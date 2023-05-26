@@ -1,10 +1,7 @@
-import { pool } from './pool.js'
 import mainMenu from '../components/shared/header/main-menu/main-menu.js'
 import cookieLayer from '../components/shared/cookie_layer/cookie_layer.js'
 import gotoTop from '../components/shared/goto_top/goto_top.js'
 import header from '../components/shared/header/header.js'
-
-pool()
 
 mainMenu.toggleMobileMenu()
 cookieLayer.init()
@@ -27,21 +24,6 @@ goToHash()
 if (document.querySelector('body#home')) {
   import('../views/home.js').then((module) => {
     module.home.init()
-  })
-}
-if (document.querySelector('body#users')) {
-  import('../views/users/users.js').then((module) => {
-    module.users.init()
-  })
-}
-if (document.querySelector('body#form')) {
-  import('../views/form/form.js').then((module) => {
-    module.form.init()
-  })
-}
-if (document.querySelector('body#plp')) {
-  import('../views/plp/plp.js').then((module) => {
-    module.plp.init()
   })
 }
 if (document.querySelector('body#privacy')) {
