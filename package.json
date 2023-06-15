@@ -1,7 +1,7 @@
 {
   "name": "PWI",
   "version": "1.0.0",
-  "description": "PWi - Programmazione Web Italia",
+  "description": "PWI - Programmazione Web Italia",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node index.js",

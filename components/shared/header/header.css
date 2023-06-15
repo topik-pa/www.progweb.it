@@ -6,13 +6,23 @@ header section {
 }
 
 header section:nth-child(1) {
-  background-color: var(--darker-gray);
+  /* background-color: var(--darker-gray); */
+  border-bottom: 1px solid var(--bt);
 }
 header section:nth-child(2) {
   position: relative;
-  border-bottom: 1px solid var(--blue);
+  border-bottom: 1px solid var(--gray);
 }
 
 #toggle-dark {
   cursor: pointer;
+}
+#toggle-dark::after {
+  content: "Darkmode";
+  font-family: 'Montserrat', sans-serif;
+  margin-left: var(--xx-small-space);
+  vertical-align: text-bottom;
+  font-size: var(--font-size-very-small);
+  font-style: italic;
+  color: var(--dark-gray);
 }
