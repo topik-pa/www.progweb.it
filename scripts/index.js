@@ -21,6 +21,21 @@ function goToHash () {
 }
 goToHash()
 
+// Go to the relative hash section
+function goToSection () {
+  const $anchors = document.querySelectorAll('a[data-target]')
+  for (const anchor of $anchors) {
+    anchor.addEventListener('click', (e) => {
+      const $target = document.getElementById(anchor.dataset.target)
+      if ($target) {
+        e.preventDefault()
+        $target.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  }
+}
+goToSection()
+
 if (document.querySelector('body#home')) {
   import('../views/home.js').then((module) => {
     module.home.init()
@@ -31,9 +46,19 @@ if (document.querySelector('body#privacy')) {
     module.privacy.init()
   })
 }
+if (document.querySelector('body#contacts')) {
+  import('../views/contacts/contacts.js').then((module) => {
+    module.contacts.init()
+  })
+}
 if (document.querySelector('body#err404')) {
   import('../views/404/404.js').then((module) => {
     module.err404.init()
+  })
+}
+if (document.querySelector('body#err500')) {
+  import('../views/500/500.js').then((module) => {
+    module.err500.init()
   })
 }
 
