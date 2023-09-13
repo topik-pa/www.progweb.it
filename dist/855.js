@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkPWI=self.webpackChunkPWI||[]).push([[855],{855:(s,e,c)=>{c.r(e),c.d(e,{err404:()=>n});const n={init:async()=>{console.log("404")}}}}]);
