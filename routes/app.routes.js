@@ -2,7 +2,7 @@ module.exports = app => {
   app.get('/', (req, res) => {
     res.render('home', { id: 'home', title: 'Home', url: req.url })
   })
-  app.get('/contacts', (req, res) => {
+  app.get('/contatti', (req, res) => {
     const breadcrumbs = [
       {
         name: 'Contatti'
@@ -17,5 +17,15 @@ module.exports = app => {
       }
     ]
     res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', url: req.url, breadcrumbs })
+  })
+  // POST
+  app.get('/javascript-closure', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Javascript Closure'
+      }
+    ]
+    res.render('post/javascript-closure/javascript-closure',
+      { id: 'js-closure', title: 'Javascript Closure', url: req.url, breadcrumbs })
   })
 }

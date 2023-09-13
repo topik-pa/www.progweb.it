@@ -51,6 +51,13 @@ if (document.querySelector('body#contacts')) {
     module.contacts.init()
   })
 }
+// POST
+if (document.querySelector('body#js-closure')) {
+  import('../views/post/javascript-closure/javascript-closure.js').then((module) => {
+    module.jsClosure.init()
+  })
+}
+// POST
 if (document.querySelector('body#err404')) {
   import('../views/404/404.js').then((module) => {
     module.err404.init()

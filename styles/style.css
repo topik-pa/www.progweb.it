@@ -24,4 +24,7 @@
 @import "/views/404/404.css";
 @import "/views/500/500.css";
 
+/* POST */
+@import "/views/post/javascript-closure/javascript-closure.css";
+
 @import "./responsive.css";
