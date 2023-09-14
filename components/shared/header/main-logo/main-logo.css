@@ -8,6 +8,8 @@
   margin-right: var(--normal-space);
   vertical-align: text-bottom;
   border-radius: 50%;
+  border: 1px solid var(--lighter-gray);
+  padding: 3px;
 }
 
 #main-logo span {

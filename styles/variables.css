@@ -1,7 +1,7 @@
 :root {
   /* COLORS */
-  --white:         #FAFAFA;
-  --lightest-gray: #F1F1F1;
+  --white:         #FCFCFC;
+  --lightest-gray: #F5F5F5;
   --lighter-gray:  #E0E0E0;
   --light-gray:    #A9A9A9;
   --gray:          #888888;
@@ -32,7 +32,7 @@
   --wst: rgba(255, 255, 255, var(--semi-transparent));
   --bt: rgba(0, 0, 0, var(--transparent));
   --bst: rgba(0, 0, 0, var(--semi-transparent));
-  --rt: rgba(201, 30, 44, var(--transparent));
+  --rt: rgba(201, 30, 44, .05);
 
   /* FONT SIZES */
   --font-size-very-small: .85rem;

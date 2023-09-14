@@ -42,6 +42,10 @@ em, .em {
   font-weight: 500;
 }
 
+.code {
+  font-family: monospace;
+}
+
 p {
   margin: var(--x-small-space) 0;
   line-height: 120%;
@@ -84,7 +88,6 @@ small {
 }
 
 aside {
-  background-color: var(--white);
   padding: var(--normal-space);
   margin-top: var(--x-large-space);;
 }
@@ -93,4 +96,28 @@ aside h2 {
 }
 aside li {
   margin-bottom: var(--small-space);
+}
+aside.links {
+  background-color: var(--white);
+}
+aside.coffee h2 {
+  color: var(--red);
+  border-top: 1px solid var(--red);
+}
+aside.coffee form {
+  margin-top: var(--normal-space);
+}
+aside.share h2 {
+  color: var(--blue);
+  border-top: 1px solid var(--blue);
+}
+aside.share div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside.coffee, aside.share {
+  text-align: center;
+  margin: var(--normal-space);
 }
