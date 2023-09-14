@@ -16,7 +16,7 @@ body {
 }
 
 main {
-  padding: var(--view-padding);
+  padding: var(--xx-large-space) var(--view-padding);
   flex: auto;
 }
 main section {
