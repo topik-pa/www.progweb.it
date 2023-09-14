@@ -22,10 +22,10 @@ module.exports = app => {
   app.get('/javascript-closure', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'Javascript Closure'
+        name: 'JavaScript Closure'
       }
     ]
     res.render('post/javascript-closure/javascript-closure',
-      { id: 'js-closure', title: 'Javascript Closure', url: req.url, breadcrumbs })
+      { id: 'js-closure', title: 'JavaScript Closure', url: req.url, breadcrumbs })
   })
 }
