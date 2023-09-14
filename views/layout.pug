@@ -6,18 +6,15 @@
   let copy = 2023
   let owner = 'Marco Pavan'
   let logo = 'https://www.zero-project.net/assets/images/logo.png'
-  let fbAppId = 123456789
-  let googleSiteVerification = '#'
-  let sc_project = 12345
-  let sc_security = 'xxxxx'  
-  let GATagId = 'UA-123456789-1'
+  let fbAppId = 1097920821592177
+  let sc_project = 12922368
+  let sc_security = '40e93898'  
 
 doctype html
 html
   head
     block meta 
       meta(charset="utf-8")
-      meta(name="google-site-verification" content=googleSiteVerification)
       meta(property="fb:app_id" content=fbAppId)
       meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
       meta(name="author" content=owner)
@@ -33,8 +30,10 @@ html
         link(rel="stylesheet", type="text/css", href="/styles/style.css")
   body(id=id)
     include ../components/shared/header/header.pug
+    block intro
     main
       block main
+    block outro
     block footer
       include ../components/shared/footer/footer.pug
       include ../components/shared/cookie_layer/cookie_layer.pug
@@ -45,33 +44,27 @@ html
       script(src='/scripts/index.js', type='module')
     if prod
       div(id="fb-root")
-      script(async defer crossorigin="anonymous" src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v17.0&appId=" + fbAppId + "&autoLogAppEvents=1") nonce="EekeMe90")
+      script(async defer crossorigin="anonymous" src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v18.0&appId=" + fbAppId + "&autoLogAppEvents=1") nonce="EekeMe90")
       script.
         var sc_project = #{sc_project};
          var sc_invisible = 1;
          var sc_security = "#{sc_security}";
-      script. 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', "#{GATagId}");
       script(async, defer, src='https://www.statcounter.com/counter/counter.js')
-      script(async, defer, src="https://www.googletagmanager.com/gtag/js?id=" + GATagId)
       script(type='application/ld+json').
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "url": "#{proj_url}",
-            "name": "#{proj_name}",
-            "description": "#{description}",
-            "image": "#{logo}",
-            "author": {
-              "@type": "Person",
-              "name": "#{owner}"
-            },
-            "copyrightHolder": {
-              "@type": "Person",
-              "name": "#{owner}"
-            }
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "#{proj_url}",
+          "name": "#{proj_name}",
+          "description": "#{description}",
+          "image": "#{logo}",
+          "author": {
+            "@type": "Person",
+            "name": "#{owner}"
+          },
+          "copyrightHolder": {
+            "@type": "Person",
+            "name": "#{owner}"
           }
-
+        }
+    block viewscripts
