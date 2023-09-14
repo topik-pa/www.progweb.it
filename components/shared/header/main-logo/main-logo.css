@@ -14,6 +14,11 @@
   display: inline-block;
 }
 
+#main-logo a {
+  display: flex;
+  align-items: center;
+}
+
 #main-logo small {
   display: block;
   font-weight: 500;

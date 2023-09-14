@@ -48,7 +48,7 @@ p {
 }
 
 small {
-  font-size: var(--font-size-small);
+  font-size: 50%;
 }
 
 .hide {
@@ -75,5 +75,22 @@ small {
 }
 
 .cp_embed_wrapper {
-  margin: var(--large-space) 0;
+  margin: var(--large-space) 0 var(--xx-small-space);
+}
+
+.penref {
+  font-size: var(--font-size-small);
+  font-style: italic;
+}
+
+aside {
+  background-color: var(--white);
+  padding: var(--normal-space);
+  margin-top: var(--x-large-space);;
+}
+aside h2 {
+  margin-bottom: var(--x-large-space);
+}
+aside li {
+  margin-bottom: var(--small-space);
 }

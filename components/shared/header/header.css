@@ -11,7 +11,7 @@ header section:nth-child(1) {
 }
 header section:nth-child(2) {
   position: relative;
-  border-bottom: 1px solid var(--gray);
+  /* border-bottom: 1px solid var(--gray); */
 }
 
 #toggle-dark {

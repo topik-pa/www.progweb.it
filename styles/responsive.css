@@ -24,12 +24,16 @@ html {
   html {
     font-size: 12px;
   }
+  #main-logo {
+    font-size: var(--font-size-bigger);
+  }
 }
 
 @media screen and (max-width: 414px) {
   html {
     font-size: 11px;
   }
+  
 }
 
 @media screen and (max-width: 320px) {
