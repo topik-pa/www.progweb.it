@@ -5,8 +5,7 @@
 
 #main-logo img {
   height: 4rem;
-  margin-right: var(--normal-space);
-  vertical-align: text-bottom;
+  margin-right: var(--xx-small-space);
   border-radius: 50%;
   border: 1px solid var(--lighter-gray);
   padding: 3px;
