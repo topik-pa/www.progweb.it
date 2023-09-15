@@ -3,19 +3,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://www.progweb.it</loc>
-		<lastmod>2023-14-09T12:00:00+00:00</lastmod>
+		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://www.progweb.it/javascript-closure</loc>
-		<lastmod>2023-14-09T12:00:00+00:00</lastmod>
+		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://www.progweb.it/privacy</loc>
-		<lastmod>2023-14-09T12:00:00+00:00</lastmod>
+		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.5</priority>
 	</url>
