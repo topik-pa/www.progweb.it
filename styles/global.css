@@ -42,6 +42,10 @@ em, .em {
   font-weight: 500;
 }
 
+i {
+  font-style: italic;
+}
+
 .code {
   font-family: monospace;
 }
