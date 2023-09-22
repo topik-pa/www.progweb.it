@@ -1,2 +1,42 @@
-#home {
+#home .post {
+  margin: var(--x-large-space) 0;
+}
+
+#home .post a {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+
+  font-weight: bold;
+  font-size: var(--font-size-bigger);
+}
+
+#home .post a > span {
+  width: 30%;
+}
+
+#home .post a span span {
+  display: block;
+  font-weight: normal;
+  margin-top: var(--large-space);
+  font-size: var(--font-size-normal);
+}
+
+
+#home .post img {
+  width: 30%;
+}
+
+
+@media screen and (max-width: 768px) {
+  #home .post a {
+    justify-content: space-between;
+  }
+  #home .post a > span {
+    width: 45%;
+  }
+  #home .post img {
+    width: 45%;
+  }
 }

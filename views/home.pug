@@ -14,6 +14,10 @@ block append meta
   meta(name="og:image" content=proj_url + "/assets/images/logo.png")
 
 block main
-  h1 #{title}
-  h2 Post 
-  a(href="/javascript-closure", title="Le Closure in Javascript") Le Closure in Javascript
+  h1 Più di recente, ho scritto...
+    span Le Closure in JavaScript
+  h2 Tutti i post 
+  div(class="post")
+    a(href="/javascript-closure", title="Le Closure in JavaScript", class="js") #[span Le Closure in JavaScript #[span JavaScript CLOSURE: cosa sono e a cosa servono. Definizione, uso ed esempi di codice per capire meglio le Closure in JavaScript]]
+      img(src="/assets/images/post/post-js-closure-cover-min.png", alt="Le Closure in JavaScript")
+      
