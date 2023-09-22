@@ -72,6 +72,7 @@ small {
   color: var(--blue);
 }
 
+/* POST */
 .intro {
   font-style: italic;
   font-weight: 500;
@@ -100,24 +101,4 @@ aside li {
 aside.links {
   background-color: var(--white);
 }
-aside.coffee h2 {
-  color: var(--red);
-  border-top: 1px solid var(--red);
-}
-aside.coffee form {
-  margin-top: var(--normal-space);
-}
-aside.share h2 {
-  color: var(--blue);
-  border-top: 1px solid var(--blue);
-}
-aside.share div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-aside.coffee, aside.share {
-  text-align: center;
-  margin: var(--normal-space);
-}
+/* POST */

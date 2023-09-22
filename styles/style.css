@@ -17,6 +17,8 @@
 @import "/components/shared/cookie_layer/cookie_layer.css";
 @import "/components/shared/goto_top/goto_top.css";
 @import "/components/shared/header/breadcrumbs/breadcrumbs.css";
+@import "/components/shared/coffee/coffee.css";
+@import "/components/shared/share/share.css";
 
 @import "/views/home.css";
 @import "/views/privacy/privacy.css";

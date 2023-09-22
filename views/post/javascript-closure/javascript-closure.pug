@@ -64,20 +64,8 @@ block main
         a(class="ext", href="https://www.w3schools.com/js/js_function_closures.asp", target="_blanck") JavaScript Function Closures
       li 
         a(class="ext", href="https://dev.to/somedood/emulating-private-variables-in-javascript-with-closures-and-factory-functions-2314", target="_blanck") Emulating "Private" Variables in JavaScript with Closures and Factory Functions - DEV Community
-  aside(class="coffee")
-    h2 Queste informazioni ti sono state utili? 
-    p Anche il mio codice è prodotto a partire da una tazza di caffè, se ti è stato utile prendi in considerazione il fatto di supportare il mio progetto. I messaggi lasciati dai Sostenitori saranno pubblicati in questa sezione!
-    div 
-      form(action="https://www.paypal.com/donate", method="post" target="_top")
-        input(type="hidden", name="hosted_button_id", value="KXPEP2FFGC86S")
-        input(type="image", src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif", border="0", name="submit", title="PayPal - The safer, easier way to pay online!", alt="Fai una donazione con il pulsante PayPal")
-        img(alt="", border="0", src="https://www.paypal.com/it_IT/i/scr/pixel.gif", width="1", height="1")
-  aside(class="share")
-    h2 Condividi questo contenuto tra i tuoi contatti!
-    div
-      div(class="fb-like" data-href=(proj_url + url) data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true")
-      script(type="IN/FollowCompany" data-id="86379680" data-counter="bottom")
-
+  include /components/shared/coffee/coffee.pug
+  include /components/shared/share/share.pug
 block viewscripts 
   script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
   script(type='application/ld+json').

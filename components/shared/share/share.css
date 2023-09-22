@@ -1,0 +1,13 @@
+#share {
+  text-align: center;
+  margin: var(--normal-space);
+}
+#share h2 {
+  color: var(--blue);
+  border-top: 1px solid var(--blue);
+}
+#share div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

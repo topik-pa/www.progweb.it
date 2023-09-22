@@ -1,0 +1,11 @@
+#coffee {
+  text-align: center;
+  margin: var(--normal-space);
+}
+#coffee h2 {
+  color: var(--red);
+  border-top: 1px solid var(--red);
+}
+#coffee form {
+  margin-top: var(--normal-space);
+}
