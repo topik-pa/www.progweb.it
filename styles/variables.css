@@ -15,7 +15,7 @@
   --green:#3db818;
 
   --primary: var(--darker-gray);
-  --secondary: var(--lightest-gray);
+  --secondary: var(--white);
   --tertiary: var(--blue);
 
   --footer: #181818;
