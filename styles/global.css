@@ -59,6 +59,14 @@ small {
   font-size: 50%;
 }
 
+ul {
+  margin: var(--normal-space);
+  list-style: disc;
+}
+ul li {
+  margin: var(--x-small-space) 0;
+}
+
 .hide {
   display: none!important;
 }

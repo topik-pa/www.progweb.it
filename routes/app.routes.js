@@ -28,4 +28,18 @@ module.exports = app => {
     res.render('post/javascript-closure/javascript-closure',
       { id: 'js-closure', title: 'JavaScript Closure', url: req.url, breadcrumbs })
   })
+  app.get('/html-attributo-ping', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'L\'attributo \'ping\' del tag &lt;a&gt; in HTML5'
+      }
+    ]
+    res.render('post/html-ping-attribute/html-ping-attribute',
+      {
+        id: 'html-ping-attribute',
+        title: 'L\'attributo \'ping\' del tag <a> in HTML',
+        url: req.url,
+        breadcrumbs
+      })
+  })
 }
