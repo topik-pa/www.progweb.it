@@ -27,6 +27,7 @@
 @import "/views/500/500.css";
 
 /* POST */
-@import "/views/post/javascript-closure/javascript-closure.css";
+/* @import "/views/post/javascript-closure/javascript-closure.css"; */
+/* @import "/views/post/html-ping-attribute/html-ping-attribute.css"; */
 
 @import "./responsive.css";

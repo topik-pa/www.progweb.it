@@ -13,14 +13,13 @@ h1 span {
 h2 {
   font-size: var(--font-size-huge);
   letter-spacing: .1rem;
-  margin-top: var(--x-large-space);
-  border-top: 1px solid var(--lighter-gray);
-  padding-top: var(--x-large-space);
+  margin-bottom: var(--large-space);
 }
 h3 {
-  font-size: var(--font-size-bigger);
+  font-size: var(--font-size-big);
   letter-spacing: .1rem;
-  margin-top: var(--normal-space);
+  font-weight: bold;
+  margin-bottom: var(--normal-space);
 }
 h4 {
   font-size: var(--font-size-big);

@@ -1,27 +1,6 @@
-- 
-  let socials = [
-    {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/profile.php?id=100086483013646',
-      icon: 'icon-facebook'
-    },
-    {
-      name: 'Telegram',
-      url: 'https://t.me/programmazionewebitalia',
-      icon: 'icon-telegram'
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/company/pwi-programmazione-web-italia',
-      icon: 'icon-linkedin2'
-    },
-    {
-      name: 'Mail',
-      url: 'mailto:marco@progweb.it',
-      icon: 'icon-envelop'
-    }
-  ]
 div(id="socials")
   each social in socials
     a(href=social.url, title=social.name)
       i(class=social.icon)
+  a(href="mailto:marco@progweb.it", title="Mail")
+    i(class="icon-envelop")

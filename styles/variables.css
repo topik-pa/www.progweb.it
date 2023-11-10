@@ -1,9 +1,9 @@
 :root {
   /* COLORS */
-  --white:         #FCFCFC;
+  --white:         #FBFBFB;
   --lightest-gray: #F5F5F5;
   --lighter-gray:  #E0E0E0;
-  --light-gray:    #A9A9A9;
+  --light-gray:    #a9a9a9;
   --gray:          #888888;
   --dark-gray:     #707070;
   --darker-gray:   #585858;
@@ -21,9 +21,12 @@
   --footer: #181818;
   --error: var(--red);
   --success: var(--green);
-  --link: var(--blue);
+  --link: var(--red);
   --text: var(--primary);
   --background: var(--secondary);
+
+  --html: rgb(239, 89, 49);
+  --js: rgb(245, 130, 51);
 
   /* TRANSPARENCIES */
   --transparent: .2;

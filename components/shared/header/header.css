@@ -1,5 +1,5 @@
 header section {
-  padding: var(--x-small-space) var(--view-padding);
+  padding: var(--small-space) 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,11 +7,19 @@ header section {
 
 header section:nth-child(1) {
   /* background-color: var(--darker-gray); */
-  border-bottom: 1px solid var(--bt);
+  /* border-bottom: 1px solid var(--bt); */
+  padding: 0;
+  padding-bottom: var(--x-small-space);
 }
 header section:nth-child(2) {
   position: relative;
   /* border-bottom: 1px solid var(--gray); */
+  background-color: var(--darker-gray);
+  padding: var(--large-space) 0;
+}
+header section:nth-child(3) {
+  border-bottom: 2px solid var(--dark-gray);
+  justify-content: flex-end;
 }
 
 #toggle-dark {
