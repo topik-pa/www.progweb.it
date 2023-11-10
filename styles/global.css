@@ -21,9 +21,12 @@ main {
   /* padding: var(--xx-large-space) var(--view-padding); */
   flex: auto;
 }
-/* main section {
-  margin: var(--section-margin) 0;
-} */
+main section {
+  /* margin: var(--section-margin) 0; */
+  padding: var(--xx-large-space);
+  padding-left: 0;
+  margin: var(--xx-large-space) var(--xx-large-space) var(--xx-large-space) 0;
+}
 
 a {
   color: var(--link);

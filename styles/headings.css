@@ -1,8 +1,8 @@
 h1 {
-  font-size: var(--font-size-biggest);
+  font-size: var(--font-size-huge);
+  margin-bottom: var(--large-space);
   letter-spacing: .1rem;
   font-weight: 500;
-  color: var(--blue);
 }
 h1 span {
   display: block;
@@ -11,7 +11,7 @@ h1 span {
   margin-left: var(--normal-space);
 }
 h2 {
-  font-size: var(--font-size-huge);
+  font-size: var(--font-size-bigger);
   letter-spacing: .1rem;
   margin-bottom: var(--large-space);
 }

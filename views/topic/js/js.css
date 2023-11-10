@@ -1,0 +1,31 @@
+#javascript main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#javascript main section.content {
+  width: 80%;
+  border-right: 1px dashed var(--lighter-gray);
+  
+}
+#javascript main section.sideside {
+  width: 20%;
+}
+
+#javascript .post {
+  margin-bottom: var(--xx-large-space);
+}
+#javascript .post img {
+  width: 50%;
+}
+#javascript .post .published {
+  font-size: var(--font-size-small);
+  font-style: italic;
+}
+#javascript .post .published time {
+  font-weight: 500;
+}
+#javascript .post p:nth-of-type(1) {
+  font-weight: 200;
+  font-style: italic;
+}

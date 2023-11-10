@@ -21,6 +21,12 @@
 @import "/components/shared/share/share.css";
 
 @import "/views/home.css";
+@import "/views/topic/html/html.css";
+@import "/views/topic/js/js.css";
+@import "/views/archive/nov2023/nov2023.css";
+@import "/views/archive/oct2023/oct2023.css";
+@import "/views/archive/sept2023/sept2023.css";
+@import "/views/graphs/graphs.css";
 @import "/views/privacy/privacy.css";
 @import "/views/contacts/contacts.css";
 @import "/views/404/404.css";

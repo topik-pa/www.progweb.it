@@ -1,0 +1,19 @@
+#graphs main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#graphs main section.content {
+  width: 80%;
+  border-right: 1px dashed var(--lighter-gray);
+  
+}
+#graphs main section.sideside {
+  width: 20%;
+}
+
+
+#graphs .entry img {
+  width: 50%;
+  margin-top: var(--normal-space);
+}
