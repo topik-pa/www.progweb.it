@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkPWI=self.webpackChunkPWI||[]).push([[930],{930:(s,e,c)=>{c.r(e),c.d(e,{jsClosure:()=>l});const l={init:async()=>{console.log("Closure")}}}}]);

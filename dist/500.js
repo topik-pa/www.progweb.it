@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkPWI=self.webpackChunkPWI||[]).push([[500],{500:(s,c,n)=>{n.r(c),n.d(c,{contacts:()=>t});const t={init:async()=>{console.log("Contacts")}}}}]);

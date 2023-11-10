@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkPWI=self.webpackChunkPWI||[]).push([[222],{222:(c,s,e)=>{e.r(s),e.d(s,{privacy:()=>n});const n={init:async()=>{console.log("Privacy")}}}}]);

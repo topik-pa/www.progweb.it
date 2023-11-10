@@ -1,7 +1,7 @@
 #main-logo {
   font-size: var(--font-size-biggest);
   width: 100%;
-  text-shadow: 0 2px var(--black);
+  text-shadow: var(--text-shadow)
 }
 
 #main-logo img {

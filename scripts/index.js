@@ -41,31 +41,4 @@ if (document.querySelector('body#home')) {
     module.home.init()
   })
 }
-if (document.querySelector('body#privacy')) {
-  import('../views/privacy/privacy.js').then((module) => {
-    module.privacy.init()
-  })
-}
-if (document.querySelector('body#contacts')) {
-  import('../views/contacts/contacts.js').then((module) => {
-    module.contacts.init()
-  })
-}
-// POST
-if (document.querySelector('body#js-closure')) {
-  import('../views/post/javascript-closure/javascript-closure.js').then((module) => {
-    module.jsClosure.init()
-  })
-}
-// POST
-if (document.querySelector('body#err404')) {
-  import('../views/404/404.js').then((module) => {
-    module.err404.init()
-  })
-}
-if (document.querySelector('body#err500')) {
-  import('../views/500/500.js').then((module) => {
-    module.err500.init()
-  })
-}
 

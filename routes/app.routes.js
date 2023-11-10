@@ -23,18 +23,18 @@ module.exports = app => {
   app.get('/html', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'Post di argomento HTML'
+        name: 'Articoli HTML'
       }
     ]
-    res.render('topic/html/html', { id: 'html', title: 'Post di argomento HTML', url: req.url, breadcrumbs })
+    res.render('topic/html/html', { id: 'html', title: 'Articoli HTML', url: req.url, breadcrumbs })
   })
   app.get('/javascript', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'Post di argomento JavaScript'
+        name: 'Articoli JavaScript'
       }
     ]
-    res.render('topic/js/js', { id: 'javascript', title: 'Post di argomento JavaScript', url: req.url, breadcrumbs })
+    res.render('topic/js/js', { id: 'javascript', title: 'Articoli JavaScript', url: req.url, breadcrumbs })
   })
 
   // ARCHIVE

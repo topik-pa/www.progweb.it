@@ -27,13 +27,10 @@
 @import "/views/archive/oct2023/oct2023.css";
 @import "/views/archive/sept2023/sept2023.css";
 @import "/views/graphs/graphs.css";
-@import "/views/privacy/privacy.css";
 @import "/views/contacts/contacts.css";
 @import "/views/404/404.css";
 @import "/views/500/500.css";
 
 /* POST */
-/* @import "/views/post/javascript-closure/javascript-closure.css"; */
-/* @import "/views/post/html-ping-attribute/html-ping-attribute.css"; */
 
 @import "./responsive.css";

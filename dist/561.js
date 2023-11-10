@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkPWI=self.webpackChunkPWI||[]).push([[561],{561:(s,e,c)=>{c.r(e),c.d(e,{err500:()=>n});const n={init:async()=>{console.log("500")}}}}]);

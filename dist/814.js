@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkPWI=self.webpackChunkPWI||[]).push([[814],{814:(e,s,c)=>{c.r(s),c.d(s,{home:()=>n});const n={init:async()=>{console.log("Home page")}}}}]);

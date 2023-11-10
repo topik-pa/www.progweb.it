@@ -1,32 +1,28 @@
 :root {
   /* COLORS */
   --white:         #FBFBFB;
-  --lightest-gray: #F5F5F5;
   --lighter-gray:  #E0E0E0;
   --light-gray:    #a9a9a9;
-  --gray:          #888888;
   --dark-gray:     #707070;
   --darker-gray:   #585858;
-  --darkest-gray:  #383838;
   --black:         #181818;
 
-  --blue: #3e78e8;
+  --blue: #02598b;
   --red:  #c91e2c;
-  --green:#3db818;
-
-  --primary: var(--darker-gray);
-  --secondary: var(--white);
-  --tertiary: var(--blue);
-
-  --footer: #181818;
-  --error: var(--red);
-  --success: var(--green);
-  --link: var(--red);
-  --text: var(--primary);
-  --background: var(--secondary);
+  --green:#007538;
 
   --html: rgb(239, 89, 49);
   --js: rgb(245, 130, 51);
+
+  --primary: var(--darker-gray);
+  --secondary: var(--white);
+
+  --error: var(--red);
+  --success: var(--green);
+  --link: var(--blue);
+  --text: var(--primary);
+  --background: var(--secondary);
+
 
   /* TRANSPARENCIES */
   --transparent: .2;
@@ -38,17 +34,17 @@
   --rt: rgba(201, 30, 44, .05);
 
   /* FONT SIZES */
-  --font-size-very-small: .85rem;
+  --font-size-very-small: .80rem;
   --font-size-small: .9rem;
   --font-size-normal: 1rem;
   --font-size-big: 1.2rem;
   --font-size-bigger: 1.5rem;
-  --font-size-huge: 1.8rem;
+  --font-size-huge: 1.9rem;
   --font-size-biggest: 2.2rem;
 
   /* SHADOWS */
   --shadow: 0 0 10px 0 var(--black);
-  --text-shadow: 0 3px 3px var(--bt);
+  --text-shadow: 0 2px var(--black);
 
   /* DIMENSIONS */
   --xx-small-space: .2rem;
@@ -62,9 +58,6 @@
   --view-padding: var(--large-space);
   --section-margin: var(--x-large-space);
   --gap: var(--x-small-space);
-  --button-padding: var(--small-space);
-  --content: 80%;
-  --input-width: calc(var(--xx-large-space) * 7);
 
   /* ICONS */
   --small-icon: var(--small-space);
@@ -86,17 +79,15 @@
 
 .dark:root {
   --white:         #181818;
-  --lightest-gray: #383838;
   --lighter-gray:  #585858;
   --light-gray:    #707070;
   --gray:          #888888;
   --dark-gray:     #A9A9A9;
   --darker-gray:   #E0E0E0;
-  --darkest-gray:  #F1F1F1;
   --black:         #FAFAFA;
 
-  --primary: var(--darkest-gray);
-  --secondary: var(--lightest-gray);
+  --primary: var(--darker-gray);
+  --secondary: var(--lighter-gray);
 }
 .dark .invert {
   filter: invert(1);
@@ -104,7 +95,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --primary: var(--lighter-gray);
-    --secondary: var(--darkest-gray);
+    --secondary: var(--darker-gray);
   }
   .invert {
     filter: invert(1);

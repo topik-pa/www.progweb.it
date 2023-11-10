@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: var(--tertiary);
+  background-color: var(--blue);
   color: var(--secondary);
   border-radius: var(--border-radius-small);
   padding: var(--x-small-space);
