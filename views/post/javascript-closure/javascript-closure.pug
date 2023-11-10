@@ -14,88 +14,89 @@ block append meta
   meta(name="og:image" content=proj_url + "/assets/images/post/post-js-closure-cover-min.png")
 
 block main
-  h1 #[em JavaScript CLOSURE]: cosa sono e a cosa servono #[small (con esempi concreti)]
-  p(class="intro") Tutte le volte che ho dovuto affrontare il discorso CLOSURE in JS finivo per avere una impressione riassumibile nella frase: "Tutto molto bello, ma... QUINDI?"
-  h2 #[em Definizione]: cosa sono le closure in JavaScript?
-  p Una closure è la capacità di una funzione, definita all'interno di un'altra funzione contenitrice, di accedere allo scope della funzione esterna, anche dopo che questa ha cessato la sua esecuzione.<br/>Attraverso le closure (ed ad un apposito handler), insomma, #[em posso accedere allo scope (metodi e attributi) di una funzione] (quella contenitrice) #[em da un qualsiasi ambito esterno].
-  p Ecco un esempio di closure.
+  section(class="content")
+    h1 #[em JavaScript CLOSURE]: cosa sono e a cosa servono #[small (con esempi concreti)]
+    p(class="intro") Tutte le volte che ho dovuto affrontare il discorso CLOSURE in JS finivo per avere una impressione riassumibile nella frase: "Tutto molto bello, ma... QUINDI?"
+    h2 #[em Definizione]: cosa sono le closure in JavaScript?
+    p Una closure è la capacità di una funzione, definita all'interno di un'altra funzione contenitrice, di accedere allo scope della funzione esterna, anche dopo che questa ha cessato la sua esecuzione.<br/>Attraverso le closure (ed ad un apposito handler), insomma, #[em posso accedere allo scope (metodi e attributi) di una funzione] (quella contenitrice) #[em da un qualsiasi ambito esterno].
+    p Ecco un esempio di closure.
 
-  p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="BaqMBOa" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
-  span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/BaqMBOa") Closures-1] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
+    p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="BaqMBOa" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
+    span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/BaqMBOa") Closures-1] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
 
-  h2 #[em Utilizzo]: come utilizzo la closure appena creata?
-  p Ora posso accedere alla variabile "#[em(class="code") x]" anche da un ambito "esterno" alla funzione in cui è definita (nell'esempio: "#[em(class="code") funzioneContenitrice]")
-  p Un esempio di utilizzo della closure definita in precedenza...
+    h2 #[em Utilizzo]: come utilizzo la closure appena creata?
+    p Ora posso accedere alla variabile "#[em(class="code") x]" anche da un ambito "esterno" alla funzione in cui è definita (nell'esempio: "#[em(class="code") funzioneContenitrice]")
+    p Un esempio di utilizzo della closure definita in precedenza...
 
-  p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="PoXjmRN" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
-  span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/PoXjmRN") Closures-2] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
+    p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="PoXjmRN" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
+    span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/PoXjmRN") Closures-2] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
 
-  h2 #[em Esempi]: quali sono gli utilizzi pratici delle closure?
-  h3 Implementare variabili private
-  p Possono #[em "simulare" una variabile privata] in un linguaggio come JavaScript che non implementa nativamente questo concetto. Questo è possibile attraverso il meccanisco di incapsulamento: lo scope della funzione contenitrice è privato ma le variabili in esso definite sono accessibili attraverso l'utilizzo esplicito di un handler.
+    h2 #[em Esempi]: quali sono gli utilizzi pratici delle closure?
+    h3 Implementare variabili private
+    p Possono #[em "simulare" una variabile privata] in un linguaggio come JavaScript che non implementa nativamente questo concetto. Questo è possibile attraverso il meccanisco di incapsulamento: lo scope della funzione contenitrice è privato ma le variabili in esso definite sono accessibili attraverso l'utilizzo esplicito di un handler.
 
-  p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="ZEVyJxp" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
-  span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/ZEVyJxp") Closures-3] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
+    p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="ZEVyJxp" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
+    span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/ZEVyJxp") Closures-3] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
 
-  h3 Creazione di moduli riutilizzabili 
-  p L'ambito privato può essere utilizzato come un #[em modulo a sè stante] per esporre funzionalità al resto della applicazione. Il codice precedente rappresenta, per esempio, un codice riutilizzabile in differenti applicazioni e che espone la funzionalità (per quanto basilare) di contare tutte le volte che una data azione viene effettuata.
+    h3 Creazione di moduli riutilizzabili 
+    p L'ambito privato può essere utilizzato come un #[em modulo a sè stante] per esporre funzionalità al resto della applicazione. Il codice precedente rappresenta, per esempio, un codice riutilizzabile in differenti applicazioni e che espone la funzionalità (per quanto basilare) di contare tutte le volte che una data azione viene effettuata.
 
-  h3 Creare funzioni di callback 
-  p La Closure può essere definita (on the fly) al momento dell'utilizzo come #[em una callback da passare alla funzione esterna], aumentando le potenzialità espressive del nostro codice. <br>Ecco un esempio esplicativo.
+    h3 Creare funzioni di callback 
+    p La Closure può essere definita (on the fly) al momento dell'utilizzo come #[em una callback da passare alla funzione esterna], aumentando le potenzialità espressive del nostro codice. <br>Ecco un esempio esplicativo.
 
-  p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="bGORLKg" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
-  span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/bGORLKg") Closures-4] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
+    p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="bGORLKg" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
+    span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/bGORLKg") Closures-4] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
 
-  h3 Aumentare l'efficenza e le performance 
-  p Una Closure può permettere un #[em accesso più efficente alle risorse] evitando elaborazioni non necessarie, per esempio: differenti chiamate ad una stessa risorsa esterna possono essere ridotte ad una sola request HTTP. <br>Vediamo un esempio di codice.
+    h3 Aumentare l'efficenza e le performance 
+    p Una Closure può permettere un #[em accesso più efficente alle risorse] evitando elaborazioni non necessarie, per esempio: differenti chiamate ad una stessa risorsa esterna possono essere ridotte ad una sola request HTTP. <br>Vediamo un esempio di codice.
 
-  p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="XWogyNG" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
-  span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/XWogyNG") Closures-5] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
+    p(class="codepen" data-height="500" data-default-tab="js" data-slug-hash="XWogyNG" data-preview="true" data-editable="true" data-user="programmazione-web-italia" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;")
+    span(class="penref") See the Pen #[a(href="https://codepen.io/programmazione-web-italia/pen/XWogyNG") Closures-5] by PWI - Programmazione Web Italia #[a(href="https://codepen.io/programmazione-web-italia") @programmazione-web-italia] on #[a(href="https://codepen.io") CodePen].
 
-  h2 Conclusioni 
-  p L'argomento "Closure" sa essere semplice e allo stesso tempo complicato, dato il fatto che il concetto in sè è piuttosto astratto. In ogni caso, avere degli esempi concreti di codice sotto'occhi ed una spiegazione dei vantaggi che derivano dal loro utilizzo può aiutare a dipanare un poco la nebbia e favorire un approccio più pragmatico. Mi piace pensare alle #[em Closure come un piccolo robottino] indipendente dalla applicazione in cui lo utilizzo e che posso richiamare in ogni momento per immagazzinare dati o effettuare computazioni di un livello più generale rispetto al resto del codice. 
+    h2 Conclusioni 
+    p L'argomento "Closure" sa essere semplice e allo stesso tempo complicato, dato il fatto che il concetto in sè è piuttosto astratto. In ogni caso, avere degli esempi concreti di codice sotto'occhi ed una spiegazione dei vantaggi che derivano dal loro utilizzo può aiutare a dipanare un poco la nebbia e favorire un approccio più pragmatico. Mi piace pensare alle #[em Closure come un piccolo robottino] indipendente dalla applicazione in cui lo utilizzo e che posso richiamare in ogni momento per immagazzinare dati o effettuare computazioni di un livello più generale rispetto al resto del codice. 
 
-  aside(class="links")
-    h2 Link esterni 
-    ul 
-      li 
-        a(class="ext", href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures?retiredLocale=it", target="_blanck") Closures - JavaScript | MDN
-      li 
-        a(class="ext", href="https://www.w3schools.com/js/js_function_closures.asp", target="_blanck") JavaScript Function Closures
-      li 
-        a(class="ext", href="https://dev.to/somedood/emulating-private-variables-in-javascript-with-closures-and-factory-functions-2314", target="_blanck") Emulating "Private" Variables in JavaScript with Closures and Factory Functions - DEV Community
-  include /components/shared/coffee/coffee.pug
-  include /components/shared/share/share.pug
-block viewscripts 
-  script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
-  script(type='application/ld+json').
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "datePublished": "2023-09-15",
-      "dateModified": "2023-09-16",
-      "url": "#{proj_url + url}",
-      "name": "JavaScript CLOSURE: cosa sono e a cosa servono",
-      "headline": "JavaScript CLOSURE: cosa sono e a cosa servono (con esempi pratici)",
-      "description": "Definizione, uso ed esempi di codice per capire meglio le Closure in JavaScript",
-      "about": {
-        "@type": "ComputerLanguage",
-        "name": "JavaScript"
-      },
-      "image": "#{proj_url}/assets/images/post/post-js-closure-cover-min.png",
-      "author": {
-        "@type": "Person",
-        "name": "#{owner}"
-      },
-      "copyrightHolder": {
-        "@type": "Person",
-        "name": "#{owner}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "#{proj_name}",
-        "url": "#{proj_url}",
-        "logo": "#{logo}"
+    aside(class="links")
+      h2 Link esterni 
+      ul 
+        li 
+          a(class="ext", href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures?retiredLocale=it", target="_blanck") Closures - JavaScript | MDN
+        li 
+          a(class="ext", href="https://www.w3schools.com/js/js_function_closures.asp", target="_blanck") JavaScript Function Closures
+        li 
+          a(class="ext", href="https://dev.to/somedood/emulating-private-variables-in-javascript-with-closures-and-factory-functions-2314", target="_blanck") Emulating "Private" Variables in JavaScript with Closures and Factory Functions - DEV Community
+    include /components/shared/coffee/coffee.pug
+    include /components/shared/share/share.pug
+  block viewscripts 
+    script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "datePublished": "2023-09-15",
+        "dateModified": "2023-09-16",
+        "url": "#{proj_url + url}",
+        "name": "JavaScript CLOSURE: cosa sono e a cosa servono",
+        "headline": "JavaScript CLOSURE: cosa sono e a cosa servono (con esempi pratici)",
+        "description": "Definizione, uso ed esempi di codice per capire meglio le Closure in JavaScript",
+        "about": {
+          "@type": "ComputerLanguage",
+          "name": "JavaScript"
+        },
+        "image": "#{proj_url}/assets/images/post/post-js-closure-cover-min.png",
+        "author": {
+          "@type": "Person",
+          "name": "#{owner}"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "#{owner}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "#{proj_name}",
+          "url": "#{proj_url}",
+          "logo": "#{logo}"
+        }
       }
-    }
 
