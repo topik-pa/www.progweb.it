@@ -17,7 +17,7 @@ block main
   section(class="content")
     h2 Di recente ho scritto...
     div(class="post")
-      div(class="badge html") HTML
+      div(class="badge html") #[a(href="/html", title="HTML") HTML]
       h3
         a(href="/html-attributo-ping", title="L'attributo 'ping' del tag <a> in HTML5") L'attributo 'ping' del tag &lt;a&gt; in HTML5
       a(href="/html-attributo-ping", title="L'attributo 'ping' del tag <a> in HTML5") 
@@ -28,7 +28,7 @@ block main
       div(class="published") Pubblicato il <time datetime="2023-09-07">7 Settembre 2023</time>
 
     div(class="post")
-      div(class="badge js") JavaScript
+      div(class="badge js") #[a(href="/javascript", title="JavaScript") JavaScript]
       h3
         a(href="/javascript-closure", title="Le Closure in JavaScript") Le Closure in JavaScript
       a(href="/javascript-closure", title="Le Closure in JavaScript") 
@@ -52,21 +52,21 @@ block main
         li 
           a(href="mailto:marco@progweb.it", title="Mail") #[i(class="icon-envelop")] marco@progweb.it
 
-    div(class="submenu categories")
-      h3 Categorie 
+    div(class="submenu topic")
+      h3 Topic 
       ul 
-        li HTML (1)
-        li JavaScript (1)
+        li #[a(href="/html", title="HTML", class="html") HTML (1)]
+        li #[a(href="/javascript", title="JavaScript", class="js") JavaScript (1)]
 
     div(class="submenu months")
       h3 Archivio 
       ul 
-        li Settembre 2023 (1)
-        li Ottobre 2023 (1)
+        li #[a(href="/settembre-2023", title="Settembre 2023") Settembre 2023 (1)]
+        li #[a(href="/ottobre-2023", title="Ottobre 2023") Ottobre 2023 (1)]
 
   section(class="sideside") 
     div(class="graph")
-      h3 Quanto si guadagna come developer?
-      p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. <br> Il confronto è fatto tra i dati dei portali Indeed e Joobydoo. #[a(href="/javascript-closure", title="Le Closure in JavaScript") Guarda il grafico...]
-      a(href="/javascript-closure", title="Le Closure in JavaScript") 
-        img(src="/assets/images/graphs/stipendi_developer-min.png", alt="Le Closure in JavaScript")
+      h3 Quanto si guadagna in Italia come developer?
+      p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. <br> Il confronto è fatto tra i dati dei portali Indeed e Joobydoo. #[a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") Guarda il grafico...]
+      a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") 
+        img(src="/assets/images/graphs/stipendi_developer-min.png", alt="Stipendio medio degli sviluppatori in Italia")

@@ -96,11 +96,14 @@ ul li {
   border-bottom: 1px dashed var(--darker-gray);
   border-left: var(--normal-space) solid var(--darker-gray);
   color: var(--darker-gray);
-  font-weight: bold;
   text-transform: uppercase;
   padding: var(--xx-small-space) var(--normal-space);
   margin: var(--xx-small-space) 0;
   display: inline-block
+}
+.badge a {
+  color: var(--darker-gray);
+  font-weight: bold;
 }
 .badge.html {
   background-color: rgba(239, 89, 49, .1);
@@ -126,6 +129,16 @@ ul li {
 }
 .submenu li {
   list-style: none;
+}
+.submenu.topic a {
+  border-left: var(--normal-space) solid var(--darker-gray);
+  padding-left: var(--x-small-space)
+}
+.submenu.topic a.html {
+  border-color: var(--html);
+}
+.submenu.topic a.js {
+  border-color: var(--js);
 }
 
 .graph {

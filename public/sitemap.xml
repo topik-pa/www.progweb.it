@@ -8,18 +8,6 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>https://www.progweb.it/javascript-closure</loc>
-		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.0</priority>
-	</url>
-	<url>
-		<loc>https://www.progweb.it/html-attributo-ping</loc>
-		<lastmod>2023-10-27T12:00:00+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>1.0</priority>
-	</url>
-	<url>
 		<loc>https://www.progweb.it/contatti</loc>
 		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
 		<changefreq>yearly</changefreq>
@@ -31,4 +19,49 @@
 		<changefreq>yearly</changefreq>
 		<priority>0.5</priority>
 	</url>
+	<url>
+		<loc>https://www.progweb.it/html</loc>
+		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/javascript</loc>
+		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/settembre-2023</loc>
+		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/ottobre-2023</loc>
+		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/grafici</loc>
+		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+
+	<!--POST-->
+	<url>
+		<loc>https://www.progweb.it/javascript-closure</loc>
+		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/html-attributo-ping</loc>
+		<lastmod>2023-10-27T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+
 </urlset>
