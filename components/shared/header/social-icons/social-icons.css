@@ -1,8 +1,5 @@
 #socials a {
   margin-left: var(--small-space);
   font-size: var(--font-size-small);
-  color: var(--darker-gray);
-}
-#socials a:hover {
-  filter: brightness(90%);
+  color: var(--primary);
 }

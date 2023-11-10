@@ -3,6 +3,9 @@
   padding-right: var(--normal-space);
   font-weight: 500;
 }
+#main-menu li:last-child {
+  padding-right: 0;
+}
 
 #main-menu ul {
   margin: 0;
@@ -16,10 +19,6 @@
   text-decoration: underline;
   font-weight: bold;
 }
-
-/* #main-menu li:hover {
-  filter: brightness(80%);
-} */
 
 #main-menu .close, .hamburger {
   display: none;
@@ -65,13 +64,6 @@
     padding: var(--normal-space) 0;
     display: inline-block;
     width: 100%;
-    /*padding: var(--normal-space);*/
   }
-  #main-menu li:not(:last-child) a {
-    /*border-bottom: 1px solid var(--light-gray);*/
-  }
-  /*#main-menu a {
-    padding-left: 0;
-  }*/
 }
 

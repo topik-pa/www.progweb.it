@@ -1,7 +1,6 @@
 #main-logo {
   font-size: var(--font-size-biggest);
   width: 100%;
-  text-shadow: var(--text-shadow)
 }
 
 #main-logo img {
@@ -17,6 +16,7 @@
   color: var(--secondary);
   text-transform: uppercase;
   font-weight: bold;
+  text-shadow: var(--text-shadow)
 }
 
 #main-logo small {
@@ -26,8 +26,66 @@
   text-transform: none;
 }
 
+.col {
+  position: absolute;
+  display: block;
+  right: 0;
+  height: 100%;
+  top: 0;
+  width: 5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.5rem;
+  border-left: 0.1rem solid white;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+.col.html {
+  background-color: rgba(239, 89, 49, .5);
+  background-image: url('/assets/images/icons/html.png');
+  right: 10rem;
+}
+.col.css {
+  background-color: rgba(0, 100, 158, .5);
+  background-image: url('/assets/images/icons/css.png');
+  right: 5rem;
+}
+.col.js {
+  background-color: rgba(245, 130, 51, .5);
+  background-image: url('/assets/images/icons/js.png');
+}
+
+@media screen and (max-width: 1024px) {
+  #main-logo {
+    font-size: var(--font-size-bigger);
+  }
+  .col {
+    width: 3.5rem;
+  }
+  .col.html {
+    right: 7rem;
+  }
+  .col.css {
+    right: 3.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #main-logo {
     font-size: var(--font-size-bigger);
+  }
+  .col {
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 0;
+  }
+  .col.html {
+    right: 10rem;
+  }
+  .col.css {
+    right: 5rem;
   }
 }

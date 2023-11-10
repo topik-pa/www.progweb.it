@@ -12,6 +12,7 @@
   --green:#007538;
 
   --html: rgb(239, 89, 49);
+  --css: rgb(0, 100, 158);
   --js: rgb(245, 130, 51);
 
   --primary: var(--darker-gray);
@@ -88,6 +89,7 @@
 
   --primary: var(--darker-gray);
   --secondary: var(--lighter-gray);
+  --link: var(--black);
 }
 .dark .invert {
   filter: invert(1);
