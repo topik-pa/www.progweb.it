@@ -14,26 +14,11 @@ block append meta
   meta(name="og:description" content="Articoli di argomento: HTML")
   meta(name="og:image" content=proj_url + "/assets/images/logo.png")
 
-block main
-  section(class="content")
-    h1 #{title}
-    div(class="post")
-      div(class="badge html") #[a(href="/html", title="HTML") HTML]
-      h2
-        a(href="/html-attributo-ping", title="L'attributo 'ping' del tag <a> in HTML5") L'attributo 'ping' del tag &lt;a&gt; in HTML5
-      a(href="/html-attributo-ping", title="L'attributo 'ping' del tag <a> in HTML5") 
-        img(src="/assets/images/post/post-html-ping-attribute-cover-min.png", alt="L'attributo 'ping' del tag <a> in HTML5")
-      p Fin dalla sua pubblicazione HTML5 ha introdotto alcuni attributi che, seppur interessanti, non sono mai stati usati o compresi fino in fondo, l'attributo 'ping' è secondo me uno di questi.
-      h3 Cos'è l'attributo "ping"?
-      p L'attributo "ping", introdotto in HTML5, è un attributo poco utilizzato del tag &lt;a&gt;. Molto semplicemente, serve a specificare una serie di URL che verranno richiamati automaticamente quando un link viene seguito dall'utente (al "click", per intenderci). Questo attributo può essere utile in diverse situazioni, in particolare per scopi di monitoraggio e analisi. #[a(href="/html-attributo-ping", title="L'attributo 'ping' del tag <a> in HTML5") Continua...]
-      div(class="published") Pubblicato il <time datetime="2023-10-27">27 ottobre 2023</time>
+block main 
+  main(class="tworows")
+    section
+      h1 #{title}
+      include ../../post/html-ping-attribute/html-ping-attribute-article-preview.pug
 
-  section(class="sideside") 
-    div(class="graph")
-      div(class="submenu graphs") 
-        h3 Analisi grafiche
-        h4 Quanto si guadagna in Italia come developer?
-        p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. <br> Il confronto è fatto tra i dati dei portali Indeed e Joobydoo. #[a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") Guarda il grafico...]
-        a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") 
-          img(src="/assets/images/graphs/stipendi_developer-preview-min.png", alt="Stipendio medio degli sviluppatori in Italia")
+    include ../../../components/shared/sideside/sideside.pug
 

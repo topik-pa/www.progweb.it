@@ -3,48 +3,15 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-#home main section.content {
+#home main section {
   width: 60%;
   border-right: 1px dashed var(--lighter-gray);
   
 }
 #home main section.side {
   width: 20%;
-  border-right: 1px dashed var(--lighter-gray);
 }
 #home main section.sideside {
   width: 20%;
-}
-
-#home .post {
-  margin-bottom: var(--xx-large-space);
-}
-#home .post img {
-  width: 20%;
-  margin: 0 var(--x-large-space) 0 0;
-  float: left;
-  border: 1px solid var(--lighter-gray);
-  box-sizing: border-box;
-}
-#home .post .published {
-  font-size: var(--font-size-small);
-  text-align: right;
-  font-style: italic;
-  margin-top: var(--normal-space);
-}
-#home .post .published time {
-  font-weight: 500;
-}
-#home .post p:nth-of-type(1) {
-  font-weight: 200;
-  font-style: italic;
-}
-
-
-@media screen and (max-width: 768px) {
-  #home .post img {
-    width: 100%;
-    float: none;
-    margin: 0;
-  }
+  border-right: none;
 }

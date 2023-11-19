@@ -15,25 +15,10 @@ block append meta
   meta(name="og:image" content=proj_url + "/assets/images/logo.png")
 
 block main
-  section(class="content")
-    h1 #{title}
-    div(class="post")
-      div(class="badge js") #[a(href="/javascript", title="JavaScript") JavaScript]
-      h2
-        a(href="/javascript-closure", title="Le Closure in JavaScript") Le Closure in JavaScript
-      a(href="/javascript-closure", title="Le Closure in JavaScript") 
-          img(src="/assets/images/post/post-js-closure-cover-min.png", alt="Le Closure in JavaScript")
-      p Tutte le volte che ho dovuto affrontare il discorso CLOSURE in JS finivo per avere una impressione riassumibile nella frase: "Tutto molto bello, ma... QUINDI?"
-      h3 Cosa sono le closure in JavaScript?
-      p Una closure è la capacità di una funzione, definita all'interno di un'altra funzione contenitrice, di accedere allo scope della funzione esterna, anche dopo che questa ha cessato la sua esecuzione. Attraverso le closure (ed ad un apposito handler), insomma, posso accedere allo scope (metodi e attributi) di una funzione (quella contenitrice) da un qualsiasi ambito esterno. #[a(href="/javascript-closure", title="Le Closure in JavaScript") Continua...]
-      div(class="published") Pubblicato il <time datetime="2023-09-14">14 settembre 2023</time>
+  main(class="tworows")
+    section
+      h1 #{title}
+      include ../../post/javascript-closure/javascript-closure-article-preview.pug
       
-  section(class="sideside") 
-    div(class="graph")
-      div(class="submenu graphs") 
-        h3 Analisi grafiche
-        h4 Quanto si guadagna in Italia come developer?
-        p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. <br> Il confronto è fatto tra i dati dei portali Indeed e Joobydoo. #[a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") Guarda il grafico...]
-        a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") 
-          img(src="/assets/images/graphs/stipendi_developer-preview-min.png", alt="Stipendio medio degli sviluppatori in Italia")
+    include ../../../components/shared/sideside/sideside.pug
 

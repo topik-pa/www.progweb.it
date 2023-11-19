@@ -14,6 +14,7 @@
 @import "/components/shared/header/main-menu/main-menu.css";
 @import "/components/shared/header/social-icons/social-icons.css";
 @import "/components/shared/footer/footer.css";
+@import "/components/shared/side/side.css";
 @import "/components/shared/cookie_layer/cookie_layer.css";
 @import "/components/shared/goto_top/goto_top.css";
 @import "/components/shared/header/breadcrumbs/breadcrumbs.css";
@@ -21,11 +22,6 @@
 @import "/components/shared/share/share.css";
 
 @import "/views/home.css";
-@import "/views/topic/html/html.css";
-@import "/views/topic/js/js.css";
-@import "/views/archive/nov2023/nov2023.css";
-@import "/views/archive/oct2023/oct2023.css";
-@import "/views/archive/sept2023/sept2023.css";
 @import "/views/graphs/graphs.css";
 @import "/views/contacts/contacts.css";
 @import "/views/404/404.css";

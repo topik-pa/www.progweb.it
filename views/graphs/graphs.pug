@@ -15,20 +15,14 @@ block append meta
   meta(name="og:image" content=proj_url + "/assets/images/logo.png")
 
 block main
-  section(class="content")
-    h1 #{title}
-    div(class="entry", id="stipendio-developer")
-      h2 Quanto si guadagna come developer?
-      p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. Il confronto è fatto tra i dati dei portali Indeed e Joobydoo.
-      div(class="published") Pubblicato il <time datetime="2023-11-10">10 Novembre 2023</time>
-      img(src="/assets/images/graphs/stipendi_developer-min.png", alt="Grafico dello stipendio medio degli sviluppatori in Italia")
-      
-  section(class="sideside") 
-    div(class="graph")
-      div(class="submenu graphs") 
-        h3 Analisi grafiche
-        h4 Quanto si guadagna in Italia come developer?
-        p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. <br> Il confronto è fatto tra i dati dei portali Indeed e Joobydoo. #[a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") Guarda il grafico...]
-        a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") 
-          img(src="/assets/images/graphs/stipendi_developer-preview-min.png", alt="Stipendio medio degli sviluppatori in Italia")
+  main(class="tworows")
+    section
+      h1 #{title}
+      div(class="entry", id="stipendio-developer")
+        h2 Quanto si guadagna come developer?
+        p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. Il confronto è fatto tra i dati dei portali Indeed e Joobydoo.
+        div(class="published") Pubblicato il <time datetime="2023-11-10">10 Novembre 2023</time>
+        img(src="/assets/images/graphs/stipendi_developer-min.png", alt="Grafico dello stipendio medio degli sviluppatori in Italia")
+        
+    include ../../components/shared/side/side.pug
 

@@ -1,0 +1,5 @@
+.side .graph img {
+  width: 100%;
+  border: 1px solid var(--darker-gray);
+  box-sizing: border-box;
+}
