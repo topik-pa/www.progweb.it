@@ -195,7 +195,26 @@ ul li {
 .intro {
   font-style: italic;
   font-weight: 500;
-  margin: var(--large-space) 0;
+  position: relative;
+  width: fit-content;
+  max-width: 75%;
+  margin: var(--x-large-space) auto;
+  padding: var(--normal-space);
+}
+.intro:before {
+  content: "\201C";
+  font-size: var(--font-size-biggest);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.intro:after {
+  content: "\201C";
+  font-size: var(--font-size-biggest);
+  transform: rotate(180deg);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .cp_embed_wrapper {
@@ -231,3 +250,5 @@ aside.links {
     margin: 0;
   }
 }
+
+
