@@ -1,3 +1,6 @@
+.side .graph  {
+  margin-bottom: var(--x-large-space);
+}
 .side .graph img {
   width: 100%;
   border: 1px solid var(--darker-gray);
