@@ -14,4 +14,7 @@ block append meta
   meta(name="og:image" content=proj_url + "/assets/images/post/post-html-ping-attribute-cover-min.png")
 
 block main
-  include ./html-ping-attribute-article.pug
+  main(class="tworows")
+    include ./html-ping-attribute-article.pug
+
+    include ../../../components/shared/sideside/sideside.pug

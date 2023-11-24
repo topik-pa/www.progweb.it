@@ -20,7 +20,7 @@ body {
 main {
   flex: auto;
 }
-main section {
+main section, main article {
   padding: var(--view-padding);
   padding-left: 0;
   margin: var(--view-padding) var(--view-padding) var(--view-padding) 0;
@@ -96,7 +96,7 @@ ul li {
   justify-content: space-between;
   align-items: flex-start;
 }
-.tworows section {
+.tworows section, .tworows article {
   width: 80%;
   border-right: 1px dashed var(--lighter-gray);
   

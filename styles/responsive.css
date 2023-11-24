@@ -22,7 +22,7 @@ html {
   main {
     flex-direction: column;
   }
-  main section {
+  main section, main article {
     width: 100%!important;
     padding: 0;
     border: none!important;
