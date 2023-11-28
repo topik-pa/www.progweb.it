@@ -168,7 +168,7 @@ ul li {
 }
 
 .preview {
-  margin-bottom: var(--xx-large-space);
+  margin-bottom: var(--large-space);
 }
 .preview img {
   width: 20%;
