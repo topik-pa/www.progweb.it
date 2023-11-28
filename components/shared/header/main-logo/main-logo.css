@@ -46,16 +46,21 @@
 #main-logo .col.html {
   background-color: rgba(239, 89, 49, .5);
   background-image: url('/assets/images/icons/html.png');
-  right: 10rem;
+  right: 15rem;
 }
 #main-logo .col.css {
   background-color: rgba(0, 100, 158, .5);
   background-image: url('/assets/images/icons/css.png');
-  right: 5rem;
+  right: 10rem;
 }
 #main-logo .col.js {
   background-color: rgba(245, 130, 51, .5);
   background-image: url('/assets/images/icons/js.png');
+  right: 5rem;
+}
+#main-logo .col.eng {
+  background-color: rgba(37, 136, 12, .5);
+  background-image: url('/assets/images/icons/eng.png');
 }
 
 @media screen and (max-width: 1024px) {
@@ -66,9 +71,12 @@
     width: 3.5rem;
   }
   #main-logo .col.html {
-    right: 7rem;
+    right: 10.5rem;
   }
   #main-logo .col.css {
+    right: 7rem;
+  }
+  #main-logo .col.js {
     right: 3.5rem;
   }
 }
@@ -83,9 +91,12 @@
     font-size: 0;
   }
   #main-logo .col.html {
-    right: 10rem;
+    right: 15rem;
   }
   #main-logo .col.css {
+    right: 10rem;
+  }
+  #main-logo .col.js {
     right: 5rem;
   }
   #main-logo img {
