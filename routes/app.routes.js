@@ -36,6 +36,14 @@ module.exports = app => {
     ]
     res.render('topic/js/js', { id: 'javascript', title: 'Articoli JavaScript', url: req.url, breadcrumbs })
   })
+  app.get('/engineering', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Articoli Engineering'
+      }
+    ]
+    res.render('topic/eng/eng', { id: 'eng', title: 'Articoli Engineering', url: req.url, breadcrumbs })
+  })
 
   // ARCHIVE
   app.get('/novembre-2023', (req, res) => {
@@ -79,17 +87,46 @@ module.exports = app => {
   })
 
   // POST
-  app.get('/javascript-closure', (req, res) => {
+  // All
+  app.get('/posts', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'JavaScript Closure'
+        name: 'Post'
       }
     ]
-    res.render('post/javascript-closure/javascript-closure',
-      { id: 'js-closure', title: 'JavaScript Closure', url: req.url, breadcrumbs })
+    res.render('post/post',
+      {
+        id: 'post',
+        title: 'Tutti i Post',
+        url: req.url,
+        breadcrumbs
+      })
+  })
+  // Specific
+  app.get('/architettura-del-sw-definizione-obiettivi', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: 'Una buona Architettura del Software: definizione e obiettivi'
+      }
+    ]
+    res.render('post/architettura-del-sw-definizione-obiettivi/architettura-del-sw-definizione-obiettivi',
+      {
+        id: 'arch-sw-def-adv',
+        title: 'Una buona Architettura del Software: definizione e obiettivi',
+        url: req.url,
+        breadcrumbs
+      })
   })
   app.get('/html-attributo-ping', (req, res) => {
     const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
       {
         name: 'L\'attributo \'ping\' del tag &lt;a&gt; in HTML5'
       }
@@ -101,5 +138,18 @@ module.exports = app => {
         url: req.url,
         breadcrumbs
       })
+  })
+  app.get('/javascript-closure', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: 'JavaScript Closure'
+      }
+    ]
+    res.render('post/javascript-closure/javascript-closure',
+      { id: 'js-closure', title: 'JavaScript Closure', url: req.url, breadcrumbs })
   })
 }

@@ -1,0 +1,57 @@
+article
+  h1 #{title}
+  p(class="intro") Tutti abbiamo almeno una idea vaga di cosa si intende per "Architettura del Software", ma penso che solo alcuni abbiano in mente concetti, pratiche e vantaggi precisi che ne derivano. 
+
+  h2 Architettura del Software: una definizione 
+  p L'architettura del software si riferisce alla struttura di un sistema software e alla progettazione delle sue componenti; comprende le decisioni di progettazione che determinano come le diverse parti di un'applicazione interagiscono e lavorano insieme per raggiungere gli obiettivi richiesti. Queste decisioni includono la struttura del filesystem (i file e le cartelle), la scelta dei framework da adottare, la definizione delle interfacce tra le diverse componenti che costituiscono l'applicazione, la gestione dei dati, la distribuzione delle responsabilità tra i moduli e altro ancora. <br> Un'architettura ben progettata facilita la manutenzione, l'aggiornamento e l'espansione del software nel tempo ponendo la giusta attenzione ad aspetti quali: la scalabilità, la sicurezza, la manutenibilità e la flessibilità per garantire che il software possa crescere e adattarsi alle esigenze in evoluzione.
+
+  h2 Architettura del Software: gli obiettivi e gli effetti
+  p Il fine ultimo di una buona Architettura del Software è quello di ridurre al minimo gli sforzi necessari alla realizzazione e manutenzione di un Sistema Software. <br> Gli effetti che una buona AdS ha sul progetto sono quelli di ridurre il numero di persone necessarie allo sviluppo, un numero inferiore di difetti ed una più semplice gestione degli stessi oltre che una maggiore flessibilità del codice prodotto. Un tale approccio allo sviluppo può avere effetti positivi sul Prodotto, sul Team e su tutta l'Organizzazione Aziendale. <br> La Qualità di un AdS si misura, allora, in funzione dell'impegno necessario a far fronte alle richieste di modifica o evoluzione del software.
+
+  p La definizione e implementazione di una opportuna AdS sembra mal si sposarsi con le esigenze di velocità e la mutevole natura dei requisiti cliente, in realtà...
+  blockquote
+    p La più grande bugia alla quale gli sviluppatori credono è che del codice mal realizzato li faccia andare più velocemente nel breve periodo e dia qualche lieve problema a lungo termine.
+    cite &dash;Robert C. Martin, Clean Engineering
+
+
+  //- aside(class="links")
+    h2 Link esterni 
+    ul 
+      li 
+        a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
+      
+  include /components/shared/coffee/coffee.pug
+  include /components/shared/share/share.pug
+
+block viewscripts 
+  //- script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
+  //- script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2023-11-24",
+      "dateModified": "2023-11-24",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "Una buona Architettura del Software: definizione e obiettivi",
+      "description": "Definizione di Architettura del Software, i suoi obiettivi e gli effetti sullo sviluppo",
+      "about": {
+        "@type": "ComputerLanguage",
+        "name": "HTML"
+      },
+      "image": "#{proj_url}/assets/images/post/post-html-ping-attribute-cover-min.png",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }

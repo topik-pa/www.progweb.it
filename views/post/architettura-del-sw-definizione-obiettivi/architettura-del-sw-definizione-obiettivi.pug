@@ -1,0 +1,20 @@
+extends ../../layout.pug
+
+block append meta
+  title #{title} | #{proj_name}
+  meta(name="description" content="L'attributo 'ping' del tag <a> in HTML5: a cosa serve e come utilizzarlo")
+  meta(name="keywords" content="html, attributo, ping")
+  link(rel="canonical", href=proj_url + url)
+
+  meta(name="og:url" content=proj_url + url)
+  meta(name="og:type" content="article")
+  meta(name="og:title" content="HTML: L'attributo 'ping' del tag <a> in HTML5: a cosa serve e come utilizzarlo")
+  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
+  meta(name="og:description" content="PWI - Programmazione Web Italia")
+  meta(name="og:image" content=proj_url + "/assets/images/post/post-html-ping-attribute-cover-min.png")
+
+block main
+  main(class="tworows")
+    include ./architettura-del-sw-definizione-obiettivi-article.pug
+
+    include ../../../components/shared/sideside/sideside.pug

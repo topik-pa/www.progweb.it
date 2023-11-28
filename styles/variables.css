@@ -14,6 +14,7 @@
   --html: rgb(239, 89, 49);
   --css: rgb(0, 100, 158);
   --js: rgb(245, 130, 51);
+  --eng: rgb(37, 136, 12);
 
   --primary: var(--darker-gray);
   --secondary: var(--white);

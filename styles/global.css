@@ -129,6 +129,10 @@ ul li {
   background-color: rgba(245, 130, 51, .1);
   border-color: var(--js);
 }
+.badge.eng {
+  background-color: rgba(37, 136, 12, .1);
+  border-color: var(--eng);
+}
 
 .submenu {
   margin-bottom: var(--xx-large-space);
@@ -159,6 +163,9 @@ ul li {
 .submenu.topic li.js {
   border-color: var(--js);
 }
+.submenu.topic li.eng {
+  border-color: var(--eng);
+}
 
 .preview {
   margin-bottom: var(--xx-large-space);
@@ -184,7 +191,20 @@ ul li {
   font-style: italic;
 }
 
-
+blockquote {
+  margin: var(--xx-large-space);
+}
+blockquote p {
+  padding: var(--large-space);
+  background-color: var(--lighter-gray);
+  border-bottom: 1px solid var(--dark-gray);
+}
+blockquote p::before {
+  content: '\201C';
+}
+blockquote p::after {
+  content: '\201D';
+}
 
 
 
@@ -200,6 +220,8 @@ ul li {
   max-width: 75%;
   margin: var(--x-large-space) auto;
   padding: var(--normal-space);
+  text-align: center;
+  color: var(--dark-gray);
 }
 .intro:before {
   content: "\201C";
