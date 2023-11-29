@@ -263,6 +263,9 @@ aside h3 {
 aside li {
   margin-bottom: var(--small-space);
 }
+aside.links {
+  border-color: var(--blue);
+}
 /* POST */
 
 

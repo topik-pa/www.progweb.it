@@ -110,13 +110,13 @@ module.exports = app => {
         url: '/posts'
       },
       {
-        name: 'Una buona Architettura del Software: definizione e obiettivi'
+        name: 'Architettura del Software: definizione e obiettivi'
       }
     ]
     res.render('post/architettura-del-sw-definizione-obiettivi/architettura-del-sw-definizione-obiettivi',
       {
         id: 'arch-sw-def-adv',
-        title: 'Una buona Architettura del Software: definizione e obiettivi',
+        title: 'Architettura del Software: definizione e obiettivi',
         url: req.url,
         breadcrumbs
       })
