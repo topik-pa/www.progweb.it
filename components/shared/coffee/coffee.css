@@ -1,11 +1,16 @@
 #coffee {
   text-align: center;
   margin: var(--normal-space);
+  margin-top: var(--xx-large-space);
+  border: none;
+  border-top: 1px solid var(--red);
 }
 #coffee h2 {
   color: var(--red);
-  border-top: 1px solid var(--red);
 }
 #coffee form {
   margin-top: var(--normal-space);
+}
+#coffee .cup {
+  width: 15%;
 }
