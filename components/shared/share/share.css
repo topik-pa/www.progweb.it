@@ -1,10 +1,11 @@
 #share {
   text-align: center;
   margin: var(--normal-space);
+  border: none;
+  border-top: 1px solid var(--blue);
 }
 #share h2 {
   color: var(--blue);
-  border-top: 1px solid var(--blue);
 }
 #share div {
   display: flex;

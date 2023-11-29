@@ -66,12 +66,13 @@ small {
   font-size: 50%;
 }
 
-ul {
+ul, ol {
   margin: var(--normal-space);
-  list-style: disc;
+  padding-left: var(--normal-space);
+  list-style: auto;
 }
-ul li {
-  margin: var(--x-small-space) 0;
+ul li, ol li {
+  margin: var(--small-space) 0;
 }
 
 .hide {
@@ -249,17 +250,18 @@ blockquote p::after {
 }
 
 aside {
-  padding: var(--normal-space);
-  margin-top: var(--x-large-space);;
+  padding: var(--x-large-space);
+  margin-top: var(--x-large-space);
+  border-left: var(--x-large-space) solid var(--lighter-gray);
 }
 aside h2 {
   margin-bottom: var(--x-large-space);
 }
+aside h3 {
+  margin-top: 0;
+}
 aside li {
   margin-bottom: var(--small-space);
-}
-aside.links {
-  background-color: var(--white);
 }
 /* POST */
 
