@@ -19,6 +19,16 @@
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
+
+	<url>
+		<loc>https://www.progweb.it/grafici</loc>
+		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+
+	<!--TOPIC-->
 	<url>
 		<loc>https://www.progweb.it/html</loc>
 		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
@@ -32,7 +42,15 @@
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.progweb.it/settembre-2023</loc>
+		<loc>https://www.progweb.it/engineering</loc>
+		<lastmod>2023-11-29T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+
+	<!--ARCHIVE-->
+	<url>
+		<loc>https://www.progweb.it/novembre-2023</loc>
 		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
@@ -44,19 +62,26 @@
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://www.progweb.it/novembre-2023</loc>
+		<loc>https://www.progweb.it/settembre-2023</loc>
 		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
+	
+
+	<!--POST-->
 	<url>
-		<loc>https://www.progweb.it/grafici</loc>
-		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
+		<loc>https://www.progweb.it/architettura-del-sw-definizione-obiettivi</loc>
+		<lastmod>2023-10-27T12:00:00+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/html-attributo-ping</loc>
+		<lastmod>2023-10-27T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
-
-	<!--POST-->
 	<url>
 		<loc>https://www.progweb.it/javascript-closure</loc>
 		<lastmod>2023-09-14T12:00:00+00:00</lastmod>
@@ -64,9 +89,9 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>https://www.progweb.it/html-attributo-ping</loc>
-		<lastmod>2023-10-27T12:00:00+00:00</lastmod>
-		<changefreq>weekly</changefreq>
+		<loc>https://www.progweb.it/posts</loc>
+		<lastmod>2023-11-29T12:00:00+00:00</lastmod>
+		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
