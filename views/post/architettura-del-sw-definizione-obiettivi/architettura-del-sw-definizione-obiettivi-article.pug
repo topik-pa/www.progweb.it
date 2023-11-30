@@ -6,7 +6,7 @@ article
   p Con Architettura del software ci riferiamo alla #[em struttura di un sistema software] e alla #[em progettazione delle interfacce dei suoi componenti]; comprende le decisioni di progettazione che determinano quali parti compongono l'applicazione e come  queste interagiscono e lavorano assieme per raggiungere gli obiettivi richiesti. Queste decisioni includono la struttura del filesystem (i file e le cartelle), la scelta dei framework da adottare, la definizione delle interfacce tra le diverse componenti che costituiscono l'applicazione, la gestione dei dati, la distribuzione delle responsabilità tra i moduli e altro ancora. <br> Un'architettura ben progettata facilita la manutenzione, l'aggiornamento e l'aggiunta di funzionalità del software nel tempo ponendo la giusta attenzione ad aspetti quali: la scalabilità, la sicurezza, la manutenibilità e la flessibilità per garantire che il software possa crescere e adattarsi alle esigenze in evoluzione.
 
   h2 Obiettivi ed effetti
-  p Il fine ultimo di una buona Architettura del Software è quello di #[em ridurre al minimo gli sforzi necessari alla realizzazione e manutenzione di un Sistema Software]. <br> Gli effetti che una buona AdS ha sul progetto sono quelli di ridurre il numero di persone necessarie allo sviluppo, un numero inferiore di difetti ed una più semplice gestione degli stessi oltre che una maggiore flessibilità del codice prodotto. Un tale approccio allo sviluppo può avere effetti positivi sul Prodotto, sul Team e su tutta l'Organizzazione Aziendale. <br> La Qualità di un AdS si misura, allora, #[em in funzione dell'impegno necessario a far fronte alle richieste di modifica o evoluzione del software].
+  p Il fine ultimo di una buona Architettura del Software è quello di #[em ridurre al minimo gli sforzi necessari alla realizzazione e manutenzione di un Sistema Software]. <br> Gli effetti che una buona AdS ha sul progetto sono quelli di ridurre il numero di persone necessarie allo sviluppo, un numero inferiore di difetti ed una più semplice gestione degli stessi oltre che una maggiore flessibilità del codice prodotto. Un tale approccio allo sviluppo può avere effetti positivi sul Prodotto, sul Team e su tutta l'Organizzazione Aziendale. <br> La qualità di un AdS si misura, allora, #[em in funzione dell'impegno necessario a far fronte alle richieste di modifica o evoluzione del software].
 
   h2 Gli effetti di una cattiva Architettura (sul Prodotto e sul Team)
   p La definizione e implementazione di una opportuna AdS sembra mal sposarsi con le esigenze di velocità e la mutevole natura dei requisiti cliente, in realtà...
@@ -16,33 +16,33 @@ article
   p Personalmente credo che tutti noi ci siamo trovati a pensare che "...Intanto lo scrivo così, in futuro lo sistemerò." Il futuro spesso dà un responso differente!
   p Una cattiva architettura del software può avere diversi #[em effetti negativi] nello sviluppo di un progetto web. Ecco alcuni dei principali.
   ol 
-    li Difficoltà di manutenzione: un codice difficile da comprendere e modificare. Ciò comporta problemi durante la manutenzione, l'aggiornamento e l'implementazione di nuove funzionalità.
-    li Scalabilità limitata: un'architettura inadeguata potrebbe non essere in grado di gestire efficacemente un aumento del carico o delle richieste degli utenti.
-    li Rischi di sicurezza: una progettazione non sicura può esporre il sistema a vulnerabilità
-    li Difficoltà di testing: un'architettura disorganizzata può rendere difficile l'implementazione di test automatizzati efficaci.
-    li Costi Elevati di Sviluppo: La correzione di errori e l'aggiunta di nuove funzionalità su un'architettura mal progettata richiedono più tempo e risorse, aumentando i costi complessivi del progetto.
-    li Bassa riusabilità del codice: una cattiva architettura può portare a un codice poco modulare e scarsamente riutilizzabile. 
-    li Difficoltà di collaborazione: l'assenza di una struttura chiara può portare a difficoltà nella collaborazione tra membri del team di sviluppo. Una buona architettura fornisce linee guida chiare su come il codice deve essere strutturato e interconnesso.
-  p Per evitare questi problemi, è essenziale #[em pianificare e progettare attentamente l'architettura del software fin dall'inizio del progetto], seguendo le migliori pratiche di Ingegneria del Software, adottando design pattern e #[a(href="https://www.html.it/guide/solid-guida-ai-principi-basilari-delloop/" title="I principi di sviluppo SOLID") principi di sviluppo SOLID].
+    li #[em Difficoltà di manutenzione]: un codice difficile da comprendere e modificare. Ciò comporta problemi durante la manutenzione, l'aggiornamento e l'implementazione di nuove funzionalità.
+    li #[em Scalabilità limitata]: un'architettura inadeguata potrebbe non essere in grado di gestire efficacemente un aumento del carico o delle richieste degli utenti.
+    li #[em Rischi di sicurezza]: una progettazione non sicura può esporre il sistema a vulnerabilità
+    li #[em Difficoltà di testing]: un'architettura disorganizzata può rendere difficile l'implementazione di test automatizzati efficaci.
+    li #[em Costi elevati di sviluppo]: la correzione di errori e l'aggiunta di nuove funzionalità su un'architettura mal progettata richiedono più tempo e risorse, aumentando i costi complessivi del progetto.
+    li #[em Bassa riusabilità del codice]: una cattiva architettura può portare a un codice poco modulare e scarsamente riutilizzabile. 
+    li #[em Difficoltà di collaborazione]: l'assenza di una struttura chiara può portare a difficoltà nella collaborazione tra membri del team di sviluppo. Una buona architettura fornisce linee guida chiare su come il codice deve essere strutturato e interconnesso.
+  p Per evitare questi problemi, è essenziale #[em pianificare e progettare attentamente l'architettura del software fin dall'inizio del progetto], seguendo le migliori pratiche di Ingegneria del Software, adottando design pattern e #[a(class="ext", href="https://www.html.it/guide/solid-guida-ai-principi-basilari-delloop/" title="I principi di sviluppo SOLID") principi di sviluppo SOLID].
 
   aside 
     h3 Tre esempi famosi di scarsa attenzione alla progettazione (e non solo...)
     p Ci sono vari esempi di progetti falliti a causa di cattive decisioni di architettura del software. 
     h4 healthcare.gov (2013)
-    p Il sito web del governo degli Stati Uniti per l'accesso alle assicurazioni sanitarie ha avuto #[a(href="https://d3.harvard.edu/platform-rctom/submission/the-failed-launch-of-www-healthcare-gov/" title="Il fallimentare lancio di www.healtcare.gov") problemi significativi al lancio]. Le difficoltà tecniche erano attribuite a una cattiva architettura del software, che ha portato a problemi di prestazioni e accesso. Voci non confermate riportarono che l'intero progetto prevedeva più di #[a(href="https://www.kqed.org/news/119265/visualizing-the-horrible-complexity-of-healthcare-gov" title="La terribile complessita del codebase di healtcare.gov") 500 milioni di righe di codice]!
+    p Il sito web del governo degli Stati Uniti per l'accesso alle assicurazioni sanitarie ha avuto #[a(class="ext", href="https://d3.harvard.edu/platform-rctom/submission/the-failed-launch-of-www-healthcare-gov/" title="Il fallimentare lancio di www.healtcare.gov") problemi significativi al lancio]. Le difficoltà tecniche erano attribuite a una cattiva architettura del software, che ha portato a problemi di prestazioni e accesso. Voci non confermate riportarono che l'intero progetto prevedeva più di #[a(class="ext", href="https://www.kqed.org/news/119265/visualizing-the-horrible-complexity-of-healthcare-gov" title="La terribile complessita del codebase di healtcare.gov") 500 milioni di righe di codice]!
 
     h4 Cyberpunk 2077
-    p Il gioco Cyberpunk 2077, sviluppato da CD Projekt, ha avuto problemi significativi durante il suo lancio nel dicembre 2020. Alcuni dei principali problemi includevano i seguenti problemi.
+    p Il gioco Cyberpunk 2077, sviluppato da CD Projekt, ha avuto problemi significativi durante il suo lancio nel dicembre 2020. Alcuni dei principali problemi includevano i seguenti punti.
     ul 
       li Problemi tecnici: il gioco è stato rilasciato con numerosi bug, glitch e problemi tecnici, soprattutto nelle versioni per console di vecchia generazione (come PlayStation 4 e Xbox One). 
       li Prestazioni scadenti sulle console di vecchia generazione.
-      li Problemi di gestione del progetto: il periodo di sviluppo del gioco è stato prolungato e ci sono state segnalazioni di crunch, ovvero periodi di lavoro estremamente intensi per il team di sviluppo. Questi problemi potrebbero essere collegati a scelte di gestione del progetto e di pianificazione.
+      li Problemi di gestione del progetto: il periodo di sviluppo del gioco è stato prolungato (la vicenda della #[a(class="ext", href="https://www.gamespot.com/gallery/all-the-cyberpunk-2077-delays/2900-3618/" title="Cyberpunk 2077: la storia della data di uscita continuamente rimandata") data di uscita continuamente rimandata] fa storia a sè) e ci sono state segnalazioni di crunch, ovvero periodi di lavoro estremamente intensi per il team di sviluppo. Questi problemi potrebbero essere collegati a scelte di gestione del progetto e di pianificazione che con molta probabilità includono anche cattive scelte architetturali.
       li Richiesta di rimborsi: a causa dei problemi tecnici e delle lamentele dei giocatori, CD Projekt ha annunciato programmi di rimborso per coloro che avevano acquistato il gioco
     p L'esperienza di Cyberpunk 2077 ha portato a una riflessione più ampia nell'industria dei videogiochi sui temi della gestione del progetto, delle aspettative dei giocatori e della necessità di garantire che un gioco sia stabile e privo di errori al momento del lancio.
     p È un esempio di come le sfide durante lo sviluppo, la gestione delle aspettative e i problemi tecnici possono influire negativamente sul successo e sulla reputazione di un prodotto.
 
     h4 Il progetto-su-cui-hai-lavorato.com
-    p Non poteva mancare il tuo progetto, personale o aziendale, che è iniziato male e finito peggio a causa di una cattiva gestione delle risorse e di una altrettanto cattiva implementazione. Spesso la fretta di iniziare porta ad intraprendere scelte sbagliate le cui ripercussioni si faranno sentire nelle release a venire. Viene voglia di rifare tutto d'accapo ma non si ha il coraggio o il budget per farlo, il progetto precedente ora divora tempo e risorse per mantenerlo! Insomma, un delirio.
+    p Non poteva mancare un tuo progetto, personale o aziendale, su cui hai lavorato o stai ancora lavorando. E' un progetto iniziato male e finito peggio a causa di una cattiva gestione delle risorse e di una altrettanto cattiva implementazione. Spesso la fretta di iniziare porta ad intraprendere scelte sbagliate le cui ripercussioni si faranno sentire nelle release a venire. Viene voglia di rifare tutto d'accapo ma non si ha il coraggio o il budget per farlo, il progetto precedente ora divora tempo e risorse per mantenerlo! Insomma, un delirio: sono sicuro che tu abbia vissuto almeno una esperienza simile.
   
   h2 Funzionalità o Architettura: cosa conta di più?
   p E' facile pensare che la funzionalità di un software sia la sua caratteristica principale: dopotutto è quello il motivo per cui lo stiamo sviluppando. L'Architettura che utilizziamo ha solamente lo scopo di servire tale funzionalità. Vi invito, però, ad una riflessione. 
@@ -50,8 +50,14 @@ article
 
   aside 
     h3 Una esperienza personale: il software di gestione della sicurezza sulle carte di credito 
-    p Mi capitò di lavorare part-time al call-center di gestione di alcune delle più utilizzate carte di credito in Italia e sui Bancomat di differenti circuiti bancari. Il programma di gestione era esclusivamente testuale, a scelta multipla, difficile da utilizzare, controintuitivo e macchinoso... E perfettamente funzionante (si trattava pur sempre di sicurezza bancaria)! Uno sviluppo decennale e attento aveva portato ad una situazione di virtuale assenza di bug, ma escludeva la possibilità di ulteriori modifiche o migliorie. Le problematiche relative alle nuove carte di credito e ai nuovi servizi inclusi nelle stesse erano quindi a totale carico dell'operatore che gestiva la cosa tramite operatività non standard sulla applicazione (forzare le funzionalità esistenti a supporto delle nuove) o con l'ausilio della cara vecchia carte e fax.
+    p Mi capitò di lavorare part-time al call-center di gestione di alcune delle più utilizzate carte di credito in Italia e sui bancomat di differenti circuiti bancari. Il programma di gestione era esclusivamente testuale, a scelta multipla, difficile da utilizzare, controintuitivo e macchinoso... E perfettamente funzionante (si trattava pur sempre di sicurezza bancaria)! Uno sviluppo decennale e attento aveva portato ad una situazione di virtuale assenza di bug, ma escludeva la possibilità di ulteriori modifiche o migliorie. Le problematiche relative alle nuove carte di credito e ai nuovi servizi inclusi nelle stesse erano quindi a totale carico dell'operatore che gestiva la cosa tramite operatività non standard sulla applicazione (forzare le funzionalità esistenti a supporto delle nuove) o con l'ausilio della cara vecchia carte e fax.
 
+  h2 Conclusione: la situazione da evitare 
+  p Le scelte architetturali devono essere effettuate nell'ottica di privilegiare la #[em flessibilità del codice] e a #[em supporto del lavoro degli sviluppatori]. Gli effetti positivi a medio e lungo periodo sono concreti e spaziano oltre i confini del Team di sviluppo. 
+  p La situzione, che un buon approccio architetturale, vuole evitare è quella di un progetto la cui manutenzione diviene col tempo e nelle successive release sempre più difficle ed onerosa per l'Azienda. Questa situazione può essere descritta nei due grafici qui sotto.
+  div(class="img-wrapper")
+    img(src="/assets/images/post/002-post-eng-architettura-del-software/graph-1.png", alt='Effetti di una cattiva Architettura nell\'economia Aziendale')
+    img(src="/assets/images/post/002-post-eng-architettura-del-software/graph-2.png", alt='Effetti di una cattiva Architettura nell\'economia Aziendale')
 
   //- section(class="links")
     h2 Link esterni 
@@ -64,21 +70,17 @@ article
 
 block viewscripts 
   //- script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
-  //- script(type='application/ld+json').
+  script(type='application/ld+json').
     {
       "@context": "https://schema.org",
       "@type": "Article",
       "datePublished": "2023-11-24",
-      "dateModified": "2023-11-24",
+      "dateModified": "2023-11-30",
       "url": "#{proj_url + url}",
       "name": "#{title}",
-      "headline": "Una buona Architettura del Software: definizione e obiettivi",
-      "description": "Definizione di Architettura del Software, i suoi obiettivi e gli effetti sullo sviluppo",
-      "about": {
-        "@type": "ComputerLanguage",
-        "name": "HTML"
-      },
-      "image": "#{proj_url}/assets/images/post/post-eng-architettura-del-software-min.png",
+      "headline": "#{title}",
+      "description": "#{title}",
+      "image": "#{proj_url}/assets/images/post/002-post-eng-architettura-del-software/post-eng-architettura-del-software-min.png",
       "author": {
         "@type": "Person",
         "name": "#{owner}"
