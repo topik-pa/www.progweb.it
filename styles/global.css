@@ -213,6 +213,9 @@ blockquote p::after {
 
 
 /* POST */
+article {
+  counter-reset: step;
+}
 .intro {
   font-style: italic;
   font-weight: 500;
@@ -249,6 +252,20 @@ blockquote p::after {
   font-style: italic;
 }
 
+article h2:before {
+  counter-increment: step;
+  content: counter(step);
+  border: 1px solid var(--darker-gray);
+  border-radius: 50%;
+  width: var(--x-large-space);
+  height: var(--x-large-space);
+  margin-right: 1rem;
+  font-size: var(--font-size-bigger);
+  display: inline-block;
+  text-align: center;
+  line-height: var(--x-large-space);
+}
+
 aside {
   padding: var(--x-large-space);
   margin-top: var(--x-large-space);
@@ -265,6 +282,9 @@ aside li {
 }
 aside.links {
   border-color: var(--blue);
+}
+aside.links h2::before {
+  content: none;
 }
 /* POST */
 

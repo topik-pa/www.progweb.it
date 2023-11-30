@@ -6,6 +6,11 @@
 }
 #share h2 {
   color: var(--blue);
+  text-align: center;
+  display: block;
+}
+#share h2::before {
+  content: none;
 }
 #share div {
   display: flex;
