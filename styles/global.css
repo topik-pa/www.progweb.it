@@ -252,6 +252,9 @@ article {
   font-style: italic;
 }
 
+article h2 {
+  margin-top: var(--xx-large-space);
+}
 article h2:before {
   counter-increment: step;
   content: counter(step);

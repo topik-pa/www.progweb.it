@@ -104,20 +104,21 @@ module.exports = app => {
   })
   // Specific
   app.get('/architettura-del-sw-definizione-obiettivi', (req, res) => {
+    const postTitle = 'Architettura del Software: definizione e obiettivi'
     const breadcrumbs = [
       {
         name: 'Post',
         url: '/posts'
       },
       {
-        name: 'Architettura del Software: definizione e obiettivi'
+        name: postTitle
       }
     ]
     res.render('post/architettura-del-sw-definizione-obiettivi/architettura-del-sw-definizione-obiettivi',
       {
         id: 'arch-sw-def-adv',
         className: 'post',
-        title: 'Architettura del Software: definizione e obiettivi',
+        title: postTitle,
         url: req.url,
         breadcrumbs
       })
