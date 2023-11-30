@@ -116,6 +116,7 @@ module.exports = app => {
     res.render('post/architettura-del-sw-definizione-obiettivi/architettura-del-sw-definizione-obiettivi',
       {
         id: 'arch-sw-def-adv',
+        className: 'post',
         title: 'Architettura del Software: definizione e obiettivi',
         url: req.url,
         breadcrumbs
@@ -134,6 +135,7 @@ module.exports = app => {
     res.render('post/html-ping-attribute/html-ping-attribute',
       {
         id: 'html-ping-attribute',
+        className: 'post',
         title: 'L\'attributo \'ping\' del tag <a> in HTML',
         url: req.url,
         breadcrumbs
@@ -150,6 +152,6 @@ module.exports = app => {
       }
     ]
     res.render('post/javascript-closure/javascript-closure',
-      { id: 'js-closure', title: 'JavaScript Closure', url: req.url, breadcrumbs })
+      { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs })
   })
 }
