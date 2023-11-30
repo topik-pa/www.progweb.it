@@ -3,6 +3,7 @@ h1 {
   margin-bottom: var(--large-space);
   letter-spacing: .1rem;
   font-weight: 500;
+  line-height: 115%;
 }
 h1 span {
   display: block;
@@ -14,6 +15,7 @@ h2 {
   font-size: var(--font-size-bigger);
   letter-spacing: .1rem;
   margin: var(--normal-space) 0;
+  line-height: 115%;
 }
 h3 {
   font-size: var(--font-size-big);

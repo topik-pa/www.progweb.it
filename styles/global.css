@@ -19,6 +19,7 @@ body {
 
 main {
   flex: auto;
+  line-height: 130%;
 }
 main section, main article {
   padding: var(--view-padding);
@@ -59,7 +60,6 @@ i {
 
 p {
   margin: var(--x-small-space) 0;
-  line-height: 130%;
 }
 
 small {
@@ -199,6 +199,7 @@ blockquote p {
   padding: var(--large-space);
   background-color: var(--lighter-gray);
   border-bottom: 1px solid var(--dark-gray);
+  font-style: italic;
 }
 blockquote p::before {
   content: '\201C';
@@ -268,6 +269,16 @@ article h2:before {
   text-align: center;
   line-height: var(--x-large-space);
 }
+article .img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+article .img-wrapper img {
+  width: 48%;
+  margin: var(--large-space) 0;
+}
 
 aside {
   padding: var(--x-large-space);
@@ -298,6 +309,13 @@ aside.links h2::before {
     width: 100%;
     float: none;
     margin: 0;
+  }
+  article .img-wrapper {
+    flex-direction: column;
+  }
+  article .img-wrapper img {
+    width: 100%;
+    margin: var(--large-space);
   }
 }
 
