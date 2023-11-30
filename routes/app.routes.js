@@ -1,6 +1,8 @@
+const posts = require('../assets/data/post.js')
+
 module.exports = app => {
   app.get('/', (req, res) => {
-    res.render('home', { id: 'home', title: 'Home', url: req.url })
+    res.render('home', { id: 'home', title: 'Home', url: req.url, posts })
   })
   app.get('/contatti', (req, res) => {
     const breadcrumbs = [
@@ -26,7 +28,7 @@ module.exports = app => {
         name: 'Articoli HTML'
       }
     ]
-    res.render('topic/html/html', { id: 'html', title: 'Articoli HTML', url: req.url, breadcrumbs })
+    res.render('topic/html/html', { id: 'html', title: 'Articoli HTML', url: req.url, breadcrumbs, posts })
   })
   app.get('/javascript', (req, res) => {
     const breadcrumbs = [
@@ -34,7 +36,7 @@ module.exports = app => {
         name: 'Articoli JavaScript'
       }
     ]
-    res.render('topic/js/js', { id: 'javascript', title: 'Articoli JavaScript', url: req.url, breadcrumbs })
+    res.render('topic/js/js', { id: 'javascript', title: 'Articoli JavaScript', url: req.url, breadcrumbs, posts })
   })
   app.get('/engineering', (req, res) => {
     const breadcrumbs = [
@@ -42,7 +44,7 @@ module.exports = app => {
         name: 'Articoli Engineering'
       }
     ]
-    res.render('topic/eng/eng', { id: 'eng', title: 'Articoli Engineering', url: req.url, breadcrumbs })
+    res.render('topic/eng/eng', { id: 'eng', title: 'Articoli Engineering', url: req.url, breadcrumbs, posts })
   })
 
   // ARCHIVE
@@ -52,7 +54,13 @@ module.exports = app => {
         name: 'Archivio novembre 2023'
       }
     ]
-    res.render('archive/nov2023/nov2023', { id: 'nov2023', title: 'Archivio novembre 2023', url: req.url, breadcrumbs })
+    res.render('archive/nov2023/nov2023', {
+      id: 'nov2023',
+      title: 'Archivio novembre 2023',
+      url: req.url,
+      breadcrumbs,
+      posts
+    })
   })
   app.get('/ottobre-2023', (req, res) => {
     const breadcrumbs = [
@@ -60,7 +68,13 @@ module.exports = app => {
         name: 'Archivio ottobre 2023'
       }
     ]
-    res.render('archive/oct2023/oct2023', { id: 'oct2023', title: 'Archivio ottobre 2023', url: req.url, breadcrumbs })
+    res.render('archive/oct2023/oct2023', {
+      id: 'oct2023',
+      title: 'Archivio ottobre 2023',
+      url: req.url,
+      breadcrumbs,
+      posts
+    })
   })
   app.get('/settembre-2023', (req, res) => {
     const breadcrumbs = [
@@ -72,7 +86,8 @@ module.exports = app => {
       id: 'sept2023',
       title: 'Archivio settembre 2023',
       url: req.url,
-      breadcrumbs
+      breadcrumbs,
+      posts
     })
   })
 
@@ -99,7 +114,8 @@ module.exports = app => {
         id: 'post',
         title: 'Tutti i Post',
         url: req.url,
-        breadcrumbs
+        breadcrumbs,
+        posts
       })
   })
   // Specific
@@ -120,7 +136,8 @@ module.exports = app => {
         className: 'post',
         title: postTitle,
         url: req.url,
-        breadcrumbs
+        breadcrumbs,
+        posts
       })
   })
   app.get('/html-attributo-ping', (req, res) => {
@@ -139,7 +156,8 @@ module.exports = app => {
         className: 'post',
         title: 'L\'attributo \'ping\' del tag <a> in HTML',
         url: req.url,
-        breadcrumbs
+        breadcrumbs,
+        posts
       })
   })
   app.get('/javascript-closure', (req, res) => {
@@ -153,6 +171,6 @@ module.exports = app => {
       }
     ]
     res.render('post/javascript-closure/javascript-closure',
-      { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs })
+      { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs, posts })
   })
 }

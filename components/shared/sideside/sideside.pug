@@ -1,18 +1,18 @@
-section(class="sideside") 
+section(class="sideside")
   div(class="submenu topic")
     h3 Topic 
     ul 
-      li(class="html") #[a(href="/html", title="HTML") HTML (1)]
-      li(class="css") CSS (0)
-      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (1)]
-      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (1)]
+      li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
+      li(class="css") CSS (#{posts.getPostCountByTopic('css')})
+      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
+      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
 
   div(class="submenu months")
     h3 Archivio 
     ul 
-      li #[a(href="/novembre-2023", title="Novembre 2023") Novembre 2023 (1)]
-      li #[a(href="/ottobre-2023", title="Ottobre 2023") Ottobre 2023 (1)]
-      li #[a(href="/settembre-2023", title="Settembre 2023") Settembre 2023 (1)]
+      li #[a(href="/novembre-2023", title="Novembre 2023") Novembre 2023 (#{posts.getPostCountByData(2023, 11)})]
+      li #[a(href="/ottobre-2023", title="Ottobre 2023") Ottobre 2023 (#{posts.getPostCountByData(2023, 10)})]
+      li #[a(href="/settembre-2023", title="Settembre 2023") Settembre 2023 (#{posts.getPostCountByData(2023, 9)})]
 
   div(class="submenu socials")
     h3 Social 
