@@ -315,7 +315,7 @@ aside.links h2::before {
   }
   article .img-wrapper img {
     width: 100%;
-    margin: var(--large-space);
+    margin: var(--large-space) 0;
   }
 }
 

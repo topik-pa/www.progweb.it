@@ -1,5 +1,4 @@
 #socials a {
   margin-left: var(--small-space);
-  font-size: var(--font-size-small);
   color: var(--primary);
 }
