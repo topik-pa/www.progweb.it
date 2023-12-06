@@ -131,8 +131,12 @@ ul li, ol li {
   border-color: var(--js);
 }
 .badge.eng {
-  background-color: rgba(37, 136, 12, .1);
+  background-color: rgba(249, 188, 16, .1);
   border-color: var(--eng);
+}
+.badge.node {
+  background-color: rgba(2, 110, 0, .1);
+  border-color: var(--node);
 }
 
 .submenu {
@@ -166,6 +170,9 @@ ul li, ol li {
 }
 .submenu.topic li.eng {
   border-color: var(--eng);
+}
+.submenu.topic li.node {
+  border-color: var(--node);
 }
 
 .preview {

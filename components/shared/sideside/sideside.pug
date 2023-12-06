@@ -6,10 +6,12 @@ section(class="sideside")
       li(class="css") CSS (#{posts.getPostCountByTopic('css')})
       li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
       li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
+      li(class="node") #[a(href="/node", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]
 
   div(class="submenu months")
     h3 Archivio 
     ul 
+      li #[a(href="/dicembre-2023", title="Dicembre 2023") Dicembre 2023 (#{posts.getPostCountByData(2023, 12)})]
       li #[a(href="/novembre-2023", title="Novembre 2023") Novembre 2023 (#{posts.getPostCountByData(2023, 11)})]
       li #[a(href="/ottobre-2023", title="Ottobre 2023") Ottobre 2023 (#{posts.getPostCountByData(2023, 10)})]
       li #[a(href="/settembre-2023", title="Settembre 2023") Settembre 2023 (#{posts.getPostCountByData(2023, 9)})]
