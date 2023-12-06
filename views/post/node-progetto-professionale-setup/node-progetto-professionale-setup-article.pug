@@ -1,0 +1,43 @@
+article
+  h1 #{title}
+  p(class="intro") 
+
+ 
+
+  //- section(class="links")
+    h2 Link esterni 
+    ul 
+      li 
+        a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
+      
+  include /components/shared/coffee/coffee.pug
+  include /components/shared/share/share.pug
+
+block viewscripts 
+  //- script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2023-11-24",
+      "dateModified": "2023-11-30",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{title}",
+      "image": "#{proj_url}/assets/images/post/002-post-eng-architettura-del-software/post-eng-architettura-del-software-min.png",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }

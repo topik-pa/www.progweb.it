@@ -141,6 +141,27 @@ module.exports = app => {
       })
   })
   // Specific
+  app.get('/node-progetto-professionale-setup', (req, res) => {
+    const postTitle = 'Node.js: un progetto professionale. Setup di Express.'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: postTitle
+      }
+    ]
+    res.render('post/node-progetto-professionale-setup/node-progetto-professionale-setup',
+      {
+        id: 'node-prof-proj-express',
+        className: 'post',
+        title: postTitle,
+        url: req.url,
+        breadcrumbs,
+        posts
+      })
+  })
   app.get('/architettura-del-sw-definizione-obiettivi', (req, res) => {
     const postTitle = 'Architettura del Software: definizione e obiettivi'
     const breadcrumbs = [
