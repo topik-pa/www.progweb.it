@@ -46,8 +46,30 @@ module.exports = app => {
     ]
     res.render('topic/eng/eng', { id: 'eng', title: 'Articoli Engineering', url: req.url, breadcrumbs, posts })
   })
+  app.get('/nodejs', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Articoli Node.js'
+      }
+    ]
+    res.render('topic/node/node', { id: 'node', title: 'Articoli Node.js', url: req.url, breadcrumbs, posts })
+  })
 
   // ARCHIVE
+  app.get('/dicembre-2023', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Archivio dicembre 2023'
+      }
+    ]
+    res.render('archive/dic2023/dic2023', {
+      id: 'dic2023',
+      title: 'Archivio dicembre 2023',
+      url: req.url,
+      breadcrumbs,
+      posts
+    })
+  })
   app.get('/novembre-2023', (req, res) => {
     const breadcrumbs = [
       {
