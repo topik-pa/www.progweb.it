@@ -1,0 +1,31 @@
+.preview {
+  margin-bottom: var(--large-space);
+}
+.preview img {
+  width: 20%;
+  margin: 0 var(--x-large-space) 0 0;
+  float: left;
+  border: 1px solid var(--lighter-gray);
+  box-sizing: border-box;
+}
+.preview .published {
+  font-size: var(--font-size-small);
+  text-align: right;
+  font-style: italic;
+  margin-top: var(--normal-space);
+}
+.preview .published time {
+  font-weight: 500;
+}
+.preview p:nth-of-type(1) {
+  font-weight: 200;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .preview img {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
