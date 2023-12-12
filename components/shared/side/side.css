@@ -1,7 +1,12 @@
-.side .graph  {
+section#side {
+  width: 20%!important;
+  padding-left: var(--view-padding);
+}
+
+#side .graph  {
   margin-bottom: var(--x-large-space);
 }
-.side .graph img {
+#side .graph img {
   width: 100%;
   border: 1px solid var(--darker-gray);
   box-sizing: border-box;

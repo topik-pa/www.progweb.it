@@ -2,6 +2,7 @@
 @import "./submenu.css";
 @import "./preview.css";
 @import "./blockquote.css";
+@import "./code.css";
 @import "./post.css";
 
 html, body {
@@ -27,10 +28,14 @@ main {
   flex: auto;
   line-height: 130%;
 }
-main section, main article {
+main section {
   padding: var(--view-padding);
   padding-left: 0;
-  margin: var(--view-padding) var(--view-padding) var(--view-padding) 0;
+  margin: var(--view-padding) 0;
+}
+main article {
+  padding: var(--view-padding);
+  margin: var(--view-padding) 0;
 }
 
 a {
@@ -58,10 +63,6 @@ em, .em {
 
 i {
   font-style: italic;
-}
-
-.code {
-  font-family: monospace;
 }
 
 p {

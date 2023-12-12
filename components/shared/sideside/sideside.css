@@ -1,0 +1,5 @@
+section#sideside {
+  width: 20%!important;
+  padding-left: var(--view-padding);
+  border-right: none!important;
+}
