@@ -9,6 +9,7 @@
 
 #main-menu ul {
   margin: 0;
+  padding-left: 0;
 }
 
 #main-menu li a {

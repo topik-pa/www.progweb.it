@@ -12,18 +12,14 @@
   border: 1px solid gray;
   padding: .2rem;
 }
-code {
+.code code {
   padding: 1rem;
   background: var(--black);
   display: block;
   color: var(--white);
   overflow-x: auto;
 }
-code pre.changed {
-  font-weight: bold;
-}
-
-code pre::before {
+.code code pre::before {
   counter-increment: line;
   content: counter(line);
   margin-right: 1rem;
@@ -31,4 +27,11 @@ code pre::before {
 }
 .code.shell code pre::before {
   content: '$';
+}
+
+.code.changed pre {
+  color: var(--light-gray);
+}
+.code.changed pre.change {
+  color: var(--white);
 }

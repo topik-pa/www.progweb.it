@@ -3,3 +3,9 @@ section#sideside {
   padding-left: var(--view-padding);
   border-right: none!important;
 }
+@media screen and (max-width: 768px) {
+  section#sideside {
+    width: 100%!important;
+    padding: 0;
+  }
+}

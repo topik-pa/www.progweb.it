@@ -11,3 +11,9 @@ section#side {
   border: 1px solid var(--darker-gray);
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 768px) {
+  section#side {
+    width: 100%!important;
+  }
+}
