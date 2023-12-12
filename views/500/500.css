@@ -4,4 +4,5 @@
 
 #err500 main div {
   font-size: 3rem;
+  margin: var(--xx-large-space);
 }
