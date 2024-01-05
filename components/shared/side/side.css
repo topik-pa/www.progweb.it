@@ -15,5 +15,6 @@ section#side {
 @media screen and (max-width: 768px) {
   section#side {
     width: 100%!important;
+    padding: 0;
   }
 }
