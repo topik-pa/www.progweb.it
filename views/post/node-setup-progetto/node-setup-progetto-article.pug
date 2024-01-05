@@ -1,10 +1,10 @@
 article
   h1 #{title}
-  p(class="intro") Esistono tante guide per fare il setup di un progetto Node / Express, in questa vorrei però aggiungere la descrizione di qualche strumento e metodologia applicati in ambito professionale. Spero che questo contribuisca alla condivisione dell'articolo..
+  p(class="intro") Esistono tante guide per fare il setup di un progetto Node / Express, in questa vorrei però aggiungere la descrizione di qualche strumento e metodologia applicati in ambito professionale. Spero che questo contribuisca alla condivisione dell'articolo...
 
   h2 Introduzione 
   h3 Cosa faremo
-  p Procederemo al #[em setup di un piccolo progetto Web]: alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo (come, per esempio, il versionamento del codice) che spesso troviamo applicate in ambienti di lavoro professionali. Non ci focalizzeremo, quindi, sulla sola #[em implementazione tecnica], ma agiremo a più ampio spetto introducendo #[em concetti e pratiche utili quando si scrive codice all'iterno di un team].
+  p Procederemo al #[em setup di un piccolo progetto Web]: alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo (come, per esempio, il versionamento del codice) che spesso troviamo applicate in ambienti di lavoro professionali. Non ci focalizzeremo, quindi, sulla sola #[em implementazione tecnica], ma agiremo a più ampio spetto introducendo #[em concetti e pratiche utili quando si scrive codice all'interno di un team].
 
   h3 Strumenti utilizzati
   p Prima di tutto, una carellata sugli strumenti utilizzati per sviluppare questo progetto: la versione del software è indicativa, non è necessario avere la medesima.
@@ -50,11 +50,11 @@ article
       pre   "author": "Marco Pavan",
       pre   "license": "ISC"
       pre }
-  p Le chiavi presenti sono auto-esplicative, una breve menzione alla chiave #[code script] che contiene i comandi disponibile eseguibili tramite il comando #[code npm run [eseguibile]] (per es. #[code npm run test]) e la chiave #[code main] che indica quale sarà l'entry point di progetto e quale, quindi, il primo file ad essere messo in esecuzione (nel nostro caso, il file /index.js non ancora esistente).
+  p Le chiavi presenti sono auto-esplicative, una breve menzione sulla chiave #[code script] che contiene i comandi disponibile eseguibili tramite il comando #[code npm run [eseguibile]] (per es. #[code npm run test]) e la chiave #[code main] che indica quale sarà l'entry point di progetto e quale, quindi, il primo file ad essere messo in esecuzione (nel nostro caso, il file /index.js non ancora esistente).
   
   aside 
     h3 Inizializzazione di un repository Git 
-    p Abbiamo creato il primo file e quindi è gia venuto il momento di #[em salvare il nostro lavoro in un repository]. Gestire il codice tramite un repository è essenziale in ambito professionale, ma anche privato, sia per condividere le fasi di sviluppo tra più sviluppatori, ma anche come strumento per accedere a versioni differenti del nostro codice. <br>Per #[em inizializzare la repository] utilizzando Git, da linea di comando, sulla root di progetto, basta digitare:
+    p Abbiamo creato il primo file e quindi è già venuto il momento di #[em salvare il nostro lavoro in un repository]. Gestire il codice tramite un repository è essenziale in ambito professionale, ma anche privato, sia per condividere le fasi di sviluppo tra più sviluppatori, ma anche come strumento per accedere a versioni differenti del nostro codice. <br>Per #[em inizializzare la repository] utilizzando Git, da linea di comando, sulla root di progetto, basta digitare:
     div(class="code shell")
       h4 Inizializzare un repository Git
       code 
@@ -111,7 +111,7 @@ article
   div(class="img-wrapper")
     img(src="/assets/images/post/003-node-setup-progetto/npm-i-express.png", alt='Installo Express tramite il comando npm')
 
-  p Il file #[code /package.json] terrà conto della nuova dipendenza di progetto inserendo la voce Express.js all'interno della chiave #[code dependencies]. <br>Esiste una chiave similare #[code devDependencies], ma in questo ultimo caso di fa riferimento a plugin utilizzati solo nella fase di sviluppo, per coadiuvare il lavoro dello sviluppatore, e che non vengono utilizzati nel sistempa in produzione. Ne vedremo degli esempi nel proseguio.
+  p Il file #[code /package.json] terrà conto della nuova dipendenza di progetto inserendo la voce Express.js all'interno della chiave #[code dependencies]. <br>Esiste una chiave similare #[code devDependencies], ma in questo ultimo caso di fa riferimento a plugin utilizzati solo nella fase di sviluppo, per coadiuvare il lavoro dello sviluppatore, e che non vengono utilizzati nel sistema in produzione. Ne vedremo degli esempi nel proseguio.
   div(class="code changed")
       h4 /package.json viene aggiornato automaticamente
       code 
@@ -155,7 +155,7 @@ article
       pre   console.log(`Example app listening on port ${PORT}`);
       pre });
 
-  p Una spiegazione dei comandi presenti: le prime due istruzioni importano il modulo Express (1) e lo istanziano (2), da ora il nostro server è raggiungibile attraverso il suo handler #[code app]. (3-5) sono i comandi che si occupano di comunicare al server di mettersi in ascolto della rotta #[code /] (la nostra home page) e, in caso di interrogazione (tramite un browser, per esempio) di rispondere con il testo "Hello World!". Come è facilmenente intuibile, #[code req] e #[code res] rappresentano rispettivamente gli handler della request e della response del server, agendo su di essi posso leggere gli attributi HTTP della richiesta e agire su quelli di risposta (inviando un testo, come nell'esempio).
+  p Una spiegazione dei comandi presenti: le prime due istruzioni importano il modulo Express (1) e lo istanziano (2), da ora il nostro server è raggiungibile attraverso il suo handler #[code app]. (3-5) sono i comandi che si occupano di comunicare al server di mettersi in ascolto della rotta #[code /] (la nostra home page) e, in caso di interrogazione (tramite un browser, per esempio) di rispondere con il testo "Hello World!". Come è facilmente intuibile, #[code req] e #[code res] rappresentano rispettivamente gli handler della request e della response del server, agendo su di essi posso leggere gli attributi HTTP della richiesta e agire su quelli di risposta (inviando un testo, come nell'esempio).
   p Nelle righe (8-11) si definisce come avviare il server, attraverso una porta (un numero intero inferiore a 65535, per convenzione si usa tipicamente la 8080) ed una funzione di callback da eseguire una volta che il server è avviato. 
   p E' finalmente giunto il momento del primo avvio del nostro progetto, per farlo basterebbe eseguire il comando #[code node index.js] dalla root di progetto. Ma preferiamo, piuttosto, sfruttare la chiave #[code scripts] del già visto #[code package.json]. Modifichiamo il file nel modo seguente (l'aggiunta è evidenziata). 
 
@@ -168,7 +168,6 @@ article
       pre   "description": "A simple Node.js project",
       pre   "main": "index.js",
       pre   "scripts": {
-      pre   "dev": "PORT=8080 node index.js",
       pre(class="change")     "dev": "PORT=8080 node index.js",
       pre     "test": "echo \"Error: no test specified\" && exit 1"
       pre   },
@@ -238,7 +237,7 @@ article
         pre   "license": "ISC"
         pre }
     
-    p Ora ogni modifica ai file di progetto scatenerà il riavvio autometico del server e una più veloce visualizzazione del risultato: basterà fare il refresh del browser (quello sì...). Provate! 
+    p Ora ogni modifica ai file di progetto scatenerà il riavvio automatico del server e una più veloce visualizzazione del risultato: basterà fare il refresh del browser (quello sì...). Provate! 
         
 
   //- section(class="links")
