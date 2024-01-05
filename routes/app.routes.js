@@ -141,22 +141,22 @@ module.exports = app => {
       })
   })
   // Specific
-  app.get('/node-progetto-professionale-setup', (req, res) => {
-    const postTitle = 'Node.js: un progetto professionale. Setup di Express.'
+  app.get('/node-setup-progetto', (req, res) => {
+    const title = 'Setup di un progetto Node / Express'
     const breadcrumbs = [
       {
         name: 'Post',
         url: '/posts'
       },
       {
-        name: postTitle
+        name: title
       }
     ]
-    res.render('post/node-progetto-professionale-setup/node-progetto-professionale-setup',
+    res.render('post/node-setup-progetto/node-setup-progetto',
       {
-        id: 'node-prof-proj-express',
+        id: 'node-setup-progetto',
         className: 'post',
-        title: postTitle,
+        title,
         url: req.url,
         breadcrumbs,
         posts

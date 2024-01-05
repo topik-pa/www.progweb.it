@@ -1,0 +1,280 @@
+article
+  h1 #{title}
+  p(class="intro") Esistono tante guide per fare il setup di un progetto Node / Express, in questa vorrei però aggiungere la descrizione di qualche strumento e metodologia applicati in ambito professionale. Spero che questo contribuisca alla condivisione dell'articolo..
+
+  h2 Introduzione 
+  h3 Cosa faremo
+  p Procederemo al #[em setup di un piccolo progetto Web]: alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo (come, per esempio, il versionamento del codice) che spesso troviamo applicate in ambienti di lavoro professionali. Non ci focalizzeremo, quindi, sulla sola #[em implementazione tecnica], ma agiremo a più ampio spetto introducendo #[em concetti e pratiche utili quando si scrive codice all'iterno di un team].
+
+  h3 Strumenti utilizzati
+  p Prima di tutto, una carellata sugli strumenti utilizzati per sviluppare questo progetto: la versione del software è indicativa, non è necessario avere la medesima.
+  ul 
+    li #[a(href="https://code.visualstudio.com/") Visual Studio Code] &ge; 1.81
+    li #[a(href="https://nodejs.org/") Node.js] &ge; 18
+    li #[a(href="https://www.npmjs.com/") npm] &ge; 9.6.7
+    li #[a(href="https://git-scm.com/") Git] &ge; 2.31
+    li #[a(href="https://nodemon.io/") nodemon] &ge; 3.0.2
+  p NB: ho usato Fedora Linux durante la creazione del progetto; per gli utenti Windows i concetti sono gli stessi e, in massima parte, i comandi rimangono simili. Se ci fossero delle incompatibilità, avvertitemi!
+
+  h2 Init del progetto 
+  p Il progetto inizia con la creazione automatica del file #[code /package.json]; si tratta del file che conterrà le dipendenze di progetto, gli script di avvio e altre importanti meta informazioni. La creazione di tale file si riduce all'esecuzione di un comando e alla compilazione di un breve questionario. Allora, dalla cartella che ospiterà i file del progetto, digiteremo il seguente comando.
+
+  div(class="code shell")
+    h4 Init di un progetto Node.js
+    code 
+      pre npm init
+
+  p L'output e il questionario è presente nella schermata qui sotto.
+
+  div(class="img-wrapper")
+    img(src="/assets/images/post/003-node-setup-progetto/npm-init.png", alt='Risultato dello script: npm init')
+
+  p Una volta confermato, verrà creato il file #[code /package.json] con contenuto simile a quello che trovate qui sotto.
+  div(class="code")
+    h4 /package.json
+    code 
+      pre {
+      pre   "name": "server-project",
+      pre   "version": "1.0.0",
+      pre   "description": "A simple Node.js project",
+      pre   "main": "index.js",
+      pre   "scripts": {
+      pre     "test": "echo \"Error: no test specified\" && exit 1"
+      pre   },
+      pre   "keywords": [
+      pre     "node",
+      pre     "express",
+      pre     "backend",
+      pre     "frontend"
+      pre   ],
+      pre   "author": "Marco Pavan",
+      pre   "license": "ISC"
+      pre }
+  p Le chiavi presenti sono auto-esplicative, una breve menzione alla chiave #[code script] che contiene i comandi disponibile eseguibili tramite il comando #[code npm run [eseguibile]] (per es. #[code npm run test]) e la chiave #[code main] che indica quale sarà l'entry point di progetto e quale, quindi, il primo file ad essere messo in esecuzione (nel nostro caso, il file /index.js non ancora esistente).
+  
+  aside 
+    h3 Inizializzazione di un repository Git 
+    p Abbiamo creato il primo file e quindi è gia venuto il momento di #[em salvare il nostro lavoro in un repository]. Gestire il codice tramite un repository è essenziale in ambito professionale, ma anche privato, sia per condividere le fasi di sviluppo tra più sviluppatori, ma anche come strumento per accedere a versioni differenti del nostro codice. <br>Per #[em inizializzare la repository] utilizzando Git, da linea di comando, sulla root di progetto, basta digitare:
+    div(class="code shell")
+      h4 Inizializzare un repository Git
+      code 
+        pre git init
+    div(class="img-wrapper")
+      img(src="/assets/images/post/003-node-setup-progetto/git-init.png", alt='Risultato dello script: git init')
+    
+    p Inizializzato il repository, sarà possibile visualizzarne lo status, aggiungere file e farne il commit tramite i comandi seguenti.
+    div(class="code shell")
+      h4 Visualizzare lo status di un repository Git
+      code 
+        pre git status
+    div(class="img-wrapper")
+      img(src="/assets/images/post/003-node-setup-progetto/git-status.png", alt='Risultato dello script: git status')
+    
+    div(class="code shell")
+      h4 Aggiungere file ad un repository Git
+      code 
+        pre git add .
+    div(class="img-wrapper")
+      img(src="/assets/images/post/003-node-setup-progetto/git-add.png", alt='Risultato dello script: git add')
+
+    div(class="code shell")
+      h4 Fare il commit di un repository Git
+      code 
+        pre git commit -m 'Project init'
+    div(class="img-wrapper")
+      img(src="/assets/images/post/003-node-setup-progetto/git-commit.png", alt='Risultato dello script: git commit')
+
+    p Non mi addentro in concetti più avanzati di Git come le branch e la loro pubblicazione su server remoti, per lo scopo di questo progetto mi basta avere una repository in locale con cui accedere al mio codice salvato in tutte le sue versioni. E' anche possibile, e probabilmente più comodo utilizzare le funzionalità messe a disposizione dal #[em plugin di Visual Studio Code "Git Graph"]. Proprio con quest'ultimo strumento, il risultato sarà quello riportato nella figura qui sotto: un branch master, su quale ho effettuato un commit con descrizione "Project init", il quale commit comprende il singolo file "package.json" 
+
+    div(class="img-wrapper")
+      img(src="/assets/images/post/003-node-setup-progetto/git-vsc.png", alt='Il risultato finale visualizzto in Visual Studio Code')
+
+    p Ultima cosa, aggiungo un file #[code .gitignore] alla root di progetto per evitare di includere nel repository tutti quei file e cartelle che per loro natura non hanno la necessità di essere gestiti tramite un repository. Si tratta generalmente di tutte qui file che vengono generati in automatico, i file di log o di configurazioni specifiche dell'ambiente locale su cui si lavora. Ecco un file .gitignore minimale adatto al progetto che stiamo sviluppando.
+
+    div(class="code")
+      h4 .gitignore
+      code 
+        pre node_modules
+        pre build
+        pre npm-debug.log
+        pre .env
+        
+  h2 Implementare un server con Express.js
+  p Dopo la fase preparativa è il momento di sviluppare una funzionalità, anche se banale. Vedremo che con poche righe otterremo la #[em creazione di un server], la sua #[em esecuzione] e la #[em definizione di una rotta] attraverso cui interrogarlo e #[em visualizzare un messaggio]. 
+
+  p Prima di tutto è necessario installare il modulo node #[code Express.js]. Questi altro non è che il server che utilizzeremo per la nostra applicazione e la sua installazione ed inclusione nel nostro progetto è molto semplice, basta digitare il seguente comando da shell.
+
+  div(class="code shell")
+    h4 Installare il modulo Express.js nel progetto
+    code 
+      pre npm install express --save
+  div(class="img-wrapper")
+    img(src="/assets/images/post/003-node-setup-progetto/npm-i-express.png", alt='Installo Express tramite il comando npm')
+
+  p Il file #[code /package.json] terrà conto della nuova dipendenza di progetto inserendo la voce Express.js all'interno della chiave #[code dependencies]. <br>Esiste una chiave similare #[code devDependencies], ma in questo ultimo caso di fa riferimento a plugin utilizzati solo nella fase di sviluppo, per coadiuvare il lavoro dello sviluppatore, e che non vengono utilizzati nel sistempa in produzione. Ne vedremo degli esempi nel proseguio.
+  div(class="code changed")
+      h4 /package.json viene aggiornato automaticamente
+      code 
+        pre {
+        pre   "name": "server-project",
+        pre   "version": "1.0.0",
+        pre   "description": "A simple Node.js project",
+        pre   "main": "index.js",
+        pre   "scripts": {
+        pre   "dev": "PORT=8080 node index.js",
+        pre     "test": "echo \"Error: no test specified\" && exit 1"
+        pre   },
+        pre   "keywords": [
+        pre     "node",
+        pre     "express",
+        pre     "backend",
+        pre     "frontend"
+        pre   ],
+        pre(class="change")   "dependencies": {
+        pre(class="change")     "express": "^4.18.2",
+        pre(class="change")   }
+        pre   "author": "Marco Pavan",
+        pre   "license": "ISC"
+        pre }
+  
+  p Insieme al modulo Express, il comando npm (Node Package Manager), si occupa anche di installare tutte le sue dipendenze nella cartella #[code /node_modules] e di tenere traccia di tutte le relazioni tra i moduli nel file #[code package-log.json]. Questi due nuovi elementi (una cartella ed un file) sono ora presenti nella nostra root. <br>#[code /node_modules], come specificato nel file #[code .gitignore], non va posto sotto sistema di versionamento Git in quanto è una cartella il cui contenuto è generato in automatico da npm.
+  p Avendo a disposizione il server Express.js, il nostro compito ora è quello di definire un file #[code /index.js] con il seguente contenuto.
+
+  div(class="code")
+    h4 il file /index.js
+    code 
+      pre const express = require('express');
+      pre const app = express();
+      pre
+      pre app.get('/', (req, res) => {
+      pre   res.send('Hello World!');
+      pre });
+      pre
+      pre const PORT = process.env.PORT || 8080;
+      pre app.listen(PORT, () => {
+      pre   console.log(`Example app listening on port ${PORT}`);
+      pre });
+
+  p Una spiegazione dei comandi presenti: le prime due istruzioni importano il modulo Express (1) e lo istanziano (2), da ora il nostro server è raggiungibile attraverso il suo handler #[code app]. (3-5) sono i comandi che si occupano di comunicare al server di mettersi in ascolto della rotta #[code /] (la nostra home page) e, in caso di interrogazione (tramite un browser, per esempio) di rispondere con il testo "Hello World!". Come è facilmenente intuibile, #[code req] e #[code res] rappresentano rispettivamente gli handler della request e della response del server, agendo su di essi posso leggere gli attributi HTTP della richiesta e agire su quelli di risposta (inviando un testo, come nell'esempio).
+  p Nelle righe (8-11) si definisce come avviare il server, attraverso una porta (un numero intero inferiore a 65535, per convenzione si usa tipicamente la 8080) ed una funzione di callback da eseguire una volta che il server è avviato. 
+  p E' finalmente giunto il momento del primo avvio del nostro progetto, per farlo basterebbe eseguire il comando #[code node index.js] dalla root di progetto. Ma preferiamo, piuttosto, sfruttare la chiave #[code scripts] del già visto #[code package.json]. Modifichiamo il file nel modo seguente (l'aggiunta è evidenziata). 
+
+  div(class="code changed")
+    h4 Aggiungiamo uno script al /package.json
+    code 
+      pre {
+      pre   "name": "server-project",
+      pre   "version": "1.0.0",
+      pre   "description": "A simple Node.js project",
+      pre   "main": "index.js",
+      pre   "scripts": {
+      pre   "dev": "PORT=8080 node index.js",
+      pre(class="change")     "dev": "PORT=8080 node index.js",
+      pre     "test": "echo \"Error: no test specified\" && exit 1"
+      pre   },
+      pre   "keywords": [
+      pre     "node",
+      pre     "express",
+      pre     "backend",
+      pre     "frontend"
+      pre   ],
+      pre   "dependencies": {
+      pre     "express": "^4.18.2",
+      pre   }
+      pre   "author": "Marco Pavan",
+      pre   "license": "ISC"
+      pre }
+
+  p Ora possiamo lanciare il comando appena definito.
+
+  div(class="code shell")
+    h4 Avviare l'applicazione tramite la chiave script del package.json
+    code 
+      pre npm run dev
+
+  p Il server si avvia e si mette in attesa di request HTTP.
+  div(class="img-wrapper")
+    img(src="/assets/images/post/003-node-setup-progetto/npm-run-dev.png", alt='Avviare l\'applicazione tramite la chiave script del package.json')
+  
+  p Guardiamo il risultato navigando all'indirizzo localhost:8080 con il nostro browser.
+  div(class="img-wrapper")
+    img(src="/assets/images/post/003-node-setup-progetto/hello-world.png", alt='Il browser mostra il risultato della chiamata')
+
+  p Abbiamo implementato un server interrogabile alla rotta "/" e che presenta un semplice messaggio di risposta.
+
+  aside 
+    h3 Utilizzo di Nodemon per fare il restart automatico del server
+    p Se volessimo cambiare il messaggio stampato a video o effettuare qualsiasi altro cambio di codice, sarebbe necessario fare il restart manuale del server (da terminale: #[code Ctrl-C] per spegnere e, nuovamente, #[code npm run dev] per riavviare il server). L'operazione può essere automatizzata e velocizzata dal plugin #[em nodemon], che si occupa di monitorare eventuali modifiche dei file di progetto. Vediamo come utilizzarlo.
+    div(class="code shell")
+      h4 Installare nodemon come dipendenza di progetto
+      code 
+        pre npm install -g nodemon
+
+    div(class="code changed")
+      h4 /package.json tiene conto della nuova dipendenza
+      code 
+        pre {
+        pre   "name": "server-project",
+        pre   "version": "1.0.0",
+        pre   "description": "A simple Node.js project",
+        pre   "main": "index.js",
+        pre   "scripts": {
+        pre   "dev": "PORT=8080 node index.js",
+        pre     "test": "echo \"Error: no test specified\" && exit 1"
+        pre   },
+        pre   "keywords": [
+        pre     "node",
+        pre     "express",
+        pre     "backend",
+        pre     "frontend"
+        pre   ],
+        pre   "dependencies": {
+        pre     "express": "^4.18.2",
+        pre   }
+        pre(class="change")   "devDependencies": {
+        pre(class="change")     "nodemon": "^3.0.2"
+        pre(class="change")   }
+        pre   "author": "Marco Pavan",
+        pre   "license": "ISC"
+        pre }
+    
+    p Ora ogni modifica ai file di progetto scatenerà il riavvio autometico del server e una più veloce visualizzazione del risultato: basterà fare il refresh del browser (quello sì...). Provate! 
+        
+
+  //- section(class="links")
+    h2 Link esterni 
+    ul 
+      li 
+        a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
+      
+  include /components/shared/coffee/coffee.pug
+  include /components/shared/share/share.pug
+
+block viewscripts 
+  //- script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2023-12-24",
+      "dateModified": "2023-12-30",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{title}",
+      "image": "#{proj_url}/assets/images/post/003-node-setup-progetto/node-setup-progetto-min.png",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }

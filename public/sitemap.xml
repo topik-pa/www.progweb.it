@@ -47,8 +47,20 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
+	<url>
+		<loc>https://www.progweb.it/nodejs</loc>
+		<lastmod>2024-01-04T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
 
 	<!--ARCHIVE-->
+	<url>
+		<loc>https://www.progweb.it/dicembre-2023</loc>
+		<lastmod>2023-12-10T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
 	<url>
 		<loc>https://www.progweb.it/novembre-2023</loc>
 		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
@@ -70,6 +82,12 @@
 	
 
 	<!--POST-->
+	<url>
+		<loc>https://www.progweb.it/node-setup-progetto</loc>
+		<lastmod>2024-01-04T12:00:00+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
 	<url>
 		<loc>https://www.progweb.it/architettura-del-sw-definizione-obiettivi</loc>
 		<lastmod>2023-10-27T12:00:00+00:00</lastmod>
