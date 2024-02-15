@@ -3,12 +3,12 @@ section#side {
   padding-left: var(--view-padding);
 }
 
-#side .graph  {
+#side .graph, #side .other  {
   margin-bottom: var(--x-large-space);
 }
-#side .graph img {
+#side .graph img, #side .other img {
   width: 100%;
-  border: 1px solid var(--darker-gray);
+  border: 1px solid var(--light-gray);
   box-sizing: border-box;
 }
 
