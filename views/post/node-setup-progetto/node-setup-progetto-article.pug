@@ -7,7 +7,7 @@ article
   p Procederemo al #[em setup di un piccolo progetto Web]: alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo (come, per esempio, il versionamento del codice) che spesso troviamo applicate in ambienti di lavoro professionali. Non ci focalizzeremo, quindi, sulla sola #[em implementazione tecnica], ma agiremo a più ampio spetto introducendo #[em concetti e pratiche utili quando si scrive codice all'interno di un team].
 
   h3 Strumenti utilizzati
-  p Prima di tutto, una carellata sugli strumenti utilizzati per sviluppare questo progetto: la versione del software è indicativa, non è necessario avere la medesima.
+  p Prima di tutto, una carrellata sugli strumenti utilizzati per sviluppare questo progetto: la versione del software è indicativa, non è necessario avere la medesima.
   ul 
     li #[a(href="https://code.visualstudio.com/") Visual Studio Code] &ge; 1.81
     li #[a(href="https://nodejs.org/") Node.js] &ge; 18
@@ -111,7 +111,7 @@ article
   div(class="img-wrapper")
     img(src="/assets/images/post/003-node-setup-progetto/npm-i-express.png", alt='Installo Express tramite il comando npm')
 
-  p Il file #[code /package.json] terrà conto della nuova dipendenza di progetto inserendo la voce Express.js all'interno della chiave #[code dependencies]. <br>Esiste una chiave similare #[code devDependencies], ma in questo ultimo caso di fa riferimento a plugin utilizzati solo nella fase di sviluppo, per coadiuvare il lavoro dello sviluppatore, e che non vengono utilizzati nel sistema in produzione. Ne vedremo degli esempi nel proseguio.
+  p Il file #[code /package.json] terrà conto della nuova dipendenza di progetto inserendo la voce Express.js all'interno della chiave #[code dependencies]. <br>Esiste una chiave similare #[code devDependencies], ma in questo ultimo caso di fa riferimento a plugin utilizzati solo nella fase di sviluppo, per coadiuvare il lavoro dello sviluppatore, e che non vengono utilizzati nel sistema in produzione. Ne vedremo degli esempi nel prosieguo.
   div(class="code changed")
       h4 /package.json viene aggiornato automaticamente
       code 
