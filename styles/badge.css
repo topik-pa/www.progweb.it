@@ -17,6 +17,10 @@
   background-color: rgba(239, 89, 49, .1);
   border-color: var(--html);
 }
+.badge.css {
+  background-color: rgba(0, 100, 158, .1);
+  border-color: var(--css);
+}
 .badge.js {
   background-color: rgba(245, 130, 51, .1);
   border-color: var(--js);

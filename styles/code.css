@@ -28,6 +28,9 @@
 .code.shell code pre::before {
   content: '$';
 }
+.code span.comment {
+  color: var(--dark-gray);
+}
 
 .code.changed pre {
   color: var(--light-gray);

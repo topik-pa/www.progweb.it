@@ -3,7 +3,7 @@ section(id="sideside")
     h3 Topic 
     ul 
       li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
-      li(class="css") CSS (#{posts.getPostCountByTopic('css')})
+      li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
       li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
       li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
       li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]
@@ -11,6 +11,7 @@ section(id="sideside")
   div(class="submenu months")
     h3 Archivio 
     ul 
+      li #[a(href="/marzo-2024", title="Marzo 2024") Marzo 2024 (#{posts.getPostCountByData(2024, 3)})]
       li #[a(href="/dicembre-2023", title="Dicembre 2023") Dicembre 2023 (#{posts.getPostCountByData(2023, 12)})]
       li #[a(href="/novembre-2023", title="Novembre 2023") Novembre 2023 (#{posts.getPostCountByData(2023, 11)})]
       li #[a(href="/ottobre-2023", title="Ottobre 2023") Ottobre 2023 (#{posts.getPostCountByData(2023, 10)})]

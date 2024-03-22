@@ -30,6 +30,14 @@ module.exports = app => {
     ]
     res.render('topic/html/html', { id: 'html', title: 'Articoli HTML', url: req.url, breadcrumbs, posts })
   })
+  app.get('/css', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Articoli CSS'
+      }
+    ]
+    res.render('topic/css/css', { id: 'css', title: 'Articoli CSS', url: req.url, breadcrumbs, posts })
+  })
   app.get('/javascript', (req, res) => {
     const breadcrumbs = [
       {
@@ -56,6 +64,20 @@ module.exports = app => {
   })
 
   // ARCHIVE
+  app.get('/marzo-2024', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Archivio marzo 2024'
+      }
+    ]
+    res.render('archive/mar2024/mar2024', {
+      id: 'mar2024',
+      title: 'Archivio marzo 2024',
+      url: req.url,
+      breadcrumbs,
+      posts
+    })
+  })
   app.get('/dicembre-2023', (req, res) => {
     const breadcrumbs = [
       {
@@ -141,6 +163,27 @@ module.exports = app => {
       })
   })
   // Specific
+  app.get('/css-selettore-has-esempi', (req, res) => {
+    const title = 'Il selettore :has() in CSS - descrizione ed esempi pratici'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/css-selettore-has/css-selettore-has',
+      {
+        id: 'css-selettore-has',
+        className: 'post',
+        title,
+        url: req.url,
+        breadcrumbs,
+        posts
+      })
+  })
   app.get('/node-setup-progetto', (req, res) => {
     const title = 'Setup di un progetto Node / Express'
     const breadcrumbs = [

@@ -1,0 +1,95 @@
+article
+  h1 #{title}
+  p(class="intro") Il selettore :has(), proposto nelle specifiche CSS level 4, fin dalla fine del 2023 è adottato dalla maggior parte dei browser: è giunto il momento di capire come utilizzare questa nuova opportunità.
+
+  h2 Il selettore :has() in CSS4
+  p Il selettore :has() è una delle 4 #[em pseudo-classi funzionali] (insieme a: :is(); :where() e :not()) e consente agli sviluppatori di selezionare elementi del DOM che contengono al loro interno elementi che rispondono al selettore passato come parametro nella funzione :has(). E' essenzialmente #[em un selettore che permentte di ottenere il "parent"] degli elementi definiti attraverso il parametro.
+  p Provo a fare un semplice esempio chiarificatore... 
+  div(class="code")
+    h4 Esempio 1 - selettore CSS :has()
+    code 
+      pre a:has(img)
+  p L'istruzione CSS qui sopra seleziona tutti gli elementi &lt;a&gt; che hanno al loro interno un elemento &lt;img&gt;.
+
+  h2 Altri esempi 
+  p Il selettore :has() può essere usato per in congiunzione con combinator o pseudo-selettori e può essere anche concatenato.
+  div(class="code")
+    h4 Esempio 2 - selettore CSS :has() in query più complesse
+    code 
+      pre
+        span(class="comment") /* Seleziona un &lt;dt&gt; che è immediatamente seguito da un ulteriore &lt;dt&gt; */
+      pre dt:has(+ dt)
+      pre
+      pre
+        span(class="comment") /* In combinazione con :not() per selezionare elementi &lt;section&gt; che non hanno titoli al loro interno */ 
+      pre section:not(:has(h1, h2, h3, h4, h5, h6))
+      pre 
+      pre
+        span(class="comment") /* L'ordine dei selettori usati ha rilevanza: qui si selezionano le &lt;section&gt; 
+      pre
+        span(class="comment") che hanno qualsiasi elemento che non sia un titolo */ 
+      pre section:has(:not(h1, h2, h3, h4, h5, h6))
+      pre
+      pre
+        span(class="comment") /* E' possibile concatenare i selettori :has() */
+      pre article:has(h2):has(ul)
+      pre
+      pre
+        span(class="comment") /* In combinazione con il selettore :is() */
+      pre :is(h1, h2, h3):has(+ :is(h2, h3, h4))
+  
+  p L'utilizzo di questo selettore permette di creare combinazioni veramente efficaci ma il rischio è quello di creare query poco comprensibili e potenzialmente poco performanti, sta allo sviluppatore utilizzarlo con il giusto criterio.
+
+  h2 Attenzione: non è possibile annidare :has() e utilizzare pseudo-elementi
+  p Se da un lato la concatenzaione di più selettori :has() è permessa (vedi esempio sopra), il "nesting" di tale selettore non è permesso a causa dei problemi di performance e di complessità logica che ne deriverebbero.
+  p Per ragioni simili anche l'utilizzo di pseudo-elementi dentro il selettore :has() è sconsigliato; in più la loro validità condizionale potrebbe introdurre cicli logici difficilmente gestibili.
+
+  h2 Compatibilità 
+  ul 
+    li Chrome &ge; 105
+    li Edge &ge; 105
+    li Safari &ge; 15.4
+    li Firefox &ge; 121
+    li Opera &ge; 91
+    li IE - Non supportato
+    li Chrome for Android &ge; 122
+    li Samsung Internet &ge; 23
+
+  aside(class="links")
+    h2 Link esterni 
+    ul 
+      li 
+        a(class="ext", href="https://www.w3.org/TR/selectors-4/#relational", target="_blanck") W3G Selectors Level 4
+      li 
+        a(class="ext", href="https://caniuse.com/css-has", target="_blanck") :has() CSS relational pseudo-class | Can I use... Support tables
+      
+  include /components/shared/coffee/coffee.pug
+  include /components/shared/share/share.pug
+
+block viewscripts 
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2024-03-22",
+      "dateModified": "2024-03-22",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{title}",
+      "image": "#{proj_url}/assets/images/post/004-css-selettore-has/css-selettore-has-min.png",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }
