@@ -3,10 +3,10 @@ section#side {
   padding-left: var(--view-padding);
 }
 
-#side .graph, #side .other  {
+#side .analysis {
   margin-bottom: var(--x-large-space);
 }
-#side .graph img, #side .other img {
+#side .analysis img {
   width: 100%;
   border: 1px solid var(--light-gray);
   box-sizing: border-box;

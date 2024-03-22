@@ -3,6 +3,11 @@ section#sideside {
   padding-left: var(--view-padding);
   border-right: none!important;
 }
+section#sideside .other img {
+  width: 100%;
+  border: 1px solid var(--light-gray);
+  box-sizing: border-box;
+}
 @media screen and (max-width: 768px) {
   section#sideside {
     width: 100%!important;
