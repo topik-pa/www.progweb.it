@@ -1,5 +1,6 @@
 .preview {
-  margin-bottom: var(--large-space);
+  margin-bottom: var(--x-large-space);
+  overflow: auto;
 }
 .preview img {
   width: 20%;
