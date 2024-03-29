@@ -1,0 +1,20 @@
+extends ../../layout.pug
+
+block append meta
+  title #{title} | #{proj_name}
+  meta(name="description" content=title)
+  meta(name="keywords" content="css, selettore, has")
+  link(rel="canonical", href=proj_url + url)
+
+  meta(name="og:url" content=proj_url + url)
+  meta(name="og:type" content="article")
+  meta(name="og:title" content=title)
+  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
+  meta(name="og:description" content="PWI - Programmazione Web Italia")
+  meta(name="og:image" content=proj_url + "/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-min.png")
+
+block main
+  main(class="tworows")
+    include ./javascript-html-tabella-dinamica-article.pug
+
+    include ../../../components/shared/sideside/sideside.pug

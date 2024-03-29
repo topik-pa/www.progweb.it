@@ -29,5 +29,6 @@
 @import "/views/500/500.css";
 
 /* POST */
+@import "/views/post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica.css";
 
 @import "./responsive.css";

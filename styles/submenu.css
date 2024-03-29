@@ -14,7 +14,7 @@
 .submenu li {
   list-style: none;
 }
-.submenu.topic li {
+.submenu.topic li, .submenu.coding li {
   border-left: var(--normal-space) solid var(--darker-gray);
   padding-left: var(--x-small-space)
 }

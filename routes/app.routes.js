@@ -62,6 +62,14 @@ module.exports = app => {
     ]
     res.render('topic/node/node', { id: 'node', title: 'Articoli Node.js', url: req.url, breadcrumbs, posts })
   })
+  app.get('/coding', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Esempi di codice'
+      }
+    ]
+    res.render('topic/coding/coding', { id: 'coding', title: 'Esempi di codice', url: req.url, breadcrumbs, posts })
+  })
 
   // ARCHIVE
   app.get('/marzo-2024', (req, res) => {
@@ -163,6 +171,27 @@ module.exports = app => {
       })
   })
   // Specific
+  app.get('/javascript-html-tabella-dinamica', (req, res) => {
+    const title = 'Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica',
+      {
+        id: 'javascript-html-tabella-dinamica',
+        className: 'post',
+        title,
+        url: req.url,
+        breadcrumbs,
+        posts
+      })
+  })
   app.get('/css-selettore-has-esempi', (req, res) => {
     const title = 'Il selettore :has() in CSS - descrizione ed esempi pratici'
     const breadcrumbs = [

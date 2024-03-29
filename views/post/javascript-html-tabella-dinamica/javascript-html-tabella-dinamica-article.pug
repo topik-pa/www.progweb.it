@@ -1,0 +1,166 @@
+article
+  h1 #{title}
+  p(class="intro") Funzionalità come il sorting e la paginazione permettono di interagire con una tabella in maniera più veloce ed efficente, spesso ci si affida a soluzioni di terzi, ma in questa guida vorrei farvi provare a sviluppare una tabella dinamica partendo da zero e utilizzando solo le versioni vanilla di HTML, JavaScript e CSS. Spero di esservi utile!
+
+  h2 Introduzione
+  p La nostra #[em tabella dinamica] si svilupperà in maniera progressiva partendo da una semplice soluzione statica con i dati tabellari scritti a mano dallo sviluppatore, procedendo con l'inserimento di dati ottenuti attraverso una chiamata HTTP e aggiungendo, infine, funzionalità più avanzate come la paginazione, il sorting e il filtering. Le varie sezioni saranno elaborate in momenti differenti e potrebbero non essere ancora disponibili: incoraggiate il mio lavoro condividendo questa pagina o mettendo un like!
+
+  h2 Una semplice tabella statica HTML 
+  p Per iniziare e per ripassare un poco l'argomento, sviluppiamo una #[em semplice tabella HTML] utilizzando i tag previsti nelle specifiche HTML5. Qui di seguito scrivo il codice che definisce una tabella per un insieme di ipotetici utenti.
+
+  div(class="code")
+    h4 Tabella 1 - Una semplice tabella HTML 
+    code 
+      pre &lt;table&gt;
+      pre   &lt;caption&gt;Tabella utenti&lt;/caption&gt;
+      pre   &lt;thead&gt;
+      pre     &lt;tr&gt;
+      pre       &lt;th&gt;Name&lt;/th&gt;
+      pre       &lt;th&gt;Username&lt;/th&gt;
+      pre       &lt;th&gt;Email&lt;/th&gt;
+      pre       &lt;th&gt;Phone&lt;/th&gt;
+      pre       &lt;th&gt;Website&lt;/th&gt;
+      pre       &lt;th&gt;Company&lt;/th&gt;
+      pre     &lt;/tr&gt;
+      pre   &lt;/thead&gt;
+      pre   &lt;tbody&gt;
+      pre     &lt;tr&gt;
+      pre       &lt;td&gt;Leanne Graham&lt;/td&gt;
+      pre       &lt;td&gt;Bret&lt;/td&gt;
+      pre       &lt;td&gt;Sincere@april.biz&lt;/td&gt;
+      pre       &lt;td&gt;1-770-736-8031 x56442"&lt;/td&gt;
+      pre       &lt;td&gt;hildegard.org&lt;/td&gt;
+      pre       &lt;td&gt;Romaguera-Crona"&lt;/td&gt;
+      pre     &lt;/tr&gt;
+      pre     &lt;tr&gt;
+      pre       &lt;td&gt;Ervin Howell"&lt;/td&gt;
+      pre       &lt;td&gt;Antonette&lt;/td&gt;
+      pre       &lt;td&gt;Shanna@melissa.tv&lt;/td&gt;
+      pre       &lt;td&gt;010-692-6593 x09125&lt;/td&gt;
+      pre       &lt;td&gt;anastasia.net&lt;/td&gt;
+      pre       &lt;td&gt;Deckow-Crist&lt;/td&gt;
+      pre     &lt;/tr&gt;
+      pre     &lt;tr&gt;
+      pre       &lt;td&gt;Clementine Bauch&lt;/td&gt;
+      pre       &lt;td&gt;Samantha&lt;/td&gt;
+      pre       &lt;td&gt;Nathan@yesenia.net&lt;/td&gt;
+      pre       &lt;td&gt;1-463-123-4447&lt;/td&gt;
+      pre       &lt;td&gt;ramiro.info&lt;/td&gt;
+      pre       &lt;td&gt;Romaguera-Jacobson&lt;/td&gt;
+      pre     &lt;/tr&gt;
+      pre   &lt;/tbody&gt;
+      pre &lt;table&gt;
+
+  p Aggiungo uno stile minimale per migliorare l'estetica e l'usabilità.
+
+  div(class="code")
+    h4 Tabella 1 - Qualche regola di stile
+    code 
+      pre table {
+      pre   width: 75%;
+      pre   margin: 2rem auto;
+      pre   color: #000;
+      pre   background-color: #FFF;
+      pre }
+      pre 
+      pre th {
+      pre   font-weight: bold;
+      pre }
+      pre 
+      pre
+        span(class="comment") /* Effetto hover sulle righe della tabella */ 
+      pre tbody tr:hover {
+      pre   color: #FFF;
+      pre   background-color: #000;
+      pre }
+      pre 
+      pre th, td {
+      pre   text-align: left;
+      pre   padding: 0.3rem 0.2rem;
+      pre   border: 1px solid #999;
+      pre }
+
+
+  p Il risultato sarà esattamente quello che potete vedere qui di seguito.
+
+  table
+    caption Tabella utenti
+    thead
+      tr
+        th Name
+        th Username
+        th Email
+        th Phone
+        th Website
+        th Company
+    tbody
+      tr
+        td Leanne Graham
+        td Bret
+        td Sincere@april.biz
+        td 1-770-736-8031 x56442
+        td hildegard.org
+        td Romaguera-Crona
+      tr
+        td Ervin Howell
+        td Antonette
+        td Shanna@melissa.tv
+        td 010-692-6593 x09125
+        td anastasia.net
+        td Deckow-Crist
+      tr
+        td Clementine Bauch
+        td Samana
+        td Naan@yesenia.net
+        td 1-463-123-4447
+        td ramiro.info
+        td Romaguera-Jacobson
+
+  p Abbiamo ricreato una semplice e funzionale tabella che mostra i dati di tre ipotetici utenti di un altrettanto ipotetico servizio. 
+  p Iniziamo ora, però, ad inserire maggiori funzionalità a tale tabella. Cominciamo con il pensare che i dati che popolano la tabella non debbano essere scritti a mano dallo sviluppatore ma potrebbero essere disponibili tramite una chiamata HTTP ad un server remoto.
+
+  h2 Popolare una tabella HTML con dati ottenuti da sorgenti remote 
+  p Sezione non ancora disponibile: se il capitolo precedente otterrà un buon riscontro mi affretterò a continuare con questa sezione.
+
+  h2 Aggiungere la paginazione 
+  p Sezione non ancora disponibile
+
+  h2 Aggiungere un ordinamento per colonne (funzionalità di sorting)
+  p Sezione non ancora disponibile
+
+  h2 Aggiungere un filtro (funzionalità di filtering)
+  p Sezione non ancora disponibile
+
+  h2 Conclusioni
+  p Sezione non ancora disponibile
+      
+  include /components/shared/coffee/coffee.pug
+  include /components/shared/share/share.pug
+
+block viewscripts 
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2024-03-29",
+      "dateModified": "2024-03-29",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{title}",
+      "image": "#{proj_url}/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-min.png",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }
