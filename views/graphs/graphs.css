@@ -1,17 +1,17 @@
-#graphs .entry img {
+#analisys .entry img {
   width: 75%;
   display: block;
   margin: 0 auto;
   margin-top: var(--normal-space);
 }
 
-#graphs .entry {
+#analisys .entry {
   margin-bottom: calc(var(--xx-large-space) * 2);
 }
 
 
 @media screen and (max-width: 768px) {
-  #graphs .entry img {
+  #analisys .entry img {
     width: 100%;
   }
 }

@@ -17,6 +17,13 @@ block main
   main
     section
       h1 Più di recente, ho scritto...
+
+      div(class="preview analysis")
+        h2 I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo
+        p La classifica dei 10 "linguaggi di programmazione" più utilizzati dagli sviluppatori nel mondo. <br> #[a(href="/grafici/#linguaggi-programmazione", title="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo") Guarda il grafico...]
+        a(href="/grafici/#linguaggi-programmazione", title="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo") 
+          img(src="/assets/images/graphs/linguaggi-programmazione-developer-preview-min.png", alt="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo")
+
       include ./post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-preview.pug
       include ./post/css-selettore-has/css-selettore-has-preview.pug
       include ./post/node-setup-progetto/node-setup-progetto-preview.pug

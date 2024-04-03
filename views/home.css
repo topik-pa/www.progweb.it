@@ -1,3 +1,7 @@
+#home main h1 {
+  font-size: var(--font-size-biggest);
+}
+
 #home main {
   display: flex;
   justify-content: space-between;
@@ -6,5 +10,8 @@
 #home main section {
   width: 60%;
   border-right: 1px dashed var(--lighter-gray);
-  
+}
+
+#home main .preview.analysis img {
+  width: 100%;
 }

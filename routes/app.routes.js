@@ -150,7 +150,7 @@ module.exports = app => {
         name: 'Analisi'
       }
     ]
-    res.render('graphs/graphs', { id: 'graphs', title: 'Analisi', url: req.url, breadcrumbs })
+    res.render('graphs/graphs', { id: 'analisys', title: 'Analisi', url: req.url, breadcrumbs })
   })
 
   // POST
