@@ -147,10 +147,10 @@ module.exports = app => {
   app.get('/grafici', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'Grafici'
+        name: 'Analisi'
       }
     ]
-    res.render('graphs/graphs', { id: 'graphs', title: 'Grafici', url: req.url, breadcrumbs })
+    res.render('graphs/graphs', { id: 'graphs', title: 'Analisi', url: req.url, breadcrumbs })
   })
 
   // POST
