@@ -68,16 +68,20 @@
   background-image: url('/assets/images/icons/node.png');
 }
 
+#main-logo span.mob {
+  display: none;
+}
+
 
 @media screen and (max-width: 1024px) {
   #main-logo {
-    font-size: var(--font-size-bigger);
+    font-size: var(--font-size-huge);
   }
   #main-logo .col {
     width: 3.5rem;
   }
   #main-logo .col.html {
-    right: 14;
+    right: 14rem;
   }
   #main-logo .col.css {
     right: 10.5rem;
@@ -92,7 +96,13 @@
 
 @media screen and (max-width: 768px) {
   #main-logo {
-    font-size: var(--font-size-big);
+    font-size: var(--font-size-biggest);
+  }
+  #main-logo span.mob {
+    display: inline;
+  }
+  #main-logo span.desk {
+    display: none;
   }
   #main-logo .col {
     width: 5rem;

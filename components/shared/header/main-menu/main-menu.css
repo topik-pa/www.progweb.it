@@ -51,6 +51,7 @@
     display: block;
     padding: var(--normal-space);
     font-weight: bold;
+    font-size: var(--font-size-bigger);
   }
   #main-menu ul {
     padding: var(--xx-large-space) var(--normal-space);
