@@ -72,6 +72,20 @@ module.exports = app => {
   })
 
   // ARCHIVE
+  app.get('/aprile-2024', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Archivio aprile 2024'
+      }
+    ]
+    res.render('archive/apr2024/apr2024', {
+      id: 'apr2024',
+      title: 'Archivio aprile 2024',
+      url: req.url,
+      breadcrumbs,
+      posts
+    })
+  })
   app.get('/marzo-2024', (req, res) => {
     const breadcrumbs = [
       {
@@ -171,6 +185,27 @@ module.exports = app => {
       })
   })
   // Specific
+  app.get('/programmazione-strutturata-oggetti-funzionale', (req, res) => {
+    const title = 'I tre paradigmi di programmazione: programmazione strutturata, ad oggetti e funzionale'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale',
+      {
+        id: 'programmazione-strutturata-oggetti-funzionale',
+        className: 'post',
+        title,
+        url: req.url,
+        breadcrumbs,
+        posts
+      })
+  })
   app.get('/javascript-html-tabella-dinamica', (req, res) => {
     const title = 'Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione'
     const breadcrumbs = [
