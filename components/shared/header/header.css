@@ -23,6 +23,9 @@ header section:nth-child(3) img {
 
 #toggle-dark {
   cursor: pointer;
+  color: var(--light-gray);
+  display: flex;
+  align-items: flex-end;
 }
 #toggle-dark::after {
   content: "Darkmode";
@@ -31,7 +34,6 @@ header section:nth-child(3) img {
   vertical-align: text-bottom;
   font-size: var(--font-size-very-small);
   font-style: italic;
-  color: var(--primary);
 }
 
 

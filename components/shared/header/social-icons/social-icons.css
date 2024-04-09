@@ -1,5 +1,10 @@
+#socials {
+  display: flex;
+  align-items: center;
+}
+
 #socials a {
-  margin-left: var(--small-space);
+  margin-left: var(--large-space);
   color: var(--primary);
-  font-size: var(--font-size-big);
+  font-size: var(--font-size-bigger);
 }
