@@ -14,14 +14,14 @@ article {
 }
 .intro:before {
   content: "\201C";
-  font-size: var(--font-size-biggest);
+  font-size: calc( var(--font-size-biggest) * 1.5 );
   position: absolute;
   left: 0;
   top: 0;
 }
 .intro:after {
   content: "\201C";
-  font-size: var(--font-size-biggest);
+  font-size: calc( var(--font-size-biggest) * 1.5 );
   transform: rotate(180deg);
   position: absolute;
   left: 0;
