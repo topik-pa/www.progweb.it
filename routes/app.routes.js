@@ -186,7 +186,7 @@ module.exports = app => {
   })
   // Specific
   app.get('/programmazione-strutturata-oggetti-funzionale', (req, res) => {
-    const title = 'I tre paradigmi di programmazione: programmazione strutturata, ad oggetti e funzionale'
+    const title = 'I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale'
     const breadcrumbs = [
       {
         name: 'Post',
