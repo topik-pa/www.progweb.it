@@ -4,6 +4,9 @@
   border: none;
   border-top: 1px solid var(--blue);
 }
+#share::before {
+  content: none;
+}
 #share h2 {
   color: var(--blue);
   text-align: center;

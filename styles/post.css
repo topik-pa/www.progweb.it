@@ -68,6 +68,15 @@ aside {
   padding: var(--x-large-space);
   margin-top: var(--x-large-space);
   border-left: var(--x-large-space) solid var(--lighter-gray);
+  position: relative;
+}
+aside::before {
+  content: 'Approfondimento';
+  position: absolute;
+  top: 0;
+  left: var(--x-large-space);
+  color: var(--light-gray);
+  font-style: italic;
 }
 aside h2 {
   margin-bottom: var(--x-large-space);

@@ -5,6 +5,9 @@
   border: none;
   border-top: 1px solid var(--red);
 }
+#coffee::before {
+  content: none;
+}
 #coffee h2 {
   color: var(--red);
   text-align: center;
