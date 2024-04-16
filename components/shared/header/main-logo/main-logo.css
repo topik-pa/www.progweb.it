@@ -45,27 +45,27 @@
 }
 #main-logo .col.html {
   background-color: rgba(239, 89, 49, .5);
-  background-image: url('/assets/images/icons/html.png');
+  background-image: url('/assets/images/icons/html-min.png');
   right: 20rem;
 }
 #main-logo .col.css {
   background-color: rgba(0, 100, 158, .5);
-  background-image: url('/assets/images/icons/css.png');
+  background-image: url('/assets/images/icons/css-min.png');
   right: 15rem;
 }
 #main-logo .col.js {
   background-color: rgba(245, 130, 51, .5);
-  background-image: url('/assets/images/icons/js.png');
+  background-image: url('/assets/images/icons/js-min.png');
   right: 10rem;
 }
 #main-logo .col.eng {
   background-color: rgba(249, 188, 16, .5);
-  background-image: url('/assets/images/icons/eng.png');
+  background-image: url('/assets/images/icons/eng-min.png');
   right: 5rem;
 }
 #main-logo .col.node {
   background-color: rgba(2, 110, 0, .5);
-  background-image: url('/assets/images/icons/node.png');
+  background-image: url('/assets/images/icons/node-min.png');
 }
 
 #main-logo span.mob {
