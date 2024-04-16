@@ -114,7 +114,7 @@ code {
   border-right: 1px dashed var(--lighter-gray);
   
 }
-.tworows section.sideside, .tworows section.side {
+.tworows .sideside, .tworows .side {
   width: 20%;
   border-right: none;
 }

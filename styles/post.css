@@ -1,7 +1,7 @@
 article {
   counter-reset: step;
 }
-.intro {
+article .intro {
   font-style: italic;
   font-weight: 500;
   position: relative;
@@ -12,14 +12,14 @@ article {
   text-align: center;
   color: var(--dark-gray);
 }
-.intro:before {
+article .intro:before {
   content: "\201C";
   font-size: calc( var(--font-size-biggest) * 1.5 );
   position: absolute;
   left: 0;
   top: 0;
 }
-.intro:after {
+article .intro:after {
   content: "\201C";
   font-size: calc( var(--font-size-biggest) * 1.5 );
   transform: rotate(180deg);
@@ -28,11 +28,11 @@ article {
   bottom: 0;
 }
 
-.cp_embed_wrapper {
+article .cp_embed_wrapper {
   margin: var(--large-space) 0 var(--xx-small-space);
 }
 
-.penref {
+article .penref {
   font-size: var(--font-size-small);
   font-style: italic;
 }
@@ -64,13 +64,13 @@ article .img-wrapper img {
   margin: var(--large-space) 0;
 }
 
-aside {
+article aside {
   padding: var(--x-large-space);
   margin-top: var(--x-large-space);
   border-left: var(--x-large-space) solid var(--lighter-gray);
   position: relative;
 }
-aside::before {
+article aside::before {
   content: 'Approfondimento';
   position: absolute;
   top: 0;
@@ -78,19 +78,22 @@ aside::before {
   color: var(--light-gray);
   font-style: italic;
 }
-aside h2 {
+article aside h2 {
   margin-bottom: var(--x-large-space);
 }
-aside h3 {
+article aside h3 {
   margin-top: 0;
 }
-aside li {
+article aside li {
   margin-bottom: var(--small-space);
 }
-aside.links {
+article aside.links {
   border-color: var(--blue);
 }
-aside.links h2::before {
+article aside.links::before {
+  content: none;
+}
+article aside.links h2::before {
   content: none;
 }
 

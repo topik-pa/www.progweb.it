@@ -1,4 +1,6 @@
-section#side {
+#side {
+  padding: var(--view-padding);
+  margin: var(--view-padding) 0;
   width: 20%!important;
   padding-left: var(--view-padding);
 }
@@ -13,7 +15,7 @@ section#side {
 }
 
 @media screen and (max-width: 768px) {
-  section#side {
+  #side {
     width: 100%!important;
     padding: 0;
   }

@@ -1,23 +1,23 @@
-header section {
+header > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header section:nth-child(1) {
+header > div:nth-child(1) {
   padding-bottom: var(--x-small-space);
 }
-header section:nth-child(2) {
+header > div:nth-child(2) {
   background-color: var(--primary);
   padding: var(--view-padding) 0;
   position: relative;
 }
-header section:nth-child(3) {
+header >div:nth-child(3) {
   border-bottom: 2px solid var(--primary);
   justify-content: flex-start;
   height: calc(var(--view-padding) * 2);
 }
-header section:nth-child(3) img { 
+header > div:nth-child(3) img { 
   display: none;
 }
 
@@ -38,10 +38,10 @@ header section:nth-child(3) img {
 
 
 @media screen and (max-width: 768px) {
-  header section:nth-child(3) {
+  header > div:nth-child(3) {
     justify-content: space-between;
   }
-  header section:nth-child(3) img { 
+  header > div:nth-child(3) img { 
     display: block;
     height: calc( (var(--view-padding) * 2) - .7rem);
     border-radius: 50%;

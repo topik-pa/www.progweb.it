@@ -3,18 +3,18 @@ footer {
   flex-direction: column;
   font-size: var(--font-size-small);
 }
-footer section {
+footer div {
   padding: var(--x-small-space) var(--view-padding);
 }
 
-footer section:nth-child(1) {
+footer div:nth-child(1) {
   background-color: var(--lighter-gray);
   text-align: center;
   padding: 0;
   padding-top: 8px;
 }
 
-footer section:nth-child(2) {
+footer div:nth-child(2) {
   text-align: center;
 }
 

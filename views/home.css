@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-#home main section {
+#home main section, #home main aside {
   width: 60%;
   border-right: 1px dashed var(--lighter-gray);
 }
