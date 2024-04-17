@@ -248,32 +248,3 @@ article
       
   include /components/shared/coffee/coffee.pug
   include /components/shared/share/share.pug
-
-block viewscripts 
-  //- script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
-  script(type='application/ld+json').
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "datePublished": "2023-12-24",
-      "dateModified": "2023-12-30",
-      "url": "#{proj_url + url}",
-      "name": "#{title}",
-      "headline": "#{title}",
-      "description": "#{title}",
-      "image": "#{proj_url}/assets/images/post/003-node-setup-progetto/node-setup-progetto-min.png",
-      "author": {
-        "@type": "Person",
-        "name": "#{owner}"
-      },
-      "copyrightHolder": {
-        "@type": "Person",
-        "name": "#{owner}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "#{proj_name}",
-        "url": "#{proj_url}",
-        "logo": "#{logo}"
-      }
-    }

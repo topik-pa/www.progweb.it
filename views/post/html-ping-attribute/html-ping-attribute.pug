@@ -18,3 +18,36 @@ block main
     include ./html-ping-attribute-article.pug
 
     include ../../../components/shared/sideside/sideside.pug
+
+block viewscripts 
+  script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2023-10-27",
+      "dateModified": "2023-10-28",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "L'attributo 'ping' del tag <a> in HTML5: a cosa serve e come utilizzarlo",
+      "description": "Definizione, uso ed esempi di codice per capire meglio come utilizzare l'attributo "ping" in HTML,
+      "about": {
+        "@type": "ComputerLanguage",
+        "name": "HTML"
+      },
+      "image": "#{proj_url}/assets/images/post/post-html-ping-attribute-cover-min.png",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }
