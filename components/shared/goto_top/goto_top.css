@@ -4,12 +4,12 @@
   bottom: 0;
   right: 0;
   background-color: var(--blue);
-  color: var(--secondary);
+  color: var(--white);
   border-radius: var(--border-radius-small);
-  padding: var(--x-small-space);
+  padding: var(--small-space);
   margin: var(--small-space);
   cursor: pointer;
-  font-size: var(--font-size-big);
+  font-size: var(--font-size-bigger);
   z-index: var(--gototop);
 }
 #goto_top:hover {
