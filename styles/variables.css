@@ -16,6 +16,7 @@
   --js: rgb(245, 130, 51);
   --eng: rgb(249, 188, 16);
   --node: rgb(2, 110, 0);
+  --coding: rgb(153, 153, 153);
 
   --primary: var(--darker-gray);
   --secondary: var(--white);
@@ -98,8 +99,17 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: var(--lighter-gray);
-    --secondary: var(--darker-gray);
+    --white:         #181818;
+    --lighter-gray:  #585858;
+    --light-gray:    #707070;
+    --gray:          #888888;
+    --dark-gray:     #A9A9A9;
+    --darker-gray:   #E0E0E0;
+    --black:         #FAFAFA;
+  
+    --primary: var(--darker-gray);
+    --secondary: var(--lighter-gray);
+    --link: var(--black);
   }
   .invert {
     filter: invert(1);

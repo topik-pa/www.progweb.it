@@ -23,7 +23,7 @@ header > div:nth-child(3) img {
 
 #toggle-dark {
   cursor: pointer;
-  color: var(--light-gray);
+  color: var(--primary);
   display: flex;
   align-items: flex-end;
 }

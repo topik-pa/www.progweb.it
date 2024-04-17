@@ -15,7 +15,7 @@
   list-style: none;
 }
 .submenu.topic li, .submenu.coding li {
-  border-left: var(--normal-space) solid var(--darker-gray);
+  border-left: var(--normal-space) solid var(--coding);
   padding-left: var(--x-small-space)
 }
 .submenu.topic li.html {

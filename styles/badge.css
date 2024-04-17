@@ -33,3 +33,7 @@
   background-color: rgba(2, 110, 0, .1);
   border-color: var(--node);
 }
+.badge.coding {
+  background-color: rgba(153, 153, 153, .1);
+  border-color: var(--coding);
+}
