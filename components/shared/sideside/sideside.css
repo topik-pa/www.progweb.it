@@ -25,6 +25,10 @@
   top: 0;
   aspect-ratio: 1;
 }
+#sideside .interview figure {
+  text-align: center;
+  margin-top: var(--large-space);
+}
 @media screen and (max-width: 768px) {
   #sideside {
     width: 100%!important;
