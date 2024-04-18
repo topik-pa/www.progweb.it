@@ -10,6 +10,21 @@
   border: 1px solid var(--light-gray);
   box-sizing: border-box;
 }
+#sideside .interview h3 {
+  position: relative;
+}
+#sideside .interview h3::before {
+  content: ' ';
+  display: inline-block;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('/assets/images/pwi-st-min.png');
+  position: absolute;
+  left: 0;
+  top: 0;
+  aspect-ratio: 1;
+}
 @media screen and (max-width: 768px) {
   #sideside {
     width: 100%!important;
