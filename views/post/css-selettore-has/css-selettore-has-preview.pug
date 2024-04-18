@@ -3,7 +3,11 @@ div(class="preview")
   h2
     a(href="/css-selettore-has-esempi", title="Il selettore :has() in CSS - descrizione ed esempi pratici") Il selettore :has() in CSS - descrizione ed esempi pratici
   a(href="/css-selettore-has-esempi", title="Il selettore :has() in CSS - descrizione ed esempi pratici") 
-    img(loading="lazy" src="/assets/images/post/004-css-selettore-has/css-selettore-has-min.png", alt="Il selettore :has() in CSS - descrizione ed esempi pratici")
+    picture 
+      source(media="(min-width: 769px)", srcset="/assets/images/post/004-css-selettore-has/css-selettore-has-s-min.png")
+      source(media="(min-width: 320px)", srcset="/assets/images/post/004-css-selettore-has/css-selettore-has-m-min.png")
+      img(loading="lazy" src="/assets/images/post/004-css-selettore-has/css-selettore-has-min.png", alt="Il selettore :has() in CSS - descrizione ed esempi pratici")
+
   p Il selettore :has(), proposto nelle specifiche CSS level 4, fin dalla fine del 2023 è adottato dalla maggior parte dei browser: è giunto il momento di capire come utilizzare questa nuova opportunità.
 
   h2 Il selettore :has() in CSS4

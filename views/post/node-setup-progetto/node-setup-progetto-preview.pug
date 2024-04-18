@@ -3,7 +3,11 @@ div(class="preview")
   h2
     a(href="/node-setup-progetto", title="Setup di un progetto Node / Express") Setup di un progetto Node / Express
   a(href="/node-setup-progetto", title="Setup di un progetto Node / Express") 
-    img(loading="lazy" src="/assets/images/post/003-node-setup-progetto/node-setup-progetto-min.png", alt="Setup di un progetto Node / Express")
+    picture 
+      source(media="(min-width: 769px)", srcset="/assets/images/post/003-node-setup-progetto/node-setup-progetto-s-min.png")
+      source(media="(min-width: 320px)", srcset="/assets/images/post/003-node-setup-progetto/node-setup-progetto-m-min.png")
+      img(loading="lazy" src="/assets/images/post/003-node-setup-progetto/node-setup-progetto-min.png", alt="Setup di un progetto Node / Express")
+
   p Esistono tante guide per fare il setup di un progetto Node / Express, in questa vorrei però aggiungere la descrizione di qualche strumento e metodologia applicati in ambito professionale. Spero che questo contribuisca alla condivisione dell'articolo..
   h3 Cosa faremo
   p Procederemo al setup di un piccolo progetto Web, alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo che spesso troviamo applicate in ambienti di lavoro professionali. Come anticipato, non ci focalizzeremo sulla sola implementazione tecnica, ma agiremo a più ampio spetto introducento concetti e pratiche provenienti dall'ambito professionale. #[a(href="/node-setup-progetto", title="Setup di un progetto Node / Express") Continua...]

@@ -3,7 +3,11 @@ div(class="preview")
   h2
     a(href="/javascript-closure", title="Le Closure in JavaScript") Le Closure in JavaScript
   a(href="/javascript-closure", title="Le Closure in JavaScript") 
-    img(loading="lazy" src="/assets/images/post/post-js-closure-cover-min.png", alt="Le Closure in JavaScript")
+    picture 
+      source(media="(min-width: 769px)", srcset="/assets/images/post/post-js-closure-cover-s-min.png")
+      source(media="(min-width: 320px)", srcset="/assets/images/post/post-js-closure-cover-m-min.png")
+      img(loading="lazy" src="/assets/images/post/post-js-closure-cover-min.png", alt="Le Closure in JavaScript")
+
   p Tutte le volte che ho dovuto affrontare il discorso CLOSURE in JS finivo per avere una impressione riassumibile nella frase: "Tutto molto bello, ma... QUINDI?"
   h3 Cosa sono le closure in JavaScript?
   p Una closure è la capacità di una funzione, definita all'interno di un'altra funzione contenitrice, di accedere allo scope della funzione esterna, anche dopo che questa ha cessato la sua esecuzione. Attraverso le closure (ed ad un apposito handler), insomma, posso accedere allo scope (metodi e attributi) di una funzione (quella contenitrice) da un qualsiasi ambito esterno. #[a(href="/javascript-closure", title="Le Closure in JavaScript") Continua...]

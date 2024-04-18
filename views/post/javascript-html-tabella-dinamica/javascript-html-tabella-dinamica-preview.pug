@@ -3,7 +3,11 @@ div(class="preview")
   h2
     a(href="/javascript-html-tabella-dinamica", title="Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione") Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione
   a(href="/javascript-html-tabella-dinamica", title="Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione") 
-    img(loading="lazy" src="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-min.png", alt="Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione")
+    picture 
+      source(media="(min-width: 769px)", srcset="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-s-min.png")
+      source(media="(min-width: 320px)", srcset="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-m-min.png")
+      img(loading="lazy" src="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-min.png", alt="Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione")
+
   p Funzionalità come il sorting e la paginazione permettono di interagire con una tabella in maniera più veloce ed efficente, spesso ci si affida a soluzioni di terzi, ma in questa guida vorrei farvi provare a sviluppare una tabella dinamica partendo da zero e utilizzando solo le versioni vanilla di HTML, JavaScript e CSS. Spero di esservi utile!
 
   h2 Introduzione

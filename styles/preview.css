@@ -3,7 +3,8 @@
   overflow: auto;
 }
 .preview img {
-  width: 20%;
+  width: 35%;
+  max-width: 360px;
   margin: 0 var(--x-large-space) 0 0;
   float: left;
   border: 1px solid var(--lighter-gray);
@@ -26,6 +27,7 @@
 @media screen and (max-width: 768px) {
   .preview img {
     width: 100%;
+    max-width: initial;
     float: none;
     margin: 0;
   }
