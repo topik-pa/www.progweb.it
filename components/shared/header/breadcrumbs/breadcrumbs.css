@@ -9,7 +9,9 @@
 }
 
 #breadcrumbs nav {
-  margin-left: var(--x-small-space);
+  display: flex;
+  align-items: center;
+  margin: var(--x-small-space) var(--x-small-space);
 }
 
 #breadcrumbs span, #breadcrumbs a {
@@ -21,9 +23,31 @@
   margin: .2rem;
   color: var(--primary);
 }
+#breadcrumbs a:last-child {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
 #breadcrumbs a {
   color: var(--primary);
 }
 #breadcrumbs a[href] {
   color: var(--link);
+}
+
+@media screen and (max-width: 1024px) {
+  #breadcrumbs a:last-child {
+    max-width: 34rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #breadcrumbs a:last-child {
+    max-width: 17rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  #breadcrumbs a:last-child {
+    max-width: 12rem;
+  }
 }
