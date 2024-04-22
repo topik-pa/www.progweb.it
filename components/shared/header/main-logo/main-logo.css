@@ -5,6 +5,7 @@
 
 #main-logo img {
   height: 4.3rem;
+  width: auto;
   border-radius: 50%;
   border: 1px solid var(--black);
   margin: 0 var(--view-padding);
