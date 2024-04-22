@@ -16,7 +16,7 @@ block append meta
 block main
   main
     section
-      h1 Più di recente, #[br] &nbsp; abbiamo scritto...
+      h1 Più di recente, su PWI...
 
       div(class="preview analysis")
         h2 I framework Web più utilizzati dagli sviluppatori
@@ -25,7 +25,7 @@ block main
           picture 
             source(media="(max-width: 414px)", srcset="/assets/images/graphs/framework-web-developer-preview-s-min.png")
             source(media="(max-width: 768px)", srcset="/assets/images/graphs/framework-web-developer-preview-m-min.png")
-            img(src="/assets/images/graphs/framework-web-developer-preview-min.png", alt="I framework Web più utilizzati dagli sviluppatori")
+            img(fetchpriority="high" src="/assets/images/graphs/framework-web-developer-preview-min.png", alt="I framework Web più utilizzati dagli sviluppatori")
 
       include ./post/programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale-article-preview.pug
 

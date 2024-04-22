@@ -118,3 +118,9 @@ code {
   width: 20%;
   border-right: none;
 }
+
+
+
+#contacts footer div:first-child div, #privacy footer div:first-child div {
+  display: none;
+}
