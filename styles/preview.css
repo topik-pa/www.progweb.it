@@ -4,6 +4,7 @@
 }
 .preview img {
   width: 35%;
+  height: auto;
   max-width: 360px;
   margin: 0 var(--x-large-space) 0 0;
   float: left;

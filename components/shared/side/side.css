@@ -10,6 +10,7 @@
 }
 #side .analysis img {
   width: 100%;
+  height: auto;
   border: 1px solid var(--light-gray);
   box-sizing: border-box;
 }
