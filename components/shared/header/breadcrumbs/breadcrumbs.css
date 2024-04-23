@@ -25,7 +25,7 @@
 }
 #breadcrumbs a:last-child {
   white-space: nowrap;
-  overflow-x: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 #breadcrumbs a {
