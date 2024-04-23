@@ -17,3 +17,10 @@
   height: auto;
   max-width: initial;
 }
+
+
+@media screen and (max-width: 768px) {
+  #home main aside {
+    border-right: none;
+  }
+}
