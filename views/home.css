@@ -23,4 +23,7 @@
   #home main aside {
     border-right: none;
   }
+  #home main .preview:nth-child(n+9) {
+    display: none;
+  }
 }
