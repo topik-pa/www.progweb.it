@@ -27,11 +27,12 @@
 
 #home main .fb-page-wrap {
   width: 100%;
-  margin: var(--x-large-space) 0;
-  padding: var(--x-large-space) var(--normal-space);
+  margin: var(--xx-large-space) auto;
+  padding: var(--x-large-space) 0;
   text-align: center;
   border-bottom: 1px solid var(--lighter-gray);
   border-top: 1px solid var(--lighter-gray);
+  border-right: none;
 }
 
 
