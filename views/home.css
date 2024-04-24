@@ -18,6 +18,13 @@
   max-width: initial;
 }
 
+#home main .viewall {
+  margin: var(--xx-large-space) auto;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
 
 @media screen and (max-width: 768px) {
   #home main aside {
