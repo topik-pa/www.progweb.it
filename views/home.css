@@ -25,6 +25,15 @@
   width: 50%;
 }
 
+#home main .fb-page-wrap {
+  width: 100%;
+  margin: var(--x-large-space) 0;
+  padding: var(--x-large-space) var(--normal-space);
+  text-align: center;
+  border-bottom: 1px solid var(--lighter-gray);
+  border-top: 1px solid var(--lighter-gray);
+}
+
 
 @media screen and (max-width: 768px) {
   #home main aside {
