@@ -31,6 +31,16 @@ app.use((req, res, next) => {
 // Use absolute path in pug imports
 app.locals.basedir = path.join(__dirname, '/')
 
+// Set custom headers
+app.use(function (req, res, next) {
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000')
+  res.setHeader('Content-Security-Policy', 'upgrade-insecure-requests')
+  res.setHeader('Content-Security-Policy', 'block-all-mixed-content')
+  res.setHeader('Content-Security-Policy', 'frame-ancestors \'none\'')
+  res.setHeader('X-Frame-Options', 'deny')
+  next()
+})
+
 // ROUTES
 require('./routes/api.routes')(app)
 require('./routes/app.routes')(app)
