@@ -42,12 +42,12 @@ app.use(function (req, res, next) {
   next()
 })
 
-app.use(function (request, response, next) {
+/* app.use(function (request, response, next) {
   if (process.env.TOHTTPS && !request.secure) {
     return response.redirect('https://' + request.headers.host + request.url)
   }
   next()
-})
+}) */
 
 // ROUTES
 require('./routes/api.routes')(app)
