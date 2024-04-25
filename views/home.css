@@ -1,5 +1,5 @@
 #home main h1 {
-  font-size: var(--font-size-biggest);
+  font-size: var(--font-size-huge);
 }
 
 #home main {
@@ -30,8 +30,8 @@
   margin: var(--xx-large-space) auto;
   padding: var(--x-large-space) 0;
   text-align: center;
-  border-bottom: 1px solid var(--lighter-gray);
-  border-top: 1px solid var(--lighter-gray);
+  border-bottom: 1px solid var(--primary);
+  border-top: 1px solid var(--primary);
   border-right: none;
 }
 

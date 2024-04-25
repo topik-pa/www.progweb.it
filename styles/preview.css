@@ -13,7 +13,7 @@
 }
 .preview .published {
   font-size: var(--font-size-small);
-  text-align: right;
+  display: inline-block;
   font-style: italic;
   margin-top: var(--normal-space);
 }

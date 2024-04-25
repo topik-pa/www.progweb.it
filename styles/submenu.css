@@ -5,11 +5,9 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--darker-gray);
-  font-weight: bold;
   border-top: 1px dashed var(--darker-gray);
   border-bottom: 1px dashed var(--darker-gray);
   padding: var(--small-space) 0;
-  font-size: 90%;
 }
 .submenu li {
   list-style: none;
