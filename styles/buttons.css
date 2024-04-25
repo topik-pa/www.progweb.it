@@ -3,12 +3,13 @@
   display: inline-block;
   margin: .5rem;
   text-decoration: none;
-  font-weight: 500;
-  background: var(--white);
+  font-weight: bold;
+  background: var(--secondary);
   padding: 0.7rem 2rem;
-  color: var(--blue);
+  color: var(--darker-gray);
   cursor: pointer;
   border: 1px solid var(--darker-gray);
+  font-size: var(--font-size-big);
 }
 .btn:hover {
   filter: brightness(90%);
@@ -17,12 +18,14 @@
 .btn.secondary {
   background: var(--secondary);
   color: var(--primary);
+  font-weight: normal;
 }
 
 .btn.tertiary {
   background: transparent;
   color: var(--secondary);
   border-color: var(--light-gray);
+  font-weight: normal;
 }
 
 .btn.disabled {
