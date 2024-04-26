@@ -49,20 +49,10 @@ app.use(function (req, res, next) {
   next()
 }) */
 app.use((req, res, next) => {
-  console.log('****')
-  console.log(req)
-  console.log('****')
-  console.log(res)
   if (process.env.NODE_ENV === 'production') {
-    console.log('****production')
-    console.log('****headers')
-    console.log(req.headers)
-    /* if (req.headers.host === 'www.progweb.it') {
-      return res.redirect(301, 'https://www.progweb.it')
-    }
     if (req.headers['x-forwarded-proto'] !== 'https') {
       return res.redirect('https://' + req.headers.host + req.url)
-    } else { return next() } */
+    } else { return next() }
   } else { return next() }
 })
 
