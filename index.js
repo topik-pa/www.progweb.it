@@ -36,18 +36,13 @@ app.use(function (req, res, next) {
   res.setHeader('Strict-Transport-Security', 'max-age=31536000')
   res.setHeader('Upgrade-insecure-requests', '1')
   // eslint-disable-next-line max-len
-  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://connect.facebook.net/ https://www.statcounter.com/ https://platform.linkedin.com/ https://www.linkedin.com/ \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' https://www.paypalobjects.com/ https://www.paypal.com/ data:; object-src \'none\'; frame-src https://c.statcounter.com/ https://www.facebook.com/ https://www.linkedin.com/ \'self\'; form-action \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
+  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://connect.facebook.net/ https://www.statcounter.com/ https://platform.linkedin.com/ https://www.linkedin.com/ \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' https://www.paypalobjects.com/ https://www.paypal.com/ data:; object-src \'none\'; frame-src https://c.statcounter.com/ https://www.facebook.com/ https://www.linkedin.com/ \'self\'; form-action https://www.paypal.com/ \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
   res.setHeader('X-Content-Type-Options', 'nosniff')
   res.setHeader('X-Frame-Options', 'deny')
   next()
 })
 
-/* app.use(function (request, response, next) {
-  if (process.env.TOHTTPS && !request.secure) {
-    return response.redirect('https://' + request.headers.host + request.url)
-  }
-  next()
-}) */
+// HTTPS redirect server-side
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
     if (req.headers['x-forwarded-proto'] !== 'https') {
