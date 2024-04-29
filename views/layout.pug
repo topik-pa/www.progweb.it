@@ -40,7 +40,7 @@ html(lang="it")
       meta(name="author" content=owner)
       link(rel="shortcut icon", href="/public/favicon.ico", type="image/x-icon")
       meta(name="google-site-verification" content=googleSiteVerification)
-    script. 
+    script(nonce=nonce). 
       if (localStorage.getItem('dark')) document.documentElement.classList.add('dark')
     if prod
         link(rel="stylesheet", type="text/css", href="/dist/main.css")
@@ -62,7 +62,7 @@ html(lang="it")
     if prod
       div(id="fb-root")
       script(async, defer, crossorigin="anonymous", src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0&appId=" + fbAppId), nonce="rnfjqRGL")
-      script.
+      script(nonce=nonce).
         var sc_project = #{sc_project};
          var sc_invisible = 1;
          var sc_security = "#{sc_security}";

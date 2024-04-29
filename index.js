@@ -4,6 +4,7 @@ const { I18n } = require('i18n')
 const path = require('path')
 const compression = require('compression')
 require('dotenv').config()
+const crypto = require('crypto')
 const PORT = process.env.PORT || 3002
 
 app.set('views', './views')
@@ -32,12 +33,14 @@ app.use((req, res, next) => {
 // Use absolute path in pug imports
 app.locals.basedir = path.join(__dirname, '/')
 
+// Add nonce attribute
+const nonce = crypto.randomUUID()
 // Set custom headers
 app.use(function (req, res, next) {
   res.setHeader('Strict-Transport-Security', 'max-age=31536000')
   res.setHeader('Upgrade-insecure-requests', '1')
   // eslint-disable-next-line max-len
-  res.setHeader('Content-Security-Policy', 'default-src \'none\'; script-src https://connect.facebook.net/ https://www.statcounter.com/ https://platform.linkedin.com/ https://www.linkedin.com/ https://cpwebassets.codepen.io/ \'self\' \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' https://www.paypalobjects.com/ https://www.paypal.com/ https://c.statcounter.com/ data:; object-src \'none\'; frame-src https://c.statcounter.com/ https://www.facebook.com/ https://web.facebook.com/ https://www.linkedin.com/ https://codepen.io/ \'self\'; form-action https://www.paypal.com/ \'self\'; font-src \'self\'; media-src \'self\'; connect-src https://c.statcounter.com/ \'self\'; frame-ancestors \'none\'; base-uri \'none\'')
+  res.setHeader('Content-Security-Policy', `default-src 'none'; script-src https://connect.facebook.net/ https://www.statcounter.com/ https://platform.linkedin.com/ https://www.linkedin.com/ https://cpwebassets.codepen.io/ 'self' 'nonce-${nonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' https://www.paypalobjects.com/ https://www.paypal.com/ https://c.statcounter.com/ data:; object-src 'none'; frame-src https://c.statcounter.com/ https://www.facebook.com/ https://web.facebook.com/ https://www.linkedin.com/ https://codepen.io/ 'self'; form-action https://www.paypal.com/ 'self'; font-src 'self'; media-src 'self'; connect-src https://c.statcounter.com/ 'self'; frame-ancestors 'none'; base-uri 'none'`)
   res.setHeader('X-Content-Type-Options', 'nosniff')
   res.setHeader('X-Frame-Options', 'deny')
   next()
@@ -65,7 +68,7 @@ function shouldCompress (req, res) {
 
 // ROUTES
 require('./routes/api.routes')(app)
-require('./routes/app.routes')(app)
+require('./routes/app.routes')(app, nonce)
 // Handle 404
 app.use(function (req, res) {
   res.status(400)

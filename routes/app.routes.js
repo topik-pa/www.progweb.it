@@ -1,8 +1,8 @@
 const posts = require('../assets/data/post.js')
 
-module.exports = app => {
+module.exports = (app, nonce) => {
   app.get('/', (req, res) => {
-    res.render('home', { id: 'home', title: 'Home', url: req.url, posts })
+    res.render('home', { id: 'home', title: 'Home', url: req.url, posts, nonce })
   })
   app.get('/contatti', (req, res) => {
     const breadcrumbs = [
@@ -10,7 +10,7 @@ module.exports = app => {
         name: 'Contatti'
       }
     ]
-    res.render('contacts/contacts', { id: 'contacts', title: 'Contatti', url: req.url, breadcrumbs })
+    res.render('contacts/contacts', { id: 'contacts', title: 'Contatti', url: req.url, breadcrumbs, nonce })
   })
   app.get('/privacy', (req, res) => {
     const breadcrumbs = [
@@ -18,7 +18,7 @@ module.exports = app => {
         name: 'Privacy'
       }
     ]
-    res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', url: req.url, breadcrumbs })
+    res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', url: req.url, breadcrumbs, nonce })
   })
 
   // TOPIC
@@ -28,7 +28,7 @@ module.exports = app => {
         name: 'Articoli HTML'
       }
     ]
-    res.render('topic/html/html', { id: 'html', title: 'Articoli HTML', url: req.url, breadcrumbs, posts })
+    res.render('topic/html/html', { id: 'html', title: 'Articoli HTML', url: req.url, breadcrumbs, posts, nonce })
   })
   app.get('/css', (req, res) => {
     const breadcrumbs = [
@@ -36,7 +36,7 @@ module.exports = app => {
         name: 'Articoli CSS'
       }
     ]
-    res.render('topic/css/css', { id: 'css', title: 'Articoli CSS', url: req.url, breadcrumbs, posts })
+    res.render('topic/css/css', { id: 'css', title: 'Articoli CSS', url: req.url, breadcrumbs, posts, nonce })
   })
   app.get('/javascript', (req, res) => {
     const breadcrumbs = [
@@ -44,7 +44,14 @@ module.exports = app => {
         name: 'Articoli JavaScript'
       }
     ]
-    res.render('topic/js/js', { id: 'javascript', title: 'Articoli JavaScript', url: req.url, breadcrumbs, posts })
+    res.render('topic/js/js', {
+      id: 'javascript',
+      title: 'Articoli JavaScript',
+      url: req.url,
+      breadcrumbs,
+      posts,
+      nonce
+    })
   })
   app.get('/engineering', (req, res) => {
     const breadcrumbs = [
@@ -52,7 +59,7 @@ module.exports = app => {
         name: 'Articoli Engineering'
       }
     ]
-    res.render('topic/eng/eng', { id: 'eng', title: 'Articoli Engineering', url: req.url, breadcrumbs, posts })
+    res.render('topic/eng/eng', { id: 'eng', title: 'Articoli Engineering', url: req.url, breadcrumbs, posts, nonce })
   })
   app.get('/nodejs', (req, res) => {
     const breadcrumbs = [
@@ -60,7 +67,7 @@ module.exports = app => {
         name: 'Articoli Node.js'
       }
     ]
-    res.render('topic/node/node', { id: 'node', title: 'Articoli Node.js', url: req.url, breadcrumbs, posts })
+    res.render('topic/node/node', { id: 'node', title: 'Articoli Node.js', url: req.url, breadcrumbs, posts, nonce })
   })
   app.get('/coding', (req, res) => {
     const breadcrumbs = [
@@ -68,7 +75,14 @@ module.exports = app => {
         name: 'Esempi di codice'
       }
     ]
-    res.render('topic/coding/coding', { id: 'coding', title: 'Esempi di codice', url: req.url, breadcrumbs, posts })
+    res.render('topic/coding/coding', {
+      id: 'coding',
+      title: 'Esempi di codice',
+      url: req.url,
+      breadcrumbs,
+      posts,
+      nonce
+    })
   })
 
   // ARCHIVE
@@ -83,7 +97,8 @@ module.exports = app => {
       title: 'Archivio aprile 2024',
       url: req.url,
       breadcrumbs,
-      posts
+      posts,
+      nonce
     })
   })
   app.get('/marzo-2024', (req, res) => {
@@ -97,7 +112,8 @@ module.exports = app => {
       title: 'Archivio marzo 2024',
       url: req.url,
       breadcrumbs,
-      posts
+      posts,
+      nonce
     })
   })
   app.get('/dicembre-2023', (req, res) => {
@@ -111,7 +127,8 @@ module.exports = app => {
       title: 'Archivio dicembre 2023',
       url: req.url,
       breadcrumbs,
-      posts
+      posts,
+      nonce
     })
   })
   app.get('/novembre-2023', (req, res) => {
@@ -125,7 +142,8 @@ module.exports = app => {
       title: 'Archivio novembre 2023',
       url: req.url,
       breadcrumbs,
-      posts
+      posts,
+      nonce
     })
   })
   app.get('/ottobre-2023', (req, res) => {
@@ -139,7 +157,8 @@ module.exports = app => {
       title: 'Archivio ottobre 2023',
       url: req.url,
       breadcrumbs,
-      posts
+      posts,
+      nonce
     })
   })
   app.get('/settembre-2023', (req, res) => {
@@ -153,7 +172,8 @@ module.exports = app => {
       title: 'Archivio settembre 2023',
       url: req.url,
       breadcrumbs,
-      posts
+      posts,
+      nonce
     })
   })
 
@@ -164,7 +184,7 @@ module.exports = app => {
         name: 'Analisi'
       }
     ]
-    res.render('graphs/graphs', { id: 'analisys', title: 'Analisi', url: req.url, breadcrumbs })
+    res.render('graphs/graphs', { id: 'analisys', title: 'Analisi', url: req.url, breadcrumbs, nonce })
   })
 
   // POST
@@ -181,7 +201,8 @@ module.exports = app => {
         title: 'Tutti i Post',
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   // Specific
@@ -203,7 +224,8 @@ module.exports = app => {
         title,
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   app.get('/javascript-html-tabella-dinamica', (req, res) => {
@@ -224,7 +246,8 @@ module.exports = app => {
         title,
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   app.get('/css-selettore-has-esempi', (req, res) => {
@@ -245,7 +268,8 @@ module.exports = app => {
         title,
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   app.get('/node-setup-progetto', (req, res) => {
@@ -266,7 +290,8 @@ module.exports = app => {
         title,
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   app.get('/architettura-del-sw-definizione-obiettivi', (req, res) => {
@@ -287,7 +312,8 @@ module.exports = app => {
         title: postTitle,
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   app.get('/html-attributo-ping', (req, res) => {
@@ -307,7 +333,8 @@ module.exports = app => {
         title: 'L\'attributo \'ping\' del tag <a> in HTML',
         url: req.url,
         breadcrumbs,
-        posts
+        posts,
+        nonce
       })
   })
   app.get('/javascript-closure', (req, res) => {
@@ -321,6 +348,6 @@ module.exports = app => {
       }
     ]
     res.render('post/javascript-closure/javascript-closure',
-      { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs, posts })
+      { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs, posts, nonce })
   })
 }
