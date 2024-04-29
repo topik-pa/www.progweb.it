@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const { I18n } = require('i18n')
 const path = require('path')
-const compression = require('compression')
+// const compression = require('compression')
 require('dotenv').config()
 const crypto = require('crypto')
 const PORT = process.env.PORT || 3002
@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 })
 
 // Compress responses if browser is capable
-app.use(compression({ filter: shouldCompress }))
+/* app.use(compression({ filter: shouldCompress }))
 function shouldCompress (req, res) {
   if (req.headers['x-no-compression']) {
     // don't compress responses with this request header
@@ -64,7 +64,7 @@ function shouldCompress (req, res) {
   }
   // fallback to standard filter function
   return compression.filter(req, res)
-}
+} */
 
 // ROUTES
 require('./routes/api.routes')(app)
