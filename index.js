@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const { I18n } = require('i18n')
 const path = require('path')
+const compression = require('compression')
 require('dotenv').config()
 const PORT = process.env.PORT || 3002
 
@@ -50,6 +51,17 @@ app.use((req, res, next) => {
     } else { return next() }
   } else { return next() }
 })
+
+// Compress responses if browser is capable
+app.use(compression({ filter: shouldCompress }))
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false
+  }
+  // fallback to standard filter function
+  return compression.filter(req, res)
+}
 
 // ROUTES
 require('./routes/api.routes')(app)
