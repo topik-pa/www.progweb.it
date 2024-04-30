@@ -350,4 +350,12 @@ module.exports = (app, nonce) => {
     res.render('post/javascript-closure/javascript-closure',
       { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs, posts, nonce })
   })
+  // Sitemap.xml
+  app.get('/sitemap.xml', function (req, res) {
+    res.sendFile('public/sitemap.xml', { root: '.' })
+  })
+  // Robots.txt
+  app.get('/robots.txt', function (req, res) {
+    res.sendFile('public/robots.txt', { root: '.' })
+  })
 }

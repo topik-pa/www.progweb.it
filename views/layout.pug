@@ -61,7 +61,7 @@ html(lang="it")
       script(src='/scripts/index.js', type='module')
     if prod
       div(id="fb-root")
-      script(async, defer, crossorigin="anonymous", src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0&appId=" + fbAppId), nonce="rnfjqRGL")
+      script(async, defer, crossorigin="anonymous", src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0&appId=" + fbAppId))
       script(nonce=nonce).
         var sc_project = #{sc_project};
          var sc_invisible = 1;
