@@ -2,10 +2,30 @@ const express = require('express')
 const app = express()
 const { I18n } = require('i18n')
 const path = require('path')
-// const compression = require('compression')
+const compression = require('compression')
 require('dotenv').config()
 const crypto = require('crypto')
 const PORT = process.env.PORT || 3002
+
+// HTTPS redirect server-side
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect('https://' + req.headers.host + req.url)
+    } else { return next() }
+  } else { return next() }
+})
+
+// Compress responses if browser is capable
+app.use(compression({ filter: shouldCompress }))
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    // don't compress responses with this request header
+    return false
+  }
+  // fallback to standard filter function
+  return compression.filter(req, res)
+}
 
 app.set('views', './views')
 app.set('view engine', 'pug')
@@ -45,26 +65,6 @@ app.use(function (req, res, next) {
   res.setHeader('X-Frame-Options', 'deny')
   next()
 })
-
-// HTTPS redirect server-side
-app.use((req, res, next) => {
-  if (process.env.NODE_ENV === 'production') {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-      return res.redirect('https://' + req.headers.host + req.url)
-    } else { return next() }
-  } else { return next() }
-})
-
-// Compress responses if browser is capable
-/* app.use(compression({ filter: shouldCompress }))
-function shouldCompress (req, res) {
-  if (req.headers['x-no-compression']) {
-    // don't compress responses with this request header
-    return false
-  }
-  // fallback to standard filter function
-  return compression.filter(req, res)
-} */
 
 // ROUTES
 require('./routes/api.routes')(app)
