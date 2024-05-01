@@ -5,8 +5,8 @@ block append meta
   meta(name="description" content=proj_acronim + " - " + proj_name + " - " + proj_tagline)
   meta(name="keywords" content="html, css, javascript, programmazione, sviluppo, web, italia")
   link(rel="canonical", href=proj_url)
-  link(rel="preload", href="/assets/images/graphs/framework-web-developer-preview-s-min.png", as="image", type="image/x-png")
-  link(rel="preload", href="/assets/images/graphs/framework-web-developer-preview-m-min.png", as="image", type="image/x-png")
+  //- link(rel="preload", href="/assets/images/graphs/framework-web-developer-preview-s.webp", as="image", type="image/x-png")
+  //- link(rel="preload", href="/assets/images/graphs/framework-web-developer-preview-m.webp", as="image", type="image/x-png")
 
   meta(name="og:url" content=proj_url)
   meta(name="og:type" content="website")
@@ -26,9 +26,9 @@ block main
         p La classifica dei framework Web più utilizzati a livello globale nel 2023. <br> #[a(href="/grafici/#framework-web-developers-2023", title="I framework Web più utilizzati dagli sviluppatori") Guarda il grafico...]
         a(href="/grafici/#framework-web-developers-2023", title="I framework Web più utilizzati dagli sviluppatori") 
           picture 
-            source(media="(max-width: 414px)", srcset="/assets/images/graphs/framework-web-developer-preview-s-min.png")
-            source(media="(max-width: 1366px)", srcset="/assets/images/graphs/framework-web-developer-preview-m-min.png")
-            img(fetchpriority="high" width="1080" height="360" src="/assets/images/graphs/framework-web-developer-preview-min.png", alt="I framework Web più utilizzati dagli sviluppatori")
+            source(media="(max-width: 414px)", srcset="/assets/images/graphs/framework-web-developer-preview-s.webp")
+            source(media="(max-width: 1366px)", srcset="/assets/images/graphs/framework-web-developer-preview-m.webp")
+            img(fetchpriority="high" width="1080" height="360" src="/assets/images/graphs/framework-web-developer-preview.webp", alt="I framework Web più utilizzati dagli sviluppatori")
         div(class="published") Pubblicato il <time datetime="2024-04-10">10 aprile 2024</time>
 
       include ./post/programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale-article-preview.pug
@@ -43,9 +43,9 @@ block main
         p La classifica dei 10 "linguaggi di programmazione" più utilizzati dagli sviluppatori nel mondo. <br> #[a(href="/grafici/#linguaggi-programmazione", title="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo") Guarda il grafico...]
         a(href="/grafici/#linguaggi-programmazione", title="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo") 
           picture 
-            source(media="(max-width: 414px)", srcset="/assets/images/graphs/linguaggi-programmazione-developer-preview-s-min.png")
-            source(media="(max-width: 1366px)", srcset="/assets/images/graphs/linguaggi-programmazione-developer-preview-m-min.png")
-            img(src="/assets/images/graphs/linguaggi-programmazione-developer-preview-min.png", width="1080" height="360" alt="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo")
+            source(media="(max-width: 414px)", srcset="/assets/images/graphs/linguaggi-programmazione-developer-preview-s.webp")
+            source(media="(max-width: 1366px)", srcset="/assets/images/graphs/linguaggi-programmazione-developer-preview-m.webp")
+            img(src="/assets/images/graphs/linguaggi-programmazione-developer-preview.webp", width="1080" height="360" alt="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo")
         div(class="published") Pubblicato il <time datetime="2024-04-03">3 aprile 2024</time>
 
       include ./post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-preview.pug
