@@ -15,12 +15,17 @@ block append meta
 
 block main
   main(class="tworows")
-    include ./programmazione-strutturata-oggetti-funzionale-article.pug
+    article
+      include ./programmazione-strutturata-oggetti-funzionale-article.pug
+
+      include /components/shared/coffee/coffee.pug
+      include /components/shared/share/share.pug
 
     include ../../../components/shared/sideside/sideside.pug
 
 block viewscripts 
-  //- script(async src="https://cpwebassets.codepen.io/assets/embed/ei.js")
+  if prod
+    script(defer, src='https://platform.linkedin.com/in.js')
   script(type='application/ld+json').
     {
       "@context": "https://schema.org",

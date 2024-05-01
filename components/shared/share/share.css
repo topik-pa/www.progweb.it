@@ -15,8 +15,6 @@
 #share h2::before {
   content: none;
 }
-#share div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#share section {
+  width: 100%;
 }
