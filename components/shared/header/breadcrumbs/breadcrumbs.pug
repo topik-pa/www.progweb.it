@@ -3,4 +3,7 @@ if breadcrumbs
     nav
       a(href="/", title="Home") Home
       each elem in breadcrumbs
-        a(href=elem.url, title=__(elem.name)) !{__(elem.name)}
+        if elem.url
+          a(href=elem.url, title=__(elem.name)) !{__(elem.name)}
+        else 
+          span !{__(elem.name)}
