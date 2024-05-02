@@ -2,7 +2,7 @@ const posts = require('../assets/data/post.js')
 
 module.exports = (app, nonce) => {
   app.get('/', (req, res) => {
-    res.render('home', { id: 'home', title: 'Home', url: req.url, posts, nonce })
+    res.render('home', { id: 'home', title: 'PWI - Home page', url: req.url, posts, nonce })
   })
   app.get('/contatti', (req, res) => {
     const breadcrumbs = [
