@@ -86,6 +86,21 @@ module.exports = (app, nonce) => {
   })
 
   // ARCHIVE
+  app.get('/maggio-2024', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Archivio maggio 2024'
+      }
+    ]
+    res.render('archive/mag2024/mag2024', {
+      id: 'mag2024',
+      title: 'Archivio maggio 2024',
+      url: req.url,
+      breadcrumbs,
+      posts,
+      nonce
+    })
+  })
   app.get('/aprile-2024', (req, res) => {
     const breadcrumbs = [
       {
@@ -229,7 +244,7 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/javascript-html-tabella-dinamica', (req, res) => {
-    const title = 'Una tabella dinamica in HTML, Javascript e CSS - codice e spiegazione'
+    const title = 'Una tabella dinamica in HTML, JavaScript e CSS - codice, esempi e spiegazione'
     const breadcrumbs = [
       {
         name: 'Post',

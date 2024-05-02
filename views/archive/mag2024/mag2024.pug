@@ -2,7 +2,7 @@ extends ../../layout.pug
 
 block append meta
   title #{title} | #{proj_name}
-  meta(name="description" content="Coding: esempi pratici")
+  meta(name="description" content="Archivio articoli e post di maggio 2024")
   meta(name="keywords" content="")
   meta(name="robots" content="")
   link(rel="canonical", href=proj_url + url)
@@ -11,15 +11,13 @@ block append meta
   meta(name="og:type" content="website")
   meta(name="og:title" content=title + ' | ' + proj_name)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="Coding: esempi pratici")
+  meta(name="og:description" content="Archivio articoli e post di maggio 2024")
   meta(name="og:image" content=proj_url + "/assets/images/logo.png")
 
-block main 
+block main
   main(class="tworows")
     section
       h1 #{title}
       include ../../post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-preview.pug
-      include ../../post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-preview.pug
 
     include ../../../components/shared/sideside/sideside.pug
-

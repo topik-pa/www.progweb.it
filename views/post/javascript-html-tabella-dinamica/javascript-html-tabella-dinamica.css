@@ -1,25 +1,27 @@
-.table-wrap {
-  overflow-y: auto;
-}
-
 table {
   width: 75%;
   margin: 2rem auto;
   color: #000;
   background-color: #FFF;
+  border-collapse: collapse;
 }
-
+ 
+caption {
+  margin: .5rem 0;
+  font-weight: bold;
+}
 th {
   font-weight: bold;
 }
-
+ 
+/* Effetto hover sulle righe della tabella */ 
 tbody tr:hover {
   color: #FFF;
   background-color: #000;
 }
-
+ 
 th, td {
   text-align: left;
-  padding: 0.3rem 0.2rem;
-  border: 1px solid #999;
+  padding: .3rem .2rem;
+  border-bottom: 1px solid #999;
 }
