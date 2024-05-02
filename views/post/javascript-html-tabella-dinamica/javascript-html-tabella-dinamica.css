@@ -1,9 +1,12 @@
+.table-wrap {
+  overflow: auto;
+}
+
 table {
-  width: 75%;
-  margin: 2rem auto;
   color: #000;
   background-color: #FFF;
   border-collapse: collapse;
+  margin: 0 auto;
 }
  
 caption {

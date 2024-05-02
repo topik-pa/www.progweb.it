@@ -192,15 +192,16 @@ article
   h3 La tabella dinamica 
   p Qui di seguito il risultato (reale e "in diretta") del codice HTML, CSS e JS descritto. Avrete notato che nel codice precedente ci sono alcune istruzioni per l'inserimento e la rimozione di classi come #[span(class="code")  loading] ed #[span(class="code")  error], sono classi ausiliarie che definiscono la status attuale della tabella e permettono di definire uno style per ciascuno dei tre possibili stati: #[span(class="code")  loading] - in caricamento; #[span(class="code")  error] - errore; #[span(class="code")  -empty-] default. Lascio all'utente la definizione di tali stili.
 
-  table(id='table')
-    caption Tabella utenti 
-    thead 
-      tr 
-        th Name 
-        th Username 
-        th Email 
-        th Phone 
-    tbody
+  div(class="table-wrap")
+    table(id='table')
+      caption Tabella utenti 
+      thead 
+        tr 
+          th Name 
+          th Username 
+          th Email 
+          th Phone 
+      tbody
 
 
   h2 Aggiungere la paginazione 
