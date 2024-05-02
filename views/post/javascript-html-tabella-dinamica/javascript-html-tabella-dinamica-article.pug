@@ -1,220 +1,216 @@
-article
-  h1 #{title}
-  p(class="intro") Funzionalità come il fetch dinamico dei dati, il sorting e la paginazione permettono di interagire con una tabella in maniera più veloce ed efficente. Per lo sviluppoSpesso ci si affida a soluzioni di terze parti, ma in questa guida vorrei farvi provare a sviluppare una tabella dinamica partendo da zero e utilizzando solo le versioni vanilla di HTML, JavaScript e CSS. Spero di esservi utile!
+h1 #{title}
+p(class="intro") Funzionalità come il fetch dinamico dei dati, il sorting e la paginazione permettono di interagire con una tabella in maniera più veloce ed efficente. Per lo sviluppoSpesso ci si affida a soluzioni di terze parti, ma in questa guida vorrei farvi provare a sviluppare una tabella dinamica partendo da zero e utilizzando solo le versioni vanilla di HTML, JavaScript e CSS. Spero di esservi utile!
 
-  h2 Introduzione
-  p La nostra #[em tabella dinamica] si svilupperà in maniera progressiva partendo da una semplice #[em soluzione statica] con i dati tabellari scritti a mano dallo sviluppatore, seguirà con una #[em tabella popolata dinamicamente] tramite dati ottenuti da una fonte remota (JSON tramite chiamata HTTP), ed infine si aggiungeranno funzionalità più avanzate come la #[em paginazione], il #[em sorting] e il #[em filtering]. 
-  p Le varie sezioni saranno elaborate in momenti differenti e potrebbero non essere tutte disponibili: incoraggiate il mio lavoro condividendo questa pagina o mettendo un like (vedi sezione in fondo alla pagina)!
+h2 Introduzione
+p La nostra #[em tabella dinamica] si svilupperà in maniera progressiva partendo da una semplice #[em soluzione statica] con i dati tabellari scritti a mano dallo sviluppatore, seguirà con una #[em tabella popolata dinamicamente] tramite dati ottenuti da una fonte remota (JSON tramite chiamata HTTP), ed infine si aggiungeranno funzionalità più avanzate come la #[em paginazione], il #[em sorting] e il #[em filtering]. 
+p Le varie sezioni saranno elaborate in momenti differenti e potrebbero non essere tutte disponibili: incoraggiate il mio lavoro condividendo questa pagina o mettendo un like (vedi sezione in fondo alla pagina)!
 
-  h2 Una semplice tabella statica HTML 
-  p Per iniziare e per ripassare un poco l'argomento, sviluppiamo una #[em semplice tabella HTML] utilizzando i tag previsti nelle specifiche HTML5. 
-  p Qui di seguito scrivo il codice che definisce una tabella per un insieme di ipotetici utenti e un CSS per dare una minimo di stile al risultato ottenuto.
+h2 Una semplice tabella statica HTML 
+p Per iniziare e per ripassare un poco l'argomento, sviluppiamo una #[em semplice tabella HTML] utilizzando i tag previsti nelle specifiche HTML5. 
+p Qui di seguito scrivo il codice che definisce una tabella per un insieme di ipotetici utenti e un CSS per dare una minimo di stile al risultato ottenuto.
 
-  div(class="code")
-    h4 Una semplice tabella statica HTML
-    code 
-      pre &lt;table&gt;
-      pre   &lt;caption&gt;Tabella utenti&lt;/caption&gt;
-      pre   &lt;thead&gt;
-      pre     &lt;tr&gt;
-      pre       &lt;th&gt;Name&lt;/th&gt;
-      pre       &lt;th&gt;Username&lt;/th&gt;
-      pre       &lt;th&gt;Email&lt;/th&gt;
-      pre       &lt;th&gt;Phone&lt;/th&gt;
-      pre     &lt;/tr&gt;
-      pre   &lt;/thead&gt;
-      pre   &lt;tbody&gt;
-      pre     &lt;tr&gt;
-      pre       &lt;td&gt;Leanne Graham&lt;/td&gt;
-      pre       &lt;td&gt;Bret&lt;/td&gt;
-      pre       &lt;td&gt;Sincere@april.biz&lt;/td&gt;
-      pre       &lt;td&gt;1-770-736-8031 x56442&lt;/td&gt;
-      pre     &lt;/tr&gt;
-      pre     &lt;tr&gt;
-      pre       &lt;td&gt;Ervin Howell&lt;/td&gt;
-      pre       &lt;td&gt;Antonette&lt;/td&gt;
-      pre       &lt;td&gt;Shanna@melissa.tv&lt;/td&gt;
-      pre       &lt;td&gt;010-692-6593 x09125&lt;/td&gt;
-      pre     &lt;/tr&gt;
-      pre     &lt;tr&gt;
-      pre       &lt;td&gt;Clementine Bauch&lt;/td&gt;
-      pre       &lt;td&gt;Samantha&lt;/td&gt;
-      pre       &lt;td&gt;Nathan@yesenia.net&lt;/td&gt;
-      pre       &lt;td&gt;1-463-123-4447&lt;/td&gt;
-      pre     &lt;/tr&gt;
-      pre   &lt;/tbody&gt;
-      pre &lt;table&gt;
+div(class="code")
+  h4 Una semplice tabella statica HTML
+  code 
+    pre &lt;table&gt;
+    pre   &lt;caption&gt;Tabella utenti&lt;/caption&gt;
+    pre   &lt;thead&gt;
+    pre     &lt;tr&gt;
+    pre       &lt;th&gt;Name&lt;/th&gt;
+    pre       &lt;th&gt;Username&lt;/th&gt;
+    pre       &lt;th&gt;Email&lt;/th&gt;
+    pre       &lt;th&gt;Phone&lt;/th&gt;
+    pre     &lt;/tr&gt;
+    pre   &lt;/thead&gt;
+    pre   &lt;tbody&gt;
+    pre     &lt;tr&gt;
+    pre       &lt;td&gt;Leanne Graham&lt;/td&gt;
+    pre       &lt;td&gt;Bret&lt;/td&gt;
+    pre       &lt;td&gt;Sincere@april.biz&lt;/td&gt;
+    pre       &lt;td&gt;1-770-736-8031 x56442&lt;/td&gt;
+    pre     &lt;/tr&gt;
+    pre     &lt;tr&gt;
+    pre       &lt;td&gt;Ervin Howell&lt;/td&gt;
+    pre       &lt;td&gt;Antonette&lt;/td&gt;
+    pre       &lt;td&gt;Shanna@melissa.tv&lt;/td&gt;
+    pre       &lt;td&gt;010-692-6593 x09125&lt;/td&gt;
+    pre     &lt;/tr&gt;
+    pre     &lt;tr&gt;
+    pre       &lt;td&gt;Clementine Bauch&lt;/td&gt;
+    pre       &lt;td&gt;Samantha&lt;/td&gt;
+    pre       &lt;td&gt;Nathan@yesenia.net&lt;/td&gt;
+    pre       &lt;td&gt;1-463-123-4447&lt;/td&gt;
+    pre     &lt;/tr&gt;
+    pre   &lt;/tbody&gt;
+    pre &lt;table&gt;
 
-  div(class="code")
-    h4 Qualche regola di stile
-    code 
-      pre table {
-      pre   width: 75%;
-      pre   margin: 2rem auto;
-      pre   color: #000;
-      pre   background-color: #FFF;
-      pre   border-collapse: collapse;
-      pre }
-      pre 
-      pre caption {
-      pre   margin: .5rem 0;
-      pre   font-weight: bold;
-      pre }
-      pre
-      pre th {
-      pre   font-weight: bold;
-      pre }
-      pre 
-      pre
-        span(class="comment") /* Effetto hover sulle righe della tabella */ 
-      pre tbody tr:hover {
-      pre   color: #FFF;
-      pre   background-color: #000;
-      pre }
-      pre 
-      pre th, td {
-      pre   text-align: left;
-      pre   padding: .3rem .2rem;
-      pre   border-bottom: 1px solid #999;
-      pre }
-
-
-  p Il risultato dei due codici precedenti è esattamente quello che potete vedere qui di seguito.
-
-  div(class="table-wrap")
-    table
-      caption Tabella utenti
-      thead
-        tr
-          th Name
-          th Username
-          th Email
-          th Phone
-      tbody
-        tr
-          td Leanne Graham
-          td Bret
-          td Sincere@april.biz
-          td 1-770-736-8031 x56442
-        tr
-          td Ervin Howell
-          td Antonette
-          td Shanna@melissa.tv
-          td 010-692-6593 x09125
-        tr
-          td Clementine Bauch
-          td Samana
-          td Naan@yesenia.net
-          td 1-463-123-4447
-
-  h3 Riepilogo
-  p Abbiamo ricreato una semplice e funzionale tabella che mostra i dati di tre ipotetici utenti; una ottima soluzione in caso di tabelle molto brevi e dati statici, ma cosa succederebbe se i dati fossero nell'ordine delle decine o centinaia? E cosa succederebbe se questi dati fossero serviti tramite JSON da servizi esterni? In questi casi è necessario sviluppare una soluzione dinamica che si occupi di eseguire il fetch (reperimento) dei dati ed il conseguente popolamento dinamico della tabella. <br>Lo vediamo nel prossimo capitolo.
+div(class="code")
+  h4 Qualche regola di stile
+  code 
+    pre table {
+    pre   width: 75%;
+    pre   margin: 2rem auto;
+    pre   color: #000;
+    pre   background-color: #FFF;
+    pre   border-collapse: collapse;
+    pre }
+    pre 
+    pre caption {
+    pre   margin: .5rem 0;
+    pre   font-weight: bold;
+    pre }
+    pre
+    pre th {
+    pre   font-weight: bold;
+    pre }
+    pre 
+    pre
+      span(class="comment") /* Effetto hover sulle righe della tabella */ 
+    pre tbody tr:hover {
+    pre   color: #FFF;
+    pre   background-color: #000;
+    pre }
+    pre 
+    pre th, td {
+    pre   text-align: left;
+    pre   padding: .3rem .2rem;
+    pre   border-bottom: 1px solid #999;
+    pre }
 
 
-  h2 Popolare una tabella HTML con dati ottenuti da sorgenti remote 
-  p L'obiettivo è quello di popolare la tabella in maniera dinamica attraverso dati provenienti da una sorgente remota, per fare questo sarà necessario aggiungere un file JavaScript in cui gestiremo la chiamata remota e creazione delle righe della tabella. La sorgente esterna sarà fornita dalla url: #[i https://jsonplaceholder.typicode.com/users], un servizio a scopo didattico che fornisce una lista di utenti in formato JSON.
-  p La situazione iniziale prevede un file HTML simile al precedente, ma in questo caso non ci sarà alcun contenuto all'interno del tag &lt;tbody&gt;: questo sarà aggiunto dinamicamente. Ecco il contenuto.
+p Il risultato dei due codici precedenti è esattamente quello che potete vedere qui di seguito.
 
-  div(class="code")
-    h4 Una tabella HTML vuota
-    code 
-      pre  &lt;table&gt;
-      pre   &lt;caption&gt;Tabella utenti&lt;/caption&gt;
-      pre   &lt;thead&gt;
-      pre     &lt;tr&gt;
-      pre       &lt;th&gt;Name&lt;/th&gt;
-      pre       &lt;th&gt;Username&lt;/th&gt;
-      pre       &lt;th&gt;Email&lt;/th&gt;
-      pre       &lt;th&gt;Phone&lt;/th&gt;
-      pre     &lt;/tr&gt;
-      pre   &lt;/thead&gt;
-      pre   &lt;tbody&gt;
-      pre   &lt;/tbody&gt;
-      pre  &lt;table&gt;
-  
-  p All'interno di un file javascript ci occuperemo di definire una funzione #[span(class="code") loadRemoteData()] che si occupa di caricare i dati utenti dalla sorgente remota, e una funzione #[span(class="code") populateTable] che si occuperà di popolare le righe della tabella con i dati appena ottenuti. Eccone il contenuto.
+div(class="table-wrap")
+  table
+    caption Tabella utenti
+    thead
+      tr
+        th Name
+        th Username
+        th Email
+        th Phone
+    tbody
+      tr
+        td Leanne Graham
+        td Bret
+        td Sincere@april.biz
+        td 1-770-736-8031 x56442
+      tr
+        td Ervin Howell
+        td Antonette
+        td Shanna@melissa.tv
+        td 010-692-6593 x09125
+      tr
+        td Clementine Bauch
+        td Samana
+        td Naan@yesenia.net
+        td 1-463-123-4447
 
-  div(class="code")
-    h4 La logica JS per popolare la tabella
-    code 
-      pre   
-        span(class="comment") // Ottengo i riferimenti alla tabella &lt;table&gt; e al suo &lt;tbody&gt;
-      pre   const $table = document.querySelector('table')
-      pre   const $tbody = $table.getElementsByTagName('tbody')[0]
-      pre 
-      pre   const loadRemoteData = async () => {
-      pre     $table.classList.add('loading')
-      pre   
-        span(class="comment")   // Eseguo il fetch dei dati remoti
-      pre     await fetch('https://jsonplaceholder.typicode.com/users')
-      pre       .then(response => {
-      pre   
-        span(class="comment")       // Se non ho una risposta valida dal servizio remoto...
-      pre         if (!response.ok) throw (Error(`Status: ${response.status}. ${response.statusText}`))
-      pre   
-        span(class="comment")       // ... altrimenti dati ottenuti vengono tradotti in formato JSON
-      pre         return response.json()
-      pre       })
-      pre       .then((json) => {
-      pre   
-        span(class="comment")       // Utilizzo i dati ottenuti per popolare la tabella
-      pre         populateTable(json)
-      pre       })
-      pre       .catch((error) => {
-      pre         $table.classList.add('error')
-      pre         console.error(error)
-      pre       })
-      pre       .finally(() => {
-      pre         $table.classList.remove('loading')
-      pre       })
-      pre   }
-      pre 
-      pre   const populateTable = (rows) => {
-      pre     $tbody.innerText = ''
-      pre     for (const row of rows) {
-      pre   
-        span(class="comment")     // Per ogni utente, definisco una nuova riga della tabella
-      pre       const $tr = document.createElement('tr')
-      pre       $tr.innerHTML = `
-      pre         &lt;td&gt;${row.name}&lt;/td&gt;
-      pre         &lt;td&gt;${row.username}&lt;/td&gt;
-      pre         &lt;td&gt;${row.email}&lt;/td&gt;
-      pre         &lt;td&gt;${row.phone}&lt;/td&gt;
-      pre       `
-      pre       $tbody.appendChild($tr)
-      pre     }
-      pre  }
-      pre 
-      pre   
-        span(class="comment") // Chiamo la funzione principale
-      pre  loadRemoteData()
-
-  h3 La tabella dinamica 
-  p Qui di seguito il risultato (reale e "in diretta") del codice HTML, CSS e JS descritto. Avrete notato che nel codice precedente ci sono alcune istruzioni per l'inserimento e la rimozione di classi come #[span(class="code")  loading] ed #[span(class="code")  error], sono classi ausiliarie che definiscono la status attuale della tabella e permettono di definire uno style per ciascuno dei tre possibili stati: #[span(class="code")  loading] - in caricamento; #[span(class="code")  error] - errore; #[span(class="code")  -empty-] default. Lascio all'utente la definizione di tali stili.
-
-  div(class="table-wrap")
-    table(id='table')
-      caption Tabella utenti 
-      thead 
-        tr 
-          th Name 
-          th Username 
-          th Email 
-          th Phone 
-      tbody
+h3 Riepilogo
+p Abbiamo ricreato una semplice e funzionale tabella che mostra i dati di tre ipotetici utenti; una ottima soluzione in caso di tabelle molto brevi e dati statici, ma cosa succederebbe se i dati fossero nell'ordine delle decine o centinaia? E cosa succederebbe se questi dati fossero serviti tramite JSON da servizi esterni? In questi casi è necessario sviluppare una soluzione dinamica che si occupi di eseguire il fetch (reperimento) dei dati ed il conseguente popolamento dinamico della tabella. <br>Lo vediamo nel prossimo capitolo.
 
 
-  h2 Aggiungere la paginazione 
-  p Sezione non ancora disponibile
+h2 Popolare una tabella HTML con dati ottenuti da sorgenti remote 
+p L'obiettivo è quello di popolare la tabella in maniera dinamica attraverso dati provenienti da una sorgente remota, per fare questo sarà necessario aggiungere un file JavaScript in cui gestiremo la chiamata remota e creazione delle righe della tabella. La sorgente esterna sarà fornita dalla url: #[i https://jsonplaceholder.typicode.com/users], un servizio a scopo didattico che fornisce una lista di utenti in formato JSON.
+p La situazione iniziale prevede un file HTML simile al precedente, ma in questo caso non ci sarà alcun contenuto all'interno del tag &lt;tbody&gt;: questo sarà aggiunto dinamicamente. Ecco il contenuto.
 
-  h2 Aggiungere un ordinamento per colonne (funzionalità di sorting)
-  p Sezione non ancora disponibile
+div(class="code")
+  h4 Una tabella HTML vuota
+  code 
+    pre  &lt;table&gt;
+    pre   &lt;caption&gt;Tabella utenti&lt;/caption&gt;
+    pre   &lt;thead&gt;
+    pre     &lt;tr&gt;
+    pre       &lt;th&gt;Name&lt;/th&gt;
+    pre       &lt;th&gt;Username&lt;/th&gt;
+    pre       &lt;th&gt;Email&lt;/th&gt;
+    pre       &lt;th&gt;Phone&lt;/th&gt;
+    pre     &lt;/tr&gt;
+    pre   &lt;/thead&gt;
+    pre   &lt;tbody&gt;
+    pre   &lt;/tbody&gt;
+    pre  &lt;table&gt;
 
-  h2 Aggiungere un filtro (funzionalità di filtering)
-  p Sezione non ancora disponibile
+p All'interno di un file javascript ci occuperemo di definire una funzione #[span(class="code") loadRemoteData()] che si occupa di caricare i dati utenti dalla sorgente remota, e una funzione #[span(class="code") populateTable] che si occuperà di popolare le righe della tabella con i dati appena ottenuti. Eccone il contenuto.
 
-  h2 Conclusioni
-  p Sezione non ancora disponibile
-      
-  include /components/shared/coffee/coffee.pug
-  include /components/shared/share/share.pug
+div(class="code")
+  h4 La logica JS per popolare la tabella
+  code 
+    pre   
+      span(class="comment") // Ottengo i riferimenti alla tabella &lt;table&gt; e al suo &lt;tbody&gt;
+    pre   const $table = document.querySelector('table')
+    pre   const $tbody = $table.getElementsByTagName('tbody')[0]
+    pre 
+    pre   const loadRemoteData = async () => {
+    pre     $table.classList.add('loading')
+    pre   
+      span(class="comment")   // Eseguo il fetch dei dati remoti
+    pre     await fetch('https://jsonplaceholder.typicode.com/users')
+    pre       .then(response => {
+    pre   
+      span(class="comment")       // Se non ho una risposta valida dal servizio remoto...
+    pre         if (!response.ok) throw (Error(`Status: ${response.status}. ${response.statusText}`))
+    pre   
+      span(class="comment")       // ... altrimenti dati ottenuti vengono tradotti in formato JSON
+    pre         return response.json()
+    pre       })
+    pre       .then((json) => {
+    pre   
+      span(class="comment")       // Utilizzo i dati ottenuti per popolare la tabella
+    pre         populateTable(json)
+    pre       })
+    pre       .catch((error) => {
+    pre         $table.classList.add('error')
+    pre         console.error(error)
+    pre       })
+    pre       .finally(() => {
+    pre         $table.classList.remove('loading')
+    pre       })
+    pre   }
+    pre 
+    pre   const populateTable = (rows) => {
+    pre     $tbody.innerText = ''
+    pre     for (const row of rows) {
+    pre   
+      span(class="comment")     // Per ogni utente, definisco una nuova riga della tabella
+    pre       const $tr = document.createElement('tr')
+    pre       $tr.innerHTML = `
+    pre         &lt;td&gt;${row.name}&lt;/td&gt;
+    pre         &lt;td&gt;${row.username}&lt;/td&gt;
+    pre         &lt;td&gt;${row.email}&lt;/td&gt;
+    pre         &lt;td&gt;${row.phone}&lt;/td&gt;
+    pre       `
+    pre       $tbody.appendChild($tr)
+    pre     }
+    pre  }
+    pre 
+    pre   
+      span(class="comment") // Chiamo la funzione principale
+    pre  loadRemoteData()
+
+h3 La tabella dinamica 
+p Qui di seguito il risultato (reale e "in diretta") del codice HTML, CSS e JS descritto. Avrete notato che nel codice precedente ci sono alcune istruzioni per l'inserimento e la rimozione di classi come #[span(class="code")  loading] ed #[span(class="code")  error], sono classi ausiliarie che definiscono la status attuale della tabella e permettono di definire uno style per ciascuno dei tre possibili stati: #[span(class="code")  loading] - in caricamento; #[span(class="code")  error] - errore; #[span(class="code")  -empty-] default. Lascio all'utente la definizione di tali stili.
+
+div(class="table-wrap")
+  table(id='table')
+    caption Tabella utenti 
+    thead 
+      tr 
+        th Name 
+        th Username 
+        th Email 
+        th Phone 
+    tbody
+
+
+h2 Aggiungere la paginazione 
+p Sezione non ancora disponibile
+
+h2 Aggiungere un ordinamento per colonne (funzionalità di sorting)
+p Sezione non ancora disponibile
+
+h2 Aggiungere un filtro (funzionalità di filtering)
+p Sezione non ancora disponibile
+
+h2 Conclusioni
+p Sezione non ancora disponibile

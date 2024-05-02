@@ -1,6 +1,5 @@
 export const post005 = {
   init: async () => {
-    console.log('post005')
     const $table = document.querySelector('#table')
     const $tbody = $table.getElementsByTagName('tbody')[0]
 

@@ -15,11 +15,17 @@ block append meta
 
 block main
   main(class="tworows")
-    include ./javascript-html-tabella-dinamica-article.pug
+    article
+      include ./javascript-html-tabella-dinamica-article.pug
+
+      include /components/shared/coffee/coffee.pug
+      include /components/shared/share/share.pug
 
     include ../../../components/shared/sideside/sideside.pug
 
 block viewscripts 
+  if prod
+    script(defer, src='https://platform.linkedin.com/in.js')
   script(type='application/ld+json').
     {
       "@context": "https://schema.org",
