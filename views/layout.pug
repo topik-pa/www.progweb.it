@@ -46,6 +46,11 @@ html(lang="it")
       if (localStorage.getItem('dark')) document.documentElement.classList.add('dark')
     if prod
         link(rel="stylesheet", type="text/css", href="/dist/main.css")
+        link(rel="dns-prefetch" href="https://connect.facebook.net/")
+        link(rel="dns-prefetch" href="https://www.facebook.com/")
+        link(rel="dns-prefetch" href="https://static.xx.fbcdn.net/")
+        link(rel="dns-prefetch" href="https://www.statcounter.com/")
+        link(rel="dns-prefetch" href="https://c.statcounter.com/")
     else
         link(rel="stylesheet", type="text/css", href="/styles/style.css")
   body(id=id, class=className)
