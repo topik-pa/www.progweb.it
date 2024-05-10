@@ -221,6 +221,28 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/curriculum-efficace-esempio-developer', (req, res) => {
+    const title = 'Un esempio di Curriculum Vitae efficace per trovare lavoro come developer'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/007-curriculum-efficace-esempio-developer/curriculum-efficace-esempio-developer',
+      {
+        id: 'curriculum-efficace-esempio-developer',
+        className: 'post',
+        title,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/programmazione-strutturata-oggetti-funzionale', (req, res) => {
     const title = 'I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale'
     const breadcrumbs = [

@@ -1,0 +1,7 @@
+#curriculum-efficace-esempio-developer img.sheet {
+  box-shadow: 1px 5px 4px var(--black);
+}
+#curriculum-efficace-esempio-developer img.detail {
+  max-width: 100%;
+  border-right: 1px solid var(--darker-gray);
+}

@@ -19,12 +19,11 @@
 		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
-
 	<url>
 		<loc>https://www.progweb.it/grafici</loc>
 		<lastmod>2023-11-10T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
-		<priority>1.0</priority>
+		<priority>0.8</priority>
 	</url>
 
 
@@ -112,6 +111,12 @@
 	
 
 	<!--POST-->
+	<url>
+		<loc>https://www.progweb.it/curriculum-efficace-esempio-developer</loc>
+		<lastmod>2024-05-05T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
 	<url>
 		<loc>https://www.progweb.it/javascript-html-tabella-dinamica</loc>
 		<lastmod>2024-05-03T12:00:00+00:00</lastmod>

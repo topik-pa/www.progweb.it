@@ -1,5 +1,11 @@
 const data = [
   {
+    id: '007-curriculum-efficace-esempio-developer',
+    topic: 'work',
+    year: 2024,
+    month: 5
+  },
+  {
     id: '005-javascript-html-tabella-dinamica',
     topic: 'code',
     year: 2024,

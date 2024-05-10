@@ -5,8 +5,6 @@ block append meta
   meta(name="description" content=proj_acronim + " - " + proj_name + " - " + proj_tagline)
   meta(name="keywords" content="html, css, javascript, programmazione, sviluppo, web, italia")
   link(rel="canonical", href=proj_url)
-  //- link(rel="preload", href="/assets/images/graphs/framework-web-developer-preview-s.webp", as="image", type="image/x-png")
-  //- link(rel="preload", href="/assets/images/graphs/framework-web-developer-preview-m.webp", as="image", type="image/x-png")
 
   meta(name="og:url" content=proj_url)
   meta(name="og:type" content="website")
@@ -20,6 +18,8 @@ block main
     section
       h1 Più di recente, su PWI...
 
+      include ./post/007-curriculum-efficace-esempio-developer/curriculum-efficace-esempio-developer-preview.pug
+
       include ./post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-preview.pug
 
       div(class="preview analysis")
@@ -30,7 +30,7 @@ block main
           picture 
             source(media="(max-width: 414px)", srcset="/assets/images/graphs/framework-web-developer-preview-s.webp")
             source(media="(max-width: 1366px)", srcset="/assets/images/graphs/framework-web-developer-preview-m.webp")
-            img(fetchpriority="high" width="1080" height="360" src="/assets/images/graphs/framework-web-developer-preview.webp", alt="I framework Web più utilizzati dagli sviluppatori")
+            img(loading="lazy" width="1080" height="360" src="/assets/images/graphs/framework-web-developer-preview.webp", alt="I framework Web più utilizzati dagli sviluppatori")
         div(class="published") Pubblicato il <time datetime="2024-04-10">10 aprile 2024</time>
 
       include ./post/programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale-article-preview.pug

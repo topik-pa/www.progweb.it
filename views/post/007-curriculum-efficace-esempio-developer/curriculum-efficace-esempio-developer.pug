@@ -1,0 +1,54 @@
+extends ../../layout.pug
+
+block append meta
+  title #{title}
+  meta(name="description" content=title)
+  meta(name="keywords" content="curriculum, efficace, esempio, developer, sviluppatore, cv")
+  link(rel="canonical", href=proj_url + url)
+
+  meta(name="og:url" content=proj_url + url)
+  meta(name="og:type" content="article")
+  meta(name="og:title" content=title)
+  meta(name="og:site_name" content=proj_name)
+  meta(name="og:description" content=proj_tagline)
+  meta(name="og:image" content=proj_url + "/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp")
+
+block main
+  main(class="tworows")
+    article
+      include ./curriculum-efficace-esempio-developer-article.pug
+
+      include /components/shared/coffee/coffee.pug
+      include /components/shared/share/share.pug
+
+    include ../../../components/shared/sideside/sideside.pug
+
+block viewscripts 
+  if prod
+    script(defer, src='https://platform.linkedin.com/in.js')
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2024-05-10",
+      "dateModified": "2024-05-10",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{title}",
+      "image": "#{proj_url}/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }
