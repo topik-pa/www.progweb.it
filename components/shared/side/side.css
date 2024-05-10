@@ -5,10 +5,10 @@
   padding-left: var(--view-padding);
 }
 
-#side .analysis {
+#side .submenu {
   margin-bottom: var(--x-large-space);
 }
-#side .analysis img {
+#side .submenu img {
   width: 100%;
   height: auto;
   border: 1px solid var(--light-gray);

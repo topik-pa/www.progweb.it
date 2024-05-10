@@ -1,13 +1,18 @@
 article {
   counter-reset: step;
 }
+
+article h1 {
+  text-align: center;
+}
+
 article .intro {
   font-style: italic;
   font-weight: 500;
   position: relative;
   width: fit-content;
   max-width: 75%;
-  margin: var(--x-large-space) auto;
+  margin: var(--xx-large-space) auto;
   padding: var(--normal-space);
   text-align: center;
   color: var(--dark-gray);
@@ -26,6 +31,13 @@ article .intro:after {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+article img.cover {
+  float: left;
+  margin: 0 calc(var(--x-large-space) * 2) calc(var(--x-large-space) * 3) 0;
+  max-width: 33%;
+  height: auto;
 }
 
 article .cp_embed_wrapper {
@@ -95,6 +107,22 @@ article aside.links::before {
 }
 article aside.links h2::before {
   content: none;
+}
+
+
+@media screen and (max-width: 1366px) {
+  article img.cover {
+    max-width: 45%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  article img.cover {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
