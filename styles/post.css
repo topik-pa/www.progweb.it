@@ -35,7 +35,7 @@ article .intro:after {
 
 article img.cover {
   float: left;
-  margin: 0 calc(var(--x-large-space) * 2) calc(var(--x-large-space) * 3) 0;
+  margin: 0 calc(var(--x-large-space) * 2) calc(var(--x-large-space) * 2) 0;
   max-width: 33%;
   height: auto;
 }
@@ -52,6 +52,10 @@ article .penref {
 article h2 {
   margin-top: var(--xx-large-space);
 }
+article h2:nth-of-type(2), article aside:nth-of-type(1), article .code:nth-of-type(1), article h3:nth-of-type(2) {
+  clear: both;
+}
+
 article h2:before {
   counter-increment: step;
   content: counter(step);

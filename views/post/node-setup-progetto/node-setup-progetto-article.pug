@@ -2,6 +2,12 @@ article
   h1 #{title}
   p(class="intro") Esistono tante guide per fare il setup di un progetto Node / Express, in questa vorrei però aggiungere la descrizione di qualche strumento e metodologia applicati in ambito professionale. Spero che questo contribuisca alla condivisione dell'articolo...
 
+  picture 
+    source(media="(max-width: 414px)", srcset="/assets/images/post/003-node-setup-progetto/node-setup-progetto-s.webp")
+    source(media="(max-width: 768px)", srcset="/assets/images/post/003-node-setup-progetto/node-setup-progetto-m.webp")
+    source(media="(max-width: 1024px)", srcset="/assets/images/post/003-node-setup-progetto/node-setup-progetto-m.webp")
+    img(class="cover" width="512" height="640" src="/assets/images/post/003-node-setup-progetto/node-setup-progetto-s.webp", alt=title)
+
   h2 Introduzione 
   h3 Cosa faremo
   p Procederemo al #[em setup di un piccolo progetto Web]: alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo (come, per esempio, il versionamento del codice) che spesso troviamo applicate in ambienti di lavoro professionali. Non ci focalizzeremo, quindi, sulla sola #[em implementazione tecnica], ma agiremo a più ampio spetto introducendo #[em concetti e pratiche utili quando si scrive codice all'interno di un team].
