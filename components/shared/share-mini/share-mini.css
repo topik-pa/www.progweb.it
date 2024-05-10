@@ -1,0 +1,17 @@
+aside#fb-page-wrap {
+  width: auto!important;
+  margin: var(--xx-large-space) auto;
+  padding: var(--x-large-space) 0;
+  text-align: center;
+  border-bottom: 1px solid var(--primary);
+  border-top: 1px solid var(--primary);
+  border-right: none!important;
+}
+
+aside#fb-page-wrap {
+  /* border-color: var(--blue); */
+  border-left: none;
+}
+aside#fb-page-wrap::before {
+  content: none;
+}

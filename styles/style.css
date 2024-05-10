@@ -21,6 +21,7 @@
 @import "/components/shared/header/breadcrumbs/breadcrumbs.css";
 @import "/components/shared/coffee/coffee.css";
 @import "/components/shared/share/share.css";
+@import "/components/shared/share-mini/share-mini.css";
 
 @import "/views/home.css";
 @import "/views/graphs/graphs.css";
