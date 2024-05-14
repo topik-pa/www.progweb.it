@@ -7,11 +7,6 @@
   max-width: 100%;
   counter-reset: line;
 }
-.code h4 {
-  text-align: center;
-  border: 1px solid gray;
-  padding: .2rem;
-}
 .code code {
   padding: 1rem;
   background: var(--black);

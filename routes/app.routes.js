@@ -222,7 +222,7 @@ module.exports = (app, nonce) => {
   })
   // Specific
   app.get('/curriculum-efficace-esempio-developer', (req, res) => {
-    const title = 'Un esempio di Curriculum Vitae efficace per trovare lavoro come developer'
+    const title = 'Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer'
     const breadcrumbs = [
       {
         name: 'Post',

@@ -37,7 +37,7 @@ article
 
   p Una volta confermato, verrà creato il file #[code /package.json] con contenuto simile a quello che trovate qui sotto.
   div(class="code")
-    h4 /package.json
+    span /package.json
     code 
       pre {
       pre   "name": "server-project",
@@ -98,7 +98,7 @@ article
     p Ultima cosa, aggiungo un file #[code .gitignore] alla root di progetto per evitare di includere nel repository tutti quei file e cartelle che per loro natura non hanno la necessità di essere gestiti tramite un repository. Si tratta generalmente di tutte qui file che vengono generati in automatico, i file di log o di configurazioni specifiche dell'ambiente locale su cui si lavora. Ecco un file .gitignore minimale adatto al progetto che stiamo sviluppando.
 
     div(class="code")
-      h4 .gitignore
+      span .gitignore
       code 
         pre node_modules
         pre build
@@ -147,7 +147,7 @@ article
   p Avendo a disposizione il server Express.js, il nostro compito ora è quello di definire un file #[code /index.js] con il seguente contenuto.
 
   div(class="code")
-    h4 il file /index.js
+    span il file /index.js
     code 
       pre const express = require('express');
       pre const app = express();

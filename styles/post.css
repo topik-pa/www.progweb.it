@@ -15,7 +15,6 @@ article .intro {
   margin: var(--xx-large-space) auto;
   padding: var(--normal-space);
   text-align: center;
-  color: var(--dark-gray);
 }
 article .intro:before {
   content: "\201C";
