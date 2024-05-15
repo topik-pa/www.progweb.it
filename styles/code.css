@@ -24,7 +24,8 @@
   content: '$';
 }
 .code span.comment {
-  color: var(--dark-gray);
+  color: var(--gray);
+  font-style: italic;
 }
 
 .code.changed pre {
