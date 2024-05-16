@@ -6,13 +6,16 @@
 }
 
 #side .submenu {
-  margin-bottom: var(--x-large-space);
+  margin-bottom: var(--xx-large-space);
 }
 #side .submenu img {
   width: 100%;
   height: auto;
   border: 1px solid var(--light-gray);
   box-sizing: border-box;
+}
+#side .submenu div {
+  margin-bottom: var(--xx-large-space);
 }
 
 @media screen and (max-width: 768px) {

@@ -5,7 +5,7 @@
   padding-left: var(--view-padding);
   border-right: none!important;
 }
-#sideside .other img {
+#sideside .submenu img {
   width: 100%;
   height: auto;
   border: 1px solid var(--light-gray);
