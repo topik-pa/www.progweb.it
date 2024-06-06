@@ -1,0 +1,76 @@
+h1 #{title}
+p(class="intro") Confronto tra i maggiori portali di e-commerce di moda italiani in termini di: <br>Performance 🚀, <br>Accessibilità ♿, <br>Best Practice ⭐, <br>SEO 🔎 e<br>Sicurezza 🛡.
+
+picture 
+  source(media="(max-width: 414px)", srcset="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cover-og-image-s.webp")
+  source(media="(max-width: 768px)", srcset="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cover-og-image-m.webp")
+  source(media="(max-width: 1024px)", srcset="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cover-og-image-m.webp")
+  img(fetchpriority="high"  class="cover" width="512" height="512" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cover-og-image-s.webp", alt=title)
+
+h2 Analisi tecnica dei portali e-commerce
+p #[em Categoria]: PRINCIPALI E-COMMERCE DI MODA ITALIANI
+br
+p I portali sono stati valutati secondo i seguenti criteri.
+ol 
+  li Performance
+  li Accessibilità
+  li Best practice
+  li SEO
+  li Sicurezza
+br
+p L'analisi è stata svolta con l'ausilio di strumenti quali #[a(class="ext", href="https://developer.chrome.com/docs/lighthouse?hl=it", target="_blanck") Google Lighthouse] e #[a(class="ext", href="https://observatory.mozilla.org/", target="_blanck") Mozilla Observatory].
+br
+h3 Risultati generali
+p L'#[em accessibilità] e le #[em regole SEO] sono in generale sviluppate in maniera sufficente ma senza senza politiche applicative ben definite può capitare che certe sezioni siano carenti da questi punti di vista.
+p #[em Critico, invece, è il discorso sicurezza]: regole basilari e di facile implementazione vengono trascurate offrendo il fianco a diverse tipologie di attacco.
+p In generale le #[em performance] sono gravate da una interfaccia ricca e immagini ad alta risoluzione, dovute al fatto che il prodotto venduto debba essere ben visibile fin nei suoi piccoli particolari. Un possibile ottimizzazione potrebbe derivare dall'utilizzo dei tag &lt;picture&gt; e source&gt; per caricare immagini di differente grandezza a seconda delle dimensioni dello schermo. Per esempio:
+div(class="code")
+  span Esempio 1 - Utilizzo del tag &lt;picture&gt; per ottimizzare la dimensione delle immagini
+  code 
+    pre &lt;picture&gt;
+    pre   &lt;source media="(max-width: 414px)" srcset="/path/to/img/img-414.webp"&gt;
+    pre   &lt;source media="(max-width: 768px)" srcset="/path/to/img/img-768.webp"&gt;
+    pre   &lt;img fetchpriority="high" src="/path/to/img/img-default.webp" alt="..."&gt;
+    pre &lt;/picture&gt;
+p Vediamo più in dettaglio i risultati delle analisi, iniziamo con le Performance...
+
+h2 Performance
+div(class="img-wrapper")
+  img(loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/analysis-1.webp", alt='Performance')
+p @Tezenis: è il caso di evitare DOM di dimensioni eccessive (in home page contiamo 7.798 elementi). Un DOM di grandi dimensioni aumenta l'utilizzo di memoria, causa calcoli di stile più lunghi e genera costosi adattamenti dinamici del layout.
+p @Intimissimi: il caricamento delle immagini fuori schermo e non immediatamente visibili può essere rimandato. Il mio suggerimento è di usare il caricamento a bassa priorità (o il lazy-loading) per le immagini fuori schermo e nascoste al termine del caricamento di tutte le risorse fondamentali per ridurre il tempo all'interattività. 
+p @Benetton: si potrebbe pubblicare le immagini in formati più recenti. I formati delle immagini come WebP e AVIF spesso consentono una compressione migliore rispetto a quella dei formati PNG o JPEG, che comporta download più veloci e un minor consumo di dati.
+
+
+include ../../../components/shared/share-mini/share-mini.pug
+
+
+h2 Accessibilità
+div(class="img-wrapper")
+  img(loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/analysis-2.webp", alt='Accessibilità')
+p @OVS: alcuni elementi immagine non hanno attributi [alt], obbligatorio in caso di utilizzo da parte di utenti ipovedenti.
+p @Terranova: il rapporto di contrasto tra i colori di sfondo e primo piano non è sufficiente. Il testo a basso contrasto è difficile, se non impossibile, da leggere per molti utenti. Per esempio: la label "Cambia paese"
+div(class="img-wrapper")
+  img(loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cambia-paese.webp", alt='Immagine di esempio violazione contrasto')
+
+
+h2 Best Practice
+div(class="img-wrapper")
+  img(loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/analysis-3.webp", alt='Best Practice')
+
+
+h2 SEO
+div(class="img-wrapper")
+  img(loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/analysis-4.webp", alt='SEO')
+p @Benetton: sono presenti e validi i dati strutturati che permettono una migliore indicizzazione dei contenuti in ottica SEO.
+
+
+h2 Sicurezza
+div(class="img-wrapper")
+  img(loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/analysis-5.webp", alt='Sicurezza')
+p @Tezenis: non è stato implementato l'header HTTP Strict Transport Security (HSTS), che indica al browser di effettuare esclusivamente navigazione HTTPS quando punta al proprio nome di dominio.
+p @Tezenis: (ATTENZIONE) l'implementazione dei livelli di sicurezza sembra essere carente sotto diversi punti di vista
+p @Tezenis: (ATTENZIONE) c'è un BUG di visualizzazione UI su device di larghezza compresa tra i 640 e i 768 pixel, in tali casi la UI i contenuti sono completamente oscurati. Possibile che non ve ne siate accorti?
+
+
+

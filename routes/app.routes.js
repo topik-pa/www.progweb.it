@@ -86,6 +86,21 @@ module.exports = (app, nonce) => {
   })
 
   // ARCHIVE
+  app.get('/giugno-2024', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Archivio giugno 2024'
+      }
+    ]
+    res.render('archive/giu2024/giu2024', {
+      id: 'giu2024',
+      title: 'Archivio giugno 2024',
+      url: req.url,
+      breadcrumbs,
+      posts,
+      nonce
+    })
+  })
   app.get('/maggio-2024', (req, res) => {
     const breadcrumbs = [
       {
@@ -200,6 +215,18 @@ module.exports = (app, nonce) => {
       }
     ]
     res.render('graphs/graphs', { id: 'analisys', title: 'Analisi', url: req.url, breadcrumbs, nonce })
+  })
+  // ANALISYS
+  app.get('/analisi/confronto-portali-ecommerce-moda-italiani', (req, res) => {
+    const title = 'Tech Review dei principali portali e-commerce di moda in Italia'
+    const breadcrumbs = [
+      {
+        name: title
+      }
+    ]
+    res.render(
+      'analisi/confronto-portali-ecommerce-moda-italiani/confronto-portali-ecommerce-moda-italiani',
+      { id: 'confronto-portali-ecommerce-moda-italiani', title, url: req.url, breadcrumbs, posts, nonce })
   })
 
   // POST
