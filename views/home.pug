@@ -8,10 +8,10 @@ block append meta
 
   meta(name="og:url" content=proj_url)
   meta(name="og:type" content="website")
-  meta(name="og:title" content=title)
+  meta(name="og:title" content=proj_name)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="Programmazione Web Italia: spunti di programmazione Web per utenti italiani")
-  meta(name="og:image" content=proj_url + "/assets/images/logo.png")
+  meta(name="og:description" content="Codice, metodologie e idee dal mondo dello Sviluppo Web")
+  meta(name="og:image" content=proj_url + "/assets/images/pwi-cover-1.webp")
 
 block main
   main
@@ -20,9 +20,13 @@ block main
 
       include ./analisi/confronto-portali-ecommerce-moda-italiani/confronto-portali-ecommerce-moda-italiani-preview.pug
 
+      include ../components/shared/share-mini/share-mini.pug
+
       include ./post/007-curriculum-efficace-esempio-developer/curriculum-efficace-esempio-developer-preview.pug
 
       include ./post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-preview.pug
+
+      include ../components/shared/share/share.pug
 
       div(class="preview analysis")
         h2 
@@ -35,7 +39,6 @@ block main
             img(loading="lazy" width="1080" height="360" src="/assets/images/graphs/framework-web-developer-preview.webp", alt="I framework Web più utilizzati dagli sviluppatori")
         div(class="published") Pubblicato il <time datetime="2024-04-10">10 aprile 2024</time>
 
-      include ../components/shared/share-mini/share-mini.pug
 
       include ./post/programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale-article-preview.pug
 
@@ -61,3 +64,7 @@ block main
       
     include ../components/shared/side/side.pug
     include ../components/shared/sideside/sideside.pug
+
+block viewscripts 
+  if prod
+    script(defer, src='https://platform.linkedin.com/in.js')

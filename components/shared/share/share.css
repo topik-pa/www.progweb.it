@@ -16,6 +16,12 @@
   content: none;
 }
 #share section {
-  width: 100%;
-  border: none;
+  width: auto!important;
+  border: none!important;;
+}
+
+#share {
+  width: auto!important;
+  border-right: none!important;
+  padding-bottom: var(--xx-large-space);
 }

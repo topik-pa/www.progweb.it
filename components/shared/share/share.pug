@@ -1,8 +1,10 @@
 aside(id="share")
-  h2 Condividi questo contenuto tra i tuoi contatti!
+  h2 Aiuta a condividere questo contenuto tra i tuoi contatti!
   section
-    h3 Su Facebook
+    h3 
+      a(class="ext", href=socials[0].url, title="Su Facebook") Su Facebook
     div(class="fb-like" data-href=(proj_url + url) data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true")
   section 
-    h3 Su LinkedIn
+    h3 
+      a(class="ext", href=socials[2].url, title="Su LinkedIn") Su LinkedIn
     script(type="IN/FollowCompany" data-id="86379680" data-counter="bottom")
