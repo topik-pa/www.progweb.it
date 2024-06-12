@@ -1,9 +1,10 @@
 #coffee {
   text-align: center;
-  margin: var(--normal-space);
+  margin: var(--normal-space) 0;
   margin-top: var(--xx-large-space);
   border: none;
   border-top: 1px solid var(--red);
+  background-color: var(--rt);
 }
 #coffee::before {
   content: none;
