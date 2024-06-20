@@ -84,6 +84,21 @@ module.exports = (app, nonce) => {
       nonce
     })
   })
+  app.get('/security', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Articoly Cyber Security'
+      }
+    ]
+    res.render('topic/security/security', {
+      id: 'sec',
+      title: 'Articoly Cyber Security',
+      url: req.url,
+      breadcrumbs,
+      posts,
+      nonce
+    })
+  })
 
   // ARCHIVE
   app.get('/giugno-2024', (req, res) => {

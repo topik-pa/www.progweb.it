@@ -32,3 +32,6 @@
 .submenu.topic li.node {
   border-color: var(--node);
 }
+.submenu.topic li.sec {
+  border-color: var(--sec);
+}

@@ -37,3 +37,7 @@
   background-color: rgba(153, 153, 153, .1);
   border-color: var(--coding);
 }
+.badge.sec {
+  background-color: rgba(150, 209, 243, .1);
+  border-color: var(--sec);
+}

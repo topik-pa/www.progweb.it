@@ -11,6 +11,7 @@ aside(id="sideside")
   div(class="submenu topic")
     h3 Topic 
     ul 
+      li(class="sec") #[a(href="/security", title="Cyber Security") Cyber Security (#{posts.getPostCountByTopic('sec')})]
       li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
       li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
       li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]

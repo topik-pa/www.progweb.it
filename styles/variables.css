@@ -18,6 +18,7 @@
   --eng: rgb(249, 188, 16);
   --node: rgb(2, 110, 0);
   --coding: rgb(153, 153, 153);
+  --sec: rgb(150, 209, 243);
 
   --primary: var(--darker-gray);
   --secondary: var(--white);
@@ -39,7 +40,7 @@
   --rt: rgba(201, 30, 44, .03);
 
   /* FONT SIZES */
-  --font-size-very-small: .80rem;
+  --font-size-very-small: .75rem;
   --font-size-small: .9rem;
   --font-size-normal: 1rem;
   --font-size-big: 1.2rem;
