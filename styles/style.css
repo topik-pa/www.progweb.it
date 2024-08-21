@@ -9,6 +9,8 @@
 @import "./buttons.css";
 @import "./loading.css";
 
+@import "./landing-type-1.css";
+
 @import "/components/shared/header/header.css";
 @import "/components/shared/header/main-logo/main-logo.css";
 @import "/components/shared/header/main-menu/main-menu.css";
