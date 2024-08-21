@@ -6,6 +6,7 @@ header > div {
 
 header > div:nth-child(1) {
   padding-bottom: var(--x-small-space);
+  padding-top: var(--x-small-space);
 }
 header > div:nth-child(2) {
   background-color: var(--primary);

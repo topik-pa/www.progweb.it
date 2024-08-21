@@ -429,6 +429,77 @@ module.exports = (app, nonce) => {
     res.render('post/javascript-closure/javascript-closure',
       { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs, posts, nonce })
   })
+
+  // Landing
+  app.get('/web-seo', (req, res) => {
+    res.render('landing/web-seo/web-seo',
+      { id: 'web-seo', className: 'landing', title: 'Web SEO', url: req.url, nonce, locale: req.locale })
+  })
+  app.get('/web-accessibility', (req, res) => {
+    res.render('landing/web-accessibility/web-accessibility',
+      { id: 'web-accessibility', className: 'landing', title: 'Web Accessibility', url: req.url, nonce, locale: req.locale })
+  })
+  app.get('/web-security', (req, res) => {
+    res.render('landing/web-security/web-security',
+      { id: 'web-security', className: 'landing', title: 'Web Security', url: req.url, nonce, locale: req.locale })
+  })
+  app.get('/web-sustainability', (req, res) => {
+    res.render('landing/web-sustainability/web-sustainability',
+      { id: 'web-sustainability', className: 'landing', title: 'Web Sustainability', url: req.url, nonce, locale: req.locale })
+  })
+  app.get('/web-performance', (req, res) => {
+    res.render('landing/web-performance/web-performance',
+      { id: 'web-performance', className: 'landing', title: 'Web Performance', url: req.url, nonce, locale: req.locale })
+  })
+  app.get('/web-user-experience', (req, res) => {
+    res.render('landing/web-user-experience/web-user-experience',
+      { id: 'web-user-experience', className: 'landing', title: 'Web User Experience', url: req.url, nonce, locale: req.locale })
+  })
+  app.get('/responsive-web-design', (req, res) => {
+    res.render('landing/responsive-web-design/responsive-web-design',
+      {
+        id: 'responsive-web-design',
+        className: 'landing',
+        title: 'Responsive Web Design',
+        url: req.url,
+        nonce,
+        locale: req.locale
+      })
+  })
+  app.get('/design-system', (req, res) => {
+    res.render('landing/design-system/design-system',
+      {
+        id: 'design-system',
+        className: 'landing',
+        title: 'Design System',
+        url: req.url,
+        nonce,
+        locale: req.locale
+      })
+  })
+  app.get('/rest-api', (req, res) => {
+    res.render('landing/rest-api/rest-api',
+      {
+        id: 'rest-api',
+        className: 'landing',
+        title: 'REST API',
+        url: req.url,
+        nonce,
+        locale: req.locale
+      })
+  })
+  app.get('/rapid-prototyping-development', (req, res) => {
+    res.render('landing/rapid-prototyping-development/rapid-prototyping-development',
+      {
+        id: 'rapid-prototyping-development',
+        className: 'landing',
+        title: 'Rapid Prototyping Development',
+        url: req.url,
+        nonce,
+        locale: req.locale
+      })
+  })
+
   // Sitemap.xml
   app.get('/sitemap.xml', function (req, res) {
     res.sendFile('public/sitemap.xml', { root: '.' })
