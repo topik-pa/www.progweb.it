@@ -263,6 +263,28 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/security-by-design-principi', (req, res) => {
+    const title = 'I 10 principi della Security by Design'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/009-security-by-design-principi/security-by-design-principi',
+      {
+        id: 'security-by-design-principi',
+        className: 'post',
+        title,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/curriculum-efficace-esempio-developer', (req, res) => {
     const title = 'Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer'
     const breadcrumbs = [

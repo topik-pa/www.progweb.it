@@ -67,6 +67,7 @@ i {
 
 p {
   margin: var(--x-small-space) 0;
+  line-height: 160%;
 }
 
 small {
