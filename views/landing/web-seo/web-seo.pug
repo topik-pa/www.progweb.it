@@ -11,13 +11,16 @@ block append meta
   meta(name="og:title" content=title)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
   meta(name="og:description" content=title)
-  meta(name="og:image" content=proj_url + "/assets/images/post/003-node-setup-progetto/node-setup-progetto.webp")
+  meta(name="og:image" content=proj_url + "/assets/images/landing/web-seo/web-seo-og-image.png")
+
+  link(rel="stylesheet", type="text/css", href="/views/landing/web-seo/web-seo.css")
 
 block main
   main
     include ./article.pug
 
 block viewscripts 
+  script(defer, src='/views/landing/web-seo/web-seo.js')
   script(type='application/ld+json').
     {
       "@context": "https://schema.org",
@@ -28,7 +31,7 @@ block viewscripts
       "name": "#{title}",
       "headline": "#{title}",
       "description": "#{title}",
-      "image": "#{proj_url}/assets/images/post/003-node-setup-progetto/node-setup-progetto.webp",
+      "image": "#{proj_url}/assets/images/landing/web-seo/web-seo-og-image.png",
       "author": {
         "@type": "Person",
         "name": "#{owner}"
