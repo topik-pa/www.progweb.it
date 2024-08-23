@@ -146,8 +146,8 @@ img#serp {
   justify-content: space-between;
 }
 .features li {
-  margin: 0 1rem;
   list-style: none;
+  width: 24%;
 }
 .features li h2::before {
   content: ' ';
