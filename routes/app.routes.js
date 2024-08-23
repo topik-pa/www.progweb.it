@@ -431,11 +431,20 @@ module.exports = (app, nonce) => {
   })
 
   // Landing
+  app.get('/web-seo/it', (req, res) => {
+    res.render('landing/web-seo/web-seo',
+      { id: 'web-seo', className: 'landing', title: 'Ottimizzazione Web SEO', url: req.url, nonce, locale: 'it' })
+  })
+  app.get('/web-seo/en', (req, res) => {
+    res.render('landing/web-seo/web-seo',
+      { id: 'web-seo', className: 'landing', title: 'Web SEO Optimization', url: req.url, nonce, locale: 'en' })
+  })
   app.get('/web-seo', (req, res) => {
     res.render('landing/web-seo/web-seo',
-      { id: 'web-seo', className: 'landing', title: 'Web SEO', url: req.url, nonce, locale: req.locale })
+      { id: 'web-seo', className: 'landing', title: 'Ottimizzazione Web SEO', url: req.url, nonce, locale: 'it' })
   })
-  app.get('/web-accessibility', (req, res) => {
+
+  /* app.get('/web-accessibility', (req, res) => {
     res.render('landing/web-accessibility/web-accessibility',
       { id: 'web-accessibility', className: 'landing', title: 'Web Accessibility', url: req.url, nonce, locale: req.locale })
   })
@@ -498,7 +507,7 @@ module.exports = (app, nonce) => {
         nonce,
         locale: req.locale
       })
-  })
+  }) */
 
   // Sitemap.xml
   app.get('/sitemap.xml', function (req, res) {

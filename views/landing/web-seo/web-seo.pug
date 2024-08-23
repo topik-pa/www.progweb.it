@@ -1,17 +1,37 @@
 extends ../../layout-landing.pug
 
 block append meta
+
   title #{title}
-  meta(name="description" content=title)
-  meta(name="keywords" content="web, seo")
-  link(rel="canonical", href=proj_url + url)
+
+  if lang==='it'
+    meta(name="description" content="Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization")
+    meta(name="keywords" content="web, seo, migliorare, visibilità, keyword, ottimizzazione, performance, analisi, parole, chiave, serp, linee, guida, traffico, ranking, strategia, udine, friuli, 2025")
+  else 
+    meta(name="description" content="How to improve your Web Ranking with Search Engine Optimization")
+    meta(name="keywords" content="web, seo, improve, visibility, keyword, optimization, performance, analisys, serp, guidelines, traffic, ranking, strategy, 2025")
+  
 
   meta(name="og:url" content=proj_url + url)
+  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
-  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content=title)
-  meta(name="og:image" content=proj_url + "/assets/images/landing/web-seo/web-seo-og-image.png")
+  if lang==='it'
+    meta(name="og:description" content="Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization")
+    meta(name="og:image" content=proj_url + "/assets/images/landing/web-seo/web-seo-og-image-it.webp")
+  else
+    meta(name="og:description" content="How to improve your Web Ranking with Search Engine Optimization")
+    meta(name="og:image" content=proj_url + "/assets/images/landing/web-seo/web-seo-og-image-en.webp")
+  
+  
+  if lang==='it'
+    link(rel="canonical", href=proj_url + '/web-seo')
+  else
+    link(rel="canonical", href=proj_url + '/web-seo/en')
+
+  link(rel="alternate", href="https://www.progweb.it/web-seo/it", hreflang="it")
+  link(rel="alternate", href="https://www.progweb.it/web-seo/en", hreflang="en")
+  link(rel="alternate", href="https://www.progweb.it/web-seo", hreflang="x-default")
 
   link(rel="stylesheet", type="text/css", href="/views/landing/web-seo/web-seo.css")
 
@@ -31,7 +51,7 @@ block viewscripts
       "name": "#{title}",
       "headline": "#{title}",
       "description": "#{title}",
-      "image": "#{proj_url}/assets/images/landing/web-seo/web-seo-og-image.png",
+      "image": "#{proj_url + '/assets/images/landing/web-seo/web-seo-og-image-' + lang +'.webp'}",
       "author": {
         "@type": "Person",
         "name": "#{owner}"
