@@ -433,15 +433,39 @@ module.exports = (app, nonce) => {
   // Landing
   app.get('/web-seo/it', (req, res) => {
     res.render('landing/web-seo/web-seo',
-      { id: 'web-seo', className: 'landing', title: 'Ottimizzazione Web SEO', url: req.url, nonce, locale: 'it' })
+      { 
+        id: 'web-seo',
+        className: 'landing',
+        title: 'Ottimizzazione Web SEO',
+        description: 'Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
   })
   app.get('/web-seo/en', (req, res) => {
     res.render('landing/web-seo/web-seo',
-      { id: 'web-seo', className: 'landing', title: 'Web SEO Optimization', url: req.url, nonce, locale: 'en' })
+      { 
+        id: 'web-seo',
+        className: 'landing',
+        title: 'Web SEO Optimization',
+        description: 'How to improve your Web Ranking with Search Engine Optimization',
+        url: req.url,
+        nonce,
+        locale: 'en'
+      })
   })
   app.get('/web-seo', (req, res) => {
     res.render('landing/web-seo/web-seo',
-      { id: 'web-seo', className: 'landing', title: 'Ottimizzazione Web SEO', url: req.url, nonce, locale: 'it' })
+      { 
+        id: 'web-seo',
+        className: 'landing',
+        title: 'Ottimizzazione Web SEO',
+        description: 'Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
   })
 
   /* app.get('/web-accessibility', (req, res) => {
