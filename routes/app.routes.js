@@ -432,8 +432,9 @@ module.exports = (app, nonce) => {
 
   // Landing
   app.get('/web-seo/it', (req, res) => {
+    if (req.locale !== 'it') res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
-      { 
+      {
         id: 'web-seo',
         className: 'landing',
         title: 'Ottimizzazione Web SEO',
@@ -444,8 +445,9 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/web-seo/en', (req, res) => {
+    if (req.locale === 'it') res.redirect('/web-seo')
     res.render('landing/web-seo/web-seo',
-      { 
+      {
         id: 'web-seo',
         className: 'landing',
         title: 'Web SEO Optimization',
@@ -456,8 +458,9 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/web-seo', (req, res) => {
+    if (req.locale !== 'it') res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
-      { 
+      {
         id: 'web-seo',
         className: 'landing',
         title: 'Ottimizzazione Web SEO',

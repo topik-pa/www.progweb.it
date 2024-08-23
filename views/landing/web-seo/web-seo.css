@@ -65,7 +65,7 @@ section.head img#rocket {
   z-index: 9999;
 }
 img#serp {
-  width: 50%;
+  width: 70%;
   height: auto;
   display: block;
   margin: 2rem auto;
@@ -94,13 +94,15 @@ img#serp {
   z-index: 999;
 }
 .steps h3 {
-  margin: var(--large-space) 0;
+  margin: 0;
   text-align: center;
   height: 50%;
   font-weight: normal;
+  font-size: var(--font-size-big);
 }
 .steps h3 em {
   font-weight: bold;
+  display: block;
 }
 .steps span {
   text-align: center;
@@ -133,7 +135,7 @@ img#serp {
 
 
 .features {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 .features h2 {
@@ -279,9 +281,6 @@ img#serp {
 }
 
 @media screen and (max-width: 1024px) {
-  html {
-    font-size: 12px!important;
-  }
   section.head img#rocket {
     position: absolute;
     top: 9%;
@@ -301,6 +300,9 @@ img#serp {
   }
   section.head img#rocket {
     display: none;
+  }
+  img#serp {
+    width: 100%;
   }
   .features, .cta, .near, .more {
     margin: 4rem auto!important;
