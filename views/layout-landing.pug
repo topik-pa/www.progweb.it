@@ -1,0 +1,95 @@
+-
+  let prod = process.env.NODE_ENV === 'production'
+  let proj_acronim = 'PWI'
+  let proj_name = 'Programmazione Web Italia'
+  let proj_tagline = 'Codice, metodologie e idee dal mondo dello Sviluppo Web'
+  let proj_description = 'Spunti di programmazione Web per utenti italiani.'
+  let proj_url = 'https://www.progweb.it'
+  let copy = 2024
+  let owner = 'Marco Pavan'
+  let email = 'info@progweb.it'
+  let owner_email = 'marco@progweb.it'
+  let logo = 'https://progweb.it/assets/images/logo.png'
+  let fbAppId = 1097920821592177
+  let googleSiteVerification = 'yeAoCZx82EAHF2DNVMmS9THRmxbj3WAEC6VliW7Nv4M'
+  let sc_project = 12922368
+  let sc_security = '40e93898'
+  let lang = locale
+  let socials = [
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/profile.php?id=100086483013646',
+      icon: 'icon-facebook'
+    },
+    {
+      name: 'Telegram',
+      url: 'https://t.me/programmazionewebitalia',
+      icon: 'icon-telegram'
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/pwi-programmazione-web-italia',
+      icon: 'icon-linkedin2'
+    }
+  ]
+
+doctype html
+html(lang=lang)
+  head
+    block meta 
+      meta(charset="utf-8")
+      meta(property="fb:app_id" content=fbAppId)
+      meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+      meta(name="author" content=owner + ' - ' + owner_email)
+      link(rel="shortcut icon", href="/public/favicon.ico", type="image/x-icon")
+      meta(name="google-site-verification" content=googleSiteVerification)
+    script(nonce=nonce). 
+      if (localStorage.getItem('dark')) document.documentElement.classList.add('dark')
+    if prod
+        link(rel="stylesheet", type="text/css", href="/dist/main.css")
+        link(rel="dns-prefetch" href="https://connect.facebook.net/")
+        link(rel="dns-prefetch" href="https://www.facebook.com/")
+        link(rel="dns-prefetch" href="https://static.xx.fbcdn.net/")
+        link(rel="dns-prefetch" href="https://www.statcounter.com/")
+        link(rel="dns-prefetch" href="https://c.statcounter.com/")
+    else
+        link(rel="stylesheet", type="text/css", href="/styles/style.css")
+  body(id=id, class=className)
+    include ../components/shared/header/header-landing.pug
+    block intro
+    block main
+    block outro
+    block footer
+      include ../components/shared/footer/footer.pug
+      include ../components/shared/cookie_layer/cookie_layer.pug
+      include ../components/shared/goto_top/goto_top.pug
+    if prod
+      script(src='/dist/main.js')
+    else
+      script(src='/scripts/index.js', type='module')
+    if prod
+      div(id="fb-root")
+      script(async, defer, crossorigin="anonymous", nonce="994HhBGv", src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0&appId=" + fbAppId))
+      script(nonce=nonce).
+        var sc_project = #{sc_project};
+         var sc_invisible = 1;
+         var sc_security = "#{sc_security}";
+      script(async, defer, src='https://www.statcounter.com/counter/counter.js')
+      script(type='application/ld+json').
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "#{proj_url}",
+          "name": "#{proj_name}",
+          "description": "#{proj_description}",
+          "image": "#{logo}",
+          "author": {
+            "@type": "Person",
+            "name": "#{owner}"
+          },
+          "copyrightHolder": {
+            "@type": "Person",
+            "name": "#{owner}"
+          }
+        }
+    block viewscripts

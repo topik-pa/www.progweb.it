@@ -178,4 +178,72 @@
 		<priority>1.0</priority>
 	</url>
 
+	<!-- LANDING PAGES -->
+	<url>
+		<loc>https://www.progweb.it/web-seo/en</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/web-seo</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<!-- <url>
+		<loc>https://www.progweb.it/web-accessibility</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/web-security</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/web-sustainability</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/web-performance</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/web-user-experience</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/responsive-web-design</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/design-system</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/rest-api</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://www.progweb.it/rapid-prototyping-development</loc>
+		<lastmod>2024-09-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url> -->
+
 </urlset>
