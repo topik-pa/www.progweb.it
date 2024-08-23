@@ -5,77 +5,70 @@
 section(class="head")
   div(class="intro")
     div(class="title")
-      h1 Fai decollare la tua #[em SEO]
-      h2 Migliora la tua visibilità #[br]aumentando il ranking SEO #[br]del tuo sito o portale Web
-      a(class="btn primary", id="cta") &#11167; Contattaci ora
+      h1 !{__('title')}
+      h2 !{__('subtitle')}
+      a(class="btn primary", id="cta") &#11167; #{__('cta')}
       picture 
-        source(media="(max-width: 414px)", srcset="/assets/images/landing/web-seo/rocket.png")
-        source(media="(max-width: 768px)", srcset="/assets/images/landing/web-seo/rocket.png")
-        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/rocket.png")
-        img(fetchpriority="high" width="1069" height="1024" src="/assets/images/landing/web-seo/rocket.png", alt=title, id="rocket")
-      picture 
-        source(media="(max-width: 414px)", srcset="/assets/images/landing/web-seo/rocket.png")
-        source(media="(max-width: 768px)", srcset="/assets/images/landing/web-seo/rocket.png")
-        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/rocket.png")
-        img(fetchpriority="high" width="1069" height="1024" src="/assets/images/landing/web-seo/serp.png", alt=title, id="serp")
+        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/rocket-350.png")
+        source(media="(max-width: 1366px)", srcset="/assets/images/landing/web-seo/rocket-400.png")
+        img(fetchpriority="high" width="500" height="479" src="/assets/images/landing/web-seo/rocket-500.png", alt=__('img-rocket'), id="rocket")
     div(class="steps")
       div 
         span Step #[span 1]
-        h3 Ottimizzazione dei #[em Core Web Vitals]
+        h3 !{__('step1')}
       div 
         span Step #[span 2]
-        h3 Miglioramento della #[em Esperienza Utente]
+        h3 !{__('step2')}
       div 
         span Step #[span 3]
-        h3 Aumento della #[em Sicurezza Web]
+        h3 !{__('step3')}
 
 section(class="features")
   ul
     li
-      h2 Keyword research
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, dolor eu eleifend hendrerit, lacus quam commodo massa, a luctus purus lectus sed sem. Nam sed leo blandit dolor suscipit interdum vehicula ac neque. Phasellus auctor vulputate congue. Vivamus sagittis vitae dolor sit amet consequat.
+      h2 #{__('fea-title-1')}
+      p #{__('fea-text-1')}
     li 
-      h2 Ottimizzazione testi
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, dolor eu eleifend hendrerit, lacus quam commodo massa, a luctus purus lectus sed sem. Nam sed leo blandit dolor suscipit interdum vehicula ac neque. Phasellus auctor vulputate congue. Vivamus sagittis vitae dolor sit amet consequat.
+      h2 #{__('fea-title-2')}
+      p #{__('fea-text-2')}
     li 
-      h2 Miglioramento delle performance
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, dolor eu eleifend hendrerit, lacus quam commodo massa, a luctus purus lectus sed sem. Nam sed leo blandit dolor suscipit interdum vehicula ac neque. Phasellus auctor vulputate congue. Vivamus sagittis vitae dolor sit amet consequat.
+      h2 #{__('fea-title-3')}
+      p #{__('fea-text-2')}
     li 
-      h2 Analisi dei risultati
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, dolor eu eleifend hendrerit, lacus quam commodo massa, a luctus purus lectus sed sem. Nam sed leo blandit dolor suscipit interdum vehicula ac neque. Phasellus auctor vulputate congue. Vivamus sagittis vitae dolor sit amet consequat.
+      h2 #{__('fea-title-4')}
+      p #{__('fea-text-4')}
 
 section(class="cta")
-  h2 Contattaci #[em oggi] per ottenere una #[em analisi gratuita] delle tue performance SEO 
+  h2 !{__('cta-title')}
   div
-    div Telefona o invia un Whatsapp al numero:
+    div #{__('cta-phone')}
       a(href="tel:info@progweb.it") 329 5698985
-    div Invia una email all'indirizzo: 
+    div #{__('cta-email')} 
       a(href="mailto:info@progweb.it") info@progweb.it
 
 section(class="near")
-  h2 Vicini a te
-  p La tua attivitò è situata in provincia di #[em Udine] o in #[em Friuli]? #[br] Hai un vantaggio in più: #[em siamo vicini!]
+  h2 #{__('near-title')}
+  p !{__('near-text')}
 
 section(class="more")
-  h4 Maggiori informazioni sulla Search Engine Optimization
-  h2 Cos'è la SEO (Search Engine Optimization)?
-  p La SEO (Search Engine Optimization), in italiano "Ottimizzazione per i motori di ricerca", è l'insieme delle tecniche e strategie utilizzate per migliorare la visibilità e il posizionamento di un sito web nei risultati organici (non a pagamento) dei motori di ricerca, come Google, Bing, o Yahoo.
+  h3 #{__('more-main-title')}
+  h4 #{__('more-main-subtitle')}
+  
+  picture 
+    source(media="(max-width: 414px)", srcset="/assets/images/landing/web-seo/serp-414.webp")
+    source(media="(max-width: 768px)", srcset="/assets/images/landing/web-seo/serp-768.webp")
+    source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/serp-1024.webp")
+    img(fetchpriority="high" width="695" height="414" src="/assets/images/landing/web-seo/serp-1024.webp", alt=__('img-serp'), id="serp")
+    <figcaption>#{__('img-serp-caption')}</figcaption>
+  
+  h2 #{__('more-title-1')}
+  p #{__('more-text-1')}
 
-  h2 Quali sono gli obiettivi della SEO?
-  p Migliorare la posizione nei risultati di ricerca: Più un sito è alto nei risultati di ricerca, maggiore è la probabilità che gli utenti lo visitino. Aumentare il traffico qualificato: Attraverso la SEO, si mira ad attrarre utenti interessati ai contenuti, prodotti o servizi offerti dal sito. Migliorare l'esperienza utente: La SEO include l'ottimizzazione tecnica del sito, rendendolo più veloce, mobile-friendly e facile da navigare.
+  h2 #{__('more-title-2')}
+  p #{__('more-text-2')}
 
-  h2 Quali sono i benefici della SEO?
-  p Miglioramento della visibilità: Un sito ben ottimizzato apparirà tra i primi risultati quando gli utenti cercano informazioni correlate. Crescita sostenibile del traffico: A differenza della pubblicità a pagamento, la SEO genera traffico organico che può durare nel tempo. Maggiore credibilità e fiducia: Gli utenti tendono a fidarsi di più dei risultati organici rispetto agli annunci a pagamento.
+  h2 #{__('more-title-3')}
+  p #{__('more-text-3')}
 
-  h2 Linee guida SEO 2025
-  ul 
-    li Ensure Google Can Find and Index Your Site
-    li Target Relevant Primary Keywords
-    li Organize Your Site’s Structure
-    li Create Useful Content
-    li Help Search Engines and Users Understand Your Content
-    li Make Sure Your Site Provides a Good User Experience
-    li Leverage Internal and External Linking
-    li Earn Backlinks to Your Website
-    li Optimize Your Images and Videos
-    li Promote Your Content
+  h2 #{__('more-title-4')}
+  ul !{__('more-text-4')}
