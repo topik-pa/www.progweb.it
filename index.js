@@ -39,6 +39,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
+app.use('/views', express.static(path.join(__dirname, 'views')))
 
 const i18n = new I18n({
   locales: ['en', 'it'],
