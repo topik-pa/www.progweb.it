@@ -1,7 +1,3 @@
-//- h1 #{title}
-//- h2 #{__('Hello')}
-//- p #{__('HelloName', { name: 'Marco' })}
-
 section(class="head")
   div(class="intro")
     div(class="title")
@@ -42,9 +38,9 @@ section(class="cta")
   h2 !{__('cta-title')}
   div
     div #{__('cta-phone')}
-      a(href="tel:info@progweb.it") 329 5698985
+      a(href="tel:+393295698985", title=__('cta-2')) (+39) 329 5698985
     div #{__('cta-email')} 
-      a(href="mailto:info@progweb.it") info@progweb.it
+      a(href="mailto:info@progweb.it", title=__('cta-3')) info@progweb.it
 
 section(class="near")
   h2 #{__('near-title')}

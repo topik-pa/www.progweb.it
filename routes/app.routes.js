@@ -263,28 +263,6 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
-  app.get('/security-by-design-principi', (req, res) => {
-    const title = 'I 10 principi della Security by Design'
-    const breadcrumbs = [
-      {
-        name: 'Post',
-        url: '/posts'
-      },
-      {
-        name: title
-      }
-    ]
-    res.render('post/009-security-by-design-principi/security-by-design-principi',
-      {
-        id: 'security-by-design-principi',
-        className: 'post',
-        title,
-        url: req.url,
-        breadcrumbs,
-        posts,
-        nonce
-      })
-  })
   app.get('/curriculum-efficace-esempio-developer', (req, res) => {
     const title = 'Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer'
     const breadcrumbs = [
@@ -454,8 +432,9 @@ module.exports = (app, nonce) => {
 
   // Landing
   app.get('/web-seo/it', (req, res) => {
+    if (req.locale !== 'it') res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
-      { 
+      {
         id: 'web-seo',
         className: 'landing',
         title: 'Ottimizzazione Web SEO',
@@ -466,8 +445,9 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/web-seo/en', (req, res) => {
+    if (req.locale === 'it') res.redirect('/web-seo')
     res.render('landing/web-seo/web-seo',
-      { 
+      {
         id: 'web-seo',
         className: 'landing',
         title: 'Web SEO Optimization',
@@ -478,8 +458,9 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/web-seo', (req, res) => {
+    if (req.locale !== 'it') res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
-      { 
+      {
         id: 'web-seo',
         className: 'landing',
         title: 'Ottimizzazione Web SEO',
