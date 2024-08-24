@@ -44,6 +44,7 @@ app.use('/views', express.static(path.join(__dirname, 'views')))
 const i18n = new I18n({
   locales: ['en', 'it'],
   defaultLocale: 'it',
+  objectNotation: true,
   directory: path.join(__dirname, 'locales')
 })
 app.use((req, res, next) => {
