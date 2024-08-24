@@ -431,6 +431,7 @@ module.exports = (app, nonce) => {
   })
 
   // Landing
+  // Web SEO
   app.get('/web-seo/it', (req, res) => {
     if (req.locale !== 'it') res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
@@ -465,6 +466,47 @@ module.exports = (app, nonce) => {
         className: 'landing',
         title: 'Ottimizzazione Web SEO',
         description: 'Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
+  })
+
+  // Responsive Web Design
+  app.get('/responsive-web-design/it', (req, res) => {
+    if (req.locale !== 'it') res.redirect('/responsive-web-design/en')
+    res.render('landing/responsive-web-design/responsive-web-design',
+      {
+        id: 'responsive-web-design',
+        className: 'landing',
+        title: 'Responsive Web Design Titolo',
+        description: 'Responsive Web Design Descrizione',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
+  })
+  app.get('/responsive-web-design/en', (req, res) => {
+    if (req.locale === 'it') res.redirect('/responsive-web-design')
+    res.render('landing/responsive-web-design/responsive-web-design',
+      {
+        id: 'responsive-web-design',
+        className: 'landing',
+        title: 'Responsive Web Design Title',
+        description: 'Responsive Web Design Description',
+        url: req.url,
+        nonce,
+        locale: 'en'
+      })
+  })
+  app.get('/responsive-web-design', (req, res) => {
+    if (req.locale !== 'it') res.redirect('/responsive-web-design/en')
+    res.render('landing/responsive-web-design/responsive-web-design',
+      {
+        id: 'responsive-web-design',
+        className: 'landing',
+        title: 'Responsive Web Design Titolo',
+        description: 'Responsive Web Design Descrizione',
         url: req.url,
         nonce,
         locale: 'it'
