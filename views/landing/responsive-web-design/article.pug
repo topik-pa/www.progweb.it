@@ -1,4 +1,39 @@
-article
-  h1 #{title}
-  h2 #{__('Hello')}
-  p #{__('HelloName', { name: 'Marco' })}
+section(class="intro")
+  div(class="head")
+    div
+      span #{proj_name}
+      h1 !{__('responsive-web-design.title')}
+      h2 !{__('responsive-web-design.subtitle')}
+  div(class="footer")
+    div(class="responsive")
+      picture 
+        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/rocket-350.png")
+        source(media="(max-width: 1366px)", srcset="/assets/images/landing/web-seo/rocket-400.png")
+        img(fetchpriority="high" width="1200" height="720" src="/assets/images/landing/responsive-web-design/test1.png", alt=__('responsive-web-design.img-rocket'), id="rocket")
+    div(class="cta")
+      h2 !{__('responsive-web-design.cta-title')}
+      div
+        div #{__('responsive-web-design.cta-phone')}
+          a(href="tel:+393295698985", title=__('responsive-web-design.cta-2')) (+39) 329 5698985
+        div #{__('responsive-web-design.cta-email')} 
+          a(href="mailto:info@progweb.it", title=__('responsive-web-design.cta-3')) info@progweb.it
+
+section(class="features")
+  ul
+    li
+      h2 #{__('responsive-web-design.fea-title-1')}
+      p !{__('responsive-web-design.fea-text-1')}
+    li 
+      h2 #{__('responsive-web-design.fea-title-2')}
+      p !{__('responsive-web-design.fea-text-2')}
+    li 
+      h2 #{__('responsive-web-design.fea-title-3')}
+      p !{__('responsive-web-design.fea-text-3')}
+    li 
+      h2 #{__('responsive-web-design.fea-title-4')}
+      p !{__('responsive-web-design.fea-text-4')}
+
+section(class="near")
+  h2 #{__('responsive-web-design.near-title')}
+  p !{__('responsive-web-design.near-text')}
+
