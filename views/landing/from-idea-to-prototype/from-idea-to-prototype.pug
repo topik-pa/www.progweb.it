@@ -1,0 +1,59 @@
+extends ../../layout-landing.pug
+
+block append meta
+
+  title #{title}
+  meta(name="description" content=description)
+
+  if lang==='it'
+    meta(name="keywords" content="prototipizzazione, rapida, rapid, prototyping, udine, friuli, 2025")
+    link(rel="canonical", href=proj_url + '/from-idea-to-prototype')
+  else 
+    meta(name="keywords" content="rapid, prototyping, udine, friuli, 2025")
+    link(rel="canonical", href=proj_url + '/from-idea-to-prototype/en')
+
+  meta(name="og:url" content=proj_url + url)
+  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
+  meta(name="og:type" content="article")
+  meta(name="og:title" content=title)
+  meta(name="og:image" content=proj_url + "/assets/images/landing/from-idea-to-prototype/from-idea-to-prototype-og-image-" + lang + ".webp")
+  meta(name="og:description" content=description)
+
+  link(rel="alternate", href="https://www.progweb.it/from-idea-to-prototype/it", hreflang="it")
+  link(rel="alternate", href="https://www.progweb.it/from-idea-to-prototype/en", hreflang="en")
+  link(rel="alternate", href="https://www.progweb.it/from-idea-to-prototype", hreflang="x-default")
+
+  link(rel="stylesheet", type="text/css", href="/views/landing/from-idea-to-prototype/style.css")
+
+block main
+  main
+    include ./article.pug
+
+block viewscripts 
+  script(defer, src='/views/landing/from-idea-to-prototype/script.js')
+  script(type='application/ld+json').
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "datePublished": "2024-09-15",
+      "dateModified": "2024-09-15",
+      "url": "#{proj_url + url}",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{description}",
+      "image": "#{proj_url + '/assets/images/landing/from-idea-to-prototype/from-idea-to-prototype-og-image-' + lang +'.webp'}",
+      "author": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "copyrightHolder": {
+        "@type": "Person",
+        "name": "#{owner}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "#{proj_name}",
+        "url": "#{proj_url}",
+        "logo": "#{logo}"
+      }
+    }

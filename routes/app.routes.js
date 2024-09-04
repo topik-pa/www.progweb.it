@@ -583,6 +583,34 @@ module.exports = (app, nonce) => {
       })
   })
 
+  // Rapid prototyping
+  app.get('/from-idea-to-prototype/en', (req, res) => {
+    if (req.locale === 'it') return res.redirect('/from-idea-to-prototype')
+    res.render('landing/from-idea-to-prototype/from-idea-to-prototype',
+      {
+        id: 'from-idea-to-prototype',
+        className: 'landing',
+        title: 'From Idea to Prototype',
+        description: 'Project design, development and management: from Zero to Prototype',
+        url: req.url,
+        nonce,
+        locale: 'en'
+      })
+  })
+  app.get(['/from-idea-to-prototype', '/from-idea-to-prototype/it'], (req, res) => {
+    if (req.locale !== 'it') return res.redirect('/from-idea-to-prototype/en')
+    res.render('landing/from-idea-to-prototype/from-idea-to-prototype',
+      {
+        id: 'from-idea-to-prototype',
+        className: 'landing',
+        title: 'Dalla Idea al Prototipo',
+        description: 'Progettazione, sviluppo e gestione di un prodotto: da Zero a Prototipo',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
+  })
+
   /* app.get('/web-accessibility', (req, res) => {
     res.render('landing/web-accessibility/web-accessibility',
       { id: 'web-accessibility', className: 'landing', title: 'Web Accessibility', url: req.url, nonce, locale: req.locale })
