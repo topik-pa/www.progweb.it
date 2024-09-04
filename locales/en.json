@@ -34,5 +34,25 @@
 		"more-text-3": "Some of the main <em>benefits of SEO</em> include: improved visibility (a well-optimized site will appear among the top results when users search for related information); sustainable traffic growth (unlike paid advertising, SEO generates organic traffic that can last over time); and increased credibility and trust (users tend to trust organic results more than paid ads). SEO offers numerous benefits, making it an essential component of any digital marketing strategy. From increasing organic traffic to building Brand authority to optimizing the user experience, <em>SEO contributes to the long-term success</em> of a website and business. Investing in SEO means building a solid online foundation that can bring lasting and sustainable results over time.",
 		"more-title-4": "SEO Guidelines 2025",
 		"more-text-4": "<em>SEO guidelines for 2025</em> reflect the evolution of search engines, user behaviors, and emerging technologies. To be effective, SEO strategies must adapt to these changes, while always keeping the <em>user experience at the center</em>. Here are the key SEO guidelines for 2025: focus on Quality; Core Web Vitals; Local SEO and personalization; video and multimedia content; semantic optimization; structured data; and advanced technical SEO. In 2025, SEO guidelines will require a more <em>holistic approach</em>, integrating technical, content, and user experience aspects. Keeping the site up-to-date with the latest trends, technologies, and user expectations will be critical to success in SEO. Adapting to changes and a user-focused approach will always be key."
+	},
+	"responsive-web-design": {
+		"title": "Don't make me ZOOM!",
+		"subtitle": "Practical reasons for having a RESPONSIVE website.",
+		"img-responsive": "A website with responsive layout to fit all devices",
+		"cta-title": "Make your project MOBILE FRIENDLY!",
+		"cta-phone": "Call or Whatsapp the number:",
+		"cta-2": "Contact us now by phone or Whatsapp",
+		"cta-email": "Send an email to the address:",
+		"cta-3": "Contact us now by email",
+		"fea-title-1": "Accessibility and Usability",
+		"fea-text-1": "A responsive site automatically adapts to different screen sizes and resolutions, making the user experience optimal on mobile devices, tablets, laptops, and desktops. This increases accessibility and ensures optimal navigation for all users.",
+		"fea-title-2": "Search engine positioning",
+		"fea-text-2": "Search engines favor responsive sites: a site that adapts well to mobile devices tends to rank better in search results, increasing visibility and organic traffic.",
+		"fea-title-3": "Optimized performance for mobile",
+		"fea-text-3": "Responsive sites can be optimized to load quickly on mobile devices, where speed is critical to maintain user attention and prevent abandonment.",
+		"fea-title-4": "Reduced Bounce Rate",
+		"fea-text-4": "If a site is not easily navigable from mobile devices, users are more likely to abandon it quickly, increasing the bounce rate. A responsive site keeps users on the site longer, improving engagement.",
+		"near-title": "Close to you",
+		"near-text": "Is your business located in the province of Udine or Friuli? <br>You have an added advantage: we are close by!"
 	}
 }

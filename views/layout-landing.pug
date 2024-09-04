@@ -10,8 +10,6 @@
   let email = 'info@progweb.it'
   let owner_email = 'marco@progweb.it'
   let logo = 'https://progweb.it/assets/images/logo.png'
-  let fbAppId = 1097920821592177
-  let googleSiteVerification = 'yeAoCZx82EAHF2DNVMmS9THRmxbj3WAEC6VliW7Nv4M'
   let sc_project = 12922368
   let sc_security = '40e93898'
   let lang = locale
@@ -38,24 +36,22 @@ html(lang=lang)
   head
     block meta 
       meta(charset="utf-8")
-      meta(property="fb:app_id" content=fbAppId)
       meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
       meta(name="author" content=owner + ' - ' + owner_email)
       link(rel="shortcut icon", href="/public/favicon.ico", type="image/x-icon")
-      meta(name="google-site-verification" content=googleSiteVerification)
     script(nonce=nonce). 
       if (localStorage.getItem('dark')) document.documentElement.classList.add('dark')
     if prod
         link(rel="stylesheet", type="text/css", href="/dist/main.css")
-        link(rel="dns-prefetch" href="https://connect.facebook.net/")
-        link(rel="dns-prefetch" href="https://www.facebook.com/")
-        link(rel="dns-prefetch" href="https://static.xx.fbcdn.net/")
         link(rel="dns-prefetch" href="https://www.statcounter.com/")
         link(rel="dns-prefetch" href="https://c.statcounter.com/")
     else
         link(rel="stylesheet", type="text/css", href="/styles/style.css")
   body(id=id, class=className)
-    include ../components/shared/header/header-landing.pug
+    if id==='responsive-web-design'
+      include ../components/shared/header/header-landing-light.pug
+    else 
+      include ../components/shared/header/header-landing.pug
     block intro
     block main
     block outro
@@ -68,8 +64,6 @@ html(lang=lang)
     else
       script(src='/scripts/index.js', type='module')
     if prod
-      div(id="fb-root")
-      script(async, defer, crossorigin="anonymous", nonce="994HhBGv", src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v19.0&appId=" + fbAppId))
       script(nonce=nonce).
         var sc_project = #{sc_project};
          var sc_invisible = 1;

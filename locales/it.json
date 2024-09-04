@@ -34,5 +34,25 @@
 		"more-text-3": "Alcuni dei principali vantaggi della SEO comprendono: il miglioramento della visibilità (un sito ben ottimizzato apparirà tra i primi risultati quando gli utenti cercano informazioni correlate); la crescita sostenibile del traffico (a differenza della pubblicità a pagamento, la SEO genera <em>traffico organico</em> che può durare nel tempo); <em>maggiore credibilità</em> e fiducia (gli utenti tendono a fidarsi di più dei risultati organici rispetto agli annunci a pagamento). La SEO offre numerosi benefici, rendendola una componente essenziale di qualsiasi strategia di marketing digitale. Dall'aumento del traffico organico alla costruzione dell'autorevolezza del Brand, fino all'ottimizzazione dell'esperienza utente, la SEO contribuisce al <em>successo a lungo termine</em> di un sito web e di un'attività commerciale. Investire nella SEO significa costruire una solida base online che può portare risultati duraturi e sostenibili nel tempo.",
 		"more-title-4": "Linee guida SEO 2025",
 		"more-text-4": "Le <em>linee guida SEO per il 2025</em> riflettono l'evoluzione dei motori di ricerca, dei comportamenti degli utenti e delle tecnologie emergenti. Per essere efficaci, le strategie SEO devono <em>adattarsi a questi cambiamenti</em>, mantenendo sempre al centro l'esperienza dell'utente. Ecco le linee guida SEO principali per il 2025: focalizzazione sulla <em>Qualità</em>; <em>Core Web Vitals</em>; <em>SEO Local</em> e personalizzazione; contenuti video e multimediali; <em>ottimizzazione semantica</em>; <em>dati strutturati</em> e SEO tecnica avanzata. Nel 2025, le linee guida SEO richiederanno un <em>approccio più olistico</em>, integrando aspetti tecnici, contenutistici e di esperienza utente. Mantenere il sito aggiornato con le ultime tendenze, tecnologie e aspettative degli utenti sarà fondamentale per avere successo nella SEO. La chiave sarà sempre l'adattamento ai cambiamenti e un approccio focalizzato sulle esigenze dell'utente."
+	},
+	"responsive-web-design": {
+		"near-title": "Vicini a te",
+		"near-text": "La tua attività è situata in provincia di <em>Udine</em> o in <em>Friuli</em>? <br> Hai un vantaggio in più: <em>siamo vicini!</em>",
+		"title": "Non farmi zoomare!",
+		"subtitle": "Motivi pratici per avere un sito Web RESPONSIVE",
+		"cta-title": "Rendi il tuo progetto MOBILE FRIENDLY!",
+		"cta-phone": "Telefona o invia un Whatsapp al numero:",
+		"cta-2": "Contattaci ora tramite telefono o Whatsapp",
+		"cta-email": "Invia una email all'indirizzo:",
+		"cta-3": "Contattaci ora tramite email",
+		"fea-title-1": "Accessibilità e Usabilità",
+		"fea-text-1": "Un sito responsive si <em>adatta automaticamente</em> alle diverse dimensioni e risoluzioni dello schermo, rendendo l'<em>esperienza utente ottimale</em> su dispositivi mobili, tablet, laptop e desktop. In questo modo <em>aumenta l'accessibilità</em> e si garantisce a tutti gli utenti una navigazione ottimale.",
+		"fea-title-2": "Posizionamento nei motori di ricerca",
+		"fea-text-2": "I motori di ricerca favoriscono i siti responsive: un sito che si adatta bene ai dispositivi mobili tende a ottenere un <em>miglior posizionamento nei risultati di ricerca</em>, aumentando la visibilità e il traffico organico.",
+		"fea-title-3": "Prestazioni ottimizzate per il mobile",
+		"fea-text-3": "I siti responsive possono essere <em>ottimizzati per caricarsi rapidamente su dispositivi mobili</em>, dove la velocità è critica per mantenere l'attenzione dell'utente e prevenire l'abbandono.",
+		"fea-title-4": "Riduzione del &quot;Bounce Rate&quot;",
+		"fea-text-4": "Se un sito non è facilmente navigabile da dispositivi mobili, gli utenti sono più propensi ad abbandonarlo rapidamente, aumentando il bounce rate. Un sito responsive <em>mantiene gli utenti sul sito più a lungo</em>, migliorando l'engagement.",
+		"img-responsive": "Un sito Web con layout responsive per adattarsi a tutti i dispositivi"
 	}
 }

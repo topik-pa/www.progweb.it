@@ -1,34 +1,47 @@
 extends ../../layout-landing.pug
 
 block append meta
+
   title #{title}
-  meta(name="description" content=title)
-  meta(name="keywords" content="web, seo")
-  link(rel="canonical", href=proj_url + url)
+  meta(name="description" content=description)
+
+  if lang==='it'
+    meta(name="keywords" content="responsive, web, design, mobile, friendly, layout, udine, friuli, 2025")
+    link(rel="canonical", href=proj_url + '/responsive-web-design')
+  else 
+    meta(name="keywords" content="responsive, web, design, mobile, friendly, layout, 2025")
+    link(rel="canonical", href=proj_url + '/responsive-web-design/en')
 
   meta(name="og:url" content=proj_url + url)
+  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
-  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content=title)
-  meta(name="og:image" content=proj_url + "/assets/images/post/003-node-setup-progetto/node-setup-progetto.webp")
+  meta(name="og:image" content=proj_url + "/assets/images/landing/responsive-web-design/responsive-web-design-og-image-" + lang + ".webp")
+  meta(name="og:description" content=description)
+
+  link(rel="alternate", href="https://www.progweb.it/responsive-web-design/it", hreflang="it")
+  link(rel="alternate", href="https://www.progweb.it/responsive-web-design/en", hreflang="en")
+  link(rel="alternate", href="https://www.progweb.it/responsive-web-design", hreflang="x-default")
+
+  link(rel="stylesheet", type="text/css", href="/views/landing/responsive-web-design/style.css")
 
 block main
   main
     include ./article.pug
 
 block viewscripts 
+  script(defer, src='/views/landing/responsive-web-design/script.js')
   script(type='application/ld+json').
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "datePublished": "2024-09-01",
-      "dateModified": "2024-09-01",
+      "datePublished": "2024-09-05",
+      "dateModified": "2024-09-05",
       "url": "#{proj_url + url}",
       "name": "#{title}",
       "headline": "#{title}",
-      "description": "#{title}",
-      "image": "#{proj_url}/assets/images/post/003-node-setup-progetto/node-setup-progetto.webp",
+      "description": "#{description}",
+      "image": "#{proj_url + '/assets/images/landing/responsive-web-design/responsive-web-design-og-image-' + lang +'.webp'}",
       "author": {
         "@type": "Person",
         "name": "#{owner}"
