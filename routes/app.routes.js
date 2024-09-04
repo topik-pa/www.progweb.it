@@ -433,7 +433,7 @@ module.exports = (app, nonce) => {
   // Landing
   // Web SEO
   app.get('/web-seo/it', (req, res) => {
-    if (req.locale !== 'it') res.redirect('/web-seo/en')
+    if (req.locale !== 'it') return res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
       {
         id: 'web-seo',
@@ -446,7 +446,7 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/web-seo/en', (req, res) => {
-    if (req.locale === 'it') res.redirect('/web-seo')
+    if (req.locale === 'it') return res.redirect('/web-seo')
     res.render('landing/web-seo/web-seo',
       {
         id: 'web-seo',
@@ -459,7 +459,7 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/web-seo', (req, res) => {
-    if (req.locale !== 'it') res.redirect('/web-seo/en')
+    if (req.locale !== 'it') return res.redirect('/web-seo/en')
     res.render('landing/web-seo/web-seo',
       {
         id: 'web-seo',
@@ -473,40 +473,27 @@ module.exports = (app, nonce) => {
   })
 
   // Responsive Web Design
-  app.get('/responsive-web-design/it', (req, res) => {
-    if (req.locale !== 'it') res.redirect('/responsive-web-design/en')
-    res.render('landing/responsive-web-design/responsive-web-design',
-      {
-        id: 'responsive-web-design',
-        className: 'landing',
-        title: 'Responsive Web Design Titolo',
-        description: 'Responsive Web Design Descrizione',
-        url: req.url,
-        nonce,
-        locale: 'it'
-      })
-  })
   app.get('/responsive-web-design/en', (req, res) => {
-    if (req.locale === 'it') res.redirect('/responsive-web-design')
+    if (req.locale === 'it') return res.redirect('/responsive-web-design')
     res.render('landing/responsive-web-design/responsive-web-design',
       {
         id: 'responsive-web-design',
         className: 'landing',
-        title: 'Responsive Web Design Title',
-        description: 'Responsive Web Design Description',
+        title: 'Responsive Web Design',
+        description: 'Develop a mobile-friendly website through a responsive layout',
         url: req.url,
         nonce,
         locale: 'en'
       })
   })
-  app.get('/responsive-web-design', (req, res) => {
-    if (req.locale !== 'it') res.redirect('/responsive-web-design/en')
+  app.get(['/responsive-web-design', '/responsive-web-design/it'], (req, res) => {
+    if (req.locale !== 'it') return res.redirect('/responsive-web-design/en')
     res.render('landing/responsive-web-design/responsive-web-design',
       {
         id: 'responsive-web-design',
         className: 'landing',
-        title: 'Responsive Web Design Titolo',
-        description: 'Responsive Web Design Descrizione',
+        title: 'Responsive Web Design',
+        description: 'Sviluppare un sito Web mobile-friendly attraverso un layout responsive',
         url: req.url,
         nonce,
         locale: 'it'
