@@ -507,8 +507,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-accessibility',
         className: 'landing',
-        title: 'Web Accessibility',
-        description: 'Web Accessibility',
+        title: 'Web Accessibility. Leave no one behind!',
+        description: 'Grow your Business with a Web site accessible to all',
         url: req.url,
         nonce,
         locale: 'en'
@@ -520,8 +520,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-accessibility',
         className: 'landing',
-        title: 'Web Accessibility',
-        description: 'Web Accessibility',
+        title: 'Accessibilità Web. Non lasciare nessuno indietro!',
+        description: 'Fai crescere il tuo Business con un sito Web accessibile a tutti',
         url: req.url,
         nonce,
         locale: 'it'

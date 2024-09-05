@@ -4,10 +4,10 @@ section(class="head")
       h1 !{__('web-accessibility.title')}
       h2 !{__('web-accessibility.subtitle')}
       a(class="btn primary", id="cta") &#10173; #{__('web-accessibility.cta')}
-      //- picture 
-      //-   source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/rocket-350.png")
-      //-   source(media="(max-width: 1366px)", srcset="/assets/images/landing/web-seo/rocket-400.png")
-      //-   img(fetchpriority="high" width="500" height="479" src="/assets/images/landing/web-seo/rocket-500.png", alt=__('web-accessibility.img-rocket'), id="rocket")
+      picture 
+        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-accessibility/lock.png")
+        source(media="(max-width: 1366px)", srcset="/assets/images/landing/web-accessibility/lock.png")
+        img(fetchpriority="high" width="355" height="512" src="/assets/images/landing/web-accessibility/lock.png", alt=__('web-accessibility.img-accessibility'), id="accessibility")
     div(class="steps")
       div 
         span Step #[span 1]
@@ -47,15 +47,14 @@ section(class="near")
   p !{__('web-accessibility.near-text')}
 
 section(class="more")
-  h3 #{__('web-accessibility.more-main-title')}
-  h4 #{__('web-accessibility.more-main-subtitle')}
+  h1 #{__('web-accessibility.more-main-title')}
+  h2 #{__('web-accessibility.more-main-subtitle')}
   
   picture 
-    source(media="(max-width: 414px)", srcset="/assets/images/landing/web-seo/serp-414.webp")
-    source(media="(max-width: 768px)", srcset="/assets/images/landing/web-seo/serp-768.webp")
-    source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-seo/serp-1024.webp")
-    img(fetchpriority="high" width="695" height="414" src="/assets/images/landing/web-seo/serp-1024.webp", alt=__('web-accessibility.img-serp'), id="serp")
-    <figcaption>!{__('web-accessibility.img-serp-caption')}</figcaption>
+    source(media="(max-width: 414px)", srcset="/assets/images/landing/web-accessibility/img-accessibility-more-414.webp")
+    source(media="(max-width: 768px)", srcset="/assets/images/landing/web-accessibility/img-accessibility-more-768.webp")
+    img(loading="lazy" width="900" height="250" src="/assets/images/landing/web-accessibility/img-accessibility-more.webp", alt=__('web-accessibility.img-more'), id="more")
+    <figcaption>!{__('web-accessibility.img-more-caption')}</figcaption>
   
   h2 #{__('web-accessibility.more-title-1')}
   p !{__('web-accessibility.more-text-1')}
@@ -65,6 +64,3 @@ section(class="more")
 
   h2 #{__('web-accessibility.more-title-3')}
   p !{__('web-accessibility.more-text-3')}
-
-  h2 #{__('web-accessibility.more-title-4')}
-  p !{__('web-accessibility.more-text-4')}
