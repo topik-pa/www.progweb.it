@@ -500,6 +500,34 @@ module.exports = (app, nonce) => {
       })
   })
 
+  // Web accessibility
+  app.get('/web-accessibility/en', (req, res) => {
+    if (req.locale === 'it') return res.redirect('/web-accessibility')
+    res.render('landing/web-accessibility/web-accessibility',
+      {
+        id: 'web-accessibility',
+        className: 'landing',
+        title: 'Web Accessibility. Leave no one behind!',
+        description: 'Grow your Business with a Web site accessible to all',
+        url: req.url,
+        nonce,
+        locale: 'en'
+      })
+  })
+  app.get(['/web-accessibility', '/web-accessibility/it'], (req, res) => {
+    if (req.locale !== 'it') return res.redirect('/web-accessibility/en')
+    res.render('landing/web-accessibility/web-accessibility',
+      {
+        id: 'web-accessibility',
+        className: 'landing',
+        title: 'Accessibilità Web. Non lasciare nessuno indietro!',
+        description: 'Fai crescere il tuo Business con un sito Web accessibile a tutti',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
+  })
+
   /* app.get('/web-accessibility', (req, res) => {
     res.render('landing/web-accessibility/web-accessibility',
       { id: 'web-accessibility', className: 'landing', title: 'Web Accessibility', url: req.url, nonce, locale: req.locale })

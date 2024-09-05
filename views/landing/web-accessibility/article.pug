@@ -1,4 +1,66 @@
-article
-  h1 #{title}
-  h2 #{__('Hello')}
-  p #{__('HelloName', { name: 'Marco' })}
+section(class="head")
+  div(class="intro")
+    div(class="title")
+      h1 !{__('web-accessibility.title')}
+      h2 !{__('web-accessibility.subtitle')}
+      a(class="btn primary", id="cta") &#10173; #{__('web-accessibility.cta')}
+      picture 
+        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-accessibility/lock.png")
+        source(media="(max-width: 1366px)", srcset="/assets/images/landing/web-accessibility/lock.png")
+        img(fetchpriority="high" width="355" height="512" src="/assets/images/landing/web-accessibility/lock.png", alt=__('web-accessibility.img-accessibility'), id="accessibility")
+    div(class="steps")
+      div 
+        span Step #[span 1]
+        h3 !{__('web-accessibility.step1')}
+      div 
+        span Step #[span 2]
+        h3 !{__('web-accessibility.step2')}
+      div 
+        span Step #[span 3]
+        h3 !{__('web-accessibility.step3')}
+
+section(class="features")
+  ul
+    li
+      h2 #{__('web-accessibility.fea-title-1')}
+      p !{__('web-accessibility.fea-text-1')}
+    li 
+      h2 #{__('web-accessibility.fea-title-2')}
+      p !{__('web-accessibility.fea-text-2')}
+    li 
+      h2 #{__('web-accessibility.fea-title-3')}
+      p !{__('web-accessibility.fea-text-3')}
+    li 
+      h2 #{__('web-accessibility.fea-title-4')}
+      p !{__('web-accessibility.fea-text-4')}
+
+section(class="cta")
+  h2 !{__('web-accessibility.cta-title')}
+  div
+    div #{__('web-accessibility.cta-phone')}
+      a(href="tel:+393295698985", title=__('web-accessibility.cta-2')) (+39) 329 5698985
+    div #{__('web-accessibility.cta-email')} 
+      a(href="mailto:info@progweb.it?subject=Need more info about Web SEO Optimization&bcc=marcopavan.mp@gmail.com", title=__('web-accessibility.cta-3')) info@progweb.it
+
+section(class="near")
+  h2 #{__('web-accessibility.near-title')}
+  p !{__('web-accessibility.near-text')}
+
+section(class="more")
+  h1 #{__('web-accessibility.more-main-title')}
+  h2 #{__('web-accessibility.more-main-subtitle')}
+  
+  picture 
+    source(media="(max-width: 414px)", srcset="/assets/images/landing/web-accessibility/img-accessibility-more-414.webp")
+    source(media="(max-width: 768px)", srcset="/assets/images/landing/web-accessibility/img-accessibility-more-768.webp")
+    img(loading="lazy" width="900" height="250" src="/assets/images/landing/web-accessibility/img-accessibility-more.webp", alt=__('web-accessibility.img-more'), id="more")
+    <figcaption>!{__('web-accessibility.img-more-caption')}</figcaption>
+  
+  h2 #{__('web-accessibility.more-title-1')}
+  p !{__('web-accessibility.more-text-1')}
+
+  h2 #{__('web-accessibility.more-title-2')}
+  p !{__('web-accessibility.more-text-2')}
+
+  h2 #{__('web-accessibility.more-title-3')}
+  p !{__('web-accessibility.more-text-3')}
