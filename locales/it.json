@@ -94,5 +94,25 @@
 		"web-seo": "Ottieni più visibilità tramite la Web SEO",
 		"responsive-web-design": "Basta ZOOM: rendi il tuo sito Mobile Friendly",
 		"web-accessibility": "Sii inclusivo: rendi accessibile il tuo sito"
+	},
+	"web-sustainability": {
+		"title": "web-sustainability.title",
+		"subtitle": "web-sustainability.subtitle",
+		"img-responsive": "web-sustainability.img-responsive",
+		"cta-title": "<em>Contattaci oggi</em> per ottenere una <em>analisi gratuita</em>",
+		"cta-phone": "Telefona o invia un Whatsapp al numero:",
+		"cta-2": "Contattaci ora tramite telefono o Whatsapp",
+		"cta-email": "Invia una email all'indirizzo:",
+		"cta-3": "Contattaci ora tramite email",
+		"fea-title-1": "web-sustainability.fea-title-1",
+		"fea-text-1": "web-sustainability.fea-text-1",
+		"fea-title-2": "web-sustainability.fea-title-2",
+		"fea-text-2": "web-sustainability.fea-text-2",
+		"fea-title-3": "web-sustainability.fea-title-3",
+		"fea-text-3": "web-sustainability.fea-text-3",
+		"fea-title-4": "web-sustainability.fea-title-4",
+		"fea-text-4": "web-sustainability.fea-text-4",
+		"near-title": "Vicini a te",
+		"near-text": "La tua attività è situata in provincia di <em>Udine</em> o in <em>Friuli</em>? <br> Hai un vantaggio in più: <em>siamo vicini!</em>"
 	}
 }
