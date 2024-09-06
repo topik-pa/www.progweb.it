@@ -7,20 +7,23 @@ section(class="intro")
       h1 !{__('web-sustainability.title')}
       h2 !{__('web-sustainability.subtitle')}
   div(class="footer")
-    div(class="responsive")
-      picture 
-        source(media="(max-width: 414px)", srcset="/assets/images/landing/web-sustainability/web-sustainability-image-414.webp")
-        source(media="(max-width: 768px)", srcset="/assets/images/landing/web-sustainability/web-sustainability-image-768.webp")
-        source(media="(max-width: 1024px)", srcset="/assets/images/landing/web-sustainability/web-sustainability-image-1024.webp")
-        source(media="(max-width: 1366px)", srcset="/assets/images/landing/web-sustainability/web-sustainability-image-1366.webp")
-        img(fetchpriority="high" width="820" height="455" src="/assets/images/landing/web-sustainability/web-sustainability-image.webp", alt=__('web-sustainability.img-responsive'), id="rwd")
-    div(class="cta")
-      h2 !{__('web-sustainability.cta-title')}
-      div
-        div #{__('web-sustainability.cta-phone')}
-          a(href="tel:+393295698985", title=__('web-sustainability.cta-2')) (+39) 329 5698985
-        div #{__('web-sustainability.cta-email')} 
-          a(href="mailto:info@progweb.it?subject=Need more info about Web Sustainability&bcc=marcopavan.mp@gmail.com", title=__('web-sustainability.cta-3')) info@progweb.it
+    div(class="left")
+      div(class="opacity")
+      div(class="text")
+        span Persone
+        span Pianeta
+        span Prosperità
+        span Pace
+        span Partnership
+    div(class="right")
+      div(class="blur")
+      div(class="cta")
+        h2 !{__('web-sustainability.cta-title')}
+        div
+          div #{__('web-sustainability.cta-phone')}
+            a(href="tel:+393295698985", title=__('web-sustainability.cta-2')) (+39) 329 5698985
+          div #{__('web-sustainability.cta-email')} 
+            a(href="mailto:info@progweb.it?subject=Need more info about Web Sustainability&bcc=marcopavan.mp@gmail.com", title=__('web-sustainability.cta-3')) info@progweb.it
 
 section(class="features")
   ul
