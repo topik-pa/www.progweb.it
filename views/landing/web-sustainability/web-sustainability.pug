@@ -1,34 +1,47 @@
 extends ../../layout-landing.pug
 
 block append meta
+
   title #{title}
-  meta(name="description" content=title)
-  meta(name="keywords" content="web, seo")
-  link(rel="canonical", href=proj_url + url)
+  meta(name="description" content=description)
+
+  if lang==='it'
+    meta(name="keywords" content="web, sustainability, udine, friuli, 2025")
+    link(rel="canonical", href=proj_url + '/web-sustainability')
+  else 
+    meta(name="keywords" content="web, sustainability, 2025")
+    link(rel="canonical", href=proj_url + '/web-sustainability/en')
 
   meta(name="og:url" content=proj_url + url)
+  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
-  meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content=title)
-  meta(name="og:image" content=proj_url + "/assets/images/post/003-node-setup-progetto/node-setup-progetto.webp")
+  meta(name="og:image" content=proj_url + "/assets/images/landing/web-sustainability/web-sustainability-og-image-" + lang + ".webp")
+  meta(name="og:description" content=description)
+
+  link(rel="alternate", href="https://www.progweb.it/web-sustainability/it", hreflang="it")
+  link(rel="alternate", href="https://www.progweb.it/web-sustainability/en", hreflang="en")
+  link(rel="alternate", href="https://www.progweb.it/web-sustainability", hreflang="x-default")
+
+  link(rel="stylesheet", type="text/css", href="/views/landing/web-sustainability/style.css")
 
 block main
   main
     include ./article.pug
 
 block viewscripts 
+  script(defer, src='/views/landing/web-sustainability/script.js')
   script(type='application/ld+json').
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "datePublished": "2024-09-01",
-      "dateModified": "2024-09-01",
+      "datePublished": "2024-09-05",
+      "dateModified": "2024-09-05",
       "url": "#{proj_url + url}",
       "name": "#{title}",
       "headline": "#{title}",
-      "description": "#{title}",
-      "image": "#{proj_url}/assets/images/post/003-node-setup-progetto/node-setup-progetto.webp",
+      "description": "#{description}",
+      "image": "#{proj_url + '/assets/images/landing/web-sustainability/web-sustainability-og-image-' + lang +'.webp'}",
       "author": {
         "@type": "Person",
         "name": "#{owner}"
