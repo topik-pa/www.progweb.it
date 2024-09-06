@@ -257,6 +257,46 @@ img#serp {
 }
 
 
+.services {
+  width: 80%;
+  margin: 0 auto;
+}
+.services h1 {
+  text-align: center;
+}
+.services ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.services li {
+  width: 20%;
+}
+.services a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .4s ease-out;
+}
+.services a:hover {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+.services img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(---primary);
+}
+.services span {
+  text-transform: uppercase;
+  margin-top: var(--x-small-space);
+  text-align: center;
+}
+
+
 
 @media screen and (max-width: 1366px) {
   html {
@@ -356,4 +396,13 @@ img#serp {
   section.head h1 em {
     margin-top: 2.5rem;
   }
+
+  .services ul {
+    flex-direction: column;
+  }
+  .services li {
+    width: 80%;
+    margin-bottom: calc(var(--xx-large-space) * 2)
+  }
+
 }
