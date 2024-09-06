@@ -88,5 +88,11 @@
 		"more-text-2": "Optimizing the accessibility of a website requires a series of actions that improve the browsing experience for all users, including those with disabilities. The guidelines mainly suggest that: <em>text and graphic</em> elements should be easily readable for all users, including those with visual impairments or color blindness; the site should be <em>fully navigable using only the keyboard</em>, since some people cannot use a mouse; <em>forms should be accessible</em> and clear; you need to make sure that the <em>user interface is consistent</em> throughout the site... More generally, a <em>clear and predictable design</em> helps people with cognitive disabilities navigate more easily.",
 		"more-title-3": "What are the 4 principles of Accessibility?",
 		"more-text-3": "Web accessibility is based on four basic principles established by the Web Content Accessibility Guidelines (WCAG). To be accessible, a site must be <em>perceptible</em>: information and user interface components must be presented in a way that users can perceive them (contrasts, alternative text...). A site must be <em>usable</em>: interface components and navigation must be easily usable by all users (navigability via keyboard or alternative devices to the mouse). The third principle refers to <em>comprehension</em>: the information and operation of the user interface must be understandable (clear text, unambiguous error messages...). Finally, the last principle relates to <em>robustness</em>: content must be robust enough to be interpreted by a wide range of user agents, including assistive devices (semantically valid and well-structured HTML and CSS)."
+	},
+	"services": {
+		"title": "Make your project effective with our Web services!",
+		"web-seo": "Get more visibility through Web SEO",
+		"responsive-web-design": "No more ZOOM: make your site Mobile Friendly",
+		"web-accessibility": "Be inclusive: make your website accessible"
 	}
 }
