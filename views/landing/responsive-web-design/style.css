@@ -50,6 +50,7 @@ figcaption {
 }
 .intro .head h2 { 
   font-style: italic;
+  font-size: var(--font-size-huge);
 }
 
 .intro .head a {
@@ -58,15 +59,16 @@ figcaption {
   align-items: center;
 }
 .intro .head a img {
-  height: var(--xx-large-space);
+  height: var(--x-large-space);
   width: auto;
   border-radius: 50%;
   padding: var(--xx-small-space);
   border: 1px solid var(---white);
-  margin-right: var(--normal-space);
+  margin-right: var(--small-space);
 }
 .intro .head a span {
   color: var(---white);
+  font-size: var(--font-size-extra-small);
 }
 
 .intro .footer {

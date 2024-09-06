@@ -40,6 +40,7 @@
   --rt: rgba(201, 30, 44, .03);
 
   /* FONT SIZES */
+  --font-size-extra-small: .6rem;
   --font-size-very-small: .75rem;
   --font-size-small: .9rem;
   --font-size-normal: 1rem;

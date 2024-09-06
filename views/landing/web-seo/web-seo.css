@@ -175,7 +175,7 @@ img#serp {
 
 
 .cta {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   border-top: 1px solid rgba(249,98,33,1);
   background-color: rgba(249,98,33,0.1);
@@ -218,7 +218,7 @@ img#serp {
 
 
 .near {
-  width: 70%;
+  width: 80%;
   margin: 4rem auto;
   background-color: rgba(2, 89, 139, 0.1);
   border-top: 1px solid rgb(2, 89, 139);
@@ -245,7 +245,7 @@ img#serp {
 
 
 .more {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 .more h3 {
@@ -276,7 +276,7 @@ img#serp {
     width: 80%;
   }
   .features, .cta, .near, .more {
-    width: 98%!important;
+    width: 92%!important;
   }
 }
 
