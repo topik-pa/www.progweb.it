@@ -535,8 +535,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-sustainability',
         className: 'landing',
-        title: 'Web Sustainability',
-        description: 'Sustainability',
+        title: 'Is your website SUSTAINABLE?',
+        description: 'Check whit us your web project\'s ecological footprint',
         url: req.url,
         nonce,
         locale: 'en'
@@ -548,8 +548,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-sustainability',
         className: 'landing',
-        title: 'Sustainability',
-        description: 'Sustainability',
+        title: 'Il tuo sito è SOSTENIBILE?',
+        description: 'Verifica con noi l\'impronta ecologia del tuo progetto web',
         url: req.url,
         nonce,
         locale: 'it'

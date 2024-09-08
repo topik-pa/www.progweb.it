@@ -19,7 +19,7 @@ main {
   padding-top: 0;
 }
 header {
-  padding: 0 var(--view-padding)!important;
+  padding: var(---padding)!important;
 }
 p {
   line-height: 150%!important;
@@ -31,6 +31,9 @@ figcaption {
   text-align: center;
   font-style: italic!important;
   color: var(--dark-gray);
+}
+#toggle-dark { 
+  visibility: hidden;
 }
 
 
@@ -75,7 +78,7 @@ figcaption {
   justify-content: space-between;
   padding: 0 calc(var(--view-padding) * 10);
 
-  background-image: url('/assets/images/landing/web-sustainability/854.jpg');
+  background-image: url('/assets/images/landing/web-sustainability/grass.webp');
   background-size: contain;
   align-items: center;
   height: 40rem;
@@ -170,7 +173,6 @@ figcaption {
   text-align: center;
   margin-bottom: var(--x-large-space);
   color: var(---primary);
-  font-weight: bold;
 }
 .cta > div {
   display: flex;
@@ -391,6 +393,7 @@ figcaption {
   .features, .near {
     margin: 4rem auto!important;
     padding: 0!important;
+    width: 92% !important;
   }
   .features ul { 
     flex-direction: column;
