@@ -528,6 +528,34 @@ module.exports = (app, nonce) => {
       })
   })
 
+  // Web sustainability
+  app.get('/web-sustainability/en', (req, res) => {
+    if (req.locale === 'it') return res.redirect('/web-sustainability')
+    res.render('landing/web-sustainability/web-sustainability',
+      {
+        id: 'web-sustainability',
+        className: 'landing',
+        title: 'Is your website SUSTAINABLE?',
+        description: 'Check whit us your web project\'s ecological footprint',
+        url: req.url,
+        nonce,
+        locale: 'en'
+      })
+  })
+  app.get(['/web-sustainability', '/web-sustainability/it'], (req, res) => {
+    if (req.locale !== 'it') return res.redirect('/web-sustainability/en')
+    res.render('landing/web-sustainability/web-sustainability',
+      {
+        id: 'web-sustainability',
+        className: 'landing',
+        title: 'Il tuo sito è SOSTENIBILE?',
+        description: 'Verifica con noi l\'impronta ecologia del tuo progetto web',
+        url: req.url,
+        nonce,
+        locale: 'it'
+      })
+  })
+
   /* app.get('/web-accessibility', (req, res) => {
     res.render('landing/web-accessibility/web-accessibility',
       { id: 'web-accessibility', className: 'landing', title: 'Web Accessibility', url: req.url, nonce, locale: req.locale })

@@ -1,4 +1,66 @@
-article
-  h1 #{title}
-  h2 #{__('Hello')}
-  p #{__('HelloName', { name: 'Marco' })}
+section(class="intro")
+  div(class="head")
+    div
+      a(href=proj_url, title="Home page")
+        img(src="/assets/images/logo-min.png", alt=proj_name + ' - Layout Web Responsive')
+        span #{proj_name}
+      h1 !{__('web-sustainability.title')}
+      h2 !{__('web-sustainability.subtitle')}
+  div(class="footer")
+    div(class="left")
+      div(class="opacity")
+      div(class="text")
+        span #{__('web-sustainability.one')}
+        span #{__('web-sustainability.two')}
+        span #{__('web-sustainability.three')}
+        span #{__('web-sustainability.four')}
+        span #{__('web-sustainability.five')}
+    div(class="right")
+      div(class="blur")
+      div(class="cta")
+        h2 !{__('web-sustainability.cta-title')}
+        div
+          div #{__('web-sustainability.cta-phone')}
+            a(href="tel:+393295698985", title=__('web-sustainability.cta-2')) (+39) 329 5698985
+          div #{__('web-sustainability.cta-email')} 
+            a(href="mailto:info@progweb.it?subject=Need more info about Web Sustainability&bcc=marcopavan.mp@gmail.com", title=__('web-sustainability.cta-3')) info@progweb.it
+
+section(class="features")
+  ul
+    li
+      h2 #{__('web-sustainability.fea-title-1')}
+      p !{__('web-sustainability.fea-text-1')}
+    li 
+      h2 #{__('web-sustainability.fea-title-2')}
+      p !{__('web-sustainability.fea-text-2')}
+    li 
+      h2 #{__('web-sustainability.fea-title-3')}
+      p !{__('web-sustainability.fea-text-3')}
+    li 
+      h2 !{__('web-sustainability.fea-title-4')}
+      p !{__('web-sustainability.fea-text-4')}
+
+section(class="near")
+  h2 #{__('web-sustainability.near-title')}
+  p !{__('web-sustainability.near-text')}
+
+
+section(class="services")
+  h1 #{__('services.title')}
+  ul(class="wrap")
+    li
+      a(href="/web-seo" title=__('services.web-seo-a-title'))
+        img(loading="lazy" width="1200" height="630" src='/assets/images/landing/web-seo/web-seo-og-image-' + lang + '.webp', alt=__('services.web-seo-alt-image'))
+        span #{__('services.web-seo')}
+    li 
+      a(href="/responsive-web-design" title=__('services.responsive-web-design-a-title'))
+        img(loading="lazy" width="1200" height="630" src='/assets/images/landing/responsive-web-design/responsive-web-design-og-image-' + lang + '.webp', alt=__('services.responsive-web-design-alt-image'))
+        span #{__('services.responsive-web-design')}
+    li 
+      a(href="/web-sustainability" title=__('services.web-sustainability-a-title'))
+        img(loading="lazy" width="1200" height="630" src='/assets/images/landing/web-sustainability/web-sustainability-og-image-' + lang + '.webp', alt=__('services.web-sustainability-alt-image'))
+        span #{__('services.web-sustainability')}
+    li 
+      a(href="/web-accessibility" title=__('services.web-accessibility-a-title'))
+        img(loading="lazy" width="1200" height="630" src='/assets/images/landing/web-accessibility/web-accessibility-og-image-' + lang + '.webp', alt=__('services.web-accessibility-alt-image'))
+        span #{__('services.web-accessibility')}
