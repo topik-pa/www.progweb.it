@@ -2,7 +2,7 @@ extends ../../layout-landing.pug
 
 block append meta
 
-  title #{title} | #{proj_name}
+  title !{title}
   meta(name="description" content=description)
 
   if lang==='it'
@@ -35,8 +35,8 @@ block viewscripts
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "datePublished": "2024-09-5",
-      "dateModified": "2024-09-5",
+      "datePublished": "2024-09-05",
+      "dateModified": "2024-09-11",
       "url": "#{proj_url + url}",
       "name": "#{title}",
       "headline": "#{title}",
