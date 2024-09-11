@@ -507,8 +507,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-accessibility',
         className: 'landing',
-        title: 'Web Accessibility. Leave no one behind!',
-        description: 'Grow your Business with a Web site accessible to all',
+        title: 'Leave NO ONE BEHIND: make your site ACCESSIBLE!',
+        description: 'Grow your Business with an accessible website - Analysis, optimisation, 2025 regulations and deadlines, practical benefits and the 4 Principles of Accessibility',
         url: req.url,
         nonce,
         locale: 'en'
@@ -520,8 +520,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-accessibility',
         className: 'landing',
-        title: 'Accessibilità Web. Non lasciare nessuno indietro!',
-        description: 'Fai crescere il tuo Business con un sito Web accessibile a tutti',
+        title: 'Non lasciare NESSUNO INDIETRO: rendi ACCESSIBILE il tuo sito!',
+        description: 'Fai crescere il tuo Business con un sito Web accessibile - Analisi, ottimizzazione, le normativa e scadenze 2025, i vantaggi pratici e i 4 Principi della Accesibilità',
         url: req.url,
         nonce,
         locale: 'it'
