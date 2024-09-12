@@ -451,8 +451,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-seo',
         className: 'landing',
-        title: 'Web SEO Optimization',
-        description: 'How to improve your Web Ranking with Search Engine Optimization',
+        title: 'Make your SEO TAKE OFF!',
+        description: 'How to improve the visibility of your web portal with Search Engine Optimisation, better Core Web Vitals, user experience and enhancing security.',
         url: req.url,
         nonce,
         locale: 'en'
@@ -464,8 +464,8 @@ module.exports = (app, nonce) => {
       {
         id: 'web-seo',
         className: 'landing',
-        title: 'Ottimizzazione Web SEO',
-        description: 'Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization',
+        title: 'Fai DECOLLARE la tua SEO!',
+        description: 'Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization e l\'ottimizzazione dei Core Web Vitals, il miglioramento della esperienza utente e l\'incremento della sicurezza.',
         url: req.url,
         nonce,
         locale: 'it'

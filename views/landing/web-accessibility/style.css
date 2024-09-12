@@ -1,19 +1,20 @@
 :root {
   /* COLORS */
-  ---primary: #ca3001;
-  ---content-width: 80%;
+  --l-primary: #ca3001;
+  --l-content-width: 80%;
 }
 
-html {
+main {
   font-size: 16px!important;
 }
 p, li {
   line-height: 150%!important;
 }
 a.btn {
-  color: var(--primary);
+  color: var(--l-primary);
   border-color: var(--primary);
   border-width: 3px;
+  font-size: var(--font-size-bigger);
 }
 figcaption {
   text-align: center;
@@ -25,7 +26,7 @@ figcaption {
 }
 
 section.head {
-  width: var(---content-width);
+  width: var(--l-content-width);
   margin: var(--x-large-space) auto;
   color: var(--white);
   padding: var(--x-large-space);
@@ -105,8 +106,8 @@ section.head img#accessibility {
   padding: var(--x-small-space);
 }
 .steps div:nth-child(1) span span {
-  color: var(---primary);
-  border-color: var(---primary);
+  color: var(--l-primary);
+  border-color: var(--l-primary);
 }
 .steps div:nth-child(2) span span {
   color: #e28204;
@@ -119,7 +120,7 @@ section.head img#accessibility {
 
 
 .features {
-  width: var(---content-width);
+  width: var(--l-content-width);
   margin: 0 auto;
 }
 .features h2 {
@@ -159,7 +160,7 @@ section.head img#accessibility {
 
 
 .cta {
-  width: var(---content-width);
+  width: var(--l-content-width);
   margin: 0 auto;
   border-top: 3px solid rgba(202, 48, 1, 1);
   background-color: rgba(202, 48, 1, 0.1);
@@ -201,7 +202,7 @@ section.head img#accessibility {
 
 
 .near {
-  width: var(---content-width);
+  width: var(--l-content-width);
   margin: 4rem auto;
   background-color: rgba(2, 89, 139, 0.1);
   border-top: 3px solid rgb(2, 89, 139);
@@ -228,12 +229,12 @@ section.head img#accessibility {
 
 
 .more {
-  width: var(---content-width);
+  width: var(--l-content-width);
   margin: 0 auto;
 }
 .more h2 {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: var(--xx-large-space);
 }
 img#more {
   width: 70%;
@@ -246,7 +247,7 @@ img#more {
 
 
 .services {
-  width: var(---content-width);
+  width: var(--l-content-width);
   margin: 0 auto;
 }
 .services h3 {
@@ -279,7 +280,7 @@ img#more {
 .services img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid var(---primary);
+  border-bottom: 1px solid var(--l-primary);
 }
 .services span {
   text-transform: uppercase;
@@ -314,7 +315,7 @@ img#more {
 
 @media screen and (max-width: 1280px) {
   section.head .intro {
-    width: var(---content-width);
+    width: var(--l-content-width);
   }
   section.head img#accessibility {
     top: 3%;
@@ -415,7 +416,7 @@ img#more {
     flex-direction: column;
   }
   .services li {
-    width: var(---content-width);
+    width: var(--l-content-width);
     margin-bottom: calc(var(--xx-large-space) * 2)
   }
 }
