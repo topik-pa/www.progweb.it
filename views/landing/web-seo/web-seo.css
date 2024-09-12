@@ -1,21 +1,28 @@
 :root {
   /* COLORS */
-  --orange: #E83600;
+  --l-primary: #E83600;
+  --l-content-width: 80%;
 }
 
-html {
+main {
   font-size: 16px!important;
 }
 p {
   line-height: 150%!important;
 }
 a.btn {
-  color: #ca3001;
+  color: var(--l-primary);
+  border-color: var(--primary);
+  border-width: 3px;
+  font-size: var(--font-size-big);
 }
 figcaption {
   text-align: center;
   font-style: italic!important;
   color: var(--dark-gray);
+}
+#toggle-dark {
+  opacity: 0;
 }
 
 section.head {
@@ -24,15 +31,15 @@ section.head {
   margin: 0;
 }
 section.head .intro {
-  width: 60%;
+  width: var(--l-content-width);
   color: var(--white);
-  padding: var(--x-large-space);
+  padding: var(--large-space);
   border: 1px solid var(--gray);
   border-radius: var(--border-radius-big);
 }
 section.head .title {
   position: relative;
-  background: var(--orange);
+  background: var(--l-primary);
   background: linear-gradient(120deg, rgba(249,98,33,1) 65%, rgba(249,98,33,0.21) 95%);
   border: 1px solid rgb(249,98,33);
   padding: var(--x-large-space);
@@ -51,6 +58,8 @@ section.head h1 em {
 section.head h2 {
   margin: var(--x-large-space) 0;
   font-size: var(--font-size-huge);
+  z-index: 9;
+  position: relative;
 }
 section.head .btn {
   margin-bottom: calc(var(--x-large-space) * 2);
@@ -58,11 +67,10 @@ section.head .btn {
 }
 section.head img#rocket {
   position: absolute;
-  top: 9%;
-  height: 479px;
-  width: 500px;
-  right: -16%;
-  z-index: 9999;
+  top: -8%;
+  height: auto;
+  width: 520px;
+  right: -13%;
 }
 img#serp {
   width: 70%;
@@ -121,21 +129,21 @@ img#serp {
   padding: var(--x-small-space);
 }
 .steps div:nth-child(1) span span {
-  color: #E83600;
-  border-color: #E83600;
+  color: var(--l-primary);
+  border-color: var(--l-primary);
 }
 .steps div:nth-child(2) span span {
-  color: #E88D00;
-  border-color: #E88D00;
+  color: #e28204;
+  border-color: #e28204;
 }
 .steps div:nth-child(3) span span {
-  color: #cec93b;
-  border-color: #cec93b;
+  color: #3d8d19;
+  border-color: #3d8d19;
 }
 
 
 .features {
-  width: 80%;
+  width: var(--l-content-width);
   margin: 0 auto;
 }
 .features h2 {
@@ -175,9 +183,9 @@ img#serp {
 
 
 .cta {
-  width: 80%;
+  width: var(--l-content-width);
   margin: 0 auto;
-  border-top: 1px solid rgba(249,98,33,1);
+  border-top: 3px solid rgba(249,98,33,1);
   background-color: rgba(249,98,33,0.1);
 }
 .cta h2 {
@@ -218,10 +226,10 @@ img#serp {
 
 
 .near {
-  width: 80%;
+  width: var(--l-content-width);
   margin: 4rem auto;
   background-color: rgba(2, 89, 139, 0.1);
-  border-top: 1px solid rgb(2, 89, 139);
+  border-top: 3px solid rgb(2, 89, 139);
   text-align: center;
   position: relative;
 }
@@ -245,24 +253,24 @@ img#serp {
 
 
 .more {
-  width: 80%;
+  width: var(--l-content-width);
   margin: 0 auto;
 }
-.more h3 {
+.more h2 {
   text-align: center;
-}
-.more h4 {
-  text-align: center;
-  margin-bottom: 3rem;
+  margin-top: var(--xx-large-space);
 }
 
 
 .services {
-  width: 80%;
+  width: var(--l-content-width);
   margin: 0 auto;
 }
-.services h1 {
+.services h3 {
   text-align: center;
+  margin-top: var(--xx-large-space);
+  border-top: 1px solid var(--gray);
+  padding: var(--xx-large-space);
 }
 .services ul {
   display: flex;
@@ -299,37 +307,45 @@ img#serp {
 
 
 @media screen and (max-width: 1366px) {
-  html {
+  main {
     font-size: 13px!important;
   }
   section.head img#rocket {
-    position: absolute;
-    top: 9%;
-    height: 383px;
-    width: 400px;
-    right: -4%;
+    top: 2%;
+    height: 440px;
+    width: auto;
+    right: -9%;
   }
 }
 
 @media screen and (max-width: 1280px) {
   section.head .intro {
-    width: 80%;
+    width: var(--l-content-width);
   }
   .features, .cta, .near, .more {
     width: 92%!important;
+  }
+  section.head img#rocket {
+    top: -10%;
+    height: 320px;
+    width: auto;
+    right: -13%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   section.head img#rocket {
-    position: absolute;
-    top: 9%;
+    top: 18%;
     height: 335px;
     width: 350px;
-    right: -9%;
+    right: -16%;
+    z-index: -9;
   }
   img#serp {
     width: 70%;
+  }
+  section.head h1, section.head h2 {
+    text-shadow: 1px 1px 1px var(--black);
   }
 
 }
@@ -401,7 +417,7 @@ img#serp {
     flex-direction: column;
   }
   .services li {
-    width: 80%;
+    width: var(--l-content-width);
     margin-bottom: calc(var(--xx-large-space) * 2)
   }
 

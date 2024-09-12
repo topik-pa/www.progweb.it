@@ -1,7 +1,7 @@
 {
 	"webseo": {
 		"title": "Fai decollare la tua <br><em>SEO</em>",
-		"subtitle": "Migliora la tua visibilità <br>aumentando il ranking SEO <br>del tuo sito o portale Web",
+		"subtitle": "Migliora la tua visibilità <br>aumentando il ranking SEO del tuo sito o portale Web",
 		"cta": "Contattaci ora",
 		"cta-2": "Contattaci ora tramite telefono o Whatsapp",
 		"cta-3": "Contattaci ora tramite email",
@@ -24,8 +24,6 @@
 		"cta-email": "Invia una email all'indirizzo:",
 		"near-title": "Vicini a te",
 		"near-text": "La tua attività è situata in provincia di <em>Udine</em> o in <em>Friuli</em>? <br> Hai un vantaggio in più: <em>siamo vicini!</em>",
-		"more-main-title": "Maggiori informazioni sulla Search Engine Optimization",
-		"more-main-subtitle": "Scopri come aumentare la visibilità all'interno delle SERP pages",
 		"more-title-1": "Cos'è la SEO (Search Engine Optimization)?",
 		"more-text-1": "La SEO (<em>Search Engine Optimization</em>), o ottimizzazione per i motori di ricerca, è un insieme di strategie e tecniche utilizzate per <em>migliorare la visibilità</em> di un sito web nei risultati organici (non a pagamento) dei motori di ricerca come Google, Bing, e Yahoo. L'obiettivo principale della SEO è <em>aumentare la quantità e la qualità del traffico</em> verso un sito Web migliorandone il posizionamento nelle pagine dei risultati dei motori di ricerca (SERP). La SEO è importante perché aiuta i motori di ricerca a comprendere meglio i contenuti di un sito web, migliorandone così la visibilità nei risultati di ricerca per parole chiave pertinenti. Aumentare la visibilità organica significa <em>attrarre più visitatori potenziali</em> senza dover pagare per la pubblicità",
 		"more-title-2": "Quali sono gli obiettivi della SEO?",
@@ -33,7 +31,9 @@
 		"more-title-3": "Quali sono i benefici della SEO?",
 		"more-text-3": "Alcuni dei principali vantaggi della SEO comprendono: il miglioramento della visibilità (un sito ben ottimizzato apparirà tra i primi risultati quando gli utenti cercano informazioni correlate); la crescita sostenibile del traffico (a differenza della pubblicità a pagamento, la SEO genera <em>traffico organico</em> che può durare nel tempo); <em>maggiore credibilità</em> e fiducia (gli utenti tendono a fidarsi di più dei risultati organici rispetto agli annunci a pagamento). La SEO offre numerosi benefici, rendendola una componente essenziale di qualsiasi strategia di marketing digitale. Dall'aumento del traffico organico alla costruzione dell'autorevolezza del Brand, fino all'ottimizzazione dell'esperienza utente, la SEO contribuisce al <em>successo a lungo termine</em> di un sito web e di un'attività commerciale. Investire nella SEO significa costruire una solida base online che può portare risultati duraturi e sostenibili nel tempo.",
 		"more-title-4": "Linee guida SEO 2025",
-		"more-text-4": "Le <em>linee guida SEO per il 2025</em> riflettono l'evoluzione dei motori di ricerca, dei comportamenti degli utenti e delle tecnologie emergenti. Per essere efficaci, le strategie SEO devono <em>adattarsi a questi cambiamenti</em>, mantenendo sempre al centro l'esperienza dell'utente. Ecco le linee guida SEO principali per il 2025: focalizzazione sulla <em>Qualità</em>; <em>Core Web Vitals</em>; <em>SEO Local</em> e personalizzazione; contenuti video e multimediali; <em>ottimizzazione semantica</em>; <em>dati strutturati</em> e SEO tecnica avanzata. Nel 2025, le linee guida SEO richiederanno un <em>approccio più olistico</em>, integrando aspetti tecnici, contenutistici e di esperienza utente. Mantenere il sito aggiornato con le ultime tendenze, tecnologie e aspettative degli utenti sarà fondamentale per avere successo nella SEO. La chiave sarà sempre l'adattamento ai cambiamenti e un approccio focalizzato sulle esigenze dell'utente."
+		"more-text-4": "Le <em>linee guida SEO per il 2025</em> riflettono l'evoluzione dei motori di ricerca, dei comportamenti degli utenti e delle tecnologie emergenti. Per essere efficaci, le strategie SEO devono <em>adattarsi a questi cambiamenti</em>, mantenendo sempre al centro l'esperienza dell'utente. Ecco le linee guida SEO principali per il 2025: focalizzazione sulla <em>Qualità</em>; <em>Core Web Vitals</em>; <em>SEO Local</em> e personalizzazione; contenuti video e multimediali; <em>ottimizzazione semantica</em>; <em>dati strutturati</em> e SEO tecnica avanzata. Nel 2025, le linee guida SEO richiederanno un <em>approccio più olistico</em>, integrando aspetti tecnici, contenutistici e di esperienza utente. Mantenere il sito aggiornato con le ultime tendenze, tecnologie e aspettative degli utenti sarà fondamentale per avere successo nella SEO. La chiave sarà sempre l'adattamento ai cambiamenti e un approccio focalizzato sulle esigenze dell'utente.",
+    "more-title-5": "Come verificare la SEO di un sito?",
+		"more-text-5": "Per verificare la SEO di un sito web, ci sono vari passaggi che possono essere seguiti.<br> Analisi SEO on Page: che prende in esame la qualità degli elementi presenti nel codice del sito (titoli, metatag, intestazioni, parole chiave...). <br>Analisi tecnica generale: per verificare la velocità del sito, l'usabilità (anche su dispositivi mobile)...<br>Backlink e autorità del dominio: quanti sono i collegfamenti esterni che puntano al nostro sito, qual è l'autorità riconosciuta al nostro portale.<br>La qualità e pertinenza dei contenuti del nostro portale (originalità, tasso di aggiornamento...)."
 	},
 	"responsive-web-design": {
 		"near-title": "Vicini a te",
