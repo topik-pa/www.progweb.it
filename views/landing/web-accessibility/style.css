@@ -88,6 +88,7 @@ section.head img#accessibility {
   text-align: center;
   font-weight: bold;
   font-size: var(--font-size-big);
+  margin: 0;
 }
 .steps span {
   text-align: center;
