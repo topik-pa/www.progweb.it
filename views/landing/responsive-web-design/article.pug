@@ -20,7 +20,7 @@ section(class="intro")
         div #{__('responsive-web-design.cta-phone')}
           a(href="tel:+393295698985", title=__('responsive-web-design.cta-2')) (+39) 329 5698985
         div #{__('responsive-web-design.cta-email')} 
-          a(href="mailto:info@progweb.it?subject=Need more info about Responsive Web Design&bcc=marcopavan.mp@gmail.com", title=__('responsive-web-design.cta-3')) info@progweb.it
+          a(href="mailto:info@progweb.it?subject=Need%20more%20info%20about%20Responsive%20Web%20Design&bcc=marcopavan.mp@gmail.com", title=__('responsive-web-design.cta-3')) info@progweb.it
 
 section(class="features")
   ul
@@ -42,8 +42,27 @@ section(class="near")
   p !{__('responsive-web-design.near-text')}
 
 
+section(class="more")
+  figure
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/landing/responsive-web-design/responsive-web-design-more-414.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/landing/responsive-web-design/responsive-web-design-more-768.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/landing/responsive-web-design/responsive-web-design-more-1024.webp")
+      img(loading="lazy" width="1024" height="524" src="/assets/images/landing/responsive-web-design/responsive-web-design-more.webp", alt=__('responsive-web-design.img-more'), id="more")
+    figcaption !{__('responsive-web-design.img-more-caption')}
+  
+  h2 #{__('responsive-web-design.more-title-1')}
+  p !{__('responsive-web-design.more-text-1')}
+
+  h2 #{__('responsive-web-design.more-title-2')}
+  p !{__('responsive-web-design.more-text-2')}
+
+  h2 #{__('responsive-web-design.more-title-3')}
+  p !{__('responsive-web-design.more-text-3')}
+
+
 section(class="services")
-  h1 #{__('services.title')}
+  h3 #{__('services.title')}
   ul(class="wrap")
     li
       a(href="/web-seo" title=__('services.web-seo-a-title'))

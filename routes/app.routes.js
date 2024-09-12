@@ -432,19 +432,6 @@ module.exports = (app, nonce) => {
 
   // Landing
   // Web SEO
-  app.get('/web-seo/it', (req, res) => {
-    if (req.locale !== 'it') return res.redirect('/web-seo/en')
-    res.render('landing/web-seo/web-seo',
-      {
-        id: 'web-seo',
-        className: 'landing',
-        title: 'Ottimizzazione Web SEO',
-        description: 'Come migliorare la visibilità del tuo portale Web con la Search Engine Optimization',
-        url: req.url,
-        nonce,
-        locale: 'it'
-      })
-  })
   app.get('/web-seo/en', (req, res) => {
     if (req.locale === 'it') return res.redirect('/web-seo')
     res.render('landing/web-seo/web-seo',
@@ -479,8 +466,8 @@ module.exports = (app, nonce) => {
       {
         id: 'responsive-web-design',
         className: 'landing',
-        title: 'Responsive Web Design',
-        description: 'Develop a mobile-friendly website through a responsive layout',
+        title: 'DON\'T MAKE ME ZOOM! Responsive Web Design for your website.',
+        description: 'Develop a mobile-friendly website with a responsive layout. Improve accessibility, usability and ranking with a product optimised for the mobile world.',
         url: req.url,
         nonce,
         locale: 'en'
@@ -492,8 +479,8 @@ module.exports = (app, nonce) => {
       {
         id: 'responsive-web-design',
         className: 'landing',
-        title: 'Responsive Web Design',
-        description: 'Sviluppare un sito Web mobile-friendly attraverso un layout responsive',
+        title: 'NON FARMI ZOOMARE! Responsive Web Design per il tuo sito web.',
+        description: 'Sviluppare un sito Web mobile-friendly attraverso un layout responsive. Migliora l\'accessibilità, l\'usabilità ed il posizionamento con un prodotto ottimizzato per il mondo mobile.',
         url: req.url,
         nonce,
         locale: 'it'
