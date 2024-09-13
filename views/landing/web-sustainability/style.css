@@ -157,6 +157,7 @@ figcaption {
   position: relative;
 }
 .intro .footer .cta {
+  margin-top: var(--x-large-space);
   background-color: white;
   position: relative;
   padding: 1rem;
@@ -275,12 +276,16 @@ figcaption {
   background-image: url('/assets/images/icons/svg/person-walking-dashed-line-arrow-right-solid-red.svg');
 }
 
+
 .services {
-  width: 100%;
+  width: var(--l-content-width);
   margin: 0 auto;
 }
-.services h1 {
+.services h3 {
   text-align: center;
+  margin-top: var(--xx-large-space);
+  border-top: 1px solid var(--gray);
+  padding: var(--xx-large-space);
 }
 .services ul {
   display: flex;
@@ -383,6 +388,9 @@ figcaption {
   }
   .intro .footer .text {
     position: relative;
+  }
+  .intro .footer .opacity {
+    background-color: transparent;
   }
   .near::after {
     position: relative;
