@@ -2,7 +2,7 @@ extends ../../layout.pug
 
 block append meta
   title #{title} | #{proj_name}
-  meta(name="description" content="Articoli di argomento: Cybersecurity")
+  meta(name="description" content="Archivio articoli e post di settembre 2024")
   meta(name="keywords" content="")
   meta(name="robots" content="")
   link(rel="canonical", href=proj_url + url)
@@ -11,14 +11,13 @@ block append meta
   meta(name="og:type" content="website")
   meta(name="og:title" content=title + ' | ' + proj_name)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="Articoli di argomento: Node.js")
+  meta(name="og:description" content="Archivio articoli e post di settembre 2024")
   meta(name="og:image" content=proj_url + "/assets/images/logo.png")
 
-block main 
+block main
   main(class="tworows")
     section
       h1 #{title}
       include ../../post/009-security-by-design-principi/preview.pug
 
     include ../../../components/shared/sideside/sideside.pug
-

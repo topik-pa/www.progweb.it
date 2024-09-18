@@ -2,21 +2,21 @@ extends ../../layout.pug
 
 block append meta
   title #{title} | #{proj_name}
-  meta(name="description" content=title)
-  meta(name="keywords" content="principi, paradigmi, security, design")
+  meta(name="description" content=description)
+  meta(name="keywords" content="principi, paradigmi, security, design, sicurezza, web, progettazione, software, sicurezza")
   link(rel="canonical", href=proj_url + url)
 
   meta(name="og:url" content=proj_url + url)
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="PWI - Programmazione Web Italia")
+  meta(name="og:description" content=description)
   meta(name="og:image" content=proj_url + "/assets/images/post/009-security-by-design-principi/security-by-design-principi.webp")
 
 block main
   main(class="tworows")
     article
-      include ./security-by-design-principi-article.pug
+      include ./article.pug
 
       include /components/shared/coffee/coffee.pug
       include /components/shared/share/share.pug
@@ -30,12 +30,12 @@ block viewscripts
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "datePublished": "2024-06-25",
-      "dateModified": "2024-06-25",
+      "datePublished": "2024-09-18",
+      "dateModified": "2024-09-18",
       "url": "#{proj_url + url}",
       "name": "#{title}",
       "headline": "#{title}",
-      "description": "#{title}",
+      "description": "#{description}",
       "image": "#{proj_url}/assets/images/post/009-security-by-design-principi/security-by-design-principi.webp",
       "author": {
         "@type": "Person",

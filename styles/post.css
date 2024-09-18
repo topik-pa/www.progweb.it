@@ -12,7 +12,7 @@ article .intro {
   position: relative;
   width: fit-content;
   max-width: 75%;
-  margin: var(--xx-large-space) auto;
+  margin: calc(var(--xx-large-space) * 1.5) auto;
   padding: var(--normal-space);
   text-align: center;
 }
@@ -37,6 +37,7 @@ article img.cover {
   display: block;
   max-width: 75%;
   height: auto;
+  width: auto;
 }
 
 article .cp_embed_wrapper {

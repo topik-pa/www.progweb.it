@@ -88,12 +88,12 @@ module.exports = (app, nonce) => {
   app.get('/security', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'Articoly Cyber Security'
+        name: 'Articoly Cybersecurity'
       }
     ]
     res.render('topic/security/security', {
       id: 'sec',
-      title: 'Articoly Cyber Security',
+      title: 'Articoly Cybersecurity',
       url: req.url,
       breadcrumbs,
       posts,
@@ -102,6 +102,21 @@ module.exports = (app, nonce) => {
   })
 
   // ARCHIVE
+  app.get('/settembre-2024', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Archivio settembre 2024'
+      }
+    ]
+    res.render('archive/sett2024/sett2024', {
+      id: 'sett2024',
+      title: 'Archivio settembre 2024',
+      url: req.url,
+      breadcrumbs,
+      posts,
+      nonce
+    })
+  })
   app.get('/giugno-2024', (req, res) => {
     const breadcrumbs = [
       {
@@ -265,7 +280,8 @@ module.exports = (app, nonce) => {
   })
   // Specific
   app.get('/security-by-design-principi', (req, res) => {
-    const title = 'I 10 principi della Security by Design'
+    const title = 'La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web'
+    const description = 'Come e perchè integrare i principali paradigmi di sicurezza nell\'implementazione del nostro sistema software fin dalle primissime fasi di progettazione. Che cosa significa il concetto di "Security by Design" e quali sono i vantaggi che offre?'
     const breadcrumbs = [
       {
         name: 'Post',
@@ -280,6 +296,7 @@ module.exports = (app, nonce) => {
         id: 'security-by-design-principi',
         className: 'post',
         title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,

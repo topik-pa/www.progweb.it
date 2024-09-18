@@ -1,9 +1,9 @@
 const data = [
   {
     id: '009-security-by-design-principi',
-    topic: 'security',
+    topic: 'sec',
     year: 2024,
-    month: 6
+    month: 9
   },
   {
     id: '008-confronto-portali-ecommerce-moda-italiani',

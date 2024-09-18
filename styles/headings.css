@@ -14,14 +14,14 @@ h1 span {
 h2 {
   font-size: var(--font-size-bigger);
   letter-spacing: .1rem;
-  margin: var(--normal-space) 0;
+  margin: var(--large-space) 0;
   line-height: 115%;
 }
 h3 {
   font-size: var(--font-size-normal);
   letter-spacing: .1rem;
   font-weight: bold;
-  margin: var(--normal-space) 0;
+  margin: var(--large-space) 0;
 }
 h4 {
   font-size: var(--font-size-normal);
