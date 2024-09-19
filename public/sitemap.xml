@@ -118,6 +118,12 @@
 
 	<!--POST-->
 	<url>
+		<loc>https://www.progweb.it/security-by-design-principi</loc>
+		<lastmod>2024-09-19T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
 		<loc>https://www.progweb.it/analisi/confronto-portali-ecommerce-moda-italiani</loc>
 		<lastmod>2024-06-06T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
