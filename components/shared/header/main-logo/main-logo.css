@@ -118,24 +118,24 @@
     display: none;
   }
   #main-logo .col {
-    width: 5rem;
+    width: 4rem;
     height: 1.3rem;
     font-size: 0;
   }
   #main-logo .col.html {
-    right: 25rem;
-  }
-  #main-logo .col.css {
     right: 20rem;
   }
+  #main-logo .col.css {
+    right: 16rem;
+  }
   #main-logo .col.js {
-    right: 15rem;
+    right: 12rem;
   }
   #main-logo .col.eng {
-    right: 10rem;
+    right: 8rem;
   }
   #main-logo .col.node {
-    right: 5rem;
+    right: 4rem;
   }
   #main-logo .col.sec {
     right: 0;
