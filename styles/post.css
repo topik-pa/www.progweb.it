@@ -12,7 +12,7 @@ article .intro {
   position: relative;
   width: fit-content;
   max-width: 75%;
-  margin: var(--xx-large-space) auto;
+  margin: calc(var(--xx-large-space) * 1.5) auto;
   padding: var(--normal-space);
   text-align: center;
 }
@@ -33,10 +33,11 @@ article .intro:after {
 }
 
 article img.cover {
-  float: left;
-  margin: 0 calc(var(--x-large-space) * 2) calc(var(--x-large-space) * 2) 0;
-  max-width: 33%;
+  margin: 0 auto;
+  display: block;
+  max-width: 75%;
   height: auto;
+  width: auto;
 }
 
 article .cp_embed_wrapper {
@@ -114,9 +115,7 @@ article aside.links h2::before {
 
 
 @media screen and (max-width: 1366px) {
-  article img.cover {
-    max-width: 45%;
-  }
+
 }
 
 @media screen and (max-width: 1024px) {

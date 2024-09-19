@@ -1,0 +1,69 @@
+h1 #{title}
+p(class="intro") Come e perchè integrare i principali paradigmi di sicurezza nell'implementazione del nostro sistema software fin dalle primissime fasi di progettazione. Che cosa significa il concetto di "Security by Design" e quali sono i vantaggi che offre? 
+
+picture 
+  source(media="(max-width: 414px)", srcset="/assets/images/post/009-security-by-design-principi/security-by-design-principi-s.webp")
+  source(media="(max-width: 768px)", srcset="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp")
+  source(media="(max-width: 1024px)", srcset="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp")
+  img(fetchpriority="high"  class="cover" width="1200" height="630" src="/assets/images/post/009-security-by-design-principi/security-by-design-principi.webp", alt=title)
+
+h2 Il concetto di Security by Design 
+p La #[em Security by Design] è un approccio fondamentale nello sviluppo software che mira ad integrare l'#[em implementazione della sicurezza fin dalle prime fasi del ciclo di vita del software]. In un tale approccio, gli strumenti e le tecniche di sicurezza fanno parte integrante dello sviluppo e non sono una sua appendice da integrare una volta che il lavoro di sviluppo principale è concluso. Il costo derivante dalla applicazione di questi principi è affrontato fin dalle prime fasi di sviluppo diventando #[em un investimento piuttosto che un  debito tecnico] da affrontare in un momento successivo.
+p #[em I principali pilasti su cui si basa la Cybersecurity] sono raccolti sotto l'acronimo CIA (Confidentiality, Integrity, Availability) e sono definiti nel modo seguente. 
+ul 
+  li #[em Confidenzialità] - garantisce la protezione delle informazioni da accessi non autorizzati facendo in modo che solo le persone autorizzate possano visualizzare o accedere ai dati sensibili.
+  li #[em Integrità] - si concentra sulla protezione dei dati da modifiche non autorizzate, garantendo che le informazioni rimangano accurate e integre nel corso del tempo.
+  li #[em Disponibilità] - si concentra sulla garanzia che i sistemi, le applicazioni e i dati siano accessibili agli utenti autorizzati quando ne hanno bisogno.
+
+h2 I 10 principi della Security by Design 
+p I seguenti sono 10 paradigmi essenziali per la progettazione di applicazioni Web sicure "by Design".
+
+h3 1. Minimo privilegio
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio1.webp", alt='Il principio del minimo privilegio')
+p Il principio del minimo privilegio mira a #[em limitare l'accesso delle risorse] agli utenti, processi e applicazioni. Gli utenti, i processi e le applicazioni ricevono i #[em privilegi minimi necessari] per svolgere le loro funzioni e solo ciò che è strettamente necessario viene autorizzato.
+p Un esempio riguarda la gestione degli accessi utente: un dipendente di un reparto finanziario dovrebbe avere accesso solo ai dati e ai sistemi necessari per le sue funzioni specifiche, senza accesso alle informazioni del reparto IT o HR.
+
+h3 2. Evitare la Security by Obscurity
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio2.webp", alt='Evitare la Security by Obscurity')
+p Si riferisce alla pratica di proteggere un sistema informatico #[em nascondendo i dettagli del suo funzionamento], confidando che, tenendo segrete alcune informazioni e le debolezze intrinseche, si possa migliorare la sicurezza complessiva del sistema. Questo principio va evitato in quanto si tratta di #[em un anti-pattern] perchè intrinsecamente debole e strutturalmente insufficiente.
+p Per esempio, l'accesso ad un pannello di controllo potrebbe essere possibile attraverso l'accesso ad una url non protetta del tipo "www.miosito.com/control-panel". Il fatto che questa url sia conosciuta solo dalle persone autorizzate ad accedervi non costituisce affatto una sicurezza.
+
+h3 3. Adottare gli Standard di Settore 
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio3.webp", alt='Adottare gli Standard di Settore')
+p il principio del "Do not invent Security" consiste nell'#[em evitare la creazione di soluzioni di sicurezza proprie], a meno che non sia strettamente necessario. Questo principio incoraggia l'uso di soluzioni di sicurezza consolidate, ben testate e ampiamente accettate, sviluppate e mantenute da esperti nel campo. Questo approccio riduce il rischio di vulnerabilità, risparmia risorse e garantisce #[em conformità alle normative di sicurezza]. 
+
+h3 4. Gestire gli errori in modo sicuro 
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio4.webp", alt='Gestire gli errori in modo sicuro')
+p Garantire che #[em in caso di errori o eccezioni] del codice il sistema non sia compromesso e non renda accessibili informazioni private. Questo principio contribuisce significativamente a limitare i danni in situazioni impreviste e a mantenere l'integrità e la sicurezza complessiva del sistema. 
+p Per esempio, in caso di guasto nei meccanismi di controllo degli accessi, il sistema dovrebbe impostare le risorse come non accessibili piuttosto che come accessibili a tutti.
+
+h3 5. La Sicurezza come default
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio5.webp", alt='La Sicurezza come default')
+p  Il "Secure Defaults" (impostazioni predefinite sicure) è il principio che aiuta a garantire che #[em i sistemi siano configurati inizialmente con impostazioni che offrono il massimo livello di sicurezza] possibile senza necessità di modifiche aggiuntive. 
+p Un semplice esempio di applicazione di questo principio è quello di implementare come default l'uso di password complesse e l'obbligo di cambiarle periodicamente.
+
+h3 6. Separazione delle responsabilità
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio6.webp", alt='Separazione delle responsabilità')
+p Questo principio implica la #[em divisione delle responsabilità tra più individui o gruppi], in modo che nessuna persona possa avere il controllo completo su una serie di operazioni critiche. 
+p Per esempio, l'implementazione della regola secondo la quale due persone diverse debbano approvare un'azione particolarmente critica.
+
+h3 7. Ridurre la "Superficie di attacco" 
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio7.webp", alt='Ridurre la "Superficie di attacco"')
+p Con superficie di attacco si intende l'insieme delle risorse hardware e software esposte a possibili atacchi malevoli. Questo principio si concentra sulla #[em minimizzazione delle opportunità che gli attaccanti hanno di penetrare nei sistemi] e sfruttare le loro vulnerabilità. 
+p Per esempio, disabilitare o rimuovere servizi e porte di rete non utilizzati significa ridurre ridurre le possibilità di un attacco mirato a specifiche vulnerabilità.
+
+h3 8. Difesa in profondità (o a strati)
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio8.webp", alt='Difesa in profondità (o a strati)')
+p Questo principio offre #[em una strategia multilivello] per proteggere i sistemi da una vasta gamma di minacce e attacchi informatici. Prevede l'implementazione di multiple misure di sicurezza che si sovrappongono e si integrano tra loro, creando una rete di difese che aumenta la resistenza complessiva del sistema e riduce le possibilità di successo degli attacchi. 
+p Ad esempio, installare un certificato HTTPS non è sufficiente a considerare sicuro il canale di comunicazione, è necessario implementare politiche e strategie multistrato per ridurre la vulnerabilità complessiva del sistemi in ogni suo livello.
+
+h3 9. Ridurre la complessità
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio9.webp", alt='Ridurre la complessità')
+p Ridurre la complessità significa #[em semplificare l'architettura, i processi e le operazioni] IT, eliminando o minimizzando componenti, procedure o configurazioni complesse che possono aumentare il rischio di errori, vulnerabilità e difficoltà di gestione. 
+p Per esempio, utilizzare un numero limitato di piattaforme software o hardware standard per ridurre la complessità delle integrazioni e delle operazioni.
+p Ridurre la complessità non solo protegge i dati e i sistemi critici, ma contribuisce anche a migliorare la resilienza aziendale e a supportare una crescita sostenibile nel lungo termine.
+
+h3 10. Tenere traccia di eventi critici
+img(loading="lazy" class="detail" src="/assets/images/post/009-security-by-design-principi/security-by-design-principio10.webp", alt='Tenere traccia di eventi critici')
+p E' fondamentale nella sicurezza informatica tenere traccia delle attività effettuate perché fornisce una traccia dettagliata degli accessi sensibili all'interno di un sistema o di un'organizzazione. Questo principio consente di monitorare e registrare gli eventi che potrebbero indicare comportamenti anomali, accessi non autorizzati o altre attività sospette che potrebbero mettere a rischio la sicurezza dei dati e delle risorse.
+
