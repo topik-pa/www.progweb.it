@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const posts = require('../assets/data/post.js')
 
 module.exports = (app, nonce) => {
