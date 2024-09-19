@@ -37,11 +37,11 @@ function goToSection () {
 goToSection()
 
 // View specific scripts
-if (document.querySelector('body#home')) {
+/* if (document.querySelector('body#home')) {
   import('../views/home.js').then((module) => {
     module.home.init()
   })
-}
+} */
 
 if (document.querySelector('body#javascript-html-tabella-dinamica')) {
   import('../views/post/javascript-html-tabella-dinamica/javascript-html-tabella-dinamica.js').then((module) => {
