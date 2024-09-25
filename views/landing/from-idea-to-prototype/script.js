@@ -1,5 +1,15 @@
 const $navLinks = document.querySelectorAll('nav a')
-// const $ctaSection = document.getElementsByClassName('cta')[0]
+const $sections = document.querySelectorAll('.content > section')
+const debounce = (callback, wait) => {
+  let timeoutId = null
+  return (...args) => {
+    window.clearTimeout(timeoutId)
+    timeoutId = window.setTimeout(() => {
+      // eslint-disable-next-line node/no-callback-literal
+      callback(...args)
+    }, wait)
+  }
+}
 
 for (let i = 0; i < $navLinks.length; i++) {
   const $link = $navLinks[i]
@@ -9,3 +19,22 @@ for (let i = 0; i < $navLinks.length; i++) {
     window.scrollTo({ top: target.offsetTop, behavior: 'smooth' })
   })
 }
+
+const handleScroll = debounce(() => {
+  console.log(window.scrollY)
+  for (let i = 0; i < $sections.length; i++) {
+    const $section = $sections[i]
+    if (window.scrollY >= $section.offsetTop) {
+      for (let i = 0; i < $navLinks.length; i++) {
+        $navLinks[i].classList.remove('active')
+      }
+      $navLinks[i].classList.add('active')
+    }
+  }
+}, 5)
+document.addEventListener('scroll', handleScroll)
+
+setTimeout(() => {
+  const target = document.querySelector('#one')
+  window.scrollTo({ top: target.offsetTop, behavior: 'smooth' })
+}, 800)
