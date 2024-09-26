@@ -1,5 +1,6 @@
 const $navLinks = document.querySelectorAll('nav a')
 const $sections = document.querySelectorAll('.content > section')
+const $nexts = document.querySelectorAll('.next')
 const debounce = (callback, wait) => {
   let timeoutId = null
   return (...args) => {
@@ -38,3 +39,12 @@ setTimeout(() => {
   const target = document.querySelector('#one')
   window.scrollTo({ top: target.offsetTop, behavior: 'smooth' })
 }, 800)
+
+for (let i = 0; i < $nexts.length; i++) {
+  const $next = $nexts[i]
+  $next.addEventListener('click', (e) => {
+    e.preventDefault()
+    const target = $sections[i + 1]
+    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' })
+  })
+}
