@@ -1,0 +1,206 @@
+:root {
+  /* COLORS */
+  --l-black: #252525;
+  --l-white: #FBFBFB;
+  --l-primary: #9C0B11;
+  --l-padding: calc(var(--view-padding) * 3) calc(var(--view-padding) * 10);
+  --l-font-size: 16px!important;
+  --l-content-w: 80%;
+  --l-nav-w: 20%;
+  --l-content-inner-w: 70%;
+  --l-h1-font-size: 4rem;
+}
+
+main {
+  font-size: var(--l-font-size);
+  padding: var(--view-padding);
+}
+body, section {
+  padding: 0!important;
+  margin: 0!important;
+}
+header {
+  padding: 0 var(--view-padding)!important;
+}
+p, li {
+  line-height: 150%!important;
+}
+
+.content {
+  width: var(--l-content-w);
+}
+nav {
+  width: var(--l-nav-w);
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+nav ul {
+  position: sticky;
+  top: 5rem;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style: none;
+  margin: var(--large-space) 0!important;
+}
+nav a {
+  box-shadow: 1px 1px 3px 0px var(--l-black);
+  display: block;
+  padding: .2rem .6rem;
+  text-align: center;
+}
+nav a:hover, nav a.active {
+  box-shadow: 1px 1px 3px 1px var(--l-black);
+  font-weight: bold;
+}
+nav a::before {
+  content: ' ';
+  display: inline-block;
+  height: calc(var(--l-font-size) + .4rem);
+  width: calc(var(--l-font-size) + .4rem);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  position: absolute;
+  margin: .2rem 0 .2rem .2rem;
+}
+nav li:nth-child(1) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/lightbulb-solid.svg');
+}
+nav li:nth-child(2) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/arrows-spin-solid.svg');
+}
+nav li:nth-child(3) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/sketch-brands-solid.svg');
+}
+nav li:nth-child(4) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/microchip-solid.svg');
+}
+nav li:nth-child(5) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/screwdriver-wrench-solid.svg');
+}
+nav li:nth-child(6) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/code-solid.svg');
+}
+nav li:nth-child(7) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/sketch-brands-solid.svg');
+}
+nav li:nth-child(8) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/star-solid.svg');
+}
+nav li:nth-child(9) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/people-group-solid.svg');
+}
+nav li:nth-child(10) a::before {
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/envelope-solid.svg');
+}
+
+
+
+.content p, .content ul {
+  text-align: center;
+  width: var(--l-content-inner-w);
+}
+
+.content > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+/*In case of html-labels*/
+.content > section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*In case of html-labels*/
+.content section h1 {
+  color: var(--l-primary);
+  font-size: var(--l-h1-font-size);
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  margin-top: var(--normal-space);
+}
+.content section img {
+  width: var(--l-content-inner-w);
+  height: auto;
+  margin: 7rem auto 2rem;
+  display: block;
+}
+#one img, #three img {
+  transform: rotate(66deg);
+}
+#five img {
+  transform: rotate(120deg);
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1366px) {
+  :root {
+    --l-font-size: 15px!important;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --l-font-size: 14px!important;
+    --l-content-inner-w: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --l-font-size: 13px!important;
+    --l-h1-font-size: 3rem;
+    --l-content-inner-w: 80%;
+  }
+  .content section img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --l-content-w: 100%;
+    --l-nav-w: 100%;
+    --l-content-inner-w: 90%;
+    --l-h1-font-size: 2.4rem;
+  }
+  .wrap {
+    flex-direction: column-reverse;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--l-white);
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  nav a {
+    font-size: 0;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  nav a::before {
+    position: relative;
+    margin: 0;
+  }
+
+}
