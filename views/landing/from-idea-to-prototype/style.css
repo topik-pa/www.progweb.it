@@ -3,12 +3,13 @@
   --l-black: #252525;
   --l-white: #FBFBFB;
   --l-primary: #9C0B11;
-  --l-padding: calc(var(--view-padding) * 3) calc(var(--view-padding) * 10);
   --l-font-size: 16px!important;
   --l-content-w: 80%;
   --l-nav-w: 20%;
   --l-content-inner-w: 70%;
   --l-h1-font-size: 4rem;
+  --l-picture-h-big: 50vh;
+  --l-picture-h: 50vh;
 }
 
 main {
@@ -47,7 +48,7 @@ nav ul {
 }
 nav li {
   list-style: none;
-  margin: var(--large-space) 0!important;
+  /* margin: var(--large-space) 0!important; */
 }
 nav a {
   box-shadow: 1px 1px 3px 0px var(--l-black);
@@ -115,6 +116,10 @@ nav li:nth-child(10) a::before {
   height: 100vh;
   justify-content: center;
 }
+.content ul, .content h2 {
+  margin: 0;
+  padding: 0;
+}
 /*In case of html-labels*/
 .content > section > div {
   display: flex;
@@ -130,11 +135,15 @@ nav li:nth-child(10) a::before {
   font-style: italic;
   margin-top: var(--normal-space);
 }
+.content #one picture {
+  height: var(--l-picture-h-big);
+}
+.content picture {
+  height: var(--l-picture-h);
+}
 .content section img {
-  width: var(--l-content-inner-w);
-  height: auto;
-  margin: 7rem auto 2rem;
-  display: block;
+  width: auto;
+  max-height: 100%;
 }
 #one img, #three img {
   transform: rotate(66deg);
@@ -165,9 +174,9 @@ nav li:nth-child(10) a::before {
     --l-h1-font-size: 3rem;
     --l-content-inner-w: 80%;
   }
-  .content section img {
+/*   .content section img {
     width: 60%;
-  }
+  } */
 }
 
 @media screen and (max-width: 768px) {
@@ -176,6 +185,7 @@ nav li:nth-child(10) a::before {
     --l-nav-w: 100%;
     --l-content-inner-w: 90%;
     --l-h1-font-size: 2.4rem;
+    --l-picture-h: 33vh;
   }
   .wrap {
     flex-direction: column-reverse;
