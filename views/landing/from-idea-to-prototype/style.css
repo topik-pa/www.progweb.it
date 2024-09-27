@@ -154,6 +154,50 @@ nav li:nth-child(10) a::before {
 
 
 
+.services {
+  width: var(--l-content-width);
+  margin: 0 auto;
+}
+.services h3 {
+  text-align: center;
+  margin-top: var(--xx-large-space);
+  border-top: 1px solid var(--gray);
+  padding: var(--xx-large-space);
+}
+.services ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.services li {
+  width: 20%;
+}
+.services a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .4s ease-out;
+}
+.services a:hover {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+.services img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(---primary);
+}
+.services span {
+  text-transform: uppercase;
+  margin-top: var(--x-small-space);
+  text-align: center;
+}
+
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 1366px) {
   :root {
@@ -211,6 +255,14 @@ nav li:nth-child(10) a::before {
   nav a::before {
     position: relative;
     margin: 0;
+  }
+
+  .services ul {
+    flex-direction: column;
+  }
+  .services li {
+    width: var(--l-content-width);
+    margin-bottom: calc(var(--xx-large-space) * 2)
   }
 
 }
