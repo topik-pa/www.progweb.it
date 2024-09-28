@@ -87,10 +87,10 @@ nav li:nth-child(5) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/screwdriver-wrench-solid.svg');
 }
 nav li:nth-child(6) a::before {
-  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/code-solid.svg');
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/gear-solid.svg');
 }
 nav li:nth-child(7) a::before {
-  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/sketch-brands-solid.svg');
+  background-image: url('/assets/images/landing/from-idea-to-prototype/icons/code-solid.svg');
 }
 nav li:nth-child(8) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/star-solid.svg');
@@ -151,6 +151,9 @@ nav li:nth-child(10) a::before {
   justify-content: space-between;
   width: var(--l-content-w);
   flex-direction: row;
+  border-bottom: 1px solid var(--lighter-gray);
+  padding-bottom: var(--normal-space);
+  font-weight: 500;
 }
 
 
