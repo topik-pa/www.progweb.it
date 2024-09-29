@@ -2,7 +2,7 @@
   /* COLORS */
   --l-black: #252525;
   --l-white: #FBFBFB;
-  --l-primary: #9C0B11;
+  --l-primary: #B61C1A;
   --l-font-size: 16px!important;
   --l-content-w: 80%;
   --l-nav-w: 20%;
@@ -69,7 +69,7 @@ nav a::before {
   background-repeat: no-repeat;
   left: 0;
   position: absolute;
-  margin: .2rem 0 .2rem .2rem;
+  margin: 0 0 0 .4rem;
 }
 nav li:nth-child(1) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/lightbulb-solid.svg');
@@ -80,25 +80,25 @@ nav li:nth-child(2) a::before {
 nav li:nth-child(3) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/sketch-brands-solid.svg');
 }
-nav li:nth-child(4) a::before {
+/* nav li:nth-child(4) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/microchip-solid.svg');
-}
-nav li:nth-child(5) a::before {
+} */
+nav li:nth-child(4) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/screwdriver-wrench-solid.svg');
 }
-nav li:nth-child(6) a::before {
+nav li:nth-child(5) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/gear-solid.svg');
 }
-nav li:nth-child(7) a::before {
+nav li:nth-child(6) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/code-solid.svg');
 }
-nav li:nth-child(8) a::before {
+nav li:nth-child(7) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/star-solid.svg');
 }
-nav li:nth-child(9) a::before {
+nav li:nth-child(8) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/people-group-solid.svg');
 }
-nav li:nth-child(10) a::before {
+nav li:nth-child(9) a::before {
   background-image: url('/assets/images/landing/from-idea-to-prototype/icons/envelope-solid.svg');
 }
 
@@ -108,6 +108,9 @@ nav li:nth-child(10) a::before {
   text-align: center;
   width: var(--l-content-inner-w);
   margin: var(--x-small-space) 0;
+}
+.content li {
+  list-style: none;
 }
 
 .content > section {
@@ -139,6 +142,9 @@ nav li:nth-child(10) a::before {
 .content #one picture {
   height: var(--l-picture-h-big);
 }
+.content #one p {
+  font-weight: 500;
+}
 .content picture {
   height: var(--l-picture-h);
 }
@@ -152,7 +158,7 @@ nav li:nth-child(10) a::before {
   justify-content: space-between;
   width: var(--l-content-w);
   flex-direction: row;
-  border-bottom: 1px solid var(--lighter-gray);
+  border-bottom: 1px dashed var(--lighter-gray);
   padding-bottom: var(--xx-small-space);
 }
 
@@ -200,7 +206,7 @@ nav li:nth-child(10) a::before {
 }
 
 .cta {
-  background-color: rgba(249,98,33,0.1);
+  background-color: rgba(182, 28, 26, .07);
   display: flex;
   flex-direction: column;
   width: var(--l-content-inner-w);

@@ -590,8 +590,8 @@ module.exports = (app, nonce) => {
       {
         id: 'from-idea-to-prototype',
         className: 'landing',
-        title: 'Idea -> Prototype: we help you in the development of innovative and high-tech products',
-        description: 'Product design, development and management: from scratch to prototype. We bring your idea to life by turning it into a concrete and functional solution',
+        title: 'Idea -> Prototype: development of innovative and high-tech products',
+        description: 'From zero to prototype: product design, development and management. We bring your idea to life by turning it into a concrete and functional solution',
         url: req.url,
         nonce,
         locale: 'en'
@@ -603,8 +603,8 @@ module.exports = (app, nonce) => {
       {
         id: 'from-idea-to-prototype',
         className: 'landing',
-        title: 'Idea -> Prototipo: ti aiutiamo nello sviluppo di prodotti innovativi ed ad alto contenuto tecnologico',
-        description: 'Progettazione, sviluppo e gestione di un prodotto: da zero a prototipo. Diamo vita alla tua idea trasformandola in una soluzione concreta e funzionale',
+        title: 'Idea -> Prototipo: sviluppo di prodotti innovativi ad alto contenuto tecnologico',
+        description: 'Da zero a prototipo: progettazione, sviluppo e gestione di un prodotto. Diamo vita alla tua idea trasformandola in una soluzione concreta e funzionale',
         url: req.url,
         nonce,
         locale: 'it'
