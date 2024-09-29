@@ -110,7 +110,10 @@
 		"web-seo-a-title": "Procedi al sevizio: Web SEO",
 		"responsive-web-design-a-title": "Procedi al sevizio: Responsive Web Design",
 		"web-sustainability-a-title": "Procedi al sevizio: Web Sostenibile",
-		"web-accessibility-a-title": "Procedi al sevizio: Accessibilità Web"
+		"web-accessibility-a-title": "Procedi al sevizio: Accessibilità Web",
+		"fitp-a-title": "services.fitp-a-title",
+		"fitp-alt-image": "services.fitp-alt-image",
+		"fitp": "services.fitp"
 	},
 	"web-sustainability": {
 		"title": "Il tuo sito è SOSTENIBILE?",
@@ -177,6 +180,10 @@
 		"img9-alt": "fitp.img9-alt",
 		"img10-alt": "fitp.img10-alt",
 		"next": "Prossima sezione",
-		"last": "Contattaci"
+		"last": "Contattaci",
+		"cta-phone": "Telefona o invia un Whatsapp al numero:",
+		"cta-2": "Contattaci ora tramite telefono o Whatsapp",
+		"cta-email": "Invia una email all'indirizzo:",
+		"cta-3": "Contattaci ora tramite email"
 	}
 }

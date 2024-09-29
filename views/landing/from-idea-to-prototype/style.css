@@ -24,7 +24,7 @@ header {
   padding: 0 var(--view-padding)!important;
 }
 p, li {
-  line-height: 150%!important;
+  line-height: 125%!important;
 }
 
 .content {
@@ -104,9 +104,10 @@ nav li:nth-child(10) a::before {
 
 
 
-.content p, .content ul {
+.content p, .content li {
   text-align: center;
   width: var(--l-content-inner-w);
+  margin: var(--x-small-space) 0;
 }
 
 .content > section {
@@ -199,6 +200,47 @@ nav li:nth-child(10) a::before {
   text-align: center;
 }
 
+.cta {
+  background-color: rgba(249,98,33,0.1);
+  display: flex;
+  flex-direction: column;
+  width: var(--l-content-inner-w);
+}
+.cta h2 {
+  text-align: center;
+  margin-bottom: var(--x-large-space);
+  color: var(--l-primary);
+  font-weight: bold;
+}
+
+.cta a {
+  display: block;
+  font-size: var(--font-size-huge);
+  margin-top: var(--normal-space);
+  color: var(--l-primary);
+}
+.cta > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.cta > div::before {
+  content: ' ';
+  display: block;
+  height: var(--xx-large-space);
+  width: var(--xx-large-space);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: var(--normal-space);
+}
+.cta > div:nth-child(1)::before {
+  background-image: url('/assets/images/icons/svg/phone-solid-red.svg');
+}
+.cta > div:nth-child(2)::before {
+  background-image: url('/assets/images/icons/svg/envelope-solid-red.svg');
+}
+
 
 
 /* RESPONSIVE */
@@ -255,6 +297,10 @@ nav li:nth-child(10) a::before {
   nav a::before {
     position: relative;
     margin: 0;
+  }
+
+  .cta {
+    width: 100%;
   }
 
   .services ul {

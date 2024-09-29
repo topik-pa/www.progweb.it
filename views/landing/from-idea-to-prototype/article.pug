@@ -9,7 +9,7 @@ div(class="wrap")
       p !{__('fitp.text-1')}
       h1 #{__('fitp.title-1')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-2')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="two")
       picture 
@@ -20,7 +20,7 @@ div(class="wrap")
       p !{__('fitp.text-2')}    
       h1 #{__('fitp.title-2')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-3')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="three")
       picture 
@@ -31,7 +31,7 @@ div(class="wrap")
       p !{__('fitp.text-3')}    
       h1 #{__('fitp.title-3')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-4')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="four")
       picture 
@@ -42,7 +42,7 @@ div(class="wrap")
       p !{__('fitp.text-4')}  
       h1 #{__('fitp.title-4')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-5')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="five")
       picture 
@@ -53,7 +53,7 @@ div(class="wrap")
       p !{__('fitp.text-5')}   
       h1 #{__('fitp.title-5')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-6')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="six")
       picture 
@@ -64,7 +64,7 @@ div(class="wrap")
       p !{__('fitp.text-6')}    
       h1 #{__('fitp.title-6')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-7')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="seven")
       picture 
@@ -75,7 +75,7 @@ div(class="wrap")
       p !{__('fitp.text-7')}   
       h1 #{__('fitp.title-7')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-8')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="eight")
       picture 
@@ -86,7 +86,7 @@ div(class="wrap")
       div !{__('fitp.text-8')}  
       h1 #{__('fitp.title-8')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-9')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="nine")
       picture 
@@ -97,15 +97,14 @@ div(class="wrap")
       div !{__('fitp.text-9')}    
       h1 #{__('fitp.title-9')}
       div(class="controls")
-        a(class="next", href="#") #{__('fitp.next')} &#10217;
+        a(class="next", href="#") #{__('fitp.title-10')} &#10217;
         a(class="last", href="#") #{__('fitp.last')} &#10219;
     section(id="ten")
-      picture 
-        source(media="(max-width: 414px)", srcset="/assets/images/landing/from-idea-to-prototype/images/300.png")
-        source(media="(max-width: 1024px)", srcset="/assets/images/landing/from-idea-to-prototype/images/430.png")
-        source(media="(max-width: 1366px)", srcset="/assets/images/landing/from-idea-to-prototype/images/570.png")
-        img( src="/assets/images/landing/from-idea-to-prototype/images/570.png", alt=__('fitp.img10-alt'), id="img10")
-      div !{__('fitp.text-10')}    
+      div(class="cta")
+        div #{__('fitp.cta-phone')}
+          a(href="tel:+393295698985", title=__('fitp.cta-2')) (+39) 329 5698985
+        div #{__('fitp.cta-email')} 
+          a(href="mailto:info@progweb.it?subject=Need%20more%20info%20about%20Prototype%20Development", title=__('fitp.cta-3')) info@progweb.it
       h1 #{__('fitp.title-10')}
   nav 
     ul
@@ -138,9 +137,9 @@ section(class="services")
         img(loading="lazy" width="1200" height="630" src='/assets/images/landing/web-seo/web-seo-og-image-' + lang + '.webp', alt=__('services.web-seo-alt-image'))
         span #{__('services.web-seo')}
     li 
-      a(href="/responsive-web-design" title=__('services.responsive-web-design-a-title'))
-        img(loading="lazy" width="1200" height="630" src='/assets/images/landing/responsive-web-design/responsive-web-design-og-image-' + lang + '.webp', alt=__('services.responsive-web-design-alt-image'))
-        span #{__('services.responsive-web-design')}
+      a(href="/fitp" title=__('services.fitp-a-title'))
+        img(loading="lazy" width="1200" height="630" src='/assets/images/landing/fitp/fitp-og-image-' + lang + '.webp', alt=__('services.fitp-alt-image'))
+        span #{__('services.fitp')}
     li 
       a(href="/web-sustainability" title=__('services.web-sustainability-a-title'))
         img(loading="lazy" width="1200" height="630" src='/assets/images/landing/web-sustainability/web-sustainability-og-image-' + lang + '.webp', alt=__('services.web-sustainability-alt-image'))
