@@ -153,8 +153,7 @@ nav li:nth-child(10) a::before {
   width: var(--l-content-w);
   flex-direction: row;
   border-bottom: 1px solid var(--lighter-gray);
-  padding-bottom: var(--normal-space);
-  font-weight: 500;
+  padding-bottom: var(--xx-small-space);
 }
 
 

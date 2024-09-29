@@ -590,8 +590,8 @@ module.exports = (app, nonce) => {
       {
         id: 'from-idea-to-prototype',
         className: 'landing',
-        title: 'From Idea to Prototype',
-        description: 'Project design, development and management: from Zero to Prototype',
+        title: 'Idea -> Prototype: we help you in the development of innovative and high-tech products',
+        description: 'Product design, development and management: from scratch to prototype. We bring your idea to life by turning it into a concrete and functional solution',
         url: req.url,
         nonce,
         locale: 'en'
@@ -603,78 +603,13 @@ module.exports = (app, nonce) => {
       {
         id: 'from-idea-to-prototype',
         className: 'landing',
-        title: 'Dalla Idea al Prototipo',
-        description: 'Progettazione, sviluppo e gestione di un prodotto: da Zero a Prototipo',
+        title: 'Idea -> Prototipo: ti aiutiamo nello sviluppo di prodotti innovativi ed ad alto contenuto tecnologico',
+        description: 'Progettazione, sviluppo e gestione di un prodotto: da zero a prototipo. Diamo vita alla tua idea trasformandola in una soluzione concreta e funzionale',
         url: req.url,
         nonce,
         locale: 'it'
       })
   })
-
-  /* app.get('/web-accessibility', (req, res) => {
-    res.render('landing/web-accessibility/web-accessibility',
-      { id: 'web-accessibility', className: 'landing', title: 'Web Accessibility', url: req.url, nonce, locale: req.locale })
-  })
-  app.get('/web-security', (req, res) => {
-    res.render('landing/web-security/web-security',
-      { id: 'web-security', className: 'landing', title: 'Web Security', url: req.url, nonce, locale: req.locale })
-  })
-  app.get('/web-sustainability', (req, res) => {
-    res.render('landing/web-sustainability/web-sustainability',
-      { id: 'web-sustainability', className: 'landing', title: 'Web Sustainability', url: req.url, nonce, locale: req.locale })
-  })
-  app.get('/web-performance', (req, res) => {
-    res.render('landing/web-performance/web-performance',
-      { id: 'web-performance', className: 'landing', title: 'Web Performance', url: req.url, nonce, locale: req.locale })
-  })
-  app.get('/web-user-experience', (req, res) => {
-    res.render('landing/web-user-experience/web-user-experience',
-      { id: 'web-user-experience', className: 'landing', title: 'Web User Experience', url: req.url, nonce, locale: req.locale })
-  })
-  app.get('/responsive-web-design', (req, res) => {
-    res.render('landing/responsive-web-design/responsive-web-design',
-      {
-        id: 'responsive-web-design',
-        className: 'landing',
-        title: 'Responsive Web Design',
-        url: req.url,
-        nonce,
-        locale: req.locale
-      })
-  })
-  app.get('/design-system', (req, res) => {
-    res.render('landing/design-system/design-system',
-      {
-        id: 'design-system',
-        className: 'landing',
-        title: 'Design System',
-        url: req.url,
-        nonce,
-        locale: req.locale
-      })
-  })
-  app.get('/rest-api', (req, res) => {
-    res.render('landing/rest-api/rest-api',
-      {
-        id: 'rest-api',
-        className: 'landing',
-        title: 'REST API',
-        url: req.url,
-        nonce,
-        locale: req.locale
-      })
-  })
-  app.get('/rapid-prototyping-development', (req, res) => {
-    res.render('landing/rapid-prototyping-development/rapid-prototyping-development',
-      {
-        id: 'rapid-prototyping-development',
-        className: 'landing',
-        title: 'Rapid Prototyping Development',
-        url: req.url,
-        nonce,
-        locale: req.locale
-      })
-  }) */
 
   // Sitemap.xml
   app.get('/sitemap.xml', function (req, res) {
