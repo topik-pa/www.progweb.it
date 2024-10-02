@@ -109,6 +109,10 @@ nav li:nth-child(9) a::before {
   width: var(--l-content-inner-w);
   margin: var(--x-small-space) 0;
 }
+.content p {
+  overflow: auto;
+  height: 30vh;
+}
 .content li {
   list-style: none;
 }
@@ -158,8 +162,6 @@ nav li:nth-child(9) a::before {
   justify-content: space-between;
   width: var(--l-content-w);
   flex-direction: row;
-  border-bottom: 1px dashed var(--lighter-gray);
-  padding-bottom: var(--xx-small-space);
 }
 
 
@@ -268,6 +270,9 @@ nav li:nth-child(9) a::before {
     --l-h1-font-size: 3rem;
     --l-content-inner-w: 80%;
   }
+  .content p {
+    height: 28vh;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -314,6 +319,12 @@ nav li:nth-child(9) a::before {
   .services li {
     width: var(--l-content-width);
     margin-bottom: calc(var(--xx-large-space) * 2)
+  }
+  .content p {
+    height: 40vh;
+  }
+  #goto_top {
+    bottom: 4rem!important;
   }
 
 }

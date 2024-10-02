@@ -158,7 +158,7 @@
 		"text-6": "Il back end è la spina dorsale di ogni applicazione e garantisce che tutte le funzionalità e i dati siano gestiti in modo efficiente. Ci occupiamo dello sviluppo di soluzioni back end personalizzate, progettando <em>architetture scalabili, solide e sicure</em> che supportano le esigenze del tuo prodotto e dei tuoi clienti. Dalla gestione dei database all'integrazione con sistemi esterni, lavoriamo per garantire che ogni aspetto del back end funzioni senza intoppi e permettere un'esperienza utente fluida e performante.",
 		"text-7": "Il front end è la faccia del tuo prodotto: è l'interfaccia che gli utenti vedono e con cui interagiscono. I nostri sforzi sono volti a creare una esperienza utente coinvolgente e intuitiva. Progettiamo interfacce grafiche accattivanti e funzionali utilizzando <em>le più recenti tecnologie e best practices</em> per garantire che ogni interazione sia fluida e piacevole. Dalla user interface (UI) alla user experience (UX), ci assicuriamo che il tuo prodotto non solo funzioni bene, ma sia anche esteticamente gradevole e <em>facile da usare per tutte le categorie di utenti</em>.",
 		"text-8": "<p>Per garantire che il tuo prodotto si distingua sul mercato, offriamo <em>una serie di servizi innovativi</em>.<br><br><em>Design System</em>: creiamo un design system completo per assicurare coerenza visiva e funzionale in tutte le interfacce (digitali e non), facilitando la scalabilità e la manutenzione del prodotto.<br><br><em>API</em>: progettiamo e implementiamo API (Application Program Interfaces) robuste e intuitive per consentire l'integrazione con altre applicazioni e servizi.<br><br><em>Software gestionale</em>: sviluppiamo sistemi di gestione che facilitano l'amministrazione di utenti, team e permessi, garantendo una facile gestione delle risorse.</p>",
-		"text-9": "<p>Siamo designer, sviluppatori front-end e back-end, meccanici ed ingegneri con esperienza nello sviluppo di software, prototipi e macchine ad alto livello innovativo.<p><h2>Il nostro obiettivo</h2><p>Mettere a disposizione le nostre competenze e permettere al Cliente di veder sviluppato il suo Prodotto funzionante in tempi brevi, precisi e concordati.</p>",
+		"text-9": "<p>Siamo designer, sviluppatori front-end e back-end, meccanici ed ingegneri con esperienza nello sviluppo di software, prototipi e macchine ad alto livello innovativo.<br><br><br><br><em>Il nostro obiettivo</em><br><br>Mettere a disposizione le nostre competenze e permettere al Cliente di veder sviluppato il suo Prodotto funzionante in tempi brevi, precisi e concordati.</p>",
 		"img1-alt": "Una lampadina simboleggia l'idea del progetto che vogliamo creare",
 		"img2-alt": "Il ciclo di produzione di un oggetto si compone di iterazioni successive e prototipi sepre più accurati",
 		"img3-alt": "Una lampadina rossa simboleggia l'applicazione del design al prodotto",
@@ -170,6 +170,7 @@
 		"cta-phone": "Telefona o invia un Whatsapp al numero:",
 		"cta-2": "Contattaci ora tramite telefono o Whatsapp",
 		"cta-email": "Invia una email all'indirizzo:",
-		"cta-3": "Contattaci ora tramite email"
+		"cta-3": "Contattaci ora tramite email",
+		"otherservices": "Tutte le opportunità"
 	}
 }

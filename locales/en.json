@@ -160,7 +160,7 @@
 		"text-6": "The back end is the backbone of any application and ensures that all functionality and data are managed efficiently. We handle the development of customized back end solutions, designing <em>scalable, robust and secure architectures</em> that support the needs of your product and your customers. From database management to integration with external systems, we work to ensure that every aspect of the back end runs smoothly and enables a smooth, high-performance user experience.",
 		"text-7": "The front end is the face of your product: it is the interface that users see and interact with. Our efforts are aimed at creating an engaging and intuitive user experience. We design attractive and functional graphical user interfaces using the <em>latest technologies and best practices</em> to ensure that every interaction is smooth and enjoyable. From user interface (UI) to user experience (UX), we ensure that your product not only works well, but is also aesthetically pleasing and <em>easy to use for all categories of users</em>.",
 		"text-8": "<p>To ensure that your product stands out in the marketplace, we offer <em>a range of innovative services</em>.<br><br><em>Design System</em>: we create a comprehensive design system to ensure visual and functional consistency across all interfaces (digital and non-digital), facilitating scalability and product maintenance.<br><br><em>API</em>: we design and implement robust and intuitive APIs (Application Program Interfaces) to enable integration with other applications and services.<br><br><em>Management Software</em>: we develop management systems that facilitate the administration of users, teams, and permissions, ensuring easy management of resources.</p>",
-		"text-9": "<p>We are designers, front-end and back-end developers, mechanics, and engineers with experience in developing software, prototypes, and machines at a high innovative level</p>.<h2>Our goal</h2><p>To make our skills available and enable the Client to see his or her Product developed and working in a short, precise, and agreed upon timeframe.</p>",
+		"text-9": "<p>We are designers, front-end and back-end developers, mechanics, and engineers with experience in developing software, prototypes, and machines at a high innovative level.<br><br><br><br><em>Our goal</em><br><br>To make our skills available and enable the Client to see his or her Product developed and working in a short, precise, and agreed upon timeframe.</p>",
 		"img1-alt": "A light bulb symbolizes the idea of the project we want to create",
 		"img2-alt": "The production cycle of an object consists of successive iterations and prototypes ifpre accurate",
 		"img3-alt": "A red light bulb symbolizes the application of design to product",
@@ -172,6 +172,7 @@
 		"cta-phone": "Call or Whatsapp the number:",
 		"cta-2": "Contact us now by phone or Whatsapp",
 		"cta-email": "Send an email to the address:",
-		"cta-3": "Contact us now by email"
+		"cta-3": "Contact us now by email",
+		"otherservices": "Other opportunities"
 	}
 }

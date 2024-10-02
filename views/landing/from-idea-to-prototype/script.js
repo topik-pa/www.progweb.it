@@ -1,5 +1,5 @@
 const $navLinks = document.querySelectorAll('nav a')
-const $sections = document.querySelectorAll('.content > section')
+const $sections = document.querySelectorAll('main section')
 const $nexts = document.querySelectorAll('.next')
 const $lasts = document.querySelectorAll('.last')
 const debounce = (callback, wait) => {
@@ -23,7 +23,6 @@ for (let i = 0; i < $navLinks.length; i++) {
 }
 
 const handleScroll = debounce(() => {
-  console.log(window.scrollY)
   for (let i = 0; i < $sections.length; i++) {
     const $section = $sections[i]
     if (window.scrollY >= $section.offsetTop) {
