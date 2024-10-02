@@ -10,7 +10,7 @@
   --l-h1-font-size: 4rem;
   --l-picture-h-big: 50vh;
   --l-picture-h: 50vh;
-  --content-p-h: 28;
+  --content-p-h: 28vh;
 }
 
 main {
@@ -113,6 +113,9 @@ nav li:nth-child(9) a::before {
 .content p {
   overflow: auto;
   height: var(--content-p-h);
+}
+.content #one p {
+  height: 24vh;
 }
 .content li {
   list-style: none;
@@ -270,7 +273,7 @@ nav li:nth-child(9) a::before {
     --l-font-size: 13px!important;
     --l-h1-font-size: 3rem;
     --l-content-inner-w: 80%;
-    --content-p-h: 26;
+    --content-p-h: 24vh;
   }
 }
 
@@ -282,7 +285,7 @@ nav li:nth-child(9) a::before {
     --l-h1-font-size: 2.4rem;
     --l-picture-h-big: 50vh;
     --l-picture-h: 33vh;
-    --content-p-h: 38;
+    --content-p-h: 36vh;
   }
   .wrap {
     flex-direction: column-reverse;
