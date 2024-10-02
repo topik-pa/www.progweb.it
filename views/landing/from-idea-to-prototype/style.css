@@ -10,6 +10,7 @@
   --l-h1-font-size: 4rem;
   --l-picture-h-big: 50vh;
   --l-picture-h: 50vh;
+  --content-p-h: 28;
 }
 
 main {
@@ -51,13 +52,13 @@ nav li {
   background-color: var(--l-white);
 }
 nav a {
-  box-shadow: 1px 1px 3px 0px var(--l-black);
+  border: 1px solid var(--gray);
   display: block;
   padding: .2rem .6rem;
   text-align: center;
 }
 nav a:hover, nav a.active {
-  box-shadow: 1px 1px 3px 1px var(--l-black);
+  box-shadow: 0px 0px 4px 2px var(--l-primary);
   font-weight: bold;
 }
 nav a::before {
@@ -111,7 +112,7 @@ nav li:nth-child(9) a::before {
 }
 .content p {
   overflow: auto;
-  height: 30vh;
+  height: var(--content-p-h);
 }
 .content li {
   list-style: none;
@@ -269,9 +270,7 @@ nav li:nth-child(9) a::before {
     --l-font-size: 13px!important;
     --l-h1-font-size: 3rem;
     --l-content-inner-w: 80%;
-  }
-  .content p {
-    height: 28vh;
+    --content-p-h: 26;
   }
 }
 
@@ -283,6 +282,7 @@ nav li:nth-child(9) a::before {
     --l-h1-font-size: 2.4rem;
     --l-picture-h-big: 50vh;
     --l-picture-h: 33vh;
+    --content-p-h: 38;
   }
   .wrap {
     flex-direction: column-reverse;
@@ -320,13 +320,6 @@ nav li:nth-child(9) a::before {
     width: var(--l-content-width);
     margin-bottom: calc(var(--xx-large-space) * 2)
   }
-  .content p {
-    height: 40vh;
-  }
-  #goto_top {
-    bottom: 4rem!important;
-  }
-
 }
 
 @media only screen 
