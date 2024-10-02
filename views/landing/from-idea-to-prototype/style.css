@@ -110,12 +110,12 @@ nav li:nth-child(9) a::before {
   width: var(--l-content-inner-w);
   margin: var(--x-small-space) 0;
 }
-.content div.text {
+.content p {
   overflow: auto;
   height: var(--content-p-h);
 }
-.content #one div.text {
-  height: 30vh;
+.content #one p {
+  height: 24vh;
 }
 .content li {
   list-style: none;
@@ -145,8 +145,7 @@ nav li:nth-child(9) a::before {
   text-transform: uppercase;
   text-align: center;
   font-style: italic;
-  margin: 0;
-  margin-top: var(--small-space);
+  margin-top: var(--normal-space);
 }
 .content #one picture {
   height: var(--l-picture-h-big);
@@ -286,7 +285,7 @@ nav li:nth-child(9) a::before {
     --l-h1-font-size: 2.4rem;
     --l-picture-h-big: 50vh;
     --l-picture-h: 33vh;
-    --content-p-h: 50vh;
+    --content-p-h: 36vh;
   }
   .wrap {
     flex-direction: column-reverse;
