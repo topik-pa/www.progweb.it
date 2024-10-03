@@ -10,7 +10,7 @@
   --l-h1-font-size: 4rem;
   --l-picture-h-big: 50vh;
   --l-picture-h: 50vh;
-  --l-content-text-h: 31vh;
+  --l-content-text-h: 35vh;
 }
 
 main {
@@ -258,13 +258,13 @@ nav li:nth-child(9) a::before {
 @media screen and (max-width: 1440px) {
   :root {
     --l-font-size: 15px!important;
-    --l-content-text-h: 35vh;
+    --l-content-text-h: 42vh;
   }
 }
 
 @media screen and (max-width: 1366px) {
   :root {
-    --l-font-size: 13px!important;
+    --l-font-size: 14px!important;
   }
 }
 
@@ -291,6 +291,7 @@ nav li:nth-child(9) a::before {
     --l-picture-h-big: 50vh;
     --l-picture-h: 33vh;
     --l-content-text-h: 36vh;
+    --l-font-size: 13px!important;
   }
   .wrap {
     flex-direction: column-reverse;
