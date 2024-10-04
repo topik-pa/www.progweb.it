@@ -203,7 +203,7 @@ nav li:nth-child(9) a::before {
 .services img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid var(---primary);
+  border-bottom: 1px solid var(--l-primary);
 }
 .services span {
   text-transform: uppercase;
@@ -338,7 +338,7 @@ nav li:nth-child(9) a::before {
 }
 
 @media only screen 
-and (max-device-width : 768px) 
+and (max-width : 768px) 
 and (orientation: landscape) {
   .content > section {
     height: initial;
