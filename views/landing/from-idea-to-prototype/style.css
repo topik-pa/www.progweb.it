@@ -121,7 +121,7 @@ nav li:nth-child(9) a::before {
   height: var(--l-content-text-h);
 }
 .content #one div.text {
-  height: 37vh;
+  height: 33vh;
 }
 .content li {
   list-style: none;
