@@ -10,7 +10,7 @@
   --l-h1-font-size: 4rem;
   --l-picture-h-big: 50vh;
   --l-picture-h: 50vh;
-  --l-content-text-h: 35vh;
+  --l-content-text-h: 40vh;
 }
 
 main {
@@ -34,6 +34,9 @@ p, li {
 nav {
   width: var(--l-nav-w);
 }
+#toggle-dark {
+  visibility: hidden;
+}
 
 .wrap {
   display: flex;
@@ -56,6 +59,9 @@ nav a {
   display: block;
   padding: .2rem .6rem;
   text-align: center;
+}
+nav a[href="#ten"] {
+  font-weight: bold;
 }
 nav a:hover, nav a.active {
   box-shadow: 0px 0px 4px 2px var(--l-primary);
@@ -115,10 +121,16 @@ nav li:nth-child(9) a::before {
   height: var(--l-content-text-h);
 }
 .content #one div.text {
-  height: 31vh;
+  height: 37vh;
 }
 .content li {
   list-style: none;
+}
+.controls a {
+  font-size: var(--font-size-big);
+}
+.controls .last {
+  font-weight: bold;
 }
 
 .content > section {
@@ -258,7 +270,7 @@ nav li:nth-child(9) a::before {
 @media screen and (max-width: 1440px) {
   :root {
     --l-font-size: 15px!important;
-    --l-content-text-h: 42vh;
+    --l-content-text-h: 45vh;
   }
 }
 
@@ -276,9 +288,10 @@ nav li:nth-child(9) a::before {
 
 @media screen and (max-width: 1024px) {
   :root {
+    --l-font-size: 13px!important;
     --l-h1-font-size: 3rem;
     --l-content-inner-w: 80%;
-    --l-content-text-h: 24vh;
+    --l-content-text-h: 35vh;
   }
 }
 
@@ -331,9 +344,21 @@ nav li:nth-child(9) a::before {
   }
 }
 
+@media screen and (max-width: 430px) {
+  :root {
+    --l-picture-h-big: 45vh;
+  }
+}
+
 @media screen and (max-width: 414px) {
   :root {
     --l-content-text-h: 48vh;
+  }
+}
+@media screen and (max-width: 360px) {
+  :root {
+    --l-font-size: 12px!important;
+    --l-content-text-h: 53vh;
   }
 }
 
