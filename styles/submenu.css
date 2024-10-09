@@ -13,6 +13,9 @@
   list-style: none;
   margin-bottom: var(--large-space);
 }
+.submenu.services li {
+  text-align: center;
+}
 .submenu.topic li {
   border-left: var(--normal-space) solid var(--coding);
   padding-left: var(--x-small-space)
