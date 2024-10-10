@@ -65,7 +65,7 @@ i {
 }
 
 p {
-  margin: var(--x-small-space) 0;
+  margin: var(--normal-space) 0;
 }
 
 small {

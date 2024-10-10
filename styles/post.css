@@ -4,6 +4,9 @@ article {
 
 article h1 {
   text-align: center;
+  text-transform: uppercase;
+  width: 75%;
+  margin: var(--xx-large-space) auto;
 }
 
 article .intro {
@@ -15,6 +18,9 @@ article .intro {
   margin: calc(var(--xx-large-space) * 1.5) auto;
   padding: var(--normal-space);
   text-align: center;
+
+  font-size: var(--font-size-bigger);
+  line-height: 150%;
 }
 article .intro:before {
   content: "\201C";
@@ -50,7 +56,7 @@ article .penref {
 }
 
 article h2 {
-  margin-top: var(--xx-large-space);
+  margin-top: var(--xxx-large-space);
 }
 article h2:nth-of-type(2), article aside:nth-of-type(1), article .code:nth-of-type(1), article h3:nth-of-type(2) {
   clear: both;

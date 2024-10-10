@@ -1,11 +1,12 @@
 h1 #{title}
-p(class="intro") Funzionalità come il fetch dinamico dei dati, il sorting e la paginazione permettono di interagire con una tabella in maniera più veloce ed efficente. Per lo sviluppoSpesso ci si affida a soluzioni di terze parti, ma in questa guida vorrei farvi provare a sviluppare una tabella dinamica partendo da zero e utilizzando solo le versioni vanilla di HTML, JavaScript e CSS. Spero di esservi utile!
 
-picture 
-  source(media="(max-width: 414px)", srcset="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-s.webp")
-  source(media="(max-width: 768px)", srcset="assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-m.webp")
-  source(media="(max-width: 1024px)", srcset="assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-m.webp")
-  img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-s.webp", alt=title)
+div(class="intro-wrap")
+  picture 
+    source(media="(max-width: 414px)", srcset="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-s.webp")
+    source(media="(max-width: 768px)", srcset="assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-m.webp")
+    source(media="(max-width: 1024px)", srcset="assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-m.webp")
+    img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-step2-s.webp", alt=title)
+  p(class="intro") Funzionalità come il fetch dinamico dei dati, il sorting e la paginazione permettono di interagire con una tabella in maniera più veloce ed efficente. Per lo sviluppoSpesso ci si affida a soluzioni di terze parti, ma in questa guida vorrei farvi provare a sviluppare una tabella dinamica partendo da zero e utilizzando solo le versioni vanilla di HTML, JavaScript e CSS. Spero di esservi utile!
 
 h2 Introduzione
 p La nostra #[em tabella dinamica] si svilupperà in maniera progressiva partendo da una semplice #[em soluzione statica] con i dati tabellari scritti a mano dallo sviluppatore, seguirà con una #[em tabella popolata dinamicamente] tramite dati ottenuti da una fonte remota (JSON tramite chiamata HTTP), ed infine si aggiungeranno funzionalità più avanzate come la #[em paginazione], il #[em sorting] e il #[em filtering]. 

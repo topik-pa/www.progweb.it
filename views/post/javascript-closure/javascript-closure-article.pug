@@ -1,12 +1,13 @@
 article
   h1 #[em JavaScript CLOSURE]: cosa sono e a cosa servono #[small (con esempi concreti)]
-  p(class="intro") Tutte le volte che ho dovuto affrontare il discorso CLOSURE in JS finivo per avere una impressione riassumibile nella frase: "Tutto molto bello, ma... QUINDI?"
 
-  picture 
-    source(media="(max-width: 414px)", srcset="/assets/images/post/post-js-closure-cover-s.webp")
-    source(media="(max-width: 768px)", srcset="/assets/images/post/post-js-closure-cover-m.webp")
-    source(media="(max-width: 1024px)", srcset="/assets/images/post/post-js-closure-cover-m.webp")
-    img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/post-js-closure-cover-s.webp", alt=title)
+  div(class="intro-wrap")
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/post/post-js-closure-cover-s.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/post/post-js-closure-cover-m.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/post/post-js-closure-cover-m.webp")
+      img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/post-js-closure-cover-s.webp", alt=title)
+    p(class="intro") Tutte le volte che ho dovuto affrontare il discorso CLOSURE in JS finivo per avere una impressione riassumibile nella frase: "Tutto molto bello, ma... QUINDI?"
 
   h2 #[em Definizione]: cosa sono le closure in JavaScript?
   p Una closure è la capacità di una funzione, definita all'interno di un'altra funzione contenitrice, di accedere allo scope della funzione esterna, anche dopo che questa ha cessato la sua esecuzione.<br/>Attraverso le closure (ed ad un apposito handler), insomma, #[em posso accedere allo scope (metodi e attributi) di una funzione] (quella contenitrice) #[em da un qualsiasi ambito esterno].
