@@ -1,5 +1,11 @@
 const data = [
   {
+    id: '010-javascript-generator-definizione-esempi',
+    topic: 'js',
+    year: 2024,
+    month: 10
+  },
+  {
     id: '009-security-by-design-principi',
     topic: 'sec',
     year: 2024,

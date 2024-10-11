@@ -1,0 +1,219 @@
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-s.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      img(fetchpriority="high"  class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title)
+    p(class="intro") I generatori JavaScript sono poco conosciuti all'interno del panorama degli sviluppatori Web, ma, una volta compreso il loro funzionamento, offrono un notevole vantaggio nella gestione del codice e del flusso di dati. Dai concetti di base ai casi più specifici, in questo articolo si descriveranno le caratteristiche salienti e si proporranno differenti esempi pratici questo particolare strumento.
+
+
+section 
+  h2 Introduzione
+  h3 Introduzione alle funzioni generatrici in JavaScript
+  p Le funzioni generatrici (generators) sono state introdotte con ECMAScript 6 (ES6), la loro particolarità principale è riferita al fatto che #[em l'esecuzione del loro codice può essere interrotta e ripresa più volte] generando e restituendo valori "intermedi" al metodo chiamante. Grazie alla loro capacità di sospendere e riprendere l'esecuzione, sono una scelta ottimale nel caso di iterazioni complesse, flussi di dati, implementazioni asincrone o quando si lavora con sequenze di valori o calcoli "on demand".
+  h3 Differenza tra una funzione ordinaria e una funzione generatrice
+  p A differenza di una normale funzione, che restituisce un solo valore al termine della sua esecuzione, #[em i generatori JavaScript restituiscono molteplici valori] mano a mano che il loro codice viene eseguito.
+
+
+section 
+  h2 Cos'è una funzione generatrice?
+  h3 Casi d'uso dei generatori in Javascript
+  p Le funzioni generatrici hanno campi di applicazione ben definiti: sono utili nel caso si debba generare una #[em grande quantità di dati o sequenze potenzialmente infinite] senza occupare tutta la memoria immediatamente. Alcini casi in cui l'utilizzo dei generators si rivela particolarmente utile comprendono i seguenti... 
+  ul 
+    li Iterazioni su sequenze di dati infinite (ad esempio, numeri interi, stream di dati).
+    li Lazy evaluation: calcolare valori solo quando necessario.
+    li Implementazione di algoritmi complessi che richiedono l'interruzione e la ripresa del calcolo.
+    li Simulazione di stati in algoritmi asincroni o di simulazione, dove è utile "mettere in pausa" e "riprendere" il calcolo in momenti specifici.
+  h3 Sintassi dei generatori JavaScript 
+  p Una funzione generatrice viene definita attraverso una sintassi simile a quella che difinisce una funzione tradizionale, ma in questo caso si utilizza la parola chiave #[code function*]. All'interno del corpo della funzione la parola chiave #[code yield] comunica all'interprete JS di mettere in "pausa" l'esecuzione e di restituire il valore specificato (tipicamente il risultato della computazione ottenuto fino a quell'istante). Una chiamata successiva al generatore permettera, in seguito, di riprenderne l'esecuzione. <br>Di seguito un semplice esempio di funzione generativa.
+  div(class="code")
+    h4 Un semplice esempio di generatore in JavaScript
+    code
+      pre   function* generatoreNumeri() {
+      pre     yield 1;
+      pre     yield 2;
+      pre     yield 3;
+      pre   }
+      pre 
+      pre   const gen = generatoreNumeri();
+      pre 
+      pre   console.log(gen.next()); // { value: 1, done: false }
+      pre   console.log(gen.next()); // { value: 2, done: false }
+      pre   console.log(gen.next()); // { value: 3, done: false }
+      pre   console.log(gen.next()); // { value: undefined, done: true }
+      pre
+  h3 Caratteristiche principali
+  p La chiamata di una funzione generatore restituisce un oggetto iteratore, questo oggetto espone il metodo #[code next()], che consente di ottenere il valore successivo generato dalla funzione. Ogni chiamata a #[code next()] riprende l'esecuzione della funzione da dove si era fermata. Il metodo #[code next()] ha due proprietà: #[code value] e #[code done]. Il primo contiene il valore prodotto dalla funzione generatrice tramite #[code yield], il secondo è un booleano che indica se la funzione ha terminato l'esecuzione.
+  p Le funzioni generatrici sono definite come #[em lazily] in quanto eseguono il loro codice in modo ritardato (lazy): il codice viene eseguito solo quando richiesto, producendo un valore alla volta tramite la chiamata a #[code yield].
+
+
+section 
+  h2 Mantenimento dello stato 
+  p Una caratteristica importante dei generatori (e un caratteristica che li accomuna alle closure) è quella di #[em mantenere lo stato tra le successive chiamate] al metodo #[code next()]. Qui sotto un semplice esempio descrittivo.
+  div(class="code")
+    h4 Il generator è capace di mantenere lo stato tra chiamate successive
+    code
+      pre function* contatore() {
+      pre   let i = 0;
+      pre   while (true) {
+      pre     yield i++;
+      pre   }
+      pre }
+      pre 
+      pre const gen = contatore();
+      pre console.log(gen.next().value); // 0
+      pre console.log(gen.next().value); // 1
+      pre console.log(gen.next().value); // 2
+  aside
+    h3 Il mantenimento dello stato nelle Closure Javascript
+    p A proposito di closure, per chi vuole approfondire il concetto di mantenimento di stato e comprendere meglio le Closure in JavaScript, #[a(href="/javascript-closure", title="Vai all'articolo relativo alle Closure JavaScript") qui] può leggere l'articolo relativo.
+    div(class="img-wrapper")
+      a(href="/javascript-closure", title="Vai all'articolo relativo alle Closure JavaScript") 
+        img(loading="lazy" class="sheet" src="/assets/images/post/post-js-closure-cover-m.webp", alt='Closure JavaScript e mantenimento dello stato')
+
+
+section 
+  h2 Passaggio di valori nei generatori
+  p E' possibile #[em inviare dati al generatore] tramite una chiamata metodo #[code next()] e l'aggiunta di un argomento. Quando si chiama il metodo #[em next(val)] su un iteratore  il valore viene passato al generatore nel punto immediatamente successivo all'ultima dichiarazione #[code yield]. Questo è utile per controllare dinamicamente il comportamento del generatore o per alimentarlo con nuovi dati man mano che l'iterazione procede.
+  div(class="code")
+    h4 Passaggio di argomenti al generatore
+    code
+      pre function* sommatore() {
+      pre   let somma = 0;
+      pre   let incremento = yield somma; // Attende un valore da 'next()'
+      pre   while (true) {
+      pre       somma += incremento;
+      pre       incremento = yield somma;  // Riceve il nuovo valore da 'next()'
+      pre   }
+      pre }
+      pre 
+      pre const iteratore = sommatore();
+      pre 
+      pre console.log(iteratore.next().value);  // 0, inizialmente il generatore restituisce 0
+      pre console.log(iteratore.next(5).value); // 5, passa 5 al generatore e restituisce la somma
+      pre console.log(iteratore.next(3).value); // 8, somma 3 al precedente valore 5 e restituisce 8
+      pre console.log(iteratore.next(10).value); // 18, somma 10 al precedente valore 8 e restituisce 18
+  p La possibilità di passare parametri permette di #[em influenzare in modo interattivo il comportamento del generatore] durante l'esecuzione. I risultati ottenuti dipendono dagli input esterni e rendono i generatori adatti a situazioni in cui i dati devono essere calcolati progressivamente e su richiesta.
+
+
+section 
+  h2 Gestione degli errori nei generatori
+  p Esistono diversi metodi per gestire gli errori all'interno di un generatore, tra cui l'uso di #[code try...catch] e l'invio di errori nel generatore stesso tramite il metodo #[code throw()].
+  h3 Uso di try...catch all'interno di un generatore
+  p Per gestire l'eventualità di un errore durante l'esecuzione di codice all'interno di un generatore, è possibile includere un blocco #[code try...catch] all'interno della stessa. Sarà così possibile la cattura e la gestione delle eccezzioni direttamente all'interno della funzione generatrice. 
+  div(class="code")
+    h4 Cattura e gestione di una eccezione all'interno di una funzione generatore
+    code
+      pre function* generatoreConErrore() {
+      pre   try {
+      pre       yield 1;
+      pre       yield 2;
+      pre       throw new Error("Errore intenzionale!"); // Genera un errore
+      pre       yield 3; // Questo non verrà mai raggiunto
+      pre   } catch (error) {
+      pre       console.log("Errore catturato nel generatore:", error.message);
+      pre   }
+      pre }
+      pre
+      pre const gen = generatoreConErrore();
+      pre 
+      pre console.log(gen.next()); // { value: 1, done: false }
+      pre console.log(gen.next()); // { value: 2, done: false }
+      pre console.log(gen.next()); // Errore catturato nel generatore: Errore intenzionale!
+      pre console.log(gen.next()); // { value: undefined, done: true }
+  h3 Uso del metodo throw()
+  p E' anche possibile inviare eccezioni a un generatore dall'esterno utilizzando il metodo #[code throw()] dell'oggetto iteratore. L'eccezione viene inviata al generatore tramite il metodo #[code gen.throw()], dopo che l'errore è stato gestito l'esecuzione riprende dal punto in cui era stata interrotta. In questo modo è possibile interagire con il flusso di esecuzione del generatore e consentire a codice esterno di segnalare errori o eventi in modo tale che sia il generatore stesso a gestirli.
+  div(class="code")
+    h4 Invio di un errore ad un generatore e gestione dello stesso
+    code
+      pre function* generatore() {
+      pre   try {
+      pre       yield 1;
+      pre       yield 2;
+      pre   } catch (error) {
+      pre       console.log("Errore catturato:", error.message);
+      pre   }
+      pre   yield 3;
+      pre }
+      pre 
+      pre const gen = generatore();
+      pre 
+      pre console.log(gen.next()); // { value: 1, done: false }
+      pre console.log(gen.next()); // { value: 2, done: false }
+      pre gen.throw(new Error("Errore esterno!")); // Errore catturato: Errore esterno!
+      pre console.log(gen.next()); // { value: 3, done: false }
+
+section 
+  h2 Uso combinato di generatori e iteratori
+  p Il ciclo #[code for...of] può essere utilizzato in combinazione con i generatori, in questo caso la chiamata a #[code next()] è implicita nel ciclo che continuera il suo loop fino a quando il generatore non restituirà il parametro #[code done] con valore #[code true].
+  div(class="code")
+    h4 Ciclo for...of e una funzione generatore
+    code
+      pre function* contatore(max) {
+      pre   let i = 0;
+      pre   while (i < max) {
+      pre       yield i++;
+      pre   }
+      pre }
+      pre
+      pre for (let num of contatore(5)) {
+      pre   console.log(num); // Stampa: 0, 1, 2, 3, 4
+      pre }
+
+
+section 
+  h2 Generatori e asincronia
+  p I #[em generatori asincroni gestiscono l'iterazione su valori ottenuti in modo asincrono]: richieste di rete; operazioni di I/O o altre operazioni che richiedono tempo per essere completate. Una funzione generatrice asincrona è definita usando la sintassi #[code async function*] e, come i generatori normali, utilizza #[code yield] per produrre valori asincroni. <br>Vediamo un esempio di generatore asincrono in combinazione con un ciclo #[code for...of]. 
+  div(class="code")
+    h4 Ciclo for...of e una funzione generatore asincrona
+    code
+      pre async function* generatoreAsincrono() {
+      pre     yield new Promise(resolve => setTimeout(() => resolve('Valore 1'), 1000));
+      pre     yield new Promise(resolve => setTimeout(() => resolve('Valore 2'), 2000));
+      pre     yield new Promise(resolve => setTimeout(() => resolve('Valore 3'), 3000));
+      pre }
+      pre 
+      pre async function processaGeneratoriAsincroni() {
+      pre     for await (let valore of generatoreAsincrono()) {
+      pre         console.log(valore); // Stampa "Valore 1", "Valore 2", "Valore 3" con intervalli
+      pre     }
+      pre }
+      pre 
+      pre processaGeneratoriAsincroni();
+  p I generatori asincroni e il ciclo #[code for await...of] rappresentano un metodo molto potente per la gestione di operazioni asincrone in JavaScript: richieste API sequenziali, streaming di dati... .
+
+
+section 
+  h2 Casi d'uso pratici: un generatore per gestire valori potenzialmente infiniti
+  p I valori sono elaborati dai generatori solo dopo una chiamata esplicita, quindi è possibile #[em gestire flussi di dati teoricamente infiniti] senza il pericolo di saturare le risorse del sistema. <br>Ecco un esempio pratico.
+  div(class="code")
+    h4 Un generatore che gestisce in maniera efficente flussi di dati infiniti
+    code
+      pre function* infinite() {
+      pre   let index = 0;
+      pre 
+      pre   while (true) {
+      pre     yield index++;
+      pre   }
+      pre }
+      pre 
+      pre const generator = infinite(); // "Generator { }"
+      pre 
+      pre console.log(generator.next().value); // 0
+      pre console.log(generator.next().value); // 1
+      pre console.log(generator.next().value); // 2
+      pre // …
+
+
+section 
+  h2 Conclusione
+  p I generatori offrono un controllo granulare sul flusso di esecuzione e sono ideali per gestire in modo efficiente operazioni complesse o asincrone, migliorando la gestione della memoria e semplificando la struttura del codice, ma è consigliabile usare i generatori solo nei casi in cui ci si aspetta di gestire flussi di dati complessi o sequenze potenzialmente infinite, come dati in streaming o iterazioni complesse, evitando di usarli per operazioni semplici in cui una normale funzione può bastare.
+  p In conclusione i vantaggi dei generatori possono essere riassunti nella seguente lista.
+  ul 
+    li Esecuzione lazy
+    li Controllo dello stato interno
+    li Gestione semplificata delle iterazioni
+    li Chiarezza del codice
+    li Miglior gestione dei flussi asincroni

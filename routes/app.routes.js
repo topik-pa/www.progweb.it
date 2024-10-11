@@ -279,6 +279,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/javascript-generator-definizione-esempi', (req, res) => {
+    const title = 'Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!'
+    const description = 'Una guida completa con definizione ed esempi pratici per comprendere come funzionano e quali vantaggi offrono le funzioni Generator in Javascript'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/010-javascript-generator-definizione-esempi/javascript-generator-definizione-esempi',
+      {
+        id: 'javascript-generator-definizione-esempi',
+        serial: '010',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/security-by-design-principi', (req, res) => {
     const title = 'La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web'
     const description = 'Come e perchè integrare i principali paradigmi di sicurezza nell\'implementazione del nostro sistema software fin dalle primissime fasi di progettazione. Che cosa significa il concetto di "Security by Design" e quali sono i vantaggi che offre?'

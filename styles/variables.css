@@ -1,6 +1,7 @@
 :root {
   /* COLORS */
   --white:         #FBFBFB;
+  --lightest-gray: #f3f3f3;
   --lighter-gray:  #E0E0E0;
   --light-gray:    #a9a9a9;
   --gray:          #888888;

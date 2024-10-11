@@ -1,11 +1,16 @@
 article {
   counter-reset: step;
 }
-
+article > section {
+  border: none!important;
+  width: initial!important;
+}
+article section:nth-child(odd) {
+  background-color: var(--lightest-gray);
+}
 article h1 {
   text-align: center;
   text-transform: uppercase;
-  width: 75%;
   margin: var(--xx-large-space) auto;
 }
 
@@ -55,9 +60,6 @@ article .penref {
   font-style: italic;
 }
 
-article h2 {
-  margin-top: var(--xxx-large-space);
-}
 article h2:nth-of-type(2), article aside:nth-of-type(1), article .code:nth-of-type(1), article h3:nth-of-type(2) {
   clear: both;
 }
@@ -119,6 +121,15 @@ article aside.links h2::before {
   content: none;
 }
 
+article .alternativa {
+  margin: var(--xxx-large-space) 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: cursive;
+  font-size: var(--font-size-big);
+  line-height: 150%;
+}
 
 @media screen and (max-width: 1366px) {
 
