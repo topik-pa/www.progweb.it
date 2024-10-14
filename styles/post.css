@@ -129,6 +129,7 @@ article .alternativa {
   font-family: cursive;
   font-size: var(--font-size-big);
   line-height: 150%;
+  font-weight: 550;
 }
 
 @media screen and (max-width: 1366px) {
