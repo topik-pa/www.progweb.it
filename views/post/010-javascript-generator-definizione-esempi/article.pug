@@ -20,14 +20,14 @@ section
 section 
   h2 Cos'è una funzione generatrice?
   h3 Casi d'uso dei generatori in Javascript
-  p Le funzioni generatrici hanno campi di applicazione ben definiti: sono utili nel caso si debba generare una #[em grande quantità di dati o sequenze potenzialmente infinite] senza occupare tutta la memoria immediatamente. Alcini casi in cui l'utilizzo dei generators si rivela particolarmente utile comprendono i seguenti... 
+  p Le funzioni generatrici hanno campi di applicazione ben definiti: sono utili nel caso si debba generare una #[em grande quantità di dati o sequenze potenzialmente infinite] senza occupare tutta la memoria immediatamente. Alcuni casi in cui l'utilizzo dei generators si rivela particolarmente utile comprendono i seguenti... 
   ul 
     li Iterazioni su sequenze di dati infinite (ad esempio, numeri interi, stream di dati).
     li Lazy evaluation: calcolare valori solo quando necessario.
     li Implementazione di algoritmi complessi che richiedono l'interruzione e la ripresa del calcolo.
     li Simulazione di stati in algoritmi asincroni o di simulazione, dove è utile "mettere in pausa" e "riprendere" il calcolo in momenti specifici.
   h3 Sintassi dei generatori JavaScript 
-  p Una funzione generatrice viene definita attraverso una sintassi simile a quella che difinisce una funzione tradizionale, ma in questo caso si utilizza la parola chiave #[code function*]. All'interno del corpo della funzione la parola chiave #[code yield] comunica all'interprete JS di mettere in "pausa" l'esecuzione e di restituire il valore specificato (tipicamente il risultato della computazione ottenuto fino a quell'istante). Una chiamata successiva al generatore permettera, in seguito, di riprenderne l'esecuzione. <br>Di seguito un semplice esempio di funzione generativa.
+  p Una funzione generatrice viene definita attraverso una sintassi simile a quella che definisce una funzione tradizionale, ma in questo caso si utilizza la parola chiave #[code function*]. All'interno del corpo della funzione la parola chiave #[code yield] comunica all'interprete JS di mettere in "pausa" l'esecuzione e di restituire il valore specificato (tipicamente il risultato della computazione ottenuto fino a quell'istante). Una chiamata successiva al generatore permetterà, in seguito, di riprenderne l'esecuzione. <br>Di seguito un semplice esempio di funzione generativa.
   div(class="code")
     h4 Un semplice esempio di generatore in JavaScript
     code
