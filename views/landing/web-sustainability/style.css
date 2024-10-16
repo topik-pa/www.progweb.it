@@ -1,13 +1,14 @@
 :root {
   /* COLORS */
-  ---black: #252525;
-  ---white: #FFFFFF;
-  ---primary: #b43218;
-  ---secondary: #0e8a2d;
-  ---padding: calc(var(--view-padding) * 1) calc(var(--view-padding) * 10);
+  --l-black: #252525;
+  --l-white: #FFFFFF;
+  --l-primary: #b43218;
+  --l-secondary: #0e8a2d;
+  --l-padding: calc(var(--view-padding) * 1) calc(var(--view-padding) * 10);
+  --l-content-width: 80%;
 }
 
-html {
+main {
   font-size: 16px!important;
 }
 body, section {
@@ -19,7 +20,7 @@ main {
   padding-top: 0;
 }
 header {
-  padding: var(---padding)!important;
+  padding: var(--l-padding)!important;
 }
 p {
   line-height: 150%!important;
@@ -39,10 +40,10 @@ figcaption {
 
 
 .intro .head {
-  color: var(---secondary);
+  color: var(--l-secondary);
 }
 .intro .head > div {
-  padding: var(---padding);
+  padding: var(--l-padding);
 }
 .intro .head h1 { 
   text-transform: uppercase;
@@ -70,7 +71,6 @@ figcaption {
 }
 .intro .head a span {
   color: var(--dark-gray);
-  font-size: var(--font-size-extra-small);
 }
 
 .intro .footer {
@@ -95,7 +95,7 @@ figcaption {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(---secondary);
+  background-color: var(--l-secondary);
   opacity: 0.4;
 }
 .intro .footer .text {
@@ -106,7 +106,7 @@ figcaption {
   right: 0;
 }
 .intro .footer .text span {
-  background-color: var(---primary);
+  background-color: var(--l-primary);
   color: var(---white);
   font-size: var(--font-size-biggest);
   display: block;
@@ -161,8 +161,8 @@ figcaption {
   background-color: white;
   position: relative;
   padding: 1rem;
-  border: 1px solid var(---primary);
-  border-bottom: 1rem solid var(---primary);
+  border: 1px solid var(--l-primary);
+  border-bottom: 1rem solid var(--l-primary);
   box-shadow: 0px 5px 40px 15px white;
 }
 
@@ -173,7 +173,7 @@ figcaption {
 .cta h2 {
   text-align: center;
   margin-bottom: var(--x-large-space);
-  color: var(---primary);
+  color: var(--l-primary);
 }
 .cta > div {
   display: flex;
@@ -184,7 +184,7 @@ figcaption {
   display: block;
   font-size: var(--font-size-huge);
   margin-top: var(--x-large-space);
-  color: var(---primary);
+  color: var(--l-primary);
 }
 .cta > div > div {
   display: flex;
@@ -211,7 +211,7 @@ figcaption {
 
 
 .near {
-  padding: var(---padding)!important;
+  padding: var(--l-padding)!important;
   margin: calc(var(--xx-large-space) * 2) auto!important;
   background-color: rgba(2, 89, 139, 0.1)!important;
   border-top: 1px solid rgb(2, 89, 139);
@@ -238,7 +238,7 @@ figcaption {
 
 
 .features {
-  padding: var(---padding)!important;
+  padding: var(--l-padding)!important;
   margin: calc(var(--xx-large-space) * 2) auto!important;
 }
 .features h2 {
@@ -279,7 +279,7 @@ figcaption {
 
 .services {
   width: var(--l-content-width);
-  margin: 0 auto;
+  margin: 0 auto!important;
 }
 .services h3 {
   text-align: center;
@@ -324,7 +324,7 @@ figcaption {
 /* RESPONSIVE */
 @media screen and (max-width: 1680px) {
   :root {
-    ---padding: calc(var(--view-padding) * 2) calc(var(--view-padding) * 5);
+    --l-padding: calc(var(--view-padding) * 2) calc(var(--view-padding) * 5);
   }
   .intro .footer {
     padding: 0 calc(var(--view-padding) * 5);
@@ -332,17 +332,14 @@ figcaption {
 }
 
 @media screen and (max-width: 1366px) {
-  html {
+  main {
     font-size: 14px!important;
-  }
-  .intro .head a span {
-    font-size: var(--font-size-small);
   }
 }
 
 @media screen and (max-width: 1280px) {
   :root {
-    ---padding: calc(var(--view-padding) * 2) calc(var(--view-padding) * 2);
+    --l-padding: calc(var(--view-padding) * 2) calc(var(--view-padding) * 2);
   }
   .intro .footer {
     align-items: center;
@@ -352,7 +349,7 @@ figcaption {
 }
 
 @media screen and (max-width: 1024px) {
-  html {
+  main {
     font-size: 13px!important;
   }
   .intro .footer {
@@ -369,9 +366,9 @@ figcaption {
 
 @media screen and (max-width: 768px) {
   :root {
-    ---padding: var(--view-padding) var(--view-padding);
+    --l-padding: var(--view-padding) var(--view-padding);
   }
-  html {
+  main {
     font-size: 12px!important;
   }
   .intro .footer {
