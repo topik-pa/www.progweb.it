@@ -35,10 +35,10 @@ const handleScroll = debounce(() => {
 }, 5)
 document.addEventListener('scroll', handleScroll)
 
-setTimeout(() => {
-  const target = document.querySelector('#one')
-  window.scrollTo({ top: target.offsetTop, behavior: 'smooth' })
-}, 1200)
+// setTimeout(() => {
+//   const target = document.querySelector('#one')
+//   window.scrollTo({ top: target.offsetTop, behavior: 'smooth' })
+// }, 1200)
 
 for (let i = 0; i < $nexts.length; i++) {
   const $next = $nexts[i]

@@ -37,8 +37,8 @@ nav {
 #toggle-dark {
   visibility: hidden;
 }
-header > div:nth-child(2) {
-  display: none;
+header {
+  display: none!important;
 }
 
 .wrap {
@@ -315,8 +315,9 @@ nav li:nth-child(9) a::before {
   nav {
     position: fixed;
     width: 21%;
-    top: 5%;
+    top: 1%;
     right: 2%;
+    z-index: 999;
   }
   nav ul {
     display: flex;
@@ -324,6 +325,9 @@ nav li:nth-child(9) a::before {
     align-items: center;
     flex-wrap: wrap;
     margin-left: 0;
+  }
+  nav li {
+    margin: var(--x-small-space) 0!important;
   }
   nav a {
     border: none;
