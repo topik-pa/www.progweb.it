@@ -1,6 +1,6 @@
 #share {
   text-align: center;
-  margin: var(--normal-space) 0;
+  margin: var(--x-large-space);
   border: none;
   border-top: 1px solid var(--blue);
   background-color: rgba(2, 89, 139, .03);
@@ -25,4 +25,10 @@
   width: auto!important;
   border-right: none!important;
   padding-bottom: var(--xx-large-space);
+}
+
+@media screen and (max-width: 768px) {
+  aside#share {
+    margin: var(--x-large-space) 0;
+  }
 }

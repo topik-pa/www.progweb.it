@@ -1,6 +1,5 @@
-article
+hgroup
   h1 #{title}
-
   div(class="intro-wrap")
     picture 
       source(media="(max-width: 414px)", srcset="/assets/images/post/002-post-eng-architettura-del-software/post-eng-architettura-del-software-s.webp")
@@ -9,12 +8,15 @@ article
       img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/002-post-eng-architettura-del-software/post-eng-architettura-del-software-s.webp", alt=title)
     p(class="intro") Tutti abbiamo almeno una idea vaga di cosa si intende per "Architettura del Software", ma penso che solo alcuni abbiano in mente concetti, pratiche e vantaggi precisi che ne derivano. 
 
+section
   h2 Architettura del Software: una definizione 
   p Con Architettura del Software ci riferiamo alla #[em struttura di un sistema software] e alla #[em progettazione delle interfacce dei suoi componenti]; comprende le decisioni di progettazione che determinano quali parti compongono l'applicazione e come  queste interagiscono e lavorano assieme per raggiungere gli obiettivi richiesti. Queste decisioni includono la struttura del file system (i file e le cartelle), la scelta dei framework da adottare, la definizione delle interfacce tra le diverse componenti che costituiscono l'applicazione, la gestione dei dati, la distribuzione delle responsabilità tra i moduli e altro ancora. <br> Un'architettura ben progettata facilita la manutenzione, l'aggiornamento e l'aggiunta di funzionalità del software nel tempo ponendo la giusta attenzione ad aspetti quali: la scalabilità, la sicurezza, la manutenibilità e la flessibilità per garantire che il software possa crescere e adattarsi alle esigenze in evoluzione.
 
+section
   h2 Obiettivi ed effetti
   p Il fine ultimo di una buona Architettura del Software è quello di #[em ridurre al minimo gli sforzi necessari alla realizzazione e manutenzione di un Sistema Software]. <br> Gli effetti che una buona AdS ha sul progetto sono quelli di ridurre il numero di persone necessarie allo sviluppo, un numero inferiore di difetti ed una più semplice gestione degli stessi oltre che una maggiore flessibilità del codice prodotto. Un tale approccio allo sviluppo può avere effetti positivi sul Prodotto, sul Team e su tutta l'Organizzazione Aziendale. <br> La qualità di un AdS si misura, allora, #[em in funzione dell'impegno necessario a far fronte alle richieste di modifica o evoluzione del software].
 
+section
   h2 Gli effetti di una cattiva Architettura (sul Prodotto e sul Team)
   p La definizione e implementazione di una opportuna AdS sembra mal sposarsi con le esigenze di velocità e la mutevole natura dei requisiti cliente, in realtà...
   blockquote
@@ -50,7 +52,8 @@ article
 
     h4 Il progetto-su-cui-hai-lavorato.com
     p Non poteva mancare un tuo progetto, personale o aziendale, su cui hai lavorato o stai ancora lavorando. E' un progetto iniziato male e finito peggio a causa di una cattiva gestione delle risorse e di una altrettanto cattiva implementazione. Spesso la fretta di iniziare porta ad intraprendere scelte sbagliate le cui ripercussioni si faranno sentire nelle release a venire. Viene voglia di rifare tutto d'accapo ma non si ha il coraggio o il budget per farlo, il progetto precedente ora divora tempo e risorse per mantenerlo! Insomma, un delirio: sono sicuro che tu abbia vissuto almeno una esperienza simile.
-  
+
+section
   h2 Funzionalità o Architettura: cosa conta di più?
   p E' facile pensare che la funzionalità di un software sia la sua caratteristica principale: dopotutto è quello il motivo per cui lo stiamo sviluppando. L'Architettura che utilizziamo ha solamente lo scopo di servire tale funzionalità. Vi invito, però, ad una riflessione. 
   p Proviamo a ragionare in termini di un programma che svolge perfettamente una funzione, ma non è modificabile in alcun modo (un esempio estremo, lo so...); ecco, quando cambiano i requisiti questo programma smetterà di erogare la funzionalità richiesta diventando di fatto un oggetto inutile. D'altro canto, un programma che non eroga la funzionalità richiesta, ma risulta facilmente modificabile, mi darà la possibilità di gestirlo e modificalo rendendolo utile ai miei fini.
@@ -59,6 +62,7 @@ article
     h3 Una esperienza personale: il software di gestione della sicurezza sulle carte di credito 
     p Mi capitò di lavorare part-time al call-center di gestione di alcune delle più utilizzate carte di credito in Italia e sui bancomat di differenti circuiti bancari. Il programma di gestione era esclusivamente testuale, a scelta multipla, difficile da utilizzare, controintuitivo e macchinoso... E perfettamente funzionante (si trattava pur sempre di sicurezza bancaria)! Uno sviluppo decennale e attento aveva portato ad una situazione di virtuale assenza di bug, ma escludeva la possibilità di ulteriori modifiche o migliorie. Le problematiche relative alle nuove carte di credito e ai nuovi servizi inclusi nelle stesse erano quindi a totale carico dell'operatore che gestiva la cosa tramite operatività non standard sulla applicazione (forzare le funzionalità esistenti a supporto delle nuove) o con l'ausilio della cara vecchia carte e fax.
 
+section
   h2 Conclusione: la situazione da evitare 
   p Le scelte architetturali devono essere effettuate nell'ottica di privilegiare la #[em flessibilità del codice] e a #[em supporto del lavoro degli sviluppatori]. Gli effetti positivi a medio e lungo periodo sono concreti e spaziano oltre i confini del Team di sviluppo. 
   p La situazione, che un buon approccio architetturale, vuole evitare è quella di un progetto la cui manutenzione diviene col tempo e nelle successive release sempre più difficile ed onerosa per l'Azienda. Questa situazione può essere descritta nei due grafici qui sotto.
@@ -66,11 +70,12 @@ article
     img(src="/assets/images/post/002-post-eng-architettura-del-software/graph-1.webp", alt='Effetti di una cattiva Architettura nell\'economia Aziendale')
     img(src="/assets/images/post/002-post-eng-architettura-del-software/graph-2.webp", alt='Effetti di una cattiva Architettura nell\'economia Aziendale')
 
-  //- section(class="links")
-    h2 Link esterni 
-    ul 
-      li 
-        a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
-      
-  include /components/shared/coffee/coffee.pug
-  include /components/shared/share/share.pug
+//- section(class="links")
+  h2 Link esterni 
+  ul 
+    li 
+      a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
+    
+include /components/shared/coffee/coffee.pug
+span(class="otherwise") Oppure, in alternativa, <br>puoi condividere questo contenuto!
+include /components/shared/share/share.pug

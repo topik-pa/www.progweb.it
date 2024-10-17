@@ -29,11 +29,6 @@ main {
 }
 main section {
   padding: var(--view-padding);
-  padding-left: 0;
-  margin: var(--view-padding) 0;
-}
-main article {
-  padding: var(--view-padding);
   margin: var(--view-padding) 0;
 }
 
@@ -109,10 +104,9 @@ code {
   justify-content: space-between;
   align-items: flex-start;
 }
-.tworows section, .tworows article {
+.tworows section/*, .tworows article*/ {
   width: 80%;
   border-right: 1px dashed var(--lighter-gray);
-  
 }
 .tworows .sideside, .tworows .side {
   width: 20%;
@@ -123,4 +117,11 @@ code {
 
 #contacts footer div:first-child div, #privacy footer div:first-child div {
   display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .tworows section  {
+    width: 100%;
+  }
 }

@@ -1,6 +1,5 @@
-article
+hgroup
   h1 #{title}
-
   div(class="intro-wrap")
     picture 
       source(media="(max-width: 414px)", srcset="/assets/images/post/003-node-setup-progetto/node-setup-progetto-s.webp")
@@ -9,6 +8,7 @@ article
       img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/003-node-setup-progetto/node-setup-progetto-s.webp", alt=title)
     p(class="intro") Esistono tante guide per fare il setup di un progetto Node / Express, in questa vorrei però aggiungere la descrizione di qualche strumento e metodologia applicati in ambito professionale. Spero che questo contribuisca alla condivisione dell'articolo...
 
+section
   h2 Introduzione 
   h3 Cosa faremo
   p Procederemo al #[em setup di un piccolo progetto Web]: alla fine dell'articolo avremo un server in ascolto su una specifica rotta e un semplice messaggio testuale come risposta. La funzionalità è decisamente minima, ma sufficiente per illustrare alcuni degli strumenti e mettere in pratica certe metodologie di sviluppo (come, per esempio, il versionamento del codice) che spesso troviamo applicate in ambienti di lavoro professionali. Non ci focalizzeremo, quindi, sulla sola #[em implementazione tecnica], ma agiremo a più ampio spetto introducendo #[em concetti e pratiche utili quando si scrive codice all'interno di un team].
@@ -23,6 +23,7 @@ article
     li #[a(href="https://nodemon.io/") nodemon] &ge; 3.0.2
   p NB: ho usato Fedora Linux durante la creazione del progetto; per gli utenti Windows i concetti sono gli stessi e, in massima parte, i comandi rimangono simili. Se ci fossero delle incompatibilità, avvertitemi!
 
+section
   h2 Init del progetto 
   p Il progetto inizia con la creazione automatica del file #[code /package.json]; si tratta del file che conterrà le dipendenze di progetto, gli script di avvio e altre importanti meta informazioni. La creazione di tale file si riduce all'esecuzione di un comando e alla compilazione di un breve questionario. Allora, dalla cartella che ospiterà i file del progetto, digiteremo il seguente comando.
 
@@ -58,7 +59,7 @@ article
       pre   "license": "ISC"
       pre }
   p Le chiavi presenti sono auto-esplicative, una breve menzione sulla chiave #[code script] che contiene i comandi disponibile eseguibili tramite il comando #[code npm run [eseguibile]] (per es. #[code npm run test]) e la chiave #[code main] che indica quale sarà l'entry point di progetto e quale, quindi, il primo file ad essere messo in esecuzione (nel nostro caso, il file /index.js non ancora esistente).
-  
+
   aside 
     h3 Inizializzazione di un repository Git 
     p Abbiamo creato il primo file e quindi è già venuto il momento di #[em salvare il nostro lavoro in un repository]. Gestire il codice tramite un repository è essenziale in ambito professionale, ma anche privato, sia per condividere le fasi di sviluppo tra più sviluppatori, ma anche come strumento per accedere a versioni differenti del nostro codice. <br>Per #[em inizializzare la repository] utilizzando Git, da linea di comando, sulla root di progetto, basta digitare:
@@ -105,7 +106,8 @@ article
         pre build
         pre npm-debug.log
         pre .env
-        
+      
+section
   h2 Implementare un server con Express.js
   p Dopo la fase preparativa è il momento di sviluppare una funzionalità, anche se banale. Vedremo che con poche righe otterremo la #[em creazione di un server], la sua #[em esecuzione] e la #[em definizione di una rotta] attraverso cui interrogarlo e #[em visualizzare un messaggio]. 
 
@@ -143,7 +145,7 @@ article
         pre   "author": "Marco Pavan",
         pre   "license": "ISC"
         pre }
-  
+
   p Insieme al modulo Express, il comando npm (Node Package Manager), si occupa anche di installare tutte le sue dipendenze nella cartella #[code /node_modules] e di tenere traccia di tutte le relazioni tra i moduli nel file #[code package-log.json]. Questi due nuovi elementi (una cartella ed un file) sono ora presenti nella nostra root. <br>#[code /node_modules], come specificato nel file #[code .gitignore], non va posto sotto sistema di versionamento Git in quanto è una cartella il cui contenuto è generato in automatico da npm.
   p Avendo a disposizione il server Express.js, il nostro compito ora è quello di definire un file #[code /index.js] con il seguente contenuto.
 
@@ -201,7 +203,7 @@ article
   p Il server si avvia e si mette in attesa di request HTTP.
   div(class="img-wrapper")
     img(src="/assets/images/post/003-node-setup-progetto/npm-run-dev.webp", alt='Avviare l\'applicazione tramite la chiave script del package.json')
-  
+
   p Guardiamo il risultato navigando all'indirizzo localhost:8080 con il nostro browser.
   div(class="img-wrapper")
     img(src="/assets/images/post/003-node-setup-progetto/hello-world.webp", alt='Il browser mostra il risultato della chiamata')
@@ -245,13 +247,14 @@ article
         pre }
     
     p Ora ogni modifica ai file di progetto scatenerà il riavvio automatico del server e una più veloce visualizzazione del risultato: basterà fare il refresh del browser (quello sì...). Provate! 
-        
-
-  //- section(class="links")
-    h2 Link esterni 
-    ul 
-      li 
-        a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
       
-  include /components/shared/coffee/coffee.pug
-  include /components/shared/share/share.pug
+
+//- section(class="links")
+  h2 Link esterni 
+  ul 
+    li 
+      a(class="ext", href="https://www.w3.org/html/wg/wiki/AddedAttributePing", target="_blanck") AddedAttributePing - HTML WG Wiki (interessanti motivi per usarlo / motivi per non usarlo)
+    
+include /components/shared/coffee/coffee.pug
+span(class="otherwise") Oppure, in alternativa, <br>puoi condividere questo contenuto!
+include /components/shared/share/share.pug

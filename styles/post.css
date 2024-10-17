@@ -1,12 +1,18 @@
 article {
   counter-reset: step;
+  margin: var(--view-padding) 0;
+  width: 80%;
+  border-right: 1px dashed var(--lighter-gray);
 }
 article > section {
   border: none!important;
   width: initial!important;
+  margin: var(--view-padding)!important;
+  padding: var(--view-padding)!important;
 }
-article section:nth-child(odd) {
+article section:nth-child(even) {
   background-color: var(--lightest-gray);
+  border-radius: var(--border-radius-small);
 }
 article h1 {
   text-align: center;
@@ -121,7 +127,7 @@ article aside.links h2::before {
   content: none;
 }
 
-article .alternativa {
+article .otherwise {
   margin: var(--xxx-large-space) 0;
   display: block;
   width: 100%;
@@ -146,6 +152,14 @@ article .alternativa {
 }
 
 @media screen and (max-width: 768px) {
+  article {
+    width: 100%;
+    border: none;
+  }
+  article > section {
+    margin: var(--view-padding) 0!important;
+    width: calc(100% - (var(--view-padding) * 2))!important;
+  }
   article .img-wrapper {
     flex-direction: column;
   }

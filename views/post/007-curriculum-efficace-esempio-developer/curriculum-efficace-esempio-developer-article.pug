@@ -1,92 +1,97 @@
-h1 #{title}
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-s.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp")
+      img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-s.webp", alt=title)
+    p(class="intro") In pochi paragrafi un Curriculum Vitae deve essere in grado di descriverci a persone che di noi nulla sanno... Anni di studio e lavoro condensati in una o due facciate, massimo. Un foglio (o file PDF) messo in competizione con tanti altri, generalmente tutti uguali. Come far emergere le nostre peculiarità e le nostre competenze? <br>Qui di seguito una serie di suggerimenti ed una proposta di template. Ma la prima regola rimane... NO file Word! 
 
-div(class="intro-wrap")
-  picture 
-    source(media="(max-width: 414px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-s.webp")
-    source(media="(max-width: 768px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp")
-    source(media="(max-width: 1024px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp")
-    img(fetchpriority="high"  class="cover" width="512" height="640" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-s.webp", alt=title)
-  p(class="intro") In pochi paragrafi un Curriculum Vitae deve essere in grado di descriverci a persone che di noi nulla sanno... Anni di studio e lavoro condensati in una o due facciate, massimo. Un foglio (o file PDF) messo in competizione con tanti altri, generalmente tutti uguali. Come far emergere le nostre peculiarità e le nostre competenze? <br>Qui di seguito una serie di suggerimenti ed una proposta di template. Ma la prima regola rimane... NO file Word! 
-
-h2 Introduzione
-p Lo scopo di questo articolo è quello di aiutare a redigere un #[em Curriculum Vitae sintetico, facile da consultare ed efficace] nel comunicare, a chi lo legge, le nostre competenze e la nostra personalità. Il Curriculum che andremo a redigere è focalizzato sulla descrizione delle competenze di uno sviluppatore software, ma può essere facilmente adattato ad ogni altra figura professionale interessata ad applicare questi suggerimenti.
-p Sarà un CV molto #[em focalizzato sulle caratteristiche personali] di chi lo redige: ad una classica sezione "Su di me" affiancheremo delle frasi d'effetto (considerazioni o citazioni) e una sezione basata sui progetti personali del candidato. In questo modo potranno emergere la personalità e la peculiare visione che il candidato ha circa la propria attività, non limitando il testo ad una sterile elencazione di competenze tecniche.
-p La sezioni, i titoli e i paragrafi, gli elenchi sono fatti in modo tale da essere il più possibile chiari anche ai #[em software di analisi automatica], caratteristica che si traduce in maggiore efficenza e tempo risparmiato al candidato.
-p Il CV sarà il più possibile #[em sintetico (massimo 2 facciate)] ma esaustivo, riportando solo i dettagli più salienti e lasciando spazio ad eventuali approfondimenti da discutere in sede di colloquio. 
-
-
-h2 Le caratteristiche principali di un Curriculum efficace
-p Per quanto riguarda il testo e l'esposizione dei vari argomenti, un buon CV deve seguire alcuni principi fondamentali.
-ul 
-    li #[em Chiarezza]: utilizzare frasi corte, semplici e chiare, cercando di essere comprensibili anche ai non addetti ai lavori. 
-    li #[em Cura]: cura del lessico, della grammatica e della sintassi; ma anche cura del font utilizzato, della formattazione e della suddivisione delle varie sezioni; perchè la parte grafica ha una importanza cruciale.
-    li #[em Concretezza]: noi abbiamo poco spazio, chi legge ha poco tempo; è necessario comunicare in maniera efficace i concetti più importanti: se avremo generato un poco di curiosità in chi legge, in fase di colloquio, ci sarà modo di soddisfare tutte le sue domande.
-    li #[em Direzione]: la disposizione degli elementi nel nostro CV deve aiutare l'occhio del selezionatore e fargli trovare gli elementi che cerca lì dove se li aspetta: nome, cognome e job title in altro come prima cosa; recapiti leggibili e in posizione prominente; elenco delle esperienze lavorative riconoscibili e ben distinte le une dalle altre...
-    li #[em Keyword]: evidenziamo le parole chiave che più descrivono le nostre competenze (capacità professionali, interpersonali e di gestione; framework conosciuti; metodologie applicate; linguaggi utilizzati...) e facciamo in modo che ci sia una #[em corrispondenza con le parole chiavi inserite nell'annuncio di lavoro] al quale vogliamo rispondere. 
-p Grazie a Ileana Moriconi per il suo #[a(class="ext" title="Post di Ileana Moriconi" href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7193142528055918592/") post], che mi ha dato lo spunto per i primi 4 principi.
+section
+  h2 Introduzione
+  p Lo scopo di questo articolo è quello di aiutare a redigere un #[em Curriculum Vitae sintetico, facile da consultare ed efficace] nel comunicare, a chi lo legge, le nostre competenze e la nostra personalità. Il Curriculum che andremo a redigere è focalizzato sulla descrizione delle competenze di uno sviluppatore software, ma può essere facilmente adattato ad ogni altra figura professionale interessata ad applicare questi suggerimenti.
+  p Sarà un CV molto #[em focalizzato sulle caratteristiche personali] di chi lo redige: ad una classica sezione "Su di me" affiancheremo delle frasi d'effetto (considerazioni o citazioni) e una sezione basata sui progetti personali del candidato. In questo modo potranno emergere la personalità e la peculiare visione che il candidato ha circa la propria attività, non limitando il testo ad una sterile elencazione di competenze tecniche.
+  p La sezioni, i titoli e i paragrafi, gli elenchi sono fatti in modo tale da essere il più possibile chiari anche ai #[em software di analisi automatica], caratteristica che si traduce in maggiore efficenza e tempo risparmiato al candidato.
+  p Il CV sarà il più possibile #[em sintetico (massimo 2 facciate)] ma esaustivo, riportando solo i dettagli più salienti e lasciando spazio ad eventuali approfondimenti da discutere in sede di colloquio. 
 
 
-h2 La struttura del nostro CV 
-p Iniziamo parlando della struttura generale che avrà il nostro CV: adotteremo una struttura rigida, dove le varie sezioni del CV sono ben separate sia dal punto di vista visuale che da quello dei contenuti. In questo modo aiuteremo chi legge a comprendere bene quali informazioni sono riportate e dove trovarle. Titoli brevi e chiari, linee di demarcazione ed elenchi puntati sono la chiave per raggiungere tale obiettivo.
-p Elenco ora le varie sezioni di cui si comporrà il documento, una descrizione più dettagliata sarà presente più avanti nell'articolo. L'ordine delle sezioni qui riportato è solo un suggerimento, in generale, un possibile elenco delle varie sezioni che comporanno il nostro documento può essere il seguente.
-h3 Intestazione 
-p In questa sezione saranno riportati il nome e cognome del candidato, la professione, i principali recapiti ed eventualmente i link alle pagine Social più rilevanti in ambito professionale (mi riferisco a LinkedIn o GitHub).
-h3 Esperienze professionali 
-p Qui saranno elencate le principali esperienze professionali in ordine cronologico inverso, partendo dalla più recente. Tre o quattro punti sono più che sufficienti, non occorre elencare tutti i lavori svolti in passato, è sufficiente descrivere le esperienze più rilevanti in base alla tipo di candidature che si vuole effettuare.
-h3 Progetti personali (o portafoglio lavori)
-p Ogni buon sviluppatore ha un progetto al quale è rimasto particolarmente legato o uno o più progetti che ha sviluppato in proprio: un contributo al mondo open source o una piccola applicazione scaturita da una intuizione personale. Ecco, questo è il momento di descrivere tali attività. Elencheremo qui uno o due di questi lavori con l'intento di far comprendere che per noi oltre il lavoro c'è... altro lavoro! Scherzi a parte, il messaggio che vogliamo trasmettere qui riguarda la passione e una piccola dose di ambizione che ci caratterizza. E', inoltre, un'ulteriore occasione per evidenziare ulteriori qualifiche e capacità che magari non hanno avuto pieno sfogo nel più strutturato mondo aziendale. 
-h3 Formazione scolastica e universitaria 
-p La più classica delle sezioni: diplomi, lauree, master o certificazioni vanno elencati qui. L'elenco deve essere sempre ben leggibile (utilizzare elenchi puntati) e sempre in ordine cronologico inverso. Tra tutte, è la sezione che preferisco di meno, anche perchè poco personalizzabile, ma è comunque molto utile a chi si occupa di vagliare il nostro CV.
-h3 "Su di me" aka "About me"
-p Questa sezione deve essere breve, ma intensa! Qui la formalità dei passi precedenti può lasciare il passo ad uno stile più personale: in poche righe abbiamo la possibilità di scrivere e far emergere i lati più personali di noi e le quelle che in gergo vengono definite #[em "soft skills"]. Lascerei da parte frasi fatte come "buona capacità comunicative e di problem solving", evidenziando in maniera più naturale quali sono le mie capacità e i miei interessi trasversali al mondo del lavoro.
-h3 Riassunto sintetico
-p Sezione critica e spesso trascurata. Si dice che ciò che vediamo all'inizio e alla fine rimane più impresso nella memoria rispetto a ciò che sta nel mezzo. Dopo aver letto la nostra storia professionale, quindi, è il momento di salutare il nostro lettore imprimendo ancora una volta nella sua memoria quali sono le nostre competenze. Lo faremo tramite un approccio più visuale, utilizzando due strumenti: le #[em "progress bar"] e le #[em "words cloud"]. Le prime sono ispirate all'ormai celebre #[a(class="ext" title="Curriculum di Marissa Mayer" href="https://www.corsirimini.it/come-scrivere-un-curriculum-marissa-mayer/") Curriculum di Marissa Mayer], le seconde sono una diretta trasposizione dal mondo Web.
+section
+  h2 Le caratteristiche principali di un Curriculum efficace
+  p Per quanto riguarda il testo e l'esposizione dei vari argomenti, un buon CV deve seguire alcuni principi fondamentali.
+  ul 
+      li #[em Chiarezza]: utilizzare frasi corte, semplici e chiare, cercando di essere comprensibili anche ai non addetti ai lavori. 
+      li #[em Cura]: cura del lessico, della grammatica e della sintassi; ma anche cura del font utilizzato, della formattazione e della suddivisione delle varie sezioni; perchè la parte grafica ha una importanza cruciale.
+      li #[em Concretezza]: noi abbiamo poco spazio, chi legge ha poco tempo; è necessario comunicare in maniera efficace i concetti più importanti: se avremo generato un poco di curiosità in chi legge, in fase di colloquio, ci sarà modo di soddisfare tutte le sue domande.
+      li #[em Direzione]: la disposizione degli elementi nel nostro CV deve aiutare l'occhio del selezionatore e fargli trovare gli elementi che cerca lì dove se li aspetta: nome, cognome e job title in altro come prima cosa; recapiti leggibili e in posizione prominente; elenco delle esperienze lavorative riconoscibili e ben distinte le une dalle altre...
+      li #[em Keyword]: evidenziamo le parole chiave che più descrivono le nostre competenze (capacità professionali, interpersonali e di gestione; framework conosciuti; metodologie applicate; linguaggi utilizzati...) e facciamo in modo che ci sia una #[em corrispondenza con le parole chiavi inserite nell'annuncio di lavoro] al quale vogliamo rispondere. 
+  p Grazie a Ileana Moriconi per il suo #[a(class="ext" title="Post di Ileana Moriconi" href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7193142528055918592/") post], che mi ha dato lo spunto per i primi 4 principi.
+
+
+section
+  h2 La struttura del nostro CV 
+  p Iniziamo parlando della struttura generale che avrà il nostro CV: adotteremo una struttura rigida, dove le varie sezioni del CV sono ben separate sia dal punto di vista visuale che da quello dei contenuti. In questo modo aiuteremo chi legge a comprendere bene quali informazioni sono riportate e dove trovarle. Titoli brevi e chiari, linee di demarcazione ed elenchi puntati sono la chiave per raggiungere tale obiettivo.
+  p Elenco ora le varie sezioni di cui si comporrà il documento, una descrizione più dettagliata sarà presente più avanti nell'articolo. L'ordine delle sezioni qui riportato è solo un suggerimento, in generale, un possibile elenco delle varie sezioni che comporanno il nostro documento può essere il seguente.
+  h3 Intestazione 
+  p In questa sezione saranno riportati il nome e cognome del candidato, la professione, i principali recapiti ed eventualmente i link alle pagine Social più rilevanti in ambito professionale (mi riferisco a LinkedIn o GitHub).
+  h3 Esperienze professionali 
+  p Qui saranno elencate le principali esperienze professionali in ordine cronologico inverso, partendo dalla più recente. Tre o quattro punti sono più che sufficienti, non occorre elencare tutti i lavori svolti in passato, è sufficiente descrivere le esperienze più rilevanti in base alla tipo di candidature che si vuole effettuare.
+  h3 Progetti personali (o portafoglio lavori)
+  p Ogni buon sviluppatore ha un progetto al quale è rimasto particolarmente legato o uno o più progetti che ha sviluppato in proprio: un contributo al mondo open source o una piccola applicazione scaturita da una intuizione personale. Ecco, questo è il momento di descrivere tali attività. Elencheremo qui uno o due di questi lavori con l'intento di far comprendere che per noi oltre il lavoro c'è... altro lavoro! Scherzi a parte, il messaggio che vogliamo trasmettere qui riguarda la passione e una piccola dose di ambizione che ci caratterizza. E', inoltre, un'ulteriore occasione per evidenziare ulteriori qualifiche e capacità che magari non hanno avuto pieno sfogo nel più strutturato mondo aziendale. 
+  h3 Formazione scolastica e universitaria 
+  p La più classica delle sezioni: diplomi, lauree, master o certificazioni vanno elencati qui. L'elenco deve essere sempre ben leggibile (utilizzare elenchi puntati) e sempre in ordine cronologico inverso. Tra tutte, è la sezione che preferisco di meno, anche perchè poco personalizzabile, ma è comunque molto utile a chi si occupa di vagliare il nostro CV.
+  h3 "Su di me" aka "About me"
+  p Questa sezione deve essere breve, ma intensa! Qui la formalità dei passi precedenti può lasciare il passo ad uno stile più personale: in poche righe abbiamo la possibilità di scrivere e far emergere i lati più personali di noi e le quelle che in gergo vengono definite #[em "soft skills"]. Lascerei da parte frasi fatte come "buona capacità comunicative e di problem solving", evidenziando in maniera più naturale quali sono le mie capacità e i miei interessi trasversali al mondo del lavoro.
+  h3 Riassunto sintetico
+  p Sezione critica e spesso trascurata. Si dice che ciò che vediamo all'inizio e alla fine rimane più impresso nella memoria rispetto a ciò che sta nel mezzo. Dopo aver letto la nostra storia professionale, quindi, è il momento di salutare il nostro lettore imprimendo ancora una volta nella sua memoria quali sono le nostre competenze. Lo faremo tramite un approccio più visuale, utilizzando due strumenti: le #[em "progress bar"] e le #[em "words cloud"]. Le prime sono ispirate all'ormai celebre #[a(class="ext" title="Curriculum di Marissa Mayer" href="https://www.corsirimini.it/come-scrivere-un-curriculum-marissa-mayer/") Curriculum di Marissa Mayer], le seconde sono una diretta trasposizione dal mondo Web.
 
 include ../../../components/shared/share-mini/share-mini.pug
 
-h2 Un esempio concreto: un curriculum da Sviluppatore Web
-p Ecco il modello di un CV per un ipotetico sviluppatore Web. La lunghezza del template in questione è una pagina (intendendo due facciate, se il CV verrà stampato).
+section
+  h2 Un esempio concreto: un curriculum da Sviluppatore Web
+  p Ecco il modello di un CV per un ipotetico sviluppatore Web. La lunghezza del template in questione è una pagina (intendendo due facciate, se il CV verrà stampato).
 
-div(class="img-wrapper")
-  img(loading="lazy" class="sheet" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Pagina 1')
-  img(loading="lazy" class="sheet" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-2.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Pagina 2')
+  div(class="img-wrapper")
+    img(loading="lazy" class="sheet" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Pagina 1')
+    img(loading="lazy" class="sheet" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-2.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Pagina 2')
 
-h3 Intestazione 
-img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-head.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Intestazione')
-p Nome, Cognome, Job title sono le informazioni essenziali per questa sezione. 
-p E' necessario inserire anche un riferimento alla #[em data di compilazione] del documento per dare un'idea di quanto sono aggiornate le informazioni che stiamo inviando.
-p Avete notato il #[em bordo superiore colorato]? E' un piccolo espediente per far risaltare il nostro foglio impilato tra tanti altri prevalentemente bianchi. In questo caso ho utilizzato un leggero gradiente e una immagine (del codice) di sfondo. Sottigliezze che rendono accattivante la grafica finale, ma che richiedono una buona stampante e attenzione alle impostazioni di stampa quando viene il momento di trasferirla su foglio.
+  h3 Intestazione 
+  img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-head.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Intestazione')
+  p Nome, Cognome, Job title sono le informazioni essenziali per questa sezione. 
+  p E' necessario inserire anche un riferimento alla #[em data di compilazione] del documento per dare un'idea di quanto sono aggiornate le informazioni che stiamo inviando.
+  p Avete notato il #[em bordo superiore colorato]? E' un piccolo espediente per far risaltare il nostro foglio impilato tra tanti altri prevalentemente bianchi. In questo caso ho utilizzato un leggero gradiente e una immagine (del codice) di sfondo. Sottigliezze che rendono accattivante la grafica finale, ma che richiedono una buona stampante e attenzione alle impostazioni di stampa quando viene il momento di trasferirla su foglio.
 
-h3 Recapiti e frase personale
-img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-subhead.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Recapiti e frase personale')
-p Oltre all'indirizzo email, al telefono e residenza, se siete degli sviluppatori software attivi, è il caso di inserire anche riferimenti a Social professionali e, se disponibile, la url del proprio sito Web o del proprio portfolio lavori.
-p Dopo le prime informazioni d'obbligo, è anche arrivato il momento di dare al lettore una prima idea circa la personalità di chi ha compilato il documento: inserite una frase che vi descriva, una vostra idea circa la vostra concezione del lavoro che fate o una citazione che vi ispira particolarmente. Attenzione, se la frase farà effetto anche al recruiter, potrebbe esservi chiesto di approfondirla in fase di colloquio... Siate preparati a questa eventualità.
-
-
-h3 Esperienza lavorativa 
-img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-work.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Esperienza lavorativa')
-p Le varie esperienze lavorativa sono ben distinte tramite un #[em elenco puntato] (dove avete già visto quella numerazione nelle intestazioni? &#128512;) e, come detto in precedenza, si elencano, in #[em ordine cronologico inverso], #[em solo quelle più rilevanti] rispetto alla job application a cui stiamo puntando. E' necessario descrivere la posizione lavorativa che si è tenuta, la località e il periodo (specificando se siamo, o meno, ancora lavorando presso tale azienda). Il testo, seppur in poche righe, dovrebbe descrivere quelle che sono state le nostre mansioni e gli obiettivi che siamo stati in grado di raggiungere. Le keywords più rilevanti vanno messe in evidenza, come vanno messi in evidenza tutti quegli strumenti che abbiamo imparato ad utilizzare o che hanno caretterizzato maggiormente la nostra esperienza lavorativa.
-p Una leggera linea orizzontale (come quella in foto) serve a separare logicamente e visivamente una esperienza da quella successiva.
+  h3 Recapiti e frase personale
+  img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-subhead.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Recapiti e frase personale')
+  p Oltre all'indirizzo email, al telefono e residenza, se siete degli sviluppatori software attivi, è il caso di inserire anche riferimenti a Social professionali e, se disponibile, la url del proprio sito Web o del proprio portfolio lavori.
+  p Dopo le prime informazioni d'obbligo, è anche arrivato il momento di dare al lettore una prima idea circa la personalità di chi ha compilato il documento: inserite una frase che vi descriva, una vostra idea circa la vostra concezione del lavoro che fate o una citazione che vi ispira particolarmente. Attenzione, se la frase farà effetto anche al recruiter, potrebbe esservi chiesto di approfondirla in fase di colloquio... Siate preparati a questa eventualità.
 
 
-h3 Progetti personali
-img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-proj.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Progetti personali')
-p Un progetto personale è simile ad una esperienza lavorativa, ma in più ci informa di quelle che sono le nostre aspirazioni personali e le abilità al di fuori del puro contesto lavorativo. Descrivete quello che avete fatto e fate trasparire il motivo che vi ha spinto ad intraprendere tale progetto. L'esempio proposto è concreto e reale (si tratta proprio del sito Web che state navigando ora), oltre alla descrizione ho aggiunto gli #[em obiettivi raggiunti] (ottimi livelli di performance, SEO, accessibilità e sicurezza) certificati dai risultati ottenuti tramite validazione di servizi esterni (Google e Mozilla). 
-p Avete notato il #[em QR Code]? Rimanda all'indirizzo Web del progetto in questione, una piccola comodità che fornisco a chi legge il mio CV attraverso la carta stampata evitandogli l'onere di digitare la url completa. 
+  h3 Esperienza lavorativa 
+  img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-work.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Esperienza lavorativa')
+  p Le varie esperienze lavorativa sono ben distinte tramite un #[em elenco puntato] (dove avete già visto quella numerazione nelle intestazioni? &#128512;) e, come detto in precedenza, si elencano, in #[em ordine cronologico inverso], #[em solo quelle più rilevanti] rispetto alla job application a cui stiamo puntando. E' necessario descrivere la posizione lavorativa che si è tenuta, la località e il periodo (specificando se siamo, o meno, ancora lavorando presso tale azienda). Il testo, seppur in poche righe, dovrebbe descrivere quelle che sono state le nostre mansioni e gli obiettivi che siamo stati in grado di raggiungere. Le keywords più rilevanti vanno messe in evidenza, come vanno messi in evidenza tutti quegli strumenti che abbiamo imparato ad utilizzare o che hanno caretterizzato maggiormente la nostra esperienza lavorativa.
+  p Una leggera linea orizzontale (come quella in foto) serve a separare logicamente e visivamente una esperienza da quella successiva.
 
 
-h3 Riepilogo delle competenze
-img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-2-recap.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Riepilogo delle competenze')
-p Siamo giunti all'ultima parte del CV, vogliamo fissare nella mente del recruiter le nostre competene e due strumenti, per lo più grafici, ci vengono in aiuto: le #[em progress bar] e le #[em words cloud]. 
-p Tramite le barre di progressione daremo un'idea di quella che stimiamo essere la nostra competenza circa un certo argomento o tematica. La valutazione è puramente soggettiva e non copre solamente ambiti tecnici (nell'esempio fornito, mi è sembrata una buona soluzione per elencare le mie competenze linguistiche). 
-p Tramite la words cloud, possiamo ancora una volta, ricordare al lettore quelle che sono le nostre competenze tecniche evidenziando, con un font di grandezza maggiore, quelle a noi più congeniali (o quelle più cercate dal recruiter).
+  h3 Progetti personali
+  img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-1-proj.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Progetti personali')
+  p Un progetto personale è simile ad una esperienza lavorativa, ma in più ci informa di quelle che sono le nostre aspirazioni personali e le abilità al di fuori del puro contesto lavorativo. Descrivete quello che avete fatto e fate trasparire il motivo che vi ha spinto ad intraprendere tale progetto. L'esempio proposto è concreto e reale (si tratta proprio del sito Web che state navigando ora), oltre alla descrizione ho aggiunto gli #[em obiettivi raggiunti] (ottimi livelli di performance, SEO, accessibilità e sicurezza) certificati dai risultati ottenuti tramite validazione di servizi esterni (Google e Mozilla). 
+  p Avete notato il #[em QR Code]? Rimanda all'indirizzo Web del progetto in questione, una piccola comodità che fornisco a chi legge il mio CV attraverso la carta stampata evitandogli l'onere di digitare la url completa. 
 
 
+  h3 Riepilogo delle competenze
+  img(loading="lazy" class="detail" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-page-2-recap.png", alt='Un esempio concreto: un curriculum da Sviluppatore Web - Riepilogo delle competenze')
+  p Siamo giunti all'ultima parte del CV, vogliamo fissare nella mente del recruiter le nostre competene e due strumenti, per lo più grafici, ci vengono in aiuto: le #[em progress bar] e le #[em words cloud]. 
+  p Tramite le barre di progressione daremo un'idea di quella che stimiamo essere la nostra competenza circa un certo argomento o tematica. La valutazione è puramente soggettiva e non copre solamente ambiti tecnici (nell'esempio fornito, mi è sembrata una buona soluzione per elencare le mie competenze linguistiche). 
+  p Tramite la words cloud, possiamo ancora una volta, ricordare al lettore quelle che sono le nostre competenze tecniche evidenziando, con un font di grandezza maggiore, quelle a noi più congeniali (o quelle più cercate dal recruiter).
 
-h2 Considerazioni finali 
-p La lingua scelta per edigere il testo è l'inglese; nella maggior parte dei casi la si può utilizzare anche se mandiamo il CV in aziende localizzate entro i confini italiani, non fa (o non dovrebbe fare) molta differenza. La scelta dell'inglese è un obbligo, invece, se il CV viene redatto per essere spedito ad una azienda estera.
-p Attenzione alle interruzioni di pagina: interrompere un paragrafo a metà non è ottimale e porta ad una degradazione dell'esperienza di chi legge. Fate attenzione a gestire gli spazi in modo tale che l'interruzione di pagina avvenga tra sezioni o sottosezioni differenti.
+
+section
+  h2 Considerazioni finali 
+  p La lingua scelta per edigere il testo è l'inglese; nella maggior parte dei casi la si può utilizzare anche se mandiamo il CV in aziende localizzate entro i confini italiani, non fa (o non dovrebbe fare) molta differenza. La scelta dell'inglese è un obbligo, invece, se il CV viene redatto per essere spedito ad una azienda estera.
+  p Attenzione alle interruzioni di pagina: interrompere un paragrafo a metà non è ottimale e porta ad una degradazione dell'esperienza di chi legge. Fate attenzione a gestire gli spazi in modo tale che l'interruzione di pagina avvenga tra sezioni o sottosezioni differenti.
 
 
-h2 Conclusioni 
-p Questa proposta deriva da esperienze personali e studio e non è il Curriculum definitivo: ogni recruiter, come ogni posto di lavoro, è differente e la chiave sta anche nell'adattare i contenuti del CV al contesto. Si tratta, però, di una soluzione generale già applicabile in molti casi. 
+section
+  h2 Conclusioni 
+  p Questa proposta deriva da esperienze personali e studio e non è il Curriculum definitivo: ogni recruiter, come ogni posto di lavoro, è differente e la chiave sta anche nell'adattare i contenuti del CV al contesto. Si tratta, però, di una soluzione generale già applicabile in molti casi. 

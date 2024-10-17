@@ -1,7 +1,6 @@
 aside#fb-page-wrap {
   width: auto!important;
-  margin: var(--xx-large-space) auto;
-  padding: var(--x-large-space) 0;
+  margin: var(--x-large-space);
   text-align: center;
   border-bottom: 1px solid var(--primary);
   border-top: 1px solid var(--primary);
@@ -14,4 +13,10 @@ aside#fb-page-wrap {
 }
 aside#fb-page-wrap::before {
   content: none;
+}
+
+@media screen and (max-width: 768px) {
+  aside#fb-page-wrap {
+    margin: 0;
+  }
 }
