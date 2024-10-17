@@ -37,6 +37,9 @@ nav {
 #toggle-dark {
   visibility: hidden;
 }
+header > div:nth-child(2) {
+  display: none;
+}
 
 .wrap {
   display: flex;
@@ -61,7 +64,7 @@ nav a {
   text-align: center;
 }
 nav a[href="#ten"] {
-  font-weight: bold;
+  color: var(--red);
 }
 nav a:hover, nav a.active {
   box-shadow: 0px 0px 4px 2px var(--l-primary);
@@ -310,8 +313,10 @@ nav li:nth-child(9) a::before {
     flex-direction: column-reverse;
   }
   nav {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 21%;
+    top: 5%;
+    right: 2%;
   }
   nav ul {
     display: flex;
@@ -320,15 +325,28 @@ nav li:nth-child(9) a::before {
     flex-wrap: wrap;
     margin-left: 0;
   }
-
   nav a {
-    font-size: 0;
-    height: 1.4rem;
-    width: 1.4rem;
+    border: none;
+    font-size: var(--font-size-very-small);
+    width: initial;
+    height: initial;
+    text-align: right;
+    padding: 0;
   }
   nav a::before {
-    position: relative;
-    margin: 0;
+    content: none;
+  }
+
+  nav a:hover, nav a.active {
+    box-shadow: none;
+    font-weight: bold;
+  }
+  nav li {
+    background-color: var(--white);
+    width: 100%;
+    border-right: 5px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    padding-right: var(--xx-small-space)
   }
 
   .cta {
