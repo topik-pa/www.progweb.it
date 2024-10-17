@@ -10,7 +10,7 @@ article > section {
   margin: var(--view-padding)!important;
   padding: var(--view-padding)!important;
 }
-article section:nth-child(even) {
+article section:nth-child(odd) {
   background-color: var(--lightest-gray);
   border-radius: var(--border-radius-small);
 }

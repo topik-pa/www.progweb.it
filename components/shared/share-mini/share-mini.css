@@ -5,6 +5,7 @@ aside#fb-page-wrap {
   border-bottom: 1px solid var(--primary);
   border-top: 1px solid var(--primary);
   border-right: none!important;
+  padding-bottom: var(--x-large-space);
 }
 
 aside#fb-page-wrap {
