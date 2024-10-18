@@ -16,7 +16,12 @@ block append meta
 block main
   main
     section
-      h1 Più di recente, su PWI...
+
+      hgroup 
+        h1 Benvenuto su #[em Programmazione Web Italia]...
+        picture 
+          source(media="(max-width: 768px)", srcset="/assets/images/marisa-s.webp")
+          img(fetchpriority="high" width="320" height="320" src="/assets/images/marisa.webp", alt="Marisa ti dà il benvenuto", id="marisa")
 
       include ./post/010-javascript-generator-definizione-esempi/preview.pug
 

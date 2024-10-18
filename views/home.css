@@ -1,5 +1,10 @@
 #home main h1 {
   font-size: var(--font-size-huge);
+  font-style: italic;
+  padding-left: var(--small-space);
+}
+#home main h1 em {
+  font-weight: bold;
 }
 
 #home main {
@@ -25,6 +30,14 @@
   width: 50%;
 }
 
+#home main hgroup {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid var(--black);
+  box-shadow: 0px 2px 5px 0px var(--black);
+}
+
 
 @media screen and (max-width: 768px) {
   #home main section {
@@ -35,5 +48,15 @@
   }
   #home main .preview:nth-child(n+9) {
     display: none;
+  }
+  #home main hgroup {
+    overflow: hidden;
+  }
+  #home main h1 {
+    width: 50%;
+  }
+  #home main hgroup img {
+    width: 280px;
+    height: auto;
   }
 }
