@@ -98,11 +98,12 @@
   --darkest-gray:  #f3f3f3;
   --black:         #FAFAFA;
 
+  --blue: #7f0707;
+
   --primary: var(--darker-gray);
   --secondary: var(--lighter-gray);
-  --link: var(--black);
-
-  --blue: #7f0707;
+  --link: var(--blue);
+  
 }
 .dark .invert {
   filter: invert(1);
@@ -118,12 +119,12 @@
     --darker-gray:   #E0E0E0;
     --darkest-gray:  #f3f3f3;
     --black:         #FAFAFA;
+
+    --blue: #7f0707;
   
     --primary: var(--darker-gray);
     --secondary: var(--lighter-gray);
-    --link: var(--black);
-
-    --blue: #7f0707;
+    --link: var(--blue);
     
   }
   .invert {

@@ -37,9 +37,6 @@ nav {
 #toggle-dark {
   visibility: hidden;
 }
-header {
-  display: none!important;
-}
 
 .wrap {
   display: flex;
@@ -64,7 +61,7 @@ nav a {
   text-align: center;
 }
 nav a[href="#ten"] {
-  color: var(--red);
+  font-weight: bold;
 }
 nav a:hover, nav a.active {
   box-shadow: 0px 0px 4px 2px var(--l-primary);
@@ -313,11 +310,9 @@ nav li:nth-child(9) a::before {
     flex-direction: column-reverse;
   }
   nav {
-    position: fixed;
-    width: 21%;
-    top: 1%;
-    right: 2%;
-    z-index: 999;
+    position: sticky;
+    top: 0;
+    background-color: var(--l-white);
   }
   nav ul {
     display: flex;
@@ -327,30 +322,25 @@ nav li:nth-child(9) a::before {
     margin-left: 0;
   }
   nav li {
-    margin: var(--x-small-space) 0!important;
+    background-color: transparent;
   }
   nav a {
-    border: none;
-    font-size: var(--font-size-very-small);
-    width: initial;
-    height: initial;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .5rem;
+
     padding: 0;
+    border: none;
+    box-shadow: none !important;
   }
   nav a::before {
-    content: none;
+    margin: 0;
+    position: relative;
+    display: block;
   }
-
   nav a:hover, nav a.active {
-    box-shadow: none;
-    font-weight: bold;
-  }
-  nav li {
-    background-color: var(--white);
-    width: 100%;
-    border-right: 5px solid var(--red);
-    border-bottom: 1px solid var(--red);
-    padding-right: var(--xx-small-space)
+    color: var(--l-primary);
   }
 
   .cta {
