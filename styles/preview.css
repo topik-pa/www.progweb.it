@@ -9,8 +9,6 @@
   max-width: 360px;
   margin: 0 var(--x-large-space) 0 0;
   float: left;
-  border: 1px solid var(--lighter-gray);
-  box-sizing: border-box;
 }
 .preview .published {
   font-size: var(--font-size-small);

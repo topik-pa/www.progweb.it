@@ -7,6 +7,7 @@
   --gray:          #888888;
   --dark-gray:     #707070;
   --darker-gray:   #585858;
+  --darkest-gray:  #333333;
   --black:         #181818;
 
   --blue: #02598b;
@@ -88,16 +89,20 @@
 
 .dark:root {
   --white:         #181818;
+  --lightest-gray: #333333;
   --lighter-gray:  #585858;
   --light-gray:    #707070;
   --gray:          #888888;
   --dark-gray:     #A9A9A9;
   --darker-gray:   #E0E0E0;
+  --darkest-gray:  #f3f3f3;
   --black:         #FAFAFA;
 
   --primary: var(--darker-gray);
   --secondary: var(--lighter-gray);
   --link: var(--black);
+
+  --blue: #7f0707;
 }
 .dark .invert {
   filter: invert(1);
@@ -105,16 +110,21 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --white:         #181818;
+    --lightest-gray: #333333;
     --lighter-gray:  #585858;
     --light-gray:    #707070;
     --gray:          #888888;
     --dark-gray:     #A9A9A9;
     --darker-gray:   #E0E0E0;
+    --darkest-gray:  #f3f3f3;
     --black:         #FAFAFA;
   
     --primary: var(--darker-gray);
     --secondary: var(--lighter-gray);
     --link: var(--black);
+
+    --blue: #7f0707;
+    
   }
   .invert {
     filter: invert(1);
