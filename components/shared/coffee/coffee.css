@@ -51,12 +51,3 @@
   border-radius: var(--border-radius-small);
   max-width: 16rem;
 }
-
-@media screen and (max-width: 768px) {
-  aside#coffee {
-    margin: var(--x-large-space) 0;
-  }
-  #coffee #cup {
-    width: 30%;
-  }
-}

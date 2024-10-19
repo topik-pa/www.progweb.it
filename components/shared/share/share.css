@@ -4,11 +4,6 @@
   border: none;
   border-top: 1px solid var(--blue);
   background-color: rgba(2, 89, 139, .03);
-
-  background-image: url('/assets/images/marisa-share-s.webp');
-  background-repeat: no-repeat;
-  background-size: 260px;
-  background-position: 100% 100%;
 }
 #share::before {
   content: none;
@@ -30,30 +25,15 @@
 #share {
   width: auto!important;
   border-right: none!important;
-  padding-bottom: var(--xx-large-space);
+  padding-bottom: 0;
 }
 
-@media screen and (max-width: 1440px) {
-  #share {
-    background-size: 220px;
-    background-position: 108% 100%;
-  }
+#share picture {
+  display: flex;
+  justify-content: flex-end;
 }
-@media screen and (max-width: 1024px) {
-  #share {
-    background-size: 190px;
-    background-position: 105% 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  #share {
-    margin: var(--x-large-space) 0;
-
-    background-position: 108% 80px;
-  }
-}
-@media screen and (max-width: 414px) {
-  #share {
-    background-position: 120% 70px
-  }
+#marisa-share {
+  width: 100%;
+  height: auto;
+  max-width: 16rem;
 }
