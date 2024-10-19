@@ -18,6 +18,8 @@
   display: block;
   color: var(--white);
   overflow-x: auto;
+  text-align: left;
+  border-radius: var(--border-radius-small);
 }
 .code code pre::before {
   counter-increment: line;

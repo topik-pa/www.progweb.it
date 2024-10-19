@@ -40,6 +40,7 @@
   --bt: rgba(0, 0, 0, var(--transparent));
   --bst: rgba(0, 0, 0, var(--semi-transparent));
   --rt: rgba(201, 30, 44, .03);
+  --gt: rgba(0, 117, 56, .03);
 
   /* FONT SIZES */
   --font-size-extra-small: .6rem;

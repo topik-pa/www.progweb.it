@@ -1,0 +1,39 @@
+#breaktime {
+  text-align: center;
+  margin: var(--x-large-space);
+  border: none;
+  border-top: 1px solid var(--green);
+  background-color: var(--gt);
+}
+#breaktime::before {
+  content: ' ';
+}
+#breaktime h2 {
+  color: var(--green);
+  text-align: center;
+  display: block;
+}
+#breaktime h2::before {
+  content: none;
+}
+
+#breaktime .code code {
+  opacity: 1;
+  transition: opacity .6s ease-out;
+}
+
+#breaktime .code code.hidden {
+  opacity: 0;
+}
+
+#breaktime #showresult {
+  font-weight: bold;
+}
+
+#marisa-breaktime {
+  width: 100%;
+  height: auto;
+  margin-top: var(--normal-space);
+  border-radius: var(--border-radius-small);
+  max-width: 16rem;
+}

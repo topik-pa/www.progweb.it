@@ -13,6 +13,14 @@ module.exports = (app, nonce) => {
     ]
     res.render('contacts/contacts', { id: 'contacts', title: 'Contatti', url: req.url, breadcrumbs, nonce })
   })
+  app.get('/supporters', (req, res) => {
+    const breadcrumbs = [
+      {
+        name: 'Supporters'
+      }
+    ]
+    res.render('supporters/supporters', { id: 'supporters', title: 'Supporter', url: req.url, breadcrumbs, nonce })
+  })
   app.get('/privacy', (req, res) => {
     const breadcrumbs = [
       {
