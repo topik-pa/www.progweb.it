@@ -1,0 +1,20 @@
+.marisa {
+  border-bottom: 1px solid var(--black);
+  box-shadow: 0px 2px 5px 0px var(--black);
+}
+
+.marisa h1, .marisa h2 {
+  font-family: monospace;
+  line-height: 130%;
+  font-style: italic;
+  z-index: 99;
+  position: relative;
+  text-shadow: 1px 1px var(--white);
+}
+.marisa h1 em, .marisa h2 em {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+
+}

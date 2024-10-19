@@ -14,6 +14,9 @@ article section:nth-child(odd) {
   background-color: var(--lightest-gray);
   border-radius: var(--border-radius-small);
 }
+article aside section:nth-child(odd) {
+  background-color: transparent;
+}
 article h1 {
   text-align: center;
   text-transform: uppercase;

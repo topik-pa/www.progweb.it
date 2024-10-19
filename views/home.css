@@ -3,7 +3,7 @@
   font-style: italic;
   padding-left: var(--small-space);
   font-family: monospace;
-  line-height: 170%;
+  line-height: 160%;
 }
 #home main h1 span {
   margin-top: var(--x-large-space);

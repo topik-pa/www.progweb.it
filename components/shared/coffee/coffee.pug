@@ -1,10 +1,12 @@
-aside(id="coffee")
-  h2 Queste informazioni ti sono state utili? <br>Valuta una donazione!
+aside(id="coffee", class="marisa")
+  h2 "Questo articolo ti è stato utile? <br>#[em Offrimi un caffè]..."
   p Ogni sviluppatore produce #[em codice partendo da una tazza di caffè], la stessa cosa vale per me.
-  img(alt="Coffee", src="/assets/images/coffee.webp", id="cup")
-  p Se pensi che questo articolo ti sia stato utile, prendi in considerazione di #[em offrirmi un piccolo supporto (un "caffè")] per sostenere il mio lavoro. <br><br> #[i Ti ringrazio...]
+  p #[i Ti ringrazio...]
   div 
     form(action="https://www.paypal.com/donate", method="post" target="_top")
       input(type="hidden", name="hosted_button_id", value="KXPEP2FFGC86S")
       input(type="image", src="https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif", name="submit", title="PayPal - The safer, easier way to pay online!", alt="Fai una donazione con il pulsante PayPal")
       img(alt="", src="https://www.paypal.com/it_IT/i/scr/pixel.gif", width="1", height="1")
+  picture 
+      source(media="(max-width: 768px)", srcset="/assets/images/marisa-donation.webp")
+      img(width="225" height="225" src="/assets/images/marisa-donation.webp", alt="Marisa", id="marisa-coofee")
