@@ -1,7 +1,15 @@
 #home main h1 {
-  font-size: var(--font-size-huge);
+  font-size: var(--font-size-big);
   font-style: italic;
   padding-left: var(--small-space);
+  font-family: monospace;
+  line-height: 170%;
+}
+#home main h1 span {
+  margin-top: var(--x-large-space);
+  margin-left: 0;
+  color: var(--red);
+  font-family: cursive;
 }
 #home main h1 em {
   font-weight: bold;
@@ -54,6 +62,7 @@
   }
   #home main h1 {
     width: 50%;
+    z-index: 9;
   }
   #home main hgroup img {
     width: 280px;
