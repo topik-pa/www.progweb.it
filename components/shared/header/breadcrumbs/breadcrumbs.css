@@ -34,17 +34,17 @@
 
 @media screen and (max-width: 1024px) {
   #breadcrumbs span {
-    max-width: 34rem;
+    max-width: 37rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   #breadcrumbs span {
-    max-width: 17rem;
+    max-width: 18rem;
   }
 }
 @media screen and (max-width: 414px) {
   #breadcrumbs span {
-    max-width: 12rem;
+    max-width: 14rem;
   }
 }

@@ -37,6 +37,7 @@ article .intro {
   line-height: 130%;
 
   position: relative;
+  border-bottom: 1px solid var(--dark-gray);
 }
 article .intro img {
   position: absolute;
@@ -50,7 +51,7 @@ article .intro:before {
   font-size: calc( var(--font-size-biggest) * 2 );
   position: absolute;
   left: 0;
-  top: 0;
+  top: calc(var(--normal-space) * -1);
 }
 article .intro:after {
   content: "\201C";
@@ -58,7 +59,7 @@ article .intro:after {
   transform: rotate(180deg);
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: calc(var(--normal-space) * -1);
 }
 
 article img.cover {
