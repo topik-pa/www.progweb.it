@@ -1,16 +1,16 @@
 extends ../../layout.pug
 
 block append meta
-  title #{title} | #{proj_name}
-  meta(name="description" content="JavaScript CLOSURE: cosa sono e a cosa servono. Definizione, uso ed esempi di codice per capire meglio le Closure in JavaScript")
-  meta(name="keywords" content="javascript, closure, esempi")
+  title #{title}
+  meta(name="description" content=description)
+  meta(name="keywords" content="javascript, closure, definizione, esempi, utilizzo")
   link(rel="canonical", href=proj_url + url)
 
   meta(name="og:url" content=proj_url + url)
   meta(name="og:type" content="article")
-  meta(name="og:title" content="JavaScript CLOSURE: cosa sono e a cosa servono")
+  meta(name="og:title" content=title)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="PWI - Programmazione Web Italia")
+  meta(name="og:description" content=description)
   meta(name="og:image" content=proj_url + "/assets/images/post/post-js-closure-cover.webp")
 
 block main
@@ -27,11 +27,11 @@ block viewscripts
       "@context": "https://schema.org",
       "@type": "Article",
       "datePublished": "2023-09-15",
-      "dateModified": "2023-09-16",
+      "dateModified": "2023-10-22",
       "url": "#{proj_url + url}",
-      "name": "JavaScript CLOSURE: cosa sono e a cosa servono",
-      "headline": "JavaScript CLOSURE: cosa sono e a cosa servono (con esempi pratici)",
-      "description": "Definizione, uso ed esempi di codice per capire meglio le Closure in JavaScript",
+      "name": "#{title}",
+      "headline": "#{title}",
+      "description": "#{description}",
       "about": {
         "@type": "ComputerLanguage",
         "name": "JavaScript"

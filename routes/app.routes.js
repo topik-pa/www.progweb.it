@@ -337,7 +337,8 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/curriculum-efficace-esempio-developer', (req, res) => {
-    const title = 'Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer'
+    const title = 'Scrivi un Curriculum Vitae efficace per trovare lavoro come Software Developer'
+    const description = 'Scopri quali sono le caratteristiche di un Curriculum efficace e ruba quante più idee possibili dal nostro Esempio Concreto di CV per Sviluppatori Web'
     const breadcrumbs = [
       {
         name: 'Post',
@@ -352,6 +353,7 @@ module.exports = (app, nonce) => {
         id: 'curriculum-efficace-esempio-developer',
         className: 'post',
         title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,
@@ -359,7 +361,8 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/programmazione-strutturata-oggetti-funzionale', (req, res) => {
-    const title = 'I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale'
+    const title = 'Scopri quali sono i 3 principali paradigmi della programmazione software'
+    const description = 'Programmazione strutturata, programmazione ad oggetti e programmazione funzionale: caratteristiche, vantaggi e svantaggi nella definizione di una architettura software efficiente'
     const breadcrumbs = [
       {
         name: 'Post',
@@ -374,6 +377,7 @@ module.exports = (app, nonce) => {
         id: 'programmazione-strutturata-oggetti-funzionale',
         className: 'post',
         title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,
@@ -381,7 +385,8 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/javascript-html-tabella-dinamica', (req, res) => {
-    const title = 'Una tabella dinamica in HTML, JavaScript e CSS - codice, esempi e spiegazione'
+    const title = 'Sviluppa facilemente una tabella dinamica in HTML, JS e CSS - Codice + Esempi pratici'
+    const description = 'Crea da zero una tabella HTML con funzionalità di fetching dinamico, paginazione e ordinamento'
     const breadcrumbs = [
       {
         name: 'Post',
@@ -396,6 +401,7 @@ module.exports = (app, nonce) => {
         id: 'javascript-html-tabella-dinamica',
         className: 'post',
         title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,
@@ -490,6 +496,8 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/javascript-closure', (req, res) => {
+    const title = 'JavaScript Closure: cosa sono e a cosa servono (con esempi concreti)!'
+    const description = 'Definizione, utilizzo ed esempi concreti per sfruttare uno dei concetti più astratti ma potenti della programmazione JavaScript'
     const breadcrumbs = [
       {
         name: 'Post',
@@ -500,7 +508,7 @@ module.exports = (app, nonce) => {
       }
     ]
     res.render('post/javascript-closure/javascript-closure',
-      { id: 'js-closure', className: 'post', title: 'JavaScript Closure', url: req.url, breadcrumbs, posts, nonce })
+      { id: 'js-closure', className: 'post', title, description, url: req.url, breadcrumbs, posts, nonce })
   })
 
   // Landing

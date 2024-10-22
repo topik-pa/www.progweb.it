@@ -1,16 +1,16 @@
 extends ../../layout.pug
 
 block append meta
-  title #{title} | #{proj_name}
-  meta(name="description" content=title)
-  meta(name="keywords" content="curriculum, efficace, esempio, developer, sviluppatore, cv")
+  title #{title}
+  meta(name="description" content=description)
+  meta(name="keywords" content="curriculum, efficace, software, developer, sviluppatore, cv, caratteristiche, esempio, concreto, template, modello")
   link(rel="canonical", href=proj_url + url)
 
   meta(name="og:url" content=proj_url + url)
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
   meta(name="og:site_name" content=proj_name)
-  meta(name="og:description" content=proj_tagline)
+  meta(name="og:description" content=description)
   meta(name="og:image" content=proj_url + "/assets/images/post/007-curriculum-efficace-esempio-developer/CV-og-image.webp")
 
 block main
@@ -32,11 +32,11 @@ block viewscripts
       "@context": "https://schema.org",
       "@type": "Article",
       "datePublished": "2024-05-10",
-      "dateModified": "2024-05-10",
+      "dateModified": "2024-10-22",
       "url": "#{proj_url + url}",
-      "name": "Template Curriculum: idee e suggerimenti",
+      "name": "#{title}",
       "headline": "#{title}",
-      "description": "#{proj_description}",
+      "description": "#{description}",
       "image": "#{proj_url}/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp",
       "author": {
         "@type": "Person",
