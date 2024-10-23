@@ -2,15 +2,15 @@ extends ../../layout.pug
 
 block append meta
   title #{title} | #{proj_name}
-  meta(name="description" content=title)
-  meta(name="keywords" content="css, selettore, has")
+  meta(name="description" content=description)
+  meta(name="keywords" content="css, selettore, has, esempi, definizione")
   link(rel="canonical", href=proj_url + url)
 
   meta(name="og:url" content=proj_url + url)
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="PWI - Programmazione Web Italia")
+  meta(name="og:description" content=description)
   meta(name="og:image" content=proj_url + "/assets/images/post/004-css-selettore-has/css-selettore-has.webp")
 
 block main
@@ -26,11 +26,11 @@ block viewscripts
       "@context": "https://schema.org",
       "@type": "Article",
       "datePublished": "2024-03-22",
-      "dateModified": "2024-03-22",
+      "dateModified": "2024-10-23",
       "url": "#{proj_url + url}",
       "name": "#{title}",
       "headline": "#{title}",
-      "description": "#{title}",
+      "description": "#{description}",
       "image": "#{proj_url}/assets/images/post/004-css-selettore-has/css-selettore-has.webp",
       "author": {
         "@type": "Person",

@@ -1,16 +1,16 @@
 extends ../../layout.pug
 
 block append meta
-  title #{title} | #{proj_name}
-  meta(name="description" content=title)
-  meta(name="keywords" content="ingegneria, software, architettura, definizione, obiettivi")
+  title #{title}
+  meta(name="description" content=description)
+  meta(name="keywords" content="software, architettura, definizione, obiettivi, concetti, pratiche, vantaggi, svantaggi, prodotto, team")
   link(rel="canonical", href=proj_url + url)
 
   meta(name="og:url" content=proj_url + url)
   meta(name="og:type" content="article")
   meta(name="og:title" content=title)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
-  meta(name="og:description" content="PWI - Programmazione Web Italia")
+  meta(name="og:description" content=description)
   meta(name="og:image" content=proj_url + "/assets/images/post/002-post-eng-architettura-del-software/post-eng-architettura-del-software.webp")
 
 block main
@@ -27,11 +27,11 @@ block viewscripts
       "@context": "https://schema.org",
       "@type": "Article",
       "datePublished": "2023-11-24",
-      "dateModified": "2023-11-30",
+      "dateModified": "2024-10-23",
       "url": "#{proj_url + url}",
       "name": "#{title}",
       "headline": "#{title}",
-      "description": "#{title}",
+      "description": "#{description}",
       "image": "#{proj_url}/assets/images/post/002-post-eng-architettura-del-software/post-eng-architettura-del-software.webp",
       "author": {
         "@type": "Person",

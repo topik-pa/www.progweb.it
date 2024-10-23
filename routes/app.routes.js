@@ -385,7 +385,7 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/javascript-html-tabella-dinamica', (req, res) => {
-    const title = 'Sviluppa facilemente una tabella dinamica in HTML, JS e CSS - Codice + Esempi pratici'
+    const title = 'Sviluppa facilmente una tabella dinamica in HTML, JS e CSS - Codice + Esempi pratici'
     const description = 'Crea da zero una tabella HTML con funzionalità di fetching dinamico, paginazione e ordinamento'
     const breadcrumbs = [
       {
@@ -409,7 +409,8 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/css-selettore-has-esempi', (req, res) => {
-    const title = 'Il selettore :has() in CSS - descrizione ed esempi pratici'
+    const title = 'Scopri come utilizzare il nuovo selettore :has() in CSS'
+    const description = 'E\'giunto il momento di capire come utilizzare questa nuova opportunità. Descrizione, esempi pratici e compatibilità del nuovo selettore CSS :has() '
     const breadcrumbs = [
       {
         name: 'Post',
@@ -424,6 +425,7 @@ module.exports = (app, nonce) => {
         id: 'css-selettore-has',
         className: 'post',
         title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,
@@ -431,7 +433,8 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/node-setup-progetto', (req, res) => {
-    const title = 'Setup di un progetto Node / Express'
+    const title = 'Come iniziare bene: setup di un progetto Node/Express. '
+    const description = 'Come iniziare con il piede giusto un progetto basato su JavaScript utilizzando strumenti e tecnologie applicati in ambito professionale'
     const breadcrumbs = [
       {
         name: 'Post',
@@ -446,6 +449,7 @@ module.exports = (app, nonce) => {
         id: 'node-setup-progetto',
         className: 'post',
         title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,
@@ -453,21 +457,23 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/architettura-del-sw-definizione-obiettivi', (req, res) => {
-    const postTitle = 'Architettura del Software: definizione e obiettivi'
+    const title = 'Come implementare un corretta Architettura del Software: concetti, pratiche e vantaggi'
+    const description = 'Cos\'è una cattiva Architettura? Cos\'è una buona Architettura? Esempi, vantaggi e svantaggi della Architettura sul Prodotto e sul Team'
     const breadcrumbs = [
       {
         name: 'Post',
         url: '/posts'
       },
       {
-        name: postTitle
+        name: title
       }
     ]
     res.render('post/architettura-del-sw-definizione-obiettivi/architettura-del-sw-definizione-obiettivi',
       {
         id: 'arch-sw-def-adv',
         className: 'post',
-        title: postTitle,
+        title,
+        description,
         url: req.url,
         breadcrumbs,
         posts,
