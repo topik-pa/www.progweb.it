@@ -4,6 +4,6 @@ if breadcrumbs
       a(href="/", title="Home") Home
       each elem in breadcrumbs
         if elem.url
-          a(href=elem.url, title=__(elem.name)) !{__(elem.name)}
+          a(href=elem.url, title=__(elem.name)) #{elem.name}
         else 
-          span !{__(elem.name)}
+          span #{elem.name}
