@@ -21,6 +21,8 @@ article h1 {
   text-align: center;
   text-transform: uppercase;
   margin: var(--xx-large-space) auto;
+  max-width: 75%;
+  text-wrap: balance;
 }
 
 article .intro {
