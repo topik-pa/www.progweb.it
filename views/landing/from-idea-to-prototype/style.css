@@ -10,7 +10,7 @@
   --l-h1-font-size: 4rem;
   --l-picture-h-big: 50vh;
   --l-picture-h: 50vh;
-  --l-content-text-h: 40vh;
+  --l-content-text-h: 30vh;
 }
 
 main {
@@ -121,7 +121,7 @@ nav li:nth-child(9) a::before {
   height: var(--l-content-text-h);
 }
 .content #one div.text p {
-  height: 33vh;
+  height: 25vh;
 }
 .content li {
   list-style: none;
@@ -270,7 +270,6 @@ nav li:nth-child(9) a::before {
 @media screen and (max-width: 1440px) {
   :root {
     --l-font-size: 15px!important;
-    --l-content-text-h: 45vh;
   }
 }
 
@@ -303,7 +302,7 @@ nav li:nth-child(9) a::before {
     --l-h1-font-size: 2.4rem;
     --l-picture-h-big: 50vh;
     --l-picture-h: 33vh;
-    --l-content-text-h: 36vh;
+    --l-content-text-h: 30vh;
     --l-font-size: 13px!important;
   }
   .content > section {
@@ -375,7 +374,6 @@ nav li:nth-child(9) a::before {
 @media screen and (max-width: 360px) {
   :root {
     --l-font-size: 12px!important;
-    --l-content-text-h: 53vh;
   }
 }
 
