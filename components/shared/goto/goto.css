@@ -1,0 +1,36 @@
+#goto {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: var(--gototop);
+}
+#goto.visible {
+  display: block;
+}
+
+#goto > * {
+  color: var(--white);
+  border-radius: var(--border-radius-small);
+  padding: var(--small-space);
+  margin: var(--small-space);
+  cursor: pointer;
+  font-size: var(--font-size-bigger);
+  border: 1px solid var(--blue);
+}
+#goto > *:hover {
+  filter: brightness(90%);
+}
+#goto a {
+  display: block;
+  color: var(--white);
+}
+
+#goto .top {
+  background-color: var(--blue-st);
+}
+
+#goto .tel {
+  background-color: var(--green);
+  border-color: var(--green);
+}

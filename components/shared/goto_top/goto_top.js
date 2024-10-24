@@ -9,6 +9,7 @@ function debounce (func, timeout = 300) {
 const gotoTop = {
   init: () => {
     const gotoTopBtn = document.getElementById('goto_top')
+    if (!gotoTopBtn) return
     const visibilityLimit = 200
     const classValue = 'visible'
     function toggleVisibility () {
