@@ -314,6 +314,7 @@ nav li:nth-child(9) a::before {
   }
   nav {
     height: 5vh;
+    min-height: 3.5rem;
     position: sticky;
     top: 0;
     background-color: var(--l-white);
