@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/javascript-promise-definizione-sintassi-esempi', (req, res) => {
+    const title = 'JavaScript Promise: impara a gestire eventi asincroni! (con aggiornamento al metodo "Promise.withResolvers")'
+    const description = 'Definizione, sintassi ed esempi concreti su come utilizzare le Promise JavaScript. Quando utilizzare le Promise, uso di async/await, gestione degli errori e introduzione al nuovo metodo "Promise.withResolvers"'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/011-javascript-promise-definizione-sintassi-esempi/javascript-promise-definizione-sintassi-esempi',
+      {
+        id: 'javascript-promise-definizione-sintassi-esempi',
+        serial: '011',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/javascript-generator-definizione-esempi', (req, res) => {
     const title = 'Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!'
     const description = 'Una guida completa con definizione ed esempi pratici per comprendere come funzionano e quali vantaggi offrono le funzioni Generator in Javascript'

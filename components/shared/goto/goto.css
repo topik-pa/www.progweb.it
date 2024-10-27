@@ -33,4 +33,5 @@
 #goto .tel {
   background-color: var(--green);
   border-color: var(--green);
+  box-shadow: 0px 0px 10px 2px var(--green);
 }

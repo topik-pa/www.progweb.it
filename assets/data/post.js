@@ -1,5 +1,11 @@
 const data = [
   {
+    id: '011-javascript-promise-definizione-sintassi-esempi',
+    topic: 'js',
+    year: 2024,
+    month: 10
+  },
+  {
     id: '010-javascript-generator-definizione-esempi',
     topic: 'js',
     year: 2024,

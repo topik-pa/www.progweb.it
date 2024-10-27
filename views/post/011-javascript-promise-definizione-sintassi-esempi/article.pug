@@ -1,0 +1,192 @@
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-s.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      img(fetchpriority="high"  class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title)
+    p(class="intro") Ogni promessa è debito... Ma quanto è romantico il termine Promise in JavaScript? Sapere, poi, che dietro a questa parola si nasconde il fatto di non fermare l'esecuzione single-thread del JavaScript Engine mentre si attende l'esito di una operazione asincrona rende tutto più commovente! &nbsp; ;) #[img(src="assets/images/marisa-talk.webp", alt="Marisa dice...", width="100", height="100")]
+
+
+section 
+  h2 Introduzione
+  h3 Cos'è una operazione asincrona?
+  p Iniziamo prima definendo che cos'è la programmazione sincrona: in tale contesto il programma esegue tutte le istrizioni che lo compongono in maniera lineare una dopo l'altra. In altri termini, l'esecuzione attende di aver portato a termine una istruzione prima di passare a quella immediatamente successiva. Un esempio banale è il seguente, dove ogni log viene stampato a console esattamente come ce lo aspettiamo: "1", "2", "3" 
+  div(class="code")
+    h4 In un codice sincrono le istruzioni vengono eseguite in ordine una dopo l'altra
+    code
+      pre console.log(1); // Prima istruzione
+      pre console.log(2); // Seconda istruzione
+      pre console.log(3); // Terza istruzione
+
+  p La programmazione asincrona, invece, non è lineare e prevede che una istruzione venga eseguita dopo un'altra anche se definita precedentemente all'interno del codice. Questo è necessario quando vengono eseguiti compiti che prevedono un certo lasso di tempo per essere eseguiti (per esempio: una richiesta HTTP per ottenere delle risorse remote, una query ad un database o una operazione di I/O verso il disco rigido...). In questo caso è preferibile che l'esecuzione del resto del codice continui senza dovera attendere il risultato della operazione. Appena il risultato è pronto (per esempio: la richiesta HTTP ha restituito un JSON) sarà possibile riprendere tutte quelle istruzioni, che stavano in attesa, e che riguardavano l'elaborazione di questo risultato (per esempio: il JSON appena restituito può essere ora analizzato e stampato a video).
+  p Una tipica operazione asincrona in JavaScript è il metodo setTimeout() che qui di seguito utilizzeremo per esemplificare del codice asincrono.
+  div(class="code")
+    h4 In un codice asincrono le istruzioni possono venire eseguite in ordine differente rispetto alla loro posizione
+    code
+      pre console.log(1); // Prima istruzione
+      pre setTimeout(()=> {
+      pre   console.log(2);  // Terza istruzione
+      pre }, 1000)
+      pre console.log(3); // Seconda istruzione
+  p In questo esempio il risultato a schermo sarà: "1", "3", "2", in quanto l'engine JavaScript rende più efficente l'esecuzione dell'intero programma senza attendere 1000 millisecondi (il valore 1000 all'interno del codice) ma prosegue direttamente alla istruzione successiva, per poi riprendere l'esecuzione in attesa una volta passato il lasso di tempo definito.
+  p Essenzialmente, si tratta solo di rendere più efficente l'esecuzione dei notri programmi e non rimanere in attesa di risorse che necessariamente avranno bisogno di un certo tempo prima di essere disponibile.
+  h3 Cos'è una Promise in JavaScript?
+  p In JavaScript, le Promise rappresentano un modo per gestire efficacemente le operazioni asincrone come quelle descritte in precedenza. Si tratta di oggetti che rappresentano delle operazioni ancora da completare, ma che (promettono!) terminaranno in un prossimo futuro con due possibili risultati: Promise risolta o Promise rifiutata.
+  h3 Le callback annidate: il problema delle callback hell 
+  p Con "callback hell" si intende il problema di gestire più operazioni asincone in sequenza. Prima delle Promise le operazioni asincrone erano gestite per messo di funzioni di callback: funzioni fornite al metodo asincrono come parametro ed eseguite una volta che l'operazione asincrona è terminata. Nel codice qui sopra, il metodo setTimeout() ha, come primo parametro, una funzione anonima che si occupa di stampare in console il numero "2" una volta passati 1000 millisecondi. Questo è un esempio semplice e non problematico di callback. Il problema si pone quando le operazione asincrone sono molteplici e ci si trova a scrivere callback che al loro interno definiscono altre callback: vediamo il seguente codice.
+  div(class="code")
+    h4 Le callback annidate o callback hell rendono difficile gestire molteplici operazioni asincrone
+    code
+      pre getDataFromServer((data) => {
+      pre   processData(data, (processedData) => {
+      pre     saveData(processedData, (savedData) => {
+      pre       updateUI(savedData, (result) => {
+      pre         console.log("Operazione completata:", result);
+      pre       });
+      pre     });
+      pre   });
+      pre });
+  p Per quanto sintatticamente coretto e funzionale, il codice dell'esempio porta ad una scarsa leggibilità e difficoltà di gestione. Nei prossimi paragrafi vedremo come le Promise riescono a risolvere il problema della callback hell.
+
+
+section 
+  h2 Creazione di una Promise
+  h3 Sintassi di una Promise JS
+  p Una Promise in JS si crea (come ogni oggetto JavaScript) attraverso il costruttore new Promise e una funzione che prevede due parametri: resolve e reject, che rappresentano i due possibili stati finali della Promise stessa. Proviamo a riscrivere l'esempio del setTimeout nonpiù attraverso una callback, ma attraverso una Promise.
+  div(class="code")
+    h4 Una semplice Promise utilizzata al posto dell callback
+    code
+      pre const myPromise = new Promise((resolve, reject) => {
+      pre   setTimeout(() => {
+      pre     const success = true; // Può essere un risultato di un'operazione reale
+      pre     if (success) {
+      pre       resolve("Operazione completata con successo!"); //Passa il valore alla Promise
+      pre     } else {
+      pre       reject("Operazione fallita."); // Passa il motivo del fallimento
+      pre     }
+      pre   }, 1000);
+      pre });
+  p L'oggetto Promise così creato sarà utilizzato secondo la seguente sintassi.
+  div(class="code")
+    h4 Utilizziamo la Promise appena creata
+    code
+      pre myPromise
+      pre   .then((result) => {
+      pre     console.log(result); // Output: "Operazione completata con successo!"
+      pre   })
+      pre   .catch((error) => {
+      pre     console.error(error); // Output: "Operazione fallita."
+      pre   })
+      pre   .finally(() => {
+      pre      console.log("Operazione conclusa."); // Questo codice eseguito in ogni caso
+      pre });
+  p Analizziamo meglio il codice appena creato...
+
+  h3 Stati di una Promise 
+  p Una Promise può trovarsi in uno dei seguenti stati.
+  ul
+    li Pending (in attesa): lo stato iniziale, l'operazione non è ancora completata
+    li Fulfilled (completata): l'operazione è completata con successo e la Promise ha restituito un valore
+    li Rejected (rifiutata): l'operazione è fallita e la Promise restituisce un motivo circa il fallimento
+  h3 I metodi principali di una Promise
+  p Per utilizzare il risultato di una Promise, si usano i metodi then, catch e finally.
+  ul
+    li then: viene chiamato quando la Promise è completata con successo
+    li catch: viene chiamato quando la Promise è rifiutata
+    li finally: viene chiamato indipendentemente dal risultato della Promise
+  h3 Un esempio concreto
+  div(class="code")
+    h4 Una Promise più concreta: fetch di risorse remote
+    code
+      pre // Funzione che restituisce una Promise per eseguire il fetch di risorse remote
+      pre function fetchRemoteResource(url) {
+      pre   return new Promise((resolve, reject) => {
+      pre     fetch(url)
+      pre       .then(response => {
+      pre         if (!response.ok) {
+      pre           throw new Error(`HTTP error! Status: ${response.status}`);
+      pre         }
+      pre         return response.json();
+      pre       })
+      pre       .then(data => resolve(data))
+      pre       .catch(error => reject(error));
+      pre   });
+      pre }
+      pre 
+      pre // Utilizzo della funzione fetchRemoteResource
+      pre const url = 'https://api.example.com/data';
+      pre 
+      pre fetchRemoteResource(url)
+      pre   .then(data => {
+      pre     console.log('Dati ricevuti:', data);
+      pre   })
+      pre   .catch(error => {
+      pre     console.error('Errore durante il fetch:', error);
+      pre   });
+      pre   .finally(() => {
+      pre      console.log("Operazione conclusa!");
+      pre   });
+
+include ../../../components/breaktime/breaktime.pug    
+
+section 
+  h2 Composizione di Promise
+  h3 Concatenazione di Promise (Promise chaining)
+  p Le Promises possono essere concatenate per gestire sequenze di operazioni asincrone. Ogni then restituisce una nuova Promise, permettendo di concatenare più operazioni. Ecco un esempio di concatenazione di Promises.
+  div(class="code")
+    h4 Concatenazione di Promise. Codice semplificato tratto da esempio in https://javascript.info/promise-chaining
+    code
+      pre fetch('/article/promise-chaining/user.json') //Ottengo i dati raw di un utente
+      pre   .then(response => response.json()) // I dati sono codificati in JSON
+      pre   .then(user => fetch(`https://api.github.com/users/${user.name}`)) // Utilizzo il nome utente per caricare ulteriori dati
+      pre   .then(response => response.json()) // Ulteriore codifica JSON
+      pre   .then(githubUser => { // Con i dati utente completi posso aggiornare il DOM della pagina (aggiunta di una immagine)
+      pre     let img = document.createElement('img');
+      pre     img.src = githubUser.avatar_url;
+      pre     img.className = "promise-avatar-example";
+      pre     document.body.append(img);
+      pre   });
+
+
+  h3 Promise combinators
+  p E' possibile la gestione di più Promise contemporaneamente attraverso dei combinatori.
+  ul
+    li Promise.all: si attiva quando tutte le Promise hanno avuto esito fullfilled o almeno una di esse ha esito reject
+    li Promise.race: si attiva appena una delle Promise ha avuto esito fulfilled o rejected 
+    li Promise.allSettled: si attiva quando tutte le promise hanno avuto esito o fulfilled o rejected
+    li Promise.any: simile a Promise.race, ma si attiva appena una Promise ha avuto esito fulfilled (ma non rejected)
+  p Darò un esempio di codice del primo caso solamente, per avere una idea di cosa significhi gestire molteplici Promise.
+  div(class="code")
+    h4 Promise.all - ricordiamo al lettore che fetch ritorna una Promise
+    code
+      pre const promises = [ // Le Promise da gestire sono raccolte in questo array
+      pre   fetch('https://api.example.com/data1'),
+      pre   fetch('https://api.example.com/data2'),     
+      pre   fetch('https://api.example.com/data3'),
+      pre ] 
+      pre Promise.all(promises) // Quando tutte le Promise sono fulfilled o nell'eventualità di un esito rejected...
+      pre   .then(results => {  //... i risultati delle Promise sono raccolti nell'array "results" nell'ordine in cui le Promises sono state passate
+      pre     console.log('Dati ricevuti da API 1:', results[0]);
+      pre     console.log('Dati ricevuti da API 2:', results[1]);
+      pre     console.log('Dati ricevuti da API 3:', results[2]);
+      pre   })
+      pre   .catch(error => { // nell'eventualità di esito rejected di almento una delle Promise gestite si esegue il metodo catch
+      pre     console.error('Errore durante il fetch:', error);
+      pre   });
+
+  h3 Promise.withResolvers()
+
+section 
+  h2 Migliorare la leggibilità delle Promise: uso di async / await
+
+section 
+  h2 Gestione degli errori nelle Promise JS 
+
+section 
+  h2 Conclusione 
+
+aside(class="links")
+  h2 Link utili
+
