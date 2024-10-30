@@ -50,9 +50,9 @@
   --font-size-small: .9rem;
   --font-size-normal: 1rem;
   --font-size-big: 1.2rem;
-  --font-size-bigger: 1.5rem;
-  --font-size-huge: 1.8rem;
-  --font-size-biggest: 2.3rem;
+  --font-size-bigger: 1.6rem;
+  --font-size-huge: 1.9rem;
+  --font-size-biggest: 2.4rem;
 
   /* SHADOWS */
   --shadow: 0 0 10px 0 var(--black);
@@ -105,7 +105,7 @@
 
   --primary: var(--darker-gray);
   --secondary: var(--lighter-gray);
-  --link: var(--blue);
+  --link: var(--black);
   
 }
 .dark .invert {
@@ -127,7 +127,7 @@
   
     --primary: var(--darker-gray);
     --secondary: var(--lighter-gray);
-    --link: var(--blue);
+    --link: var(--black);
     
   }
   .invert {

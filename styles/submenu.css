@@ -15,6 +15,7 @@
 }
 .submenu.services li {
   text-align: center;
+  margin-bottom: var(--xx-large-space);
 }
 .submenu.topic li {
   border-left: var(--normal-space) solid var(--coding);

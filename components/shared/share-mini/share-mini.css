@@ -2,8 +2,6 @@ aside#fb-page-wrap {
   width: auto!important;
   margin: var(--x-large-space);
   text-align: center;
-  border-bottom: 1px solid var(--primary);
-  border-top: 1px solid var(--primary);
   border-right: none!important;
   padding-bottom: var(--x-large-space);
 }
