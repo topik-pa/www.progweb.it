@@ -288,7 +288,7 @@ module.exports = (app, nonce) => {
   })
   // Specific
   app.get('/javascript-promise-definizione-sintassi-esempi', (req, res) => {
-    const title = 'JavaScript Promise: impara a gestire eventi asincroni! (con aggiornamento al metodo "Promise.withResolvers")'
+    const title = 'Impara a gestire efficacemente eventi asincroni con le JavaScript Promise!'
     const description = 'Definizione, sintassi ed esempi concreti su come utilizzare le Promise JavaScript. Quando utilizzare le Promise, uso di async/await, gestione degli errori e introduzione al nuovo metodo "Promise.withResolvers"'
     const breadcrumbs = [
       {

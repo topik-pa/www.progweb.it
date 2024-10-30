@@ -10,53 +10,55 @@ hgroup
 
 
 section 
-  h2 Introduzione
+  h2 Introduzione alle operazioni asincrone
   h3 Cos'è una operazione asincrona?
-  p Iniziamo prima definendo che cos'è la programmazione sincrona: in tale contesto il programma esegue tutte le istrizioni che lo compongono in maniera lineare una dopo l'altra. In altri termini, l'esecuzione attende di aver portato a termine una istruzione prima di passare a quella immediatamente successiva. Un esempio banale è il seguente, dove ogni log viene stampato a console esattamente come ce lo aspettiamo: "1", "2", "3" 
+  p Iniziamo prima definendo che cos'è la #[em programmazione sincrona]: in tale contesto il programma esegue tutte le istruzioni che lo compongono in maniera lineare una dopo l'altra. In altri termini, l'esecuzione attende di aver portato a termine una istruzione prima di passare a quella immediatamente successiva. Un esempio banale è il seguente, dove ogni log viene stampato a console esattamente come ce lo aspettiamo: "1", "2", "3" 
   div(class="code")
-    h4 In un codice sincrono le istruzioni vengono eseguite in ordine una dopo l'altra
+    h3 In un codice sincrono le istruzioni vengono eseguite in ordine una dopo l'altra
     code
       pre console.log(1); // Prima istruzione
       pre console.log(2); // Seconda istruzione
       pre console.log(3); // Terza istruzione
 
-  p La programmazione asincrona, invece, non è lineare e prevede che una istruzione venga eseguita dopo un'altra anche se definita precedentemente all'interno del codice. Questo è necessario quando vengono eseguiti compiti che prevedono un certo lasso di tempo per essere eseguiti (per esempio: una richiesta HTTP per ottenere delle risorse remote, una query ad un database o una operazione di I/O verso il disco rigido...). In questo caso è preferibile che l'esecuzione del resto del codice continui senza dovera attendere il risultato della operazione. Appena il risultato è pronto (per esempio: la richiesta HTTP ha restituito un JSON) sarà possibile riprendere tutte quelle istruzioni, che stavano in attesa, e che riguardavano l'elaborazione di questo risultato (per esempio: il JSON appena restituito può essere ora analizzato e stampato a video).
-  p Una tipica operazione asincrona in JavaScript è il metodo setTimeout() che qui di seguito utilizzeremo per esemplificare del codice asincrono.
+  p La #[em programmazione asincrona], invece, non è lineare e prevede che una istruzione venga eseguita dopo un'altra anche se definita precedentemente all'interno del codice. Questo è necessario quando vengono eseguiti compiti che prevedono un certo lasso di tempo per essere eseguiti (per esempio: una richiesta HTTP per ottenere delle risorse remote, una query ad un database o una operazione di I/O verso il disco rigido...). In questo caso è preferibile che l'esecuzione continui con il resto del codice senza dover attendere il risultato della prima operazione. Appena il risultato è pronto (per esempio: la richiesta HTTP ha restituito un JSON) sarà possibile riprendere tutte quelle istruzioni, che stavano in attesa, e che riguardavano l'elaborazione di questo risultato (per esempio: il JSON appena restituito può essere ora analizzato e stampato a video).
+  p Tipici esempi di operazioni asincrone in JavaScript sono i metodi #[code fetch()] e  #[code setTimeout()] che qui di seguito utilizzeremo per esemplificare del codice asincrono.
   div(class="code")
-    h4 In un codice asincrono le istruzioni possono venire eseguite in ordine differente rispetto alla loro posizione
+    h3 In un codice asincrono le istruzioni possono venire eseguite in ordine differente rispetto alla loro posizione
     code
       pre console.log(1); // Prima istruzione
       pre setTimeout(()=> {
       pre   console.log(2);  // Terza istruzione
       pre }, 1000)
       pre console.log(3); // Seconda istruzione
-  p In questo esempio il risultato a schermo sarà: "1", "3", "2", in quanto l'engine JavaScript rende più efficente l'esecuzione dell'intero programma senza attendere 1000 millisecondi (il valore 1000 all'interno del codice) ma prosegue direttamente alla istruzione successiva, per poi riprendere l'esecuzione in attesa una volta passato il lasso di tempo definito.
-  p Essenzialmente, si tratta solo di rendere più efficente l'esecuzione dei notri programmi e non rimanere in attesa di risorse che necessariamente avranno bisogno di un certo tempo prima di essere disponibile.
+  p In questo esempio il risultato a schermo sarà: "1", "3", "2", in quanto l'engine JavaScript rende più efficiente l'esecuzione dell'intero programma evitando di attendere 1000 millisecondi (il valore 1000 all'interno del codice) ma proseguendo, invece,  direttamente alla istruzione successiva, per poi riprendere l'esecuzione messa in attesa una volta passato il lasso di tempo definito.
+  p Essenzialmente, si tratta solo di rendere più efficiente l'esecuzione dei nostri programmi e non rimanere in attesa di risorse che necessariamente avranno bisogno di un certo tempo prima di essere disponibile.
   h3 Cos'è una Promise in JavaScript?
-  p In JavaScript, le Promise rappresentano un modo per gestire efficacemente le operazioni asincrone come quelle descritte in precedenza. Si tratta di oggetti che rappresentano delle operazioni ancora da completare, ma che (promettono!) terminaranno in un prossimo futuro con due possibili risultati: Promise risolta o Promise rifiutata.
-  h3 Le callback annidate: il problema delle callback hell 
-  p Con "callback hell" si intende il problema di gestire più operazioni asincone in sequenza. Prima delle Promise le operazioni asincrone erano gestite per messo di funzioni di callback: funzioni fornite al metodo asincrono come parametro ed eseguite una volta che l'operazione asincrona è terminata. Nel codice qui sopra, il metodo setTimeout() ha, come primo parametro, una funzione anonima che si occupa di stampare in console il numero "2" una volta passati 1000 millisecondi. Questo è un esempio semplice e non problematico di callback. Il problema si pone quando le operazione asincrone sono molteplici e ci si trova a scrivere callback che al loro interno definiscono altre callback: vediamo il seguente codice.
-  div(class="code")
-    h4 Le callback annidate o callback hell rendono difficile gestire molteplici operazioni asincrone
-    code
-      pre getDataFromServer((data) => {
-      pre   processData(data, (processedData) => {
-      pre     saveData(processedData, (savedData) => {
-      pre       updateUI(savedData, (result) => {
-      pre         console.log("Operazione completata:", result);
-      pre       });
-      pre     });
-      pre   });
-      pre });
-  p Per quanto sintatticamente coretto e funzionale, il codice dell'esempio porta ad una scarsa leggibilità e difficoltà di gestione. Nei prossimi paragrafi vedremo come le Promise riescono a risolvere il problema della callback hell.
+  p In JavaScript, le #[em Promise] rappresentano un modo per gestire efficacemente le operazioni asincrone come quelle descritte in precedenza. Si tratta di #[em oggetti che rappresentano delle operazioni ancora da completare], ma che (promettono!) termineranno in un prossimo futuro con due possibili risultati: #[em Promise risolta] o #[em Promise rifiutata].
+
+  aside
+    h3 Le callback annidate: il problema delle callback hell 
+    p Con "#[em callback hell]" si intende il problema di gestire più operazioni asincrone in sequenza. Prima delle Promise le operazioni asincrone erano gestite per messo di funzioni di callback: funzioni fornite al metodo asincrono come parametro ed eseguite una volta che l'operazione asincrona è terminata. Nel codice qui sopra, il metodo #[code setTimeout()] ha, come primo parametro, una funzione anonima che si occupa di stampare in console il numero "2" una volta passati 1000 millisecondi. Questo è un esempio semplice e non problematico di callback. Il problema si pone quando le operazione asincrone sono molteplici e ci si trova a scrivere callback che al loro interno definiscono altre callback: vediamo il seguente codice.
+    div(class="code")
+      h3 Le callback annidate o callback hell rendono difficile gestire molteplici operazioni asincrone
+      code
+        pre getDataFromServer((data) => {
+        pre   processData(data, (processedData) => {
+        pre     saveData(processedData, (savedData) => {
+        pre       updateUI(savedData, (result) => {
+        pre         console.log("Operazione completata:", result);
+        pre       });
+        pre     });
+        pre   });
+        pre });
+    p Per quanto sintatticamente corretto e funzionale, il codice dell'esempio porta ad una scarsa leggibilità e difficoltà di gestione. Nei prossimi paragrafi vedremo come le Promise riescono a risolvere il problema della callback hell.
 
 
 section 
   h2 Creazione di una Promise
   h3 Sintassi di una Promise JS
-  p Una Promise in JS si crea (come ogni oggetto JavaScript) attraverso il costruttore new Promise e una funzione che prevede due parametri: resolve e reject, che rappresentano i due possibili stati finali della Promise stessa. Proviamo a riscrivere l'esempio del setTimeout nonpiù attraverso una callback, ma attraverso una Promise.
+  p Una Promise in JS si crea (come ogni oggetto JavaScript) attraverso il costruttore #[code new Promise] e una funzione che prevede due parametri: #[code resolve] e #[code reject], che rappresentano i due possibili stati finali della Promise stessa. Proviamo a riscrivere l'esempio del setTimeout non più attraverso una callback, ma attraverso una Promise.
   div(class="code")
-    h4 Una semplice Promise utilizzata al posto dell callback
+    h3 Una semplice Promise utilizzata al posto della callback
     code
       pre const myPromise = new Promise((resolve, reject) => {
       pre   setTimeout(() => {
@@ -70,7 +72,7 @@ section
       pre });
   p L'oggetto Promise così creato sarà utilizzato secondo la seguente sintassi.
   div(class="code")
-    h4 Utilizziamo la Promise appena creata
+    h3 Utilizziamo la Promise appena creata
     code
       pre myPromise
       pre   .then((result) => {
@@ -87,18 +89,18 @@ section
   h3 Stati di una Promise 
   p Una Promise può trovarsi in uno dei seguenti stati.
   ul
-    li Pending (in attesa): lo stato iniziale, l'operazione non è ancora completata
-    li Fulfilled (completata): l'operazione è completata con successo e la Promise ha restituito un valore
-    li Rejected (rifiutata): l'operazione è fallita e la Promise restituisce un motivo circa il fallimento
+    li #[em Pending] (in attesa): lo stato iniziale, l'operazione non è ancora completata
+    li #[em Fulfilled] (completata): l'operazione è completata con successo e la Promise ha restituito un valore
+    li #[em Rejected] (rifiutata): l'operazione è fallita e la Promise restituisce un motivo circa il fallimento
   h3 I metodi principali di una Promise
-  p Per utilizzare il risultato di una Promise, si usano i metodi then, catch e finally.
+  p Per utilizzare il risultato di una Promise, si usano i metodi #[code then], #[code catch] e #[code finally].
   ul
-    li then: viene chiamato quando la Promise è completata con successo
-    li catch: viene chiamato quando la Promise è rifiutata
-    li finally: viene chiamato indipendentemente dal risultato della Promise
-  h3 Un esempio concreto
+    li #[em then]: viene chiamato quando la Promise è completata con successo
+    li #[em catch]: viene chiamato quando la Promise è rifiutata
+    li #[em finally]: viene chiamato indipendentemente dal risultato della Promise
+  h3 Un esempio concreto di creazione Promise
   div(class="code")
-    h4 Una Promise più concreta: fetch di risorse remote
+    h3 Una Promise più concreta: fetch di risorse remote
     code
       pre // Funzione che restituisce una Promise per eseguire il fetch di risorse remote
       pre function fetchRemoteResource(url) {
@@ -134,9 +136,9 @@ include ../../../components/breaktime/breaktime.pug
 section 
   h2 Composizione di Promise
   h3 Concatenazione di Promise (Promise chaining)
-  p Le Promises possono essere concatenate per gestire sequenze di operazioni asincrone. Ogni then restituisce una nuova Promise, permettendo di concatenare più operazioni. Ecco un esempio di concatenazione di Promises.
+  p Le Promises #[em possono essere concatenate] per gestire sequenze di operazioni asincrone. Ogni #[code then] restituisce una nuova Promise, permettendo di concatenare più operazioni. Ecco un esempio di concatenazione di Promises.
   div(class="code")
-    h4 Concatenazione di Promise. Codice semplificato tratto da esempio in https://javascript.info/promise-chaining
+    h3 Concatenazione di Promise: codice semplificato tratto da esempio in https://javascript.info/promise-chaining
     code
       pre fetch('/article/promise-chaining/user.json') //Ottengo i dati raw di un utente
       pre   .then(response => response.json()) // I dati sono codificati in JSON
@@ -153,13 +155,13 @@ section
   h3 Promise combinators
   p E' possibile la gestione di più Promise contemporaneamente attraverso dei combinatori.
   ul
-    li Promise.all: si attiva quando tutte le Promise hanno avuto esito fullfilled o almeno una di esse ha esito reject
-    li Promise.race: si attiva appena una delle Promise ha avuto esito fulfilled o rejected 
-    li Promise.allSettled: si attiva quando tutte le promise hanno avuto esito o fulfilled o rejected
-    li Promise.any: simile a Promise.race, ma si attiva appena una Promise ha avuto esito fulfilled (ma non rejected)
+    li #[code Promise.all]: si attiva quando tutte le Promise hanno avuto esito fullfilled o almeno una di esse ha esito reject
+    li #[code Promise.race]: si attiva appena una delle Promise ha avuto esito fulfilled o rejected 
+    li #[code Promise.allSettled]: si attiva quando tutte le promise hanno avuto esito o fulfilled o rejected
+    li #[code Promise.any]: simile a Promise.race, ma si attiva appena una Promise ha avuto esito fulfilled (ma non rejected)
   p Darò un esempio di codice del primo caso solamente, per avere una idea di cosa significhi gestire molteplici Promise.
   div(class="code")
-    h4 Promise.all - ricordiamo al lettore che fetch ritorna una Promise
+    h3 Promise.all - ricordiamo al lettore che fetch ritorna una Promise
     code
       pre const promises = [ // Le Promise da gestire sono raccolte in questo array
       pre   fetch('https://api.example.com/data1'),
@@ -177,16 +179,111 @@ section
       pre   });
 
   h3 Promise.withResolvers()
+  p TODO
 
 section 
-  h2 Migliorare la leggibilità delle Promise: uso di async / await
+  h2 Migliorare la leggibilità delle Promise: uso di async/await
+  p L'introduzione delle funzione #[code async] e #[code await] introducono una modalità differente di lavorare con le Promise e hanno lo scopo di semplificare la scrittura e la gestione delle operazioni asincrone, rendendo il codice risultante simile a quello sincrono. 
+  h3 #[code async] - Dichiarare una funzione asincrona
+  p Per #[em dichiarare una funzione asincrona], si utilizza la parola chiave #[em async] prima della definizione della funzione. Una funzione async restituisce sempre una Promise, anche se al suo interno il codice non usa esplicitamente la keyword Promise.
+  div(class="code")
+    h3 Definire di una funzione asincrona con async
+    code
+      pre async function esempioAsync() {
+      pre   return "Risultato";
+      pre }   
+      pre 
+      pre // L'esecuzione di esempioAsync() restituisce una Promise
+      pre esempioAsync().then(console.log); // Output: "Risultato"
+
+
+  h3 #[code await] - Attendere il completamento di una Promise
+  p La parola chiave #[em await] può essere usata solo all'interno di una funzione async. Blocca temporaneamente l'esecuzione del codice fino a che la Promise non si risolve, restituendo il valore risolto della Promise.
+  div(class="code")
+    h3 Attendere il completamento di una Promise attraverso la keyword await
+    code
+      pre async function esempioAwait() {
+      pre   const risultato = await new Promise((resolve) => {
+      pre     setTimeout(() => resolve("Completato!"), 2000);
+      pre });
+      pre console.log(risultato); // Output dopo 2 secondi: "Completato!"
+      pre }
+      pre 
+      pre esempioAwait();
 
 section 
   h2 Gestione degli errori nelle Promise JS 
+  p Abbiamo già visto negli esempi di codice come sia possibile (e, più che altro, obbligatorio) gestire eventuali errori e situazioni inattese attraverso i metodi #[code catch()] e #[code finally()]. Approfondiamo meglio l'argomento focalizzandoci su questo aspetto e affrontando la questione anche per quanto riguarda l'uso di async e await.
+  h3 Gestione degli Errori con .catch()
+  p Se una Promise viene rifiutata in uno dei passaggi della catena, #[code catch()] cattura l’errore e permette di gestirlo, impedendo che il programma si blocchi.
+  div(class="code")
+    h3 Catturare e gestire un errore con catch()
+    code
+      pre fetch("https://api.example.com/dati")
+      pre   .then((response) => {
+      pre     if (!response.ok) {
+      pre       throw new Error("Errore nella risposta"); // Genero un errore in caso di risposta negativa
+      pre     }
+      pre     return response.json();
+      pre   })
+      pre .then((data) => {
+      pre   console.log("Dati ricevuti:", data);
+      pre })
+      pre .catch((error) => {
+      pre   console.error("Errore:", error.message); // L'errore è catturato e gestito
+      pre })
+      pre .finally(() => {
+      pre   console.log("Richiesta completata."); // Questo codice viene eseguito in ogni caso
+      pre });
+
+  p E' anche possibile gestire gli errori all'interno del metodo then()
+  div(class="code")
+    h3 Catturare e gestire un errore con catch()
+    code
+      pre fetch("https://api.example.com/dati")
+      pre   .then(
+      pre     (response) => response.json(),
+      pre     (error) => console.error("Errore:", error.message)
+      pre   );
+  p Il metodo #[code finally()] permette di eseguire del codice al termine della Promise, indipendentemente dal fatto che essa sia stata risolta o rifiutata. Questo è utile per eseguire operazioni di pulizia (ad esempio chiudere una connessione o nascondere un loader).
+
+
+  h3 Gestione degli errori in async/await con try-catch
+  p Quando si usano async e await, la gestione degli errori diventa simile a quella del codice sincrono. Possiamo, allora, usare #[em try-catch] per catturare gli errori in blocchi di codice await. Ecco un esempio.
+  div(class="code")
+    h3 Gestire gli errori in async/await attraverso l'uso di try-catch
+    code
+      pre async function fetchDati() {
+      pre   try {
+      pre     const response = await fetch("https://api.example.com/dati");
+      pre     if (!response.ok) throw new Error("Errore nella risposta");
+      pre     const dati = await response.json();
+      pre     console.log("Dati ricevuti:", dati);
+      pre   } catch (error) {
+      pre     console.error("Errore:", error.message);
+      pre   } finally {
+      pre     console.log("Richiesta completata.");
+      pre   }
+      pre }
+      pre 
+      pre fetchDati();
+
 
 section 
   h2 Conclusione 
+  p Le Promise rappresentano uno dei fondamenti principali per la gestione asincrona del codice in JavaScript, migliorando significativamente la leggibilità e la gestione degli errori rispetto ai tradizionali callback. Con l'introduzione dei costrutti async/await, poi, il codice risultante risulta molto simile a quello asincrono e quindi semplice ed immediato da gestire.
+  p In definitiva, le Promise costituiscono una pietra angolare per chi vuole padroneggiare JavaScript e sono un’abilità essenziale per chi sviluppa applicazioni avanzate e interattive.
 
 aside(class="links")
   h2 Link utili
+  ul 
+    li 
+      a(class="ext", href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise", target="_blanck") MDN Web Docs - Promise
+      p Una guida completa sulle Promise dal team MDN. Qui troverai dettagli su sintassi, esempi pratici e una spiegazione delle caratteristiche principali delle Promise, oltre che link alle funzioni async e await.
+    li 
+      a(class="ext", href="https://javascript.info/async-await", target="_blanck") The JavaScript languagePromises, async/await
+      p Una spiegazione dettagliata con esempi pratici per comprendere meglio l'uso delle Promise e del flusso asincrono in JavaScript. Questa risorsa spiega in modo chiaro le basi e i concetti avanzati.
+    li 
+      a(class="ext", href="https://www.youtube.com/watch?v=DHvZLI7Db8E", target="_blanck") JavaScript Promises In 10 Minutes
+      p Un video conciso che introduce i concetti base delle Promises, spiegandone l’uso pratico in poco tempo. Traversy Media offre molti video su argomenti JavaScript che possono essere d'aiuto.
 
