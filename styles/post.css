@@ -34,10 +34,9 @@ article .intro {
   margin: calc(var(--xx-large-space) * 1.5) auto;
   padding: var(--normal-space);
   text-align: center;
-
+  text-wrap: balance;
   font-size: var(--font-size-bigger);
   line-height: 130%;
-
   position: relative;
   border-bottom: 1px solid var(--dark-gray);
 }

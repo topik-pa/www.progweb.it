@@ -178,8 +178,36 @@ section
       pre     console.error('Errore durante il fetch:', error);
       pre   });
 
-  h3 Promise.withResolvers()
-  p TODO
+  h3 Promise.withResolvers() - metodo ancora sperimentale
+  p Il metodo #[code Promise.withResolvers()] è un’API sperimentale di JavaScript che permette di creare una Promise già associata ai metodi resolve e reject. Questo consente di gestire più agevolmente la risoluzione o il rifiuto della Promise stessa senza la necessità di definire resolve e reject all'interno dell'esecuzione di una nuova Promise. La sintassi è semplice...
+  div(class="code")
+    h3 Promise.withResolvers() - sintassi 
+    code
+      pre const { promise, resolve, reject } = Promise.withResolvers();
+  p Qui un esempio concreto di utilizzo.
+  div(class="code")
+    h3 Promise.withResolvers() - esempio di utilizzo 
+    code
+      pre function fetchData() {
+      pre   const { promise, resolve, reject } = Promise.withResolvers();
+      pre   // Simulazione di una richiesta asincrona
+      pre   setTimeout(() => {
+      pre     const success = Math.random() > 0.5;
+      pre     if (success) {
+      pre       resolve("Dati ricevuti con successo!");
+      pre     } else {
+      pre       reject("Errore nella ricezione dei dati.");
+      pre     }
+      pre   }, 1000);
+      pre
+      pre   return promise;
+      pre }
+      pre 
+      pre fetchData()
+      pre   .then(data => console.log(data))
+      pre   .catch(error => console.error(error));
+  p I vantaggi di tale metodo sono riassumibili nella #[em maggiore chiarezza e leggibilità] del codice prodotto. Ma, attenzione, essendo #[code sperimentale], il metodo Promise.withResolvers() potrebbe non essere supportato in tutti gli ambienti e potrebbe cambiare in future versioni di JavaScript.
+
 
 section 
   h2 Migliorare la leggibilità delle Promise: uso di async/await
@@ -281,7 +309,7 @@ aside(class="links")
       a(class="ext", href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise", target="_blanck") MDN Web Docs - Promise
       p Una guida completa sulle Promise dal team MDN. Qui troverai dettagli su sintassi, esempi pratici e una spiegazione delle caratteristiche principali delle Promise, oltre che link alle funzioni async e await.
     li 
-      a(class="ext", href="https://javascript.info/async-await", target="_blanck") The JavaScript languagePromises, async/await
+      a(class="ext", href="https://javascript.info/async-await", target="_blanck") The JavaScript language Promises, async/await
       p Una spiegazione dettagliata con esempi pratici per comprendere meglio l'uso delle Promise e del flusso asincrono in JavaScript. Questa risorsa spiega in modo chiaro le basi e i concetti avanzati.
     li 
       a(class="ext", href="https://www.youtube.com/watch?v=DHvZLI7Db8E", target="_blanck") JavaScript Promises In 10 Minutes

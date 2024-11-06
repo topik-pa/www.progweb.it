@@ -1,13 +1,12 @@
 aside#fb-page-wrap {
   width: auto!important;
-  margin: var(--x-large-space);
   text-align: center;
   border-right: none!important;
   padding-bottom: var(--x-large-space);
+  overflow-x: auto;
 }
 
 aside#fb-page-wrap {
-  /* border-color: var(--blue); */
   border-left: none;
 }
 aside#fb-page-wrap::before {
