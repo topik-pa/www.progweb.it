@@ -8,16 +8,3 @@
   color: var(--primary);
   font-size: var(--font-size-bigger);
 }
-
-#socials .icon-facebook {
-  color: #0866FF;
-}
-#socials .icon-telegram {
-  color: #239CD7;
-}
-#socials .icon-linkedin2 {
-  color: #0A66C2;
-}
-#socials .icon-envelop {
-  color: #da3910;
-}

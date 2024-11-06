@@ -292,7 +292,7 @@ img#more {
 
 
 @media screen and (max-width: 1750px) {
-  html {
+  main {
     font-size: 14px!important;
   }
   section.head img#accessibility {
@@ -304,8 +304,8 @@ img#more {
 }
 
 @media screen and (max-width: 1366px) {
-  html {
-    font-size: 14px!important;
+  main {
+    font-size: 13px!important;
   }
   section.head img#accessibility {
     top: 5%;

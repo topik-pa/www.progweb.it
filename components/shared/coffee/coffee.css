@@ -44,6 +44,9 @@
   margin: var(--xx-large-space) 0;
 }
 
+.otherwise div {
+  margin-bottom: var(--large-space);
+}
 #marisa-coofee {
   width: 100%;
   height: auto;

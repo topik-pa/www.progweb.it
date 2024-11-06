@@ -13,6 +13,22 @@ aside#fb-page-wrap::before {
   content: none;
 }
 
+aside#fb-page-wrap .icon-facebook {
+  color: #0866FF;
+}
+aside#fb-page-wrap .icon-telegram {
+  color: #239CD7;
+}
+aside#fb-page-wrap .icon-linkedin2 {
+  color: #0A66C2;
+}
+
+aside#fb-page-wrap .socials a {
+  margin-left: var(--large-space);
+  color: var(--primary);
+  font-size: var(--font-size-bigger);
+}
+
 @media screen and (max-width: 768px) {
   aside#fb-page-wrap {
     margin: 0;
