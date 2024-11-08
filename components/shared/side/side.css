@@ -18,6 +18,13 @@
   margin-bottom: var(--xx-large-space);
 }
 
+#side .mediawrapper {
+  text-align: center;
+}
+#side .mediawrapper video {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   #side {
     width: 100%!important;
