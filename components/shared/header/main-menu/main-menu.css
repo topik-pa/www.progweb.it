@@ -33,6 +33,9 @@
     display: block;
   }
   #main-menu {
+    position: fixed;
+  }
+  #main-menu > div {
     top: 7rem;
     width: 70%;
     right: -70%;
@@ -41,9 +44,16 @@
     background-color: var(--lighter-gray);
     z-index: var(--main-menu);
   }
-  #main-menu.show {
+  #main-menu.show > div{
     right: 0;
     box-shadow: 0 0 10px 0 var(--black);
+  }
+  #main-menu.show {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
   #main-menu .close {
     position: absolute;

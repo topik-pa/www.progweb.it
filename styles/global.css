@@ -36,7 +36,6 @@ main section {
 a {
   color: var(--link);
   text-decoration: none;
-  position: relative;
   font-weight: 500;
 }
 a:hover {
