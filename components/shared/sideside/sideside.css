@@ -29,6 +29,13 @@
   width: 100%;
   max-width: 270px;
 }
+
+#sideside .fb-exclusive {
+  text-align: center;
+}
+#sideside .fb-exclusive > div{
+  overflow-x: auto;
+}
 @media screen and (max-width: 768px) {
   #sideside {
     width: 100%!important;
