@@ -1,0 +1,299 @@
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-s.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      img(fetchpriority="high"  class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title)
+    p(class="intro") Finalmente anche CSS introduce l'uso delle variabili (in realtà dal 2015...)! Ufficialmente chiamate Custom Properties, il loro scopo è quello di aiutare lo sviluppatore ad organizzare e gestire meglio il suo codice. Qui troverai una introduzione con dettagli d'uso ed esempi pratici!   #[img(src="assets/images/marisa-talk.webp", alt="Marisa dice...", width="100", height="100")]
+
+
+section
+  h2 Introduzione alle variabili in CSS
+  p Negli ultimi anni, le variabili in CSS (note anche come "#[em CSS Custom Properties]") hanno trasformato il modo in cui progettiamo e gestiamo lo stile dei siti web. Con l'introduzione di questa funzionalità, è diventato possibile definire dei valori riutilizzabili all'interno di un foglio di stile, portando un notevole miglioramento in termini di manutenibilità e scalabilità del codice.
+  p Le variabili #[em sono valori che possiamo definire una volta e riutilizzare] in più punti del nostro codice e #[em permettono di centralizzare e organizzare le proprietà] che vengono usate più volte, come colori, spaziature e dimensioni dei caratteri.
+  p Grazie alle variabili, possiamo aggiornare lo stile di un'intera interfaccia modificando un solo valore (la variabile, per l'appunto), risparmiando tempo e riducendo errori. Questo migliora la coerenza e facilita la manutenzione del codice, rendendo lo stile più flessibile e adattabile.
+  h3 Cosa sono le variabili in CSS?
+  p In CSS, una variabile è una sorta di segnaposto per un valore che può essere riutilizzato in più punti del codice. Posso definire una variabile per il colore principale della nostra interfaccia e utilizzarlo ovunque sia necessario attraverso il nome dell variabile e senza dover ripetere manualmente il valore specifico. Modificando il valore della variabile, quindi solo una volta, tutte le proprietà che richiamano tale variabile saranno aggiornate di conseguenza.
+
+  //- aside 
+  //-   h3 Panoramica delle differenze rispetto alle variabili in altri linguaggi di programmazione
+  //-   p A differenza delle variabili nei linguaggi di programmazione tradizionali (come JavaScript, Python o C++), le variabili CSS non sono vincolate a valori statici. In molti linguaggi, una variabile è un contenitore per un dato che viene risolto all'interno di un contesto specifico e gestito in memoria. In CSS, invece, le variabili sono valori riutilizzabili che vengono interpretati dal browser al momento del rendering, il che significa che possono essere modificate dinamicamente senza dover ricaricare o ricompilare il codice CSS.
+  //-   ul
+  //-     li Dinamismo nel browser: le variabili CSS possono essere aggiornate al volo tramite JavaScript, consentendo di creare temi interattivi o adattamenti di stile basati sull’interazione dell’utente.
+  //-     li Scope (Ambito) variabile: una variabile CSS può essere definita in un ambito globale (usando :root) o locale (all'interno di un selettore specifico). Questo è diverso da molte variabili di programmazione, che hanno un ambito ben definito come globale, locale o di blocco.
+  //-     li Ereditarietà e specificità: le variabili CSS seguono le regole di specificità e ereditarietà del CSS. Questo significa che, a seconda di dove sono definite e di come viene strutturato il foglio di stile, le variabili possono essere sovrascritte o ereditate all’interno del DOM, qualcosa che non è comune nelle variabili nei linguaggi di programmazione.
+
+  h3 Perché usare le variabili in CSS?
+  p Prima dell'introduzione delle variabili, i progettisti dovevano gestire lo stile globale di un sito scrivendo lo stesso valore in molteplici punti del codice o affidandosi a pre-processori CSS come Sass o Less. Oggi, con le variabili native, CSS consente di:
+  ul
+    li migliorare la coerenza visiva: un colore, una spaziatura o un valore specifico possono essere centralizzati, eliminando la necessità di ricordare e replicare esattamente quel valore in ogni punto in cui è necessario;
+    li semplificare la manutenzione del codice: se devi cambiare un colore di brand, è sufficiente aggiornare la variabile e vedere la modifica propagarsi automaticamente;
+    li facilitare la personalizzazione dei temi: con le variabili, diventa semplice gestire variazioni di tema come modalità scura e chiara, semplicemente aggiornando i valori delle variabili;
+    li sfruttare la flessibilità e l'adattabilità: a differenza delle variabili dei pre-processori, le variabili CSS sono gestite direttamente dal browser e possono essere modificate anche in modo dinamico tramite JavaScript.
+  h3 Un esempio semplice
+  p Per comprendere la potenza delle variabili CSS, vediamo un esempio semplice.
+  div(class="code")
+    h3 Un semplice esempio di utilizzo delle variabili in CSS
+    code
+      pre :root {
+      pre   --main-color: #3498db;
+      pre   --padding-size: 16px;
+      pre }
+      pre 
+      pre body {
+      pre   color: var(--main-color);
+      pre   padding: var(--padding-size);
+      pre }
+
+  p In questo esempio, la variabile #[code --main-color] contiene un colore e #[code --padding-size] rappresenta uno spazio di padding. Entrambe le variabili vengono poi utilizzate in successive regole CSS. Se decidiamo di cambiare il colore principale o la dimensione del padding, basterà aggiornare i valori delle variabili senza dover cercare e modificare ogni occorrenza.
+
+section
+  h2 Sintassi di base
+  h3 Definizione delle variabili
+  p Per definire una variabile in CSS, dobbiamo utilizzare due trattini (--) seguiti dal nome della variabile, che può essere scelto liberamente. Sono case-sensitive e devono essere definite all'interno di un selettore. Solitamente, si usano nel selettore #[code :root] per definire variabili globali accessibili in tutto il documento, ma è possibile definirle in selettori più interni per limitare l'uso della variabile a contesti più specifici.
+  div(class="code")
+    h3 Definizione di variabili in CSS
+    code
+      pre :root {
+      pre   --primary-color: #3498db;
+      pre   --secondary-color: #2ecc71;
+      pre   --font-size-large: 24px;
+      pre } 
+  ul
+    li #[code --primary-color] rappresenta il colore primario, #3498db.
+    li #[code --secondary-color] rappresenta un colore secondario, #2ecc71.
+    li #[code --font-size-large] rappresenta una dimensione del testo di 24px.
+  p 
+  h3 Utilizzo delle variabili
+  p Per usare una variabile definita, si utilizza la funzione #[code var()], specificando il nome della variabile tra parentesi. La sintassi è:
+  div(class="code")
+    h3 Utilizzo di una variabile in CSS
+    code
+      pre property: var(--nome-variabile);
+  p 
+  div(class="code")
+    h3 Esempio pratico di utilizzo di variabili in CSS
+    code
+      pre h1 {
+      pre   color: var(--primary-color);
+      pre   font-size: var(--font-size-large);
+      pre }
+      pre 
+      pre p {
+      pre   color: var(--secondary-color);
+      pre } 
+  p In questo caso, l'elemento h1 avrà il colore primario e la dimensione del font definiti in :root. L'elemento p userà il colore secondario.
+  h3 Variabili locali e ambito di applicazione (scope)
+  p Come già anticipato, è possibile definire variabili anche in ambiti locali, ovvero all'interno di un selettore specifico, limitando così l'accesso a quel contesto.
+  div(class="code")
+    h3 Una variabile CSS definita in un ambito (selettore) specifico
+    code
+      pre .card {
+      pre   --card-padding: 20px;
+      pre   padding: var(--card-padding);
+      pre }
+      pre 
+      pre .card--highlighted {
+      pre   --card-padding: 30px; /* Sovrascrive la variabile solo in questo contesto */
+      pre   padding: var(--card-padding);
+      pre } 
+  p Qui, --card-padding viene ridefinita per .card--highlighted, che avrà un padding di 30px invece di 20px. La versione locale della variabile sovrascrive quella globale solo all'interno di .card--highlighted, mostrando la flessibilità delle variabili CSS.
+
+section
+  h2 Fallbacks nelle variabili CSS
+  p La funzione #[code var()] accetta un secondo parametro opzionale, che rappresenta il valore di fallback. Questo valore viene utilizzato se la variabile non è definita.
+  div(class="code")
+    h3 Definire un fallbck per il valore di un variabiel CSS
+    code
+      pre button {
+      pre   color: var(--button-color, #555); /* Usa #555 se --button-color non è definita */
+      pre }
+  p In questo caso, se la variabile #[code --button-color] non è impostata, il browser applicherà il colore di fallback #[code #555] per i pulsanti. Questo è utile per garantire una certa sicurezza e continuità visiva in assenza di variabili.
+
+section
+  h2 Ereditarietà e specificità delle variabili
+  p I meccanismi classici di #[em ereditarietà, specificità e l'utilizzo di !important] sono mantenuti inalterati anche con l'introduzione delle variabili CSS. In ognio caso, vediamo come si comportano le variabili qundo si presentano tali casistiche.
+  h3 Ereditarietà delle variabili
+  p In CSS, molte proprietà hanno un comportamento ereditario (il principio raccolto nella parola "Cascading"): quando non sono specificate per un elemento figlio, ereditano il valore dall'elemento genitore. Le variabili CSS seguono questa stessa logica e possono quindi essere ereditate lungo la struttura DOM.
+  div(class="code")
+    h3 Ereditarietà a "cascata" delle proprietà CSS (vale anche per le variabili)
+    code
+      pre :root {
+      pre   --text-color: #333;
+      pre } 
+      pre 
+      pre body {
+      pre   color: var(--text-color);
+      pre }
+      pre 
+      pre section {
+      pre     /* section eredita il colore dalla variabile nel body */
+      pre }
+  p In questo caso, il valore di #[code --text-color] è definito globalmente in #[code :root] e viene applicato a body. Tutti gli elementi all'interno di body, inclusi quelli che non hanno un colore specificato, erediteranno #[code --text-color].
+  h4 Sovrascrittura delle variabili ereditate
+  p Le variabili CSS possono essere sovrascritte su selettori specifici, modificando l'aspetto degli elementi figli. Definendo una nuova variabile su un elemento specifico, i suoi elementi figli useranno questa variabile invece di quella ereditata.
+  div(class="code")
+    h3 Sovrascrittura delle variabili CSS
+    code
+      pre :root {
+      pre   --text-color: #333;
+      pre } 
+      pre 
+      pre body {
+      pre   color: var(--text-color);
+      pre }
+      pre 
+      pre .highlight {
+      pre   --text-color: #e74c3c; /* Sovrascrive il valore solo in .highlight */
+      pre }
+  p In questo caso, tutti gli elementi con la classe #[code .highlight] avranno #[code --text-color] impostato su #e74c3c, e quindi anche gli elementi figli di #[code .highlight] useranno questo colore sovrascritto.
+  h3 Specificità delle variabili
+  p La specificità in CSS si riferisce a quanto "forte" sia una regola e in che ordine venga applicata rispetto alle altre. Le variabili CSS, in quanto proprietà di stile, seguono le stesse regole di specificità e possono essere sovrascritte a seconda della priorità del selettore.
+  p Ad esempio, se una variabile viene definita in un selettore con specificità bassa e poi ridefinita in uno con specificità più alta, il valore con la specificità più alta prenderà il sopravvento:
+  div(class="code")
+    h3 Specificità e variabili CSS
+    code
+      pre :root {
+      pre   --background-color: #f5f5f5;
+      pre } 
+      pre 
+      pre .container {
+      pre   --background-color: #ffffff; /* Sovrascrive la variabile */
+      pre   background-color: var(--background-color);
+      pre }
+      pre 
+      pre .container.primary {
+      pre   --background-color: #cccccc; /* Ancora più specifico, quindi prende il sopravvento */
+      pre }
+  ul
+    li :root definisce --background-color come #f5f5f5
+    li il valore viene sovrascritto da .container, che imposta --background-color su #ffffff.
+    li il valore cambia ancora con .container.primary, che imposta --background-color su #cccccc.
+  h3 Gestione dei conflitti di variabili
+  p È importante ricordare che quando le variabili CSS sono definite con lo stesso nome in contesti diversi, il valore con la specificità più alta sarà applicato. Questo principio consente di avere un controllo preciso e dinamico sullo stile e di applicare facilmente temi o variazioni di stile all'interno di sezioni specifiche di una pagina.
+  h4 Ordine di definizione e importanza (!important)
+  p Come per altre proprietà CSS, è possibile usare #[code !important] per forzare l'applicazione di una variabile, indipendentemente dalla specificità dei selettori.
+  div(class="code")
+    h3 Utilizzo di !important con le variabili CSS
+    code
+      pre :root {
+      pre   --button-color: #3498db !important;
+      pre } 
+      pre 
+      pre .button {
+      pre   --button-color: #2ecc71; /* Questo valore viene ignorato */
+      pre   color: var(--button-color);
+      pre }
+  p In questo caso, anche se #[code .button] definisce #[code --button-color] come #2ecc71, il valore #3498db definito in #[code :root] verrà comunque applicato, perché è stato marcato come #[code !important].
+
+section
+  h2 Manipolazione dinamica delle variabili CSS 
+  p Uno dei grandi vantaggi delle variabili CSS è la possibilità di modificarle dinamicamente utilizzando JavaScript. Questa caratteristica apre a moltissime possibilità creative, come la realizzazione di temi, l'aggiornamento dello stile in base all'interazione dell'utente o la gestione delle preferenze di visualizzazione (ad esempio, modalità chiara e scura).
+  h3 Perché manipolare dinamicamente le variabili CSS?
+  ul
+    li Implementare temi dinamici: come la modalità chiara/scura o temi personalizzati.
+    li Reattività agli input dellr'tente: ad esempio, cambiando i colori in base alle azioni dell'utente o all'interazione con determinati elementi.
+    li Esperienze interattive e personalizzate: ad esempio, permettendo all'utente di scegliere impostazioni di stile come colori e dimensioni dei caratteri.
+  h3 Come aggiornare le variabili CSS con JavaScript
+  p Le variabili CSS possono essere modificate direttamente attraverso JavaScript utilizzando il metodo #[code .style.setProperty()] sull'elemento che contiene la variabile (:root per le variabili globali).
+  div(class="code")
+    h3 Cambiare uno stile in maniera dinamica
+    code
+      pre // Seleziona l'elemento root
+      pre const root = document.documentElement;
+      pre 
+      pre // Cambia il valore di una variabile CSS
+      pre root.style.setProperty('--primary-color', '#ff6347'); // Imposta il colore
+  p In questo esempio, la variabile #[code --primary-color] viene aggiornata a #ff6347. Tutti gli elementi che fanno riferimento a #[code --primary-color] nel foglio di stile aggiorneranno automaticamente il loro colore.
+  h3 Esempio concreto: Cambiare tema con variabili CSS e JS 
+  p Uno degli utilizzi più comuni della manipolazione dinamica delle variabili CSS è la creazione di temi per la pagina, come la modalità scura e chiara. Questo può essere realizzato facilmente dichiarando i colori come variabili e modificandoli tramite JavaScript.
+  div(class="code")
+    h3 Un esempio concreto di manipolazione dinamica dello stile CSS (CSS)
+    code
+      pre /* Variabili per la modalità chiara */
+      pre :root {
+      pre   --background-color: #ffffff;
+      pre   --text-color: #333333;
+      pre }
+      pre /* Stili per l'applicazione */
+      pre body {
+      pre   background-color: var(--background-color);
+      pre   color: var(--text-color);
+      pre }
+  p Ora, aggiungiamo lo script per cambiare tema:
+  div(class="code")
+    h3 Un esempio concreto di manipolazione dinamica dello stile CSS (JS)
+    code
+      pre function switchToDarkMode() {
+      pre   document.documentElement.style.setProperty('--background-color', '#333333');
+      pre   document.documentElement.style.setProperty('--text-color', '#ffffff');
+      pre }
+      pre function switchToLightMode() {
+      pre   document.documentElement.style.setProperty('--background-color', '#ffffff');
+      pre   document.documentElement.style.setProperty('--text-color', '#333333');
+      pre }
+      pre // Esempio di utilizzo: alterna tema al clic di un pulsante
+      pre document.getElementById('theme-toggle').addEventListener('click', () => {
+      pre   const currentBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color').trim();
+      pre     if (currentBackgroundColor === '#ffffff') {
+      pre       switchToDarkMode();
+      pre     } else {
+      pre       switchToLightMode();
+      pre     }
+      pre });
+      pre 
+  p Questo esempio consente di cambiare tema al clic su un pulsante, alternando tra due set di variabili CSS.
+  p La manipolazione dinamica delle variabili CSS offre una potente soluzione per creare interfacce interattive e adattabili. Combinando CSS e JavaScript, puoi modificare facilmente stili e temi al volo, garantendo un'esperienza utente ricca e personalizzata. Le possibilità sono infinite, e con una conoscenza di base delle variabili CSS e JavaScript, si possono realizzare soluzioni uniche per migliorare l'interattività del sito.
+
+
+
+section
+  h2 Best Practices e organizzazione del codice
+  h3 Organizzazione delle variabili in sezioni logiche
+  p Dividere le variabili CSS in categorie logiche semplifica la gestione del codice, soprattutto nei progetti di grandi dimensioni. Alcune categorie comuni possono includere le seguenti.
+  ul
+    li Colori (--primary-color, --secondary-color, --accent-color)
+    li Tipografia (--font-size-base, --font-family, --font-weight-bold)
+    li Spaziature (--spacing-small, --spacing-medium, --spacing-large)
+    li Dimensioni (--container-width, --max-width)
+  h3 Definire le variabili in :root per la massima accessibilità
+  p Le variabili definite in #[code :root] sono accessibili ovunque nel documento, il che le rende ideali per valori globali come colori primari, tipografia e spaziature generali. In questo modo, anche componenti distanti nel DOM possono utilizzare le variabili senza doverle ridefinire.
+  h3 Utilizzare nomi chiari e descrittivi
+  p Nomi di variabili chiari e descrittivi migliorano la leggibilità e riducono il rischio di confusione durante lo sviluppo e la manutenzione. Evita abbreviazioni ambigue o nomi troppo generici.
+  h3 Creare temi flessibili con le variabili
+  p Se il progetto prevede più temi (ad esempio, modalità chiara e scura), le variabili CSS possono essere usate per definire i temi in modo semplice. Una pratica comune è definire set di variabili per ciascun tema e applicarli tramite classi o media query.
+  h3 Usare valori di fallback nelle variabili
+  p Per evitare problemi quando una variabile non è disponibile, conviene specificare un valore di fallback con la funzione #[code var()]. Questo garantisce che gli stili abbiano sempre un valore da applicare, anche se la variabile non è definita o è assente.
+  h3 Limitare l'uso delle variabili locali
+  p Definire variabili locali (ovvero all'interno di selettori specifici) può creare confusione, soprattutto se si sovrascrivono variabili globali con nomi simili. Utilizza variabili locali solo quando strettamente necessario, come per componenti o sezioni che richiedono valori specifici non riutilizzati altrove.
+  h3 Documentare le variabili CSS
+  p Documentare il significato e l'uso delle variabili CSS nel codice può risultare molto utile, soprattutto in progetti condivisi con altri sviluppatori.
+  h3 Evitare di definire troppe variabili globali
+  p Sebbene sia comodo centralizzare le variabili, conviene evitare di definire troppe variabili globali se non sono realmente utili al progetto. È meglio focalizzarsi su variabili che vengono utilizzate frequentemente e che contribuiscono alla coerenza del design.
+  h3 Usare i CSS Custom Properties come configurazione per componenti riutilizzabili
+  p Le variabili CSS possono essere particolarmente utili quando si sviluppano componenti riutilizzabili. Invece di definire stili rigidi all'interno dei componenti, è possibile usare variabili CSS per configurare colori, dimensioni e altri parametri direttamente dal foglio di stile principale.
+  h3 Adottare un design system o set di variabili coerente
+  p Avere un design system o una guida di stile che definisce un set coerente di variabili CSS per tutto il progetto aiuta a mantenere l'uniformità visiva e a migliorare la collaborazione nel team. Questo approccio centralizza le decisioni di design e riduce il rischio di inconsistenze.
+
+section
+  h2 Compatibilità dei browser e fallback
+  p Le variabili CSS offrono flessibilità e controllo sugli stili, ma è importante considerare la compatibilità con i browser, soprattutto quando si lavora su progetti che devono supportare versioni più datate o browser con supporto limitato. Fortunatamente, oggi la maggior parte dei browser moderni supporta le variabili CSS, ma esistono ancora situazioni in cui è necessario implementare soluzioni di fallback per garantire la coerenza dello stile.
+  h3 Supporto dei browser per le variabili CSS
+  ul
+    li Chrome (dalla versione 49)
+    li Firefox (dalla versione 31)
+    li Safari (dalla versione 9.1)
+    li Edge (dalla versione 15)
+    li Opera (dalla versione 36)
+  p Alcune versioni di Internet Explorer non supportano le variabili CSS, e quindi richiedono un fallback se è necessario garantire compatibilità con questi ambienti.
+  h4 Fallback per browser non supportati (come IE)
+  p Per browser come Internet Explorer che non supportano le variabili CSS, è possibile utilizzare CSS tradizionale come fallback. Il trucco consiste nel dichiarare prima le proprietà con valori fissi e successivamente ridefinirle usando le variabili CSS, in modo che i browser che supportano le variabili applichino i nuovi valori e ignorino i precedenti.
+
+section
+  h2 Conclusione
+  p Le variabili CSS rappresentano un notevole passo avanti nella scrittura di CSS più efficiente, flessibile e modulare. Grazie alla loro capacità di gestire valori dinamici e di semplificare la gestione di stili complessi, le variabili CSS si sono affermate come un potente strumento per gli sviluppatori moderni. Integrando le variabili all'interno dei propri progetti, è possibile migliorare la coerenza del design, facilitare il mantenimento e rendere il codice più leggibile e gestibile.
+  p Abbiamo visto come definire e utilizzare le variabili CSS, come funziona l'ereditarietà e la specificità, e come manipolare dinamicamente le variabili per creare effetti interattivi. Abbiamo anche esplorato le best practices per una gestione ordinata del codice e alcune soluzioni di fallback per garantire la compatibilità anche sui browser meno recenti.
+  p In conclusione, l'adozione delle variabili CSS nei progetti è una scelta che migliora l'efficienza, riduce la possibilità di errori e permette di aggiornare gli stili con facilità. Continuando a esplorare le potenzialità di queste variabili e mantenendo un approccio organizzato, i progetti CSS possono essere più moderni, accessibili e sostenibili nel lungo termine.
+  p Le variabili CSS sono destinate a rimanere una parte fondamentale del CSS e con l'evoluzione continua del web, è probabile che in futuro si arricchiranno di funzionalità sempre più avanzate. Spero che questa guida ti abbia fornito le basi per sfruttarle al meglio nei tuoi progetti!

@@ -1,7 +1,7 @@
 article {
   counter-reset: step;
   margin: var(--view-padding) 0;
-  width: 80%;
+  width: 70%;
   border-right: 1px dashed var(--lighter-gray);
 }
 article > section {
@@ -141,6 +141,10 @@ article aside.links h2::before {
   content: none;
 }
 
+.post #sideside {
+  width: 30% !important;
+}
+
 @media screen and (max-width: 1440px) {
   article .intro img {
     width: 80px;
@@ -174,5 +178,8 @@ article aside.links h2::before {
   article .intro img {
     width: 60px;
     bottom: -60px;
+  }
+  .post #sideside {
+    width: 100% !important;
   }
 }

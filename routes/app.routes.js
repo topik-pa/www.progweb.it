@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/css-variabili-sintassi-esempi', (req, res) => {
+    const title = 'Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!'
+    const description = 'Introduzione alle variabili CSS con spiegazione della sintassi, esempi e casi d\'uso. Rendi più pulito ed efficiente il tuo codice CSS.'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/012-css-variabili-sintassi-esempi/css-variabili-sintassi-esempi',
+      {
+        id: 'css-variabili-sintassi-esempi',
+        serial: '012',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/javascript-promise-definizione-sintassi-esempi', (req, res) => {
     const title = 'JavaScript Promise: impara a gestire efficacemente gli eventi asincroni!'
     const description = 'Definizione, sintassi ed esempi concreti su come sfruttare le Promise JavaScript. Quando utilizzare le Promise, uso di async/await, gestione degli errori e introduzione al nuovo metodo "Promise.withResolvers"'
