@@ -1,0 +1,74 @@
+aside(id="sidearticle")
+
+  include ../share-mini/share-mini.pug
+
+  div(class="submenu fb-exclusive")
+    h3 Esclusiva Facebook
+    p L'ultimo post pubblicato sulla mia pagina Facebook!
+    div
+      div.fb-post(data-href='https://www.facebook.com/permalink.php?story_fbid=pfbid029s55YosL19DyLKyH6HPLwbzKcig4uELAP93LwfTEfeCpYwvFdzjx8vcCNPusSBzHl&id=100086483013646' data-width='350' data-show-text='true')
+        blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/permalink.php?story_fbid=548085218084241&id=100086483013646')
+          p
+            | Cosa fa scroll-behavior: smooth?
+            | Imposta uno scrolling fluido per l&apos;intera pagina HTML!
+            | Il valore smooth applicato alla...
+          | Pubblicato da 
+          a(href='https://www.facebook.com/people/PWI-Programmazione-Web-Italia/100086483013646/') PWI - Programmazione Web Italia
+          |  su&nbsp;
+          a(href='https://www.facebook.com/permalink.php?story_fbid=548085218084241&id=100086483013646') Venerd&igrave; 8 novembre 2024
+
+
+  div(class="submenu services")
+    h3 I nostri servizi 
+    ul 
+      li 
+        a(href="/from-idea-to-prototype", title="Dalla Idea al Prototipo") Idea &gt; Prototipo: sviluppo di prodotti innovativi ad alto contenuto tecnologico
+          img(width="1200", height="630", src="/assets/images/landing/from-idea-to-prototype/from-idea-to-prototype-og-image-it.webp", alt="Da zero a prototipo: progettazione, sviluppo e gestione di un prodotto.")
+      li 
+        a(href="/web-seo", title="Web SEO") Fai decollare la tua SEO
+          img(width="1200", height="630", src="/assets/images/landing/web-seo/web-seo-og-image-it.webp", alt="Migliora la tua visibilità aumentando il ranking SEO del tuo sito o portale Web")
+      li 
+        a(href="/web-accessibility", title="Accessibilità Web") Fai crescere il tuo Business con un sito Web accessibile a tutti
+          img(loading="lazy", width="1200", height="630", src="/assets/images/landing/web-accessibility/web-accessibility-og-image-it.webp", alt="Non lasciare NESSUNO INDIETRO: rendi ACCESSIBILE il tuo sito!")
+      li 
+        a(href="/responsive-web-design", title="Responsive Web Design") Non farmi zoomare! Motivi pratici per avere un sito Web RESPONSIVE
+          img(loading="lazy", width="1200", height="630", src="/assets/images/landing/responsive-web-design/responsive-web-design-og-image-it.webp", alt="Rendi il tuo progetto MOBILE FRIENDLY!")
+      li 
+        a(href="/web-sustainability", title="Sostenibilità Web") Il tuo sito è sostenibile? Verifica l'impronta ecologia del tuo progetto web!
+          img(loading="lazy", width="1200", height="630", src="/assets/images/landing/web-sustainability/web-sustainability-og-image-it.webp", alt="Verifica l'impronta ecologia del tuo progetto web")
+
+  div(class="submenu topic")
+    h3 Topic 
+    ul 
+      li(class="sec") #[a(href="/security", title="Cybersecurity") Cybersecurity(#{posts.getPostCountByTopic('sec')})]
+      li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
+      li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
+      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
+      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
+      li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]
+
+  div(class="submenu others")
+    h3 Articoli pubblicati di recente
+    ul 
+      li 
+        a(href="/javascript-promise-definizione-sintassi-esempi", title="JavaScript Promise: impara a gestire eventi asincroni!") JavaScript Promise: impara a gestire eventi asincroni! (con aggiornamento al metodo "Promise.withResolvers")
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/011-javascript-promise-definizione-sintassi-esempi/javascript-promise-definizione-sintassi-esempi-m.webp", alt="JavaScript Promise: impara a gestire eventi asincroni!")
+      li 
+        a(href="/javascript-generator-definizione-esempi", title="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!") Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/010-javascript-generator-definizione-esempi/javascript-generator-definizione-esempi-m.webp", alt="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!")
+      li 
+        a(href="/security-by-design-principi", title="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web") La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp", alt="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web")
+      li 
+        a(href="/curriculum-efficace-esempio-developer", title="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer") Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp", alt="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer")
+      li 
+        a(href="/programmazione-strutturata-oggetti-funzionale", title="I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale") I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/006-programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale-m.webp", alt="I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale")   
+      li 
+        a(href="/javascript-html-tabella-dinamica", title="Tabella dinamica in HTML, Javascript e CSS") Tabella dinamica in HTML, Javascript e CSS
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-m.webp", alt="Tabella dinamica in HTML, Javascript e CSS")     
+      li 
+        a(href="/css-selettore-has-esempi", title="Il selettore :has() in CSS - descrizione ed esempi pratici") Il selettore :has() in CSS - descrizione ed esempi pratici
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/004-css-selettore-has/css-selettore-has-m.webp", alt="Il selettore :has() in CSS - descrizione ed esempi pratici")                          
+      

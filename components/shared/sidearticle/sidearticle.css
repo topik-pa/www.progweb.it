@@ -1,0 +1,44 @@
+#sidearticle {
+  padding: var(--view-padding);
+  margin: var(--view-padding) 0;
+  width: 20%!important;
+  padding-left: var(--view-padding);
+  border-right: none!important;
+}
+#sidearticle .submenu img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--light-gray);
+  box-sizing: border-box;
+}
+#sidearticle .interview h3::before {
+  content: ' ';
+  display: block;
+  height: 3.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/assets/images/pwi-st-min.png');
+  width: 3.5rem;
+  margin: 0 auto;
+}
+#sidearticle .interview figure {
+  text-align: center;
+  margin-top: var(--large-space);
+}
+#sidearticle .interview audio {
+  width: 100%;
+  max-width: 270px;
+}
+
+#sidearticle .fb-exclusive {
+  text-align: center;
+}
+#sidearticle .fb-exclusive > div{
+  overflow-x: auto;
+}
+@media screen and (max-width: 768px) {
+  #sidearticle {
+    width: 100%!important;
+    padding: 0;
+  }
+}
