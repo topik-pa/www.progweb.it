@@ -2,7 +2,7 @@ extends layout.pug
 
 block append meta
   title #{title} | #{proj_name}
-  meta(name="description" content=proj_acronim + " - " + proj_name + " - " + proj_tagline)
+  meta(name="description" content=proj_name + " - " + proj_tagline)
   meta(name="keywords" content="html, css, javascript, programmazione, sviluppo, web, italia")
   link(rel="canonical", href=proj_url)
 
@@ -11,7 +11,7 @@ block append meta
   meta(name="og:title" content=proj_name)
   meta(name="og:site_name" content="PWI - Programmazione Web Italia")
   meta(name="og:description" content="Codice, metodologie e idee dal mondo dello Sviluppo Web")
-  meta(name="og:image" content=proj_url + "/assets/images/pwi-cover-1.webp")
+  meta(name="og:image" content=proj_url + "/assets/images/cover-image.webp")
 
 block main
   main
