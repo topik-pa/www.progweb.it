@@ -1,6 +1,6 @@
 .preview {
-  margin-bottom: var(--xx-large-space) 0;
-  padding: var(--large-space) 0;
+  margin-bottom: var(--xx-large-space);
+  padding-bottom: var(--xx-large-space);
   overflow: auto;
 }
 .preview img {

@@ -5,6 +5,10 @@
   padding-left: var(--view-padding);
   border-right: none!important;
 }
+#sidearticle .submenu {
+  margin-bottom: var(--xx-large-space);
+  padding-bottom: var(--large-space);
+}
 #sidearticle .submenu img {
   width: 100%;
   height: auto;

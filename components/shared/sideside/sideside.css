@@ -5,6 +5,12 @@
   padding-left: var(--view-padding);
   border-right: none!important;
 }
+
+#sideside .submenu {
+  margin-bottom: var(--xx-large-space);
+  padding-bottom: var(--large-space);
+}
+
 #sideside .submenu img {
   width: 100%;
   height: auto;

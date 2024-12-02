@@ -7,6 +7,7 @@
 
 #side .submenu {
   margin-bottom: var(--xx-large-space);
+  padding-bottom: var(--large-space);
 }
 #side .submenu img {
   width: 100%;
@@ -14,8 +15,9 @@
   border: 1px solid var(--light-gray);
   box-sizing: border-box;
 }
-#side .submenu div {
+#side .submenu > div {
   margin-bottom: var(--xx-large-space);
+  padding-bottom: var(--small-space);
 }
 
 #side .mediawrapper {

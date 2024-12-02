@@ -13,7 +13,7 @@
   list-style: none;
   margin-bottom: var(--large-space);
 }
-.submenu.services li {
+.submenu.services li, .submenu.others li {
   text-align: center;
   margin-bottom: var(--xx-large-space);
 }
