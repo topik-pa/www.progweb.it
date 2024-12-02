@@ -1,6 +1,8 @@
 aside(id="fb-page-wrap")
   div(class="fb-page" data-href="https://www.facebook.com/profile.php?id=100086483013646" data-tabs="" data-width="240" data-height="" data-lazy="true" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
-  p Gli #[em aggiornamenti più recenti] sono pubblicati sulla <br>#[a(class="ext" title="Pagina Facebook di PWI" href=socials[0].url) pagina Facebook di PWI!]<br><br>Seguimi anche attraverso i miei Social
+  p Gli #[em aggiornamenti più recenti] sono pubblicati sulla <br>#[a(class="ext" title="Pagina Facebook di PWI" href=socials[0].url) pagina Facebook di PWI!]
+  div(class="fb-like" data-href=(proj_url + url) data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true")
+  <br><br>Seguimi sulle mie piattaforme Social<br><br>
   div(class="socials") 
     each social in socials
       a(href=social.url, title=social.name)
