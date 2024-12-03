@@ -25,6 +25,7 @@
   font-weight: 500;
   font-style: italic;
   text-transform: none;
+  margin-top: var(--xx-small-space);
 }
 
 #main-logo .col {
@@ -75,7 +76,7 @@
   right: 0;
 }
 
-#main-logo span.mob {
+#main-logo .mob {
   display: none;
 }
 
@@ -111,10 +112,10 @@
   #main-logo {
     font-size: var(--font-size-biggest);
   }
-  #main-logo span.mob {
+  #main-logo .mob {
     display: inline;
   }
-  #main-logo span.desk {
+  #main-logo .desk {
     display: none;
   }
   #main-logo .col {

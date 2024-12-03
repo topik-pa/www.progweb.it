@@ -16,7 +16,7 @@ header > div:nth-child(2) {
 header >div:nth-child(3) {
   border-bottom: 2px solid var(--primary);
   justify-content: flex-start;
-  height: calc(var(--view-padding) * 2);
+  height: calc(var(--view-padding) * 2.4);
 }
 header > div:nth-child(3) img { 
   display: none;
