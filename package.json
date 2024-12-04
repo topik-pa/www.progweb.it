@@ -1,7 +1,7 @@
 {
   "name": "PWI",
   "version": "1.0.0",
-  "description": "PWI - Programmazione Web Italia",
+  "description": "Programmazione Web Italia",
   "main": "index.js",
   "engines": {
     "node": "20.x"
