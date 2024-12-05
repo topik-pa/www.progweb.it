@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/html-attributo-loading-lazy-load', (req, res) => {
+    const title = 'Attributo "loading" in HTML5: migliora performance e UX con il lazy load nativo!'
+    const description = 'Ottimizza il caricamento delle risorse e l\'esperienza utente direttamente in HTML. Vantaggi, esempi, best practice e compatibilità con i browser più diffusi dell\'attributo "loading" in HTML5'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/013-html-attributo-loading-lazy-load/html-attributo-loading-lazy-load',
+      {
+        id: 'html-attributo-loading-lazy-load',
+        serial: '013',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/css-variabili-sintassi-esempi', (req, res) => {
     const title = 'Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!'
     const description = 'Introduzione alle variabili CSS con spiegazione della sintassi, esempi e casi d\'uso. Rendi più pulito ed efficiente il tuo codice CSS.'
