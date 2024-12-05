@@ -1,5 +1,11 @@
 const data = [
   {
+    id: '013-html-attributo-loading-lazy-load',
+    topic: 'html',
+    year: 2024,
+    month: 12
+  },
+  {
     id: '012-css-variabili-sintassi-esempi',
     topic: 'css',
     year: 2024,

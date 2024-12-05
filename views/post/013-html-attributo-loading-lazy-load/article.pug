@@ -1,0 +1,83 @@
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    picture 
+      source(media="(max-width: 414px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-s.webp")
+      source(media="(max-width: 768px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      source(media="(max-width: 1024px)", srcset="/assets/images/post/" + serial + "-" + id + "/" + id + "-m.webp")
+      img(fetchpriority="high"  class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title)
+    p(class="intro") Migliorare le prestazioni e il caricamento delle pagine web in maniera nativa senza ricorrere a soluzioni di terze parti ora è più semplice che mai. Impara ad utilizzare l'attributo "loading" di HTML5 per le immagini e gli iframe! #[img(src="assets/images/marisa-talk.webp", alt="Marisa dice...", width="100", height="100")]
+
+
+section
+  h2 Introduzione
+  h3 Breve descrizione dell'attributo "loading"
+  p L'attributo #[code loading] in HTML5 è stato introdotto #[em per migliorare l'efficienza del caricamento delle pagine web]. Questo attributo, applicabile alle immagini (&lt;img&gt;) e agli iframe (&lt;iframe&gt;), consente agli sviluppatori di specificare come e quando questi elementi devono essere caricati rispetto alla visualizzazione del contenuto da parte dell'utente (per esempio: se l'immagine non è ancora visibile perchè ancora below-the-fold). La sua funzione principale è ottimizzare l'utilizzo delle risorse, ritardando il caricamento degli elementi non essenziali fino a quando non diventano visibili nel viewport a seguito dell'attività di scrolling dell'utente. In questo modo, si riducono i tempi di caricamento iniziali della pagina, migliorando sia l'esperienza utente (UX) sia il posizionamento nei motori di ricerca, che premiano le pagine con prestazioni elevate.
+  h3 Perché è importante per il caricamento delle immagini e degli iframe
+  p Il caricamento delle immagini e degli iframe può avere un impatto significativo sulle prestazioni di una pagina web. Elementi visivi di grandi dimensioni o contenuti esterni, come quelli incorporati tramite iframe, possono rallentare il tempo necessario per rendere la pagina visibile e interattiva agli utenti. Con l'attributo loading, #[em è possibile differire il caricamento di questi elementi] fino a quando non sono effettivamente necessari, riducendo il carico iniziale sul browser e #[em migliorando il tempo di caricamento] percepito. Questo approccio è particolarmente utile per le pagine con molte immagini o contenuti embed, poiché consente di ottimizzare la distribuzione delle risorse e di migliorare l'esperienza di navigazione, specialmente per gli utenti con connessioni lente o dispositivi meno potenti.
+  h3 Focus sull'ottimizzazione delle performance delle pagine web
+  p L'attributo loading rappresenta una soluzione semplice ma efficace per ottimizzare le performance delle pagine web. Utilizzandolo correttamente, #[em si può ridurre il tempo di caricamento complessivo e migliorare i cosiddetti Core Web Vitals], metriche chiave utilizzate dai motori di ricerca, come Google, per valutare la qualità dell'esperienza utente. Il caricamento differito degli elementi non essenziali consente al browser di concentrare le risorse sulle parti critiche della pagina, come il contenuto above-the-fold (già visibili all'utente), garantendo una navigazione più fluida e reattiva. Questo approccio non solo #[em aumenta la soddisfazione degli utenti], ma ha anche #[em un impatto diretto sul ranking SEO], rendendo le pagine più competitive nei risultati di ricerca. Inoltre, l'ottimizzazione delle performance è essenziale in un contesto in cui i dispositivi mobili e le connessioni variabili rappresentano una quota sempre più significativa del traffico web.
+section
+  h2 Cosa fa l'attributo loading
+  p l'attributo loading è applicabile ad elementi quali immagini (&lt;img&gt;) e iframe (&lt;iframe&gt;) e #[em supporta due valori principali]:
+  ul
+    li #[code lazy] - posticipa il caricamento dell'elemento fino a quando non è prossimo ad entrare nel viewport. Questo comportamento è ideale per immagini o contenuti iframe non immediatamente visibili, come elementi che si trovano più in basso nella pagina.
+      div(class="code")
+        h3 Utilizzo dell'attributo loading con valore "lazy"
+        code
+          pre 
+          pre &lt;img src="immagine.jpg" loading="lazy" alt="Immagine da caricare in modalità lazy"&gt;
+          pre 
+    li #[code eager] - indica che l'elemento deve essere caricato immediatamente, indipendentemente dalla sua posizione nel viewport. Questo valore è utile per contenuti critici, come immagini di intestazione o elementi che devono essere subito disponibili
+      div(class="code")
+        h3 Utilizzo dell'attributo loading con valore "eager"
+        code
+          pre 
+          pre &lt;img src="immagine.jpg" loading="lazy" alt="Immagine da caricare in modalità eager"&gt;
+          pre 
+  p Se l'attributo loading non è specificato, #[em il browser decide autonomamente] il comportamento di caricamento. Generalmente, la scelta ricade su un comportamento simile a eager, ma questo può variare in base al browser.
+
+section
+  h2 Best practice riguardo il lazy loading e la UX
+  p L'attributo loading è uno strumento potente per migliorare le performance delle pagine web, ma il suo utilizzo richiede attenzione per ottenere risultati ottimali senza compromettere l'esperienza utente. Ecco alcune best practice da seguire.
+  ul
+    li #[em Usa loading="lazy" per contenuti non critici] - Le immagini o gli iframe che si trovano fuori dal viewport iniziale dovrebbero essere caricati in modalità differita. Ad esempio, immagini di articoli in fondo alla pagina o mappe incorporate visibili solo dopo uno scroll. Questo riduce il carico iniziale sul browser e migliora i tempi di caricamento percepiti dagli utenti.
+    li #[em Evita lazy per contenuti critici] - Gli elementi essenziali per la struttura e la comprensione immediata della pagina, come il logo, le immagini di copertina (hero images) o le immagini vicine al fold, devono essere caricati con loading="eager" o senza l'attributo (default).Questo assicura che gli utenti vedano i contenuti chiave senza ritardi
+    li #[em Considera le dimensioni delle immagini] - Se un'immagine è troppo grande e si trova nella parte superiore della pagina, caricarla immediatamente può rallentare il rendering. In questi casi, valuta di ottimizzare l'immagine (ad esempio con tecniche di compressione o utilizzo di formati moderni come WebP).
+    li #[em Usa immagini responsive] - Associa l'attributo loading a tecniche di immagini responsive con gli attributi srcset e sizes, così da garantire il caricamento delle versioni più appropriate per il dispositivo.
+      div(class="code")
+        h3 Utilizzo di immagini responsive in combinazione con il lazy load
+        code
+          pre 
+          pre &lt;img 
+          pre   src="immagine-piccola.jpg" 
+          pre   srcset="immagine-media.jpg 768w, immagine-grande.jpg 1200w" 
+          pre   sizes="(max-width: 768px) 100vw, 50vw" 
+          pre   loading="lazy" 
+          pre   alt="Immagine ottimizzata"&gt;
+          pre           
+    li #[em Testa la compatibilità con i browser] - Non tutti i browser supportano l'attributo loading. Sebbene i browser moderni offrano un buon supporto, è importante testare il comportamento in quelli meno recenti. Per i browser che non supportano loading, considera una delle molte soluzioni di terze parti basate su JavaScript.
+    li #[em Bilancia performance e UX] - Sebbene loading="lazy" migliori le performance, non abusarne: caricare troppe immagini in modalità lazy può causare ritardi visibili agli utenti quando scorrono rapidamente la pagina. Testa sempre il comportamento della tua pagina su dispositivi reali.
+    li #[em Usa strumenti di analisi] - Dopo aver implementato loading, utilizza strumenti come Google Lighthouse, PageSpeed Insights o WebPageTest per verificare il miglioramento delle prestazioni. Controlla anche i Core Web Vitals per assicurarti che i tempi di caricamento e la stabilità visiva siano ottimali.
+
+section
+  h2 Compatibilità tra browser
+  ul 
+    li Google Chrome &ge; 76
+    li Microsoft Edge &ge; 79
+    li Safari (macOS/iOS) &ge; 16
+    li Firefox &ge; 75 
+    li Opera &ge; 64
+    li Internet Explorer - Non supportato
+  p Internet Explorer, essendo un browser obsoleto, non supporta questa funzionalità. Per compatibilità con utenti che ancora lo utilizzano, valuta di gestire il lazy loading con librerie esterne o script personalizzati.
+
+aside(class="links")
+  h2 Link esterni 
+  ul 
+    li 
+      a(class="ext", href="https://web.dev/articles/browser-level-image-lazy-loading?hl=it", target="_blanck") Caricamento lento delle immagini a livello di browser per il Web
+    li 
+      a(class="ext", href="https://developer.chrome.com/docs/lighthouse/overview?hl=it", target="_blanck") Utilizza Lighthouse per testare e ottimizzare il caricamento delle risorse nella tua pagina. Puoi identificare opportunità per implementare il lazy loading e misurare i suoi effetti sulle prestazioni.
+    li 
+      a(class="ext", href="https://caniuse.com/?search=loading", target="_blanck") Controlla quali browser supportano l'attributo loading e scopri alternative per i browser non compatibili.
+    
