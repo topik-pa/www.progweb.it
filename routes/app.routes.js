@@ -288,7 +288,7 @@ module.exports = (app, nonce) => {
   })
   // Specific
   app.get('/html-attributo-loading-lazy-load', (req, res) => {
-    const title = 'Attributo "loading" in HTML5: migliora performance e UX con il lazy load nativo!'
+    const title = 'Attributo "loading" in HTML5 - Migliora performance e UX con il lazy load nativo!'
     const description = 'Ottimizza il caricamento delle risorse e l\'esperienza utente direttamente in HTML. Vantaggi, esempi, best practice e compatibilità con i browser più diffusi dell\'attributo "loading" in HTML5'
     const breadcrumbs = [
       {

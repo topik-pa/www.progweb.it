@@ -10,6 +10,7 @@
   let email = 'info@progweb.it'
   let owner_email = 'marco@progweb.it'
   let logo = 'https://progweb.it/assets/images/logo.png'
+  let fbAppId = 1097920821592177
   let sc_project = 12922368
   let sc_security = '40e93898'
   let lang = locale
@@ -64,6 +65,8 @@ html(lang=lang)
     else
       script(src='/scripts/index.js', type='module')
     if prod
+      div(id="fb-root")
+      script(async, defer, crossorigin="anonymous", src=("https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v21.0&appId=" + fbAppId))
       script(nonce=nonce).
         var sc_project = #{sc_project};
          var sc_invisible = 1;
