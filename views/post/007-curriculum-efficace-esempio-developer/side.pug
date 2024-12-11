@@ -1,6 +1,6 @@
-aside(id="sidearticle")
+aside(id="sideside")
 
-  include ../share-mini/share-mini.pug
+  include ../../../components/shared/share-mini/share-mini.pug
 
   div(class="submenu fb-exclusive")
     h3 Esclusiva Facebook
@@ -15,6 +15,17 @@ aside(id="sidearticle")
           a(href='https://www.facebook.com/people/Programmazione-Web-Italia/100086483013646/') Programmazione Web Italia
           |  su&nbsp;
           a(href='https://www.facebook.com/permalink.php?story_fbid=565583853001044&id=100086483013646') Marted&igrave; 3 dicembre 2024
+
+
+  div(class="submenu topic")
+    h3 Topic 
+    ul 
+      li(class="sec") #[a(href="/security", title="Cybersecurity") Cybersecurity(#{posts.getPostCountByTopic('sec')})]
+      li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
+      li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
+      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
+      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
+      li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]  
 
   div(class="submenu services")
     h3 Al tuo servizio
@@ -35,15 +46,6 @@ aside(id="sidearticle")
         a(href="/web-sustainability", title="Sostenibilità Web") Il tuo sito è sostenibile? Verifica l'impronta ecologia del tuo progetto web!
           img(loading="lazy", width="1200", height="630", src="/assets/images/landing/web-sustainability/web-sustainability-og-image-it.webp", alt="Verifica l'impronta ecologia del tuo progetto web")
 
-  div(class="submenu topic")
-    h3 Topic 
-    ul 
-      li(class="sec") #[a(href="/security", title="Cybersecurity") Cybersecurity(#{posts.getPostCountByTopic('sec')})]
-      li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
-      li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
-      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
-      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
-      li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]
 
   div(class="submenu others")
     h3 Articoli pubblicati di recente
@@ -59,17 +61,35 @@ aside(id="sidearticle")
           img(loading="lazy", width="768", height="403", src="/assets/images/post/010-javascript-generator-definizione-esempi/javascript-generator-definizione-esempi-m.webp", alt="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!")
       li 
         a(href="/security-by-design-principi", title="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web") La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web
-          img(loading="lazy", width="768", height="403", src="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp", alt="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web")
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp", alt="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web")             
+
+  div(class="submenu coding")
+    h3 Esempi di codice 
+    ul 
       li 
-        a(href="/curriculum-efficace-esempio-developer", title="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer") Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer
-          img(loading="lazy", width="768", height="403", src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp", alt="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer")
+        a(href="/javascript-html-tabella-dinamica", title="Tabella dinamica in HTML+JS") Tabella dinamica in HTML + JS
+          picture 
+            source(media="(max-width: 768px)", srcset="/assets/images/dynamic-table-m.webp")
+            img(loading="lazy" width="512" height="257" src="/assets/images/dynamic-table-s.webp", alt="Un esempio di tabella dinamica")
+        p Una tabella dinamica in HTML, JavaScript e CSS - codice, esempi e spiegazione.
+
+  div(class="submenu socials")
+    h3 Social 
+    p I nostri Canali Social
+    ul 
+      each social in socials
+        li
+          a(href=social.url, title=social.name) #[i(class=social.icon)] #{social.name}
+            
+    p #[em Contatta PWI] per commentare o suggerire come migliorare i contenuti
+    ul
       li 
-        a(href="/programmazione-strutturata-oggetti-funzionale", title="I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale") I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale
-          img(loading="lazy", width="768", height="403", src="/assets/images/post/006-programmazione-strutturata-oggetti-funzionale/programmazione-strutturata-oggetti-funzionale-m.webp", alt="I tre paradigmi di programmazione: strutturata, ad oggetti e funzionale")   
-      li 
-        a(href="/javascript-html-tabella-dinamica", title="Tabella dinamica in HTML, Javascript e CSS") Tabella dinamica in HTML, Javascript e CSS
-          img(loading="lazy", width="768", height="403", src="/assets/images/post/005-javascript-html-tabella-dinamica/javascript-html-tabella-dinamica-m.webp", alt="Tabella dinamica in HTML, Javascript e CSS")     
-      li 
-        a(href="/css-selettore-has-esempi", title="Il selettore :has() in CSS - descrizione ed esempi pratici") Il selettore :has() in CSS - descrizione ed esempi pratici
-          img(loading="lazy", width="768", height="403", src="/assets/images/post/004-css-selettore-has/css-selettore-has-m.webp", alt="Il selettore :has() in CSS - descrizione ed esempi pratici")                          
-      
+        a(href="mailto:info@progweb.it", title="Mail") #[i(class="icon-envelop")] info@progweb.it
+
+  div(class="submenu others") 
+      h3 Altri progetti 
+      div(class="other")
+        h4 tradingradar.net
+        p #[em Trova ora le Azioni più interessanti della Borsa Italiana]. Scopri in tempo reale quali titoli azionari stanno generando segnali cruciali secondo i principi dell' Analisi Tecnica.
+        a(href="https://tradingradar.net", title="tradingradar.net") 
+          img(loading="lazy" width="768" height="142" src="/assets/images/tr-logo-min.png", alt="tradingradar.net")

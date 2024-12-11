@@ -1,7 +1,7 @@
 article {
   counter-reset: step;
   margin: var(--view-padding) 0;
-  width: 80%;
+  width: 70%;
   border-right: 1px dashed var(--lighter-gray);
 }
 article > section {

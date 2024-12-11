@@ -1,6 +1,6 @@
 aside(id="sideside")
 
-  include ../share-mini/share-mini.pug
+  include ../../../components/shared/share-mini/share-mini.pug
 
   div(class="submenu fb-exclusive")
     h3 Esclusiva Facebook
@@ -16,13 +16,6 @@ aside(id="sideside")
           |  su&nbsp;
           a(href='https://www.facebook.com/permalink.php?story_fbid=565583853001044&id=100086483013646') Marted&igrave; 3 dicembre 2024
 
-
-  //- div(class="submenu interview")
-  //-   h3 Story Time intervista PWI
-  //-   p Le motivazioni, le caratteristiche e le modalità che hanno portato alla creazione di questo portale.
-  //-   figure
-  //-     figcaption Ascolta l'intervista di CANALE ITALIA
-  //-     audio(controls, preload="none", src="/assets/audio/MARCO-PAVAN_PROGRAMMAZIONE-WEB-ITALIA.mp3")
 
   div(class="submenu topic")
     h3 Topic 
@@ -52,6 +45,23 @@ aside(id="sideside")
       li 
         a(href="/web-sustainability", title="Sostenibilità Web") Il tuo sito è sostenibile? Verifica l'impronta ecologia del tuo progetto web!
           img(loading="lazy", width="1200", height="630", src="/assets/images/landing/web-sustainability/web-sustainability-og-image-it.webp", alt="Verifica l'impronta ecologia del tuo progetto web")
+
+
+  div(class="submenu others")
+    h3 Articoli pubblicati di recente
+    ul 
+      li 
+        a(href="/css-variabili-sintassi-esempi", title="Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!") Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/012-css-variabili-sintassi-esempi/css-variabili-sintassi-esempi-m.webp", alt="Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!")
+      li 
+        a(href="/javascript-promise-definizione-sintassi-esempi", title="JavaScript Promise: impara a gestire eventi asincroni!") JavaScript Promise: impara a gestire eventi asincroni! (con aggiornamento al metodo "Promise.withResolvers")
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/011-javascript-promise-definizione-sintassi-esempi/javascript-promise-definizione-sintassi-esempi-m.webp", alt="JavaScript Promise: impara a gestire eventi asincroni!")
+      li 
+        a(href="/javascript-generator-definizione-esempi", title="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!") Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/010-javascript-generator-definizione-esempi/javascript-generator-definizione-esempi-m.webp", alt="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!")
+      li 
+        a(href="/security-by-design-principi", title="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web") La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp", alt="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web")             
 
   div(class="submenu coding")
     h3 Esempi di codice 

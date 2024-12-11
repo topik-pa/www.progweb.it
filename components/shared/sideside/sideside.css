@@ -42,6 +42,9 @@
 #sideside .fb-exclusive > div{
   overflow-x: auto;
 }
+.post #sideside {
+  width: 30%!important;
+}
 @media screen and (max-width: 768px) {
   #sideside {
     width: 100%!important;
