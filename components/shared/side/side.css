@@ -1,7 +1,7 @@
 #side {
   padding: var(--view-padding);
   margin: var(--view-padding) 0;
-  width: 20%!important;
+  width: 30%!important;
   padding-left: var(--view-padding);
 }
 
@@ -25,6 +25,10 @@
 }
 #side .mediawrapper video {
   width: 100%;
+}
+
+#side .fb-post {
+  overflow-x: scroll;
 }
 
 @media screen and (max-width: 768px) {

@@ -108,7 +108,7 @@ code {
   width: 80%;
   border-right: 1px dashed var(--lighter-gray);
 }
-.tworows .sideside, .tworows .side {
+.tworows .side {
   width: 20%;
   border-right: none;
 }

@@ -253,7 +253,7 @@ module.exports = (app, nonce) => {
         name: 'Analisi'
       }
     ]
-    res.render('graphs/graphs', { id: 'analisys', title: 'Analisi', url: req.url, breadcrumbs, nonce })
+    res.render('graphs/graphs', { id: 'analisys', title: 'Analisi', url: req.url, breadcrumbs, posts, nonce })
   })
   // ANALISYS
   app.get('/analisi/confronto-portali-ecommerce-moda-italiani', (req, res) => {

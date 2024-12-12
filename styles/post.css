@@ -175,7 +175,4 @@ article aside.links h2::before {
     width: 60px;
     bottom: -60px;
   }
-  .post #sideside {
-    width: 100% !important;
-  }
 }
