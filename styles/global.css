@@ -29,7 +29,7 @@ main {
   line-height: 130%;
 }
 main section {
-  padding: var(--view-padding);
+  padding-right: var(--view-padding);
   margin: var(--view-padding) 0;
 }
 
@@ -104,13 +104,9 @@ code {
   justify-content: space-between;
   align-items: flex-start;
 }
-.tworows section/*, .tworows article*/ {
-  width: 80%;
+.tworows section {
+  width: 70%;
   border-right: 1px dashed var(--lighter-gray);
-}
-.tworows .side {
-  width: 20%;
-  border-right: none;
 }
 
 

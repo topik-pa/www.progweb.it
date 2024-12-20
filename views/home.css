@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-#home main section, #home main aside {
-  width: 60%;
+#home main section {
+  width: 70%;
   border-right: 1px dashed var(--lighter-gray);
 }
 
