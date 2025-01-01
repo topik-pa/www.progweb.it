@@ -289,7 +289,7 @@ module.exports = (app, nonce) => {
   // Specific
   app.get('/progettazione-software-sviluppo-evoluzionistico', (req, res) => {
     const title = 'Sviluppo evoluzionistico - un approccio organico alla progettazione software'
-    const description = 'Sviluppare un software attraverso un apprioccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica.'
+    const description = 'Sviluppare un software attraverso un approccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica.'
     const breadcrumbs = [
       {
         name: 'Post',
