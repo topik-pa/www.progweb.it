@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/progettazione-software-sviluppo-evoluzionistico', (req, res) => {
+    const title = 'Sviluppo evoluzionistico - un approccio organico alla progettazione software'
+    const description = 'Sviluppare un software attraverso un apprioccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica.'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/014-progettazione-software-sviluppo-evoluzionistico/progettazione-software-sviluppo-evoluzionistico',
+      {
+        id: 'progettazione-software-sviluppo-evoluzionistico',
+        serial: '014',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/html-attributo-loading-lazy-load', (req, res) => {
     const title = 'Attributo "loading" in HTML5 - Migliora performance e UX con il lazy load nativo!'
     const description = 'Ottimizza il caricamento delle risorse e l\'esperienza utente direttamente in HTML. Vantaggi, esempi, best practice e compatibilità con i browser più diffusi dell\'attributo "loading" in HTML5'

@@ -105,6 +105,7 @@ article .img-wrapper {
 }
 article .img-wrapper img {
   max-width: 100%;
+  height: auto;
   margin: var(--large-space) 0;
 }
 

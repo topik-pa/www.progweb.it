@@ -118,6 +118,12 @@
 
 	<!--POST-->
 	<url>
+		<loc>https://www.progweb.it/progettazione-software-sviluppo-evoluzionistico</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
 		<loc>https://www.progweb.it/html-attributo-loading-lazy-load</loc>
 		<lastmod>2024-12-05T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
