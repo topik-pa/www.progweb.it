@@ -287,9 +287,23 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/software-development-evolutionary-approach/en', (req, res) => {
+    res.render('post/014-progettazione-software-sviluppo-evoluzionistico/software-development-evolutionary-approach',
+      {
+        id: 'progettazione-software-sviluppo-evoluzionistico',
+        serial: '014',
+        className: 'post',
+        title: 'Evolutionary development - an organic approach to software design',
+        description: 'Developing software through an approach similar to the one we see in Nature: a methodology that places the structure of the project, the relationships between its components and the requirements to be met at the forefront, developing them in an organic, cohesive and holistic manner',
+        url: req.url,
+        nonce,
+        posts,
+        locale: 'en'
+      })
+  })
   app.get('/progettazione-software-sviluppo-evoluzionistico', (req, res) => {
     const title = 'Sviluppo evoluzionistico - un approccio organico alla progettazione software'
-    const description = 'Sviluppare un software attraverso un approccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica.'
+    const description = 'Sviluppare un software attraverso un approccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica'
     const breadcrumbs = [
       {
         name: 'Post',

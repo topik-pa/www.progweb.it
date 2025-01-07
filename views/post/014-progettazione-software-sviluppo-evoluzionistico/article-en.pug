@@ -1,0 +1,93 @@
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    img(fetchpriority="high" class="cover" width="1200" height="630" srcw="/assets/images/post/" + serial + "-" + id + "/" + id + "-en.webp", alt=title, srcset='/assets/images/post/' + serial + '-' + id + '/' + id + '-en.webp' + ' 1200w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-m-en.webp' + ' 1024w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-s-en.webp' + ' 768w')
+
+    p(class="intro") Developing software through an approach similar to the one we see in Nature: a methodology that places the structure of the project, the relationships between its components and the requirements to be met at the forefront, developing them in an organic, cohesive and holistic manner. #[img(src="/assets/images/marco-talk.webp", alt="Marco dice...", width="100", height="100")]
+
+
+section
+  h2 Introduction
+  h3 Concept of ‘organic’ (or ‘evolutionary’) development
+  p Software development is often perceived as a technical and linear process; what if we considered it, instead, as something more natural and fluid? This idea gave rise to the concept of Organic Development, an approach inspired by the way living organisms grow and develop in Nature following a balanced and interdependent development between all their parts.
+  p Just as an organism cannot grow by concentrating on only one part at a time (an arm, a leg or a specific organ), a piece of software should also evolve harmoniously. All its parts, from the backend to the frontend, from the user interface to the API, must develop in synergy, maintaining a constant balance between functionality, usability and sustainability.
+  p Organic Development is proposed as a methodology that overcomes the limitations of traditional approaches, often focused on a single dimension of the project (such as adding functionality or meeting deadlines), and instead promotes holistic and progressive growth. The objective is to achieve a final product that not only meets initial requirements, but is also consistent, flexible and ready to adapt to the changes that will inevitably be required by stakeholders.
+  p In this article, we will explore the fundamentals of Organic Development, its advantages, its special characteristics, and explain how it can be implemented to foster the creation of software that grows naturally, just like a living organism.
+
+  h3 The development of a living organism
+  p A living organism grows in a balanced and coordinated manner: each cell, tissue and organ develops together with the others, following a complex but harmonious plan. No part of the body grows in isolation or to the detriment of the others, as this would compromise the functionality and overall health of the organism.
+  div(class="img-wrapper")
+    img(loading="lazy" src='/assets/images/post/' + serial + '-' + id + '/pianta.webp', alt='Lo sviluppo organico di una piantina' width="614" height="194")
+  p This principle can be applied to software. Imagine a software project as a living organism in which each component represents an ‘organ’ with a specific function. If one part of the software is developed disproportionately to the others, the entire system may be inefficient or difficult to maintain.
+  p For example, focusing efforts solely on frontend development without considering the needs of the backend and APIs can lead to performance, integration and scalability problems. In contrast, synchronised growth allows all parts to evolve together, ensuring that each component works perfectly in relation to the others. The same can be applied, on a smaller scale, to the parts that make up the frontend, the backend, etc. Even within these subsystems, the sub-components must be designed and developed harmoniously.
+  p The metaphor of the living organism also emphasises the importance of adaptability. Just as an organism responds to external stimuli, software must adapt to user feedback, new technologies and market changes. This dynamic and interconnected approach makes it possible to create a system that is flexible, robust and able to evolve over time without losing consistency.
+
+  h3 Importance of balanced and organic growth in the context of software development.
+  p In the context of software development, a balanced and organic growth is crucial to ensure that the final product is not only functional, but also adaptable to the frequent and inevitable changes that will be required in the future. When all parts of a system develop harmoniously, the risks of integration problems, technical debt and inefficiencies that often result from uneven evolution are reduced.
+  p Some benefits of a balanced approach to software development...
+  ul
+    li Improves system coherence: each component evolves in synergy with the others, maintaining a coherent design and well-integrated logic.
+    li Maintenance is easier: software is easier to update and improve when there are no overdeveloped or over-detailed sections compared to others.
+    li It is easier to adapt to changes: a balanced system can respond more easily to user feedback or new market needs without requiring radical revisions.
+  p In addition, organic growth promotes collaboration between the development, design and project management teams, as each group works in a coordinated manner to evolve the system as a single, cohesive whole. This approach not only improves the quality of the software, but also creates a more harmonious and productive working environment. Or at least it helps...
+
+
+section
+  h2 The problem of traditional development
+  p Traditional software development, often associated with methodologies such as the waterfall model or rigidly planned approaches, has several limitations that can hinder the achievement of a high-quality end product.
+  h3 Excessive focus on initial planning
+  p One of the main problems of traditional development (especially the aforementioned waterfall) is the dependence on detailed planning at the beginning of the project. This approach assumes that all requirements are clear and immutable from the outset, ignoring the dynamic nature of software projects. Changes in requirements or new discoveries during the development process can quickly render the initial planning obsolete, causing delays, additional costs and dissatisfaction.
+  h3 Lack of flexibility
+  p Traditional methodologies often lack the flexibility to adapt to changes. Excessive rigidity in processes and timing may prevent them from responding adequately to user feedback, changes in the market or technological innovations. This often leads to final products that do not fully meet expectations or require costly post-launch modifications.
+  h3 Uneven development of components
+  p A traditional approach tends to segment the work into isolated phases such as analysis, design, development and testing. This separation can lead to uneven growth of components, where some parts of the system are overdeveloped while others lag behind. The result is often an unbalanced product that is difficult to maintain.
+  h3 Limited focus on the end user
+  p In the traditional model, end-user involvement typically occurs only at the beginning (to gather requirements) and at the end (to release the product). This lack of continuous interaction can lead to products that do not truly reflect users' needs and expectations, reducing the value and effectiveness of the software.
+  p Organic Development addresses and solves many of the problems highlighted by traditional development, offering a more flexible, collaborative and harmonious growth-oriented approach. In the following sections, we will explore how this methodology can be implemented and its many advantages.
+
+
+section
+  h2 Principles of organic (or evolutionary) methodology
+  p The Organic Development methodology is based on a set of principles that guide the harmonious and progressive growth of software. These principles are inspired by Nature, promoting a holistic and adaptive approach.
+  h3 Incremental and iterative growth
+  p Just as living organisms grow gradually, software should also develop through small incremental steps. Each iteration adds value to the product, allowing progress to be constantly assessed and improvements to be made. At each cycle, a prototype is released with which the customer can already interact and use. The feedback obtained will be the necessary basis for understanding how well the project is responding to requirements and a fundamental indication for subsequent developments.
+  h3 Interdependence between components and adaptability to change
+  p All parts of the system must evolve in a coordinated manner. The backend, frontend, API and user interface cannot be developed in isolation; they must grow together to ensure smooth integration and complete functionality. Each module is independent, but contributes to the harmonious functioning of the system.
+  p Furthermore, Organic Development embraces change as a natural part of the process: user feedback, new market requirements or technological innovations are integrated into the development cycle, ensuring that the final product remains relevant and competitive.
+  h3 User-centred approach
+  p End users are actively involved throughout the development process. This makes it possible to create software that truly meets their needs, enhancing product satisfaction and value.
+  h3 Collaboration between teams
+  p Organic development promotes close collaboration between developers, designers, project managers and other stakeholders. This interdisciplinary approach ensures that every aspect of the project is considered and integrated in the best possible way.
+
+
+section
+  h2 How to implement this methodology
+  p Implementing the organic development methodology requires a change of mindset and approach from traditional practices. Here are the main steps to adopt it successfully.
+  h3  Initial light analysis
+  p Instead of spending months designing a complex system, it is important to start with a general understanding of the problem to be solved. Focus on the basic functionality needed to build a working prototype, leaving the more complex details for future iterations.
+  h3 Start with a minimum core (MVP)
+  p Start the project by developing a Minimum Viable Product (MVP), a product with the minimum set of functionalities that solve the main problem. The MVP represents the ‘seed’ from which the final product will grow. At this stage, the goal is to validate the idea and gather feedback from real users.
+  h3 Frequent and incremental iterations
+  p Each new iteration should bring with it a small improvement or new functionality. This approach allows the product to evolve naturally and easily adapt to changing requirements or user feedback.
+  h3 Interdisciplinary collaboration
+  p Involve a heterogeneous team from the beginning, consisting of developers, designers, domain experts and stakeholders. This collaboration allows problems to be approached from multiple perspectives and ensures that the product grows in harmony with the needs of all stakeholders.
+  h3 Continuous adaptation and constant revision
+  p Monitoring product usage and collecting data on performance and user experience is crucial to guide future developments. Schedule regular reviews to ensure that product growth is consistent with initial goals and that any issues are addressed promptly.
+  h3 Flexible tools and technologies
+  p Adopt technologies that allow easy extension and modification of the product. Modular frameworks, scalable architectures and agile development tools are essential to facilitate the organic expansion of the project. It is not necessary, or even counterproductive, to focus on one specific technology, language or framework: in the early stages of development, the simplest solution is also the one that will best adapt to later evolutions towards more complex technical solutions. Are we undecided as to which is the best solution to implement a database? Are we sure it is strictly necessary to have one in the initial stages? Perhaps a text file for storing the first data is sufficient and, as the structure of the necessary data evolves, it will also become clearer in the near future which DB solution would be ideal for the problem we wish to solve.
+aside 
+  h3 Do you have a project or an idea and want to see how Evolutionary Development can help you make it a reality?
+  p From Idea to Prototype, we support you in realising your project by turning it into a concrete and functional solution. We offer a design and development support service for software and hardware products. We work with you guaranteeing performance, usability and accessibility.
+  div(class="img-wrapper")
+    a(href="/from-idea-to-prototype", title="From Idea to Prototype") From zero to prototype: product design, development and management
+      img(width="1200", height="630", loading="lazy" src="/assets/images/landing/from-idea-to-prototype/from-idea-to-prototype-og-image-en.webp", alt="From zero to prototype: product design, development and management")
+
+
+aside 
+  h3 Practical example: a personal budget management application
+  p A team decides to develop an application to help users manage their monthly budget. Following a traditional approach, they might invest months in developing complex features, such as advanced reports, bank integrations, and predictive analytics, only to find that users find the product too complicated. With the organic methodology, on the other hand, the team might start with an MVP that allows users to record income and expenses manually. After collecting feedback from users, they might find that the most requested feature is the automatic categorisation of expenses. In response, they develop this functionality in the second iteration, focusing resources on what creates the most value. With each iteration, the product grows based on the real needs of users, avoiding waste of resources and ensuring a more useful and appreciated application.
+
+
+section
+  h2 Conclusion
+  p The organic development methodology represents an innovative and versatile approach to software and product design. Focused on the idea of gradual and natural growth, this methodology allows you to effectively meet the challenges of an ever-changing market and requirements that are often uncertain or constantly changing. Thanks to its flexibility, organic growth enables the development of solutions that respond to the real needs of users, reducing waste of time and resources. The creation of a product becomes a collaborative process, where interdisciplinary teams and stakeholders work together to produce a harmonious end result that is well adapted to the context. Comparing it with other methodologies, it emerges as a powerful and complementary alternative, capable of integrating the strengths of more structured approaches (such as Agile or DevOps), but without inheriting their organisational complexity. Adopting this methodology means not only improving product quality, but also creating a more sustainable development path, where each step adds real value. In an era where adaptability and speed of response are key, organic growth is a winning strategy for turning ideas into reality while ensuring innovation and success. If you want to start experimenting with this approach, remember: start with a minimal core, listen to your users, and let your project grow naturally, like a well-tended plant would.
