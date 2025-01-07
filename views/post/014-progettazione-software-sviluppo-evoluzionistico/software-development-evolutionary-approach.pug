@@ -11,7 +11,7 @@ block append meta
   meta(name="og:title" content=title)
   meta(name="og:site_name" content=proj_name)
   meta(name="og:description" content=description)
-  meta(name="og:image" content=proj_url + "/assets/images/post/" + serial + "-" + id + "/" + id + ".webp")
+  meta(name="og:image" content=proj_url + "/assets/images/post/" + serial + "-" + id + "/" + id + "-en.webp")
 
 block main
   main(class="tworows")
@@ -32,7 +32,7 @@ block viewscripts
       "name": "#{title}",
       "headline": "#{title}",
       "description": "#{description}",
-      "image": "#{proj_url + "/assets/images/post/" + serial + "-" + id + "/" + id + ".webp"}",
+      "image": "#{proj_url + "/assets/images/post/" + serial + "-" + id + "/" + id + "-en.webp"}",
       "author": {
         "@type": "Person",
         "name": "#{owner}"
