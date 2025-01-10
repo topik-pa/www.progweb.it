@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/javascript-throttle-debounce-definizione-esempi', (req, res) => {
+    const title = 'Throttle e debounce in javascript: cosa sono e come usarli (con esempi)'
+    const description = 'Gestire le prestazioni e mantenere la user experience quando si deve ascoltare e reagire ad eventi che vengono generati troppo frequentemente. Una guida al throttiling e al debouncing in JavaScript con esempi pratici e codice!'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/015-javascript-throttle-debounce-definizione-esempi/javascript-throttle-debounce-definizione-esempi',
+      {
+        id: 'javascript-throttle-debounce-definizione-esempi',
+        serial: '015',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/software-development-evolutionary-approach/en', (req, res) => {
     res.render('post/014-progettazione-software-sviluppo-evoluzionistico/software-development-evolutionary-approach',
       {

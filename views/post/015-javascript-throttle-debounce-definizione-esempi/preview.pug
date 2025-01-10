@@ -1,0 +1,21 @@
+- 
+ let _015_postTopic = 'javascript'
+ let _015_postTitle = 'Throttle e debounce in javascript: cosa sono e come usarli (con esempi)'
+ let _015_postUrl = '/javascript-throttle-debounce-definizione-esempi'
+ let _015_post = 'javascript-throttle-debounce-definizione-esempi'
+ let _015_postSerial = '015'
+
+div(class="preview")
+  div(class="badge js") #[a(href="/javascript", title=_015_postTopic) #{_015_postTopic}]
+  h2
+    a(href=_015_postUrl, title=_015_postTitle) #{_015_postTitle}
+  a(href=_015_postUrl, title=_015_postTitle) 
+    img(fetchpriority="high" class="cover" width="1200" height="630" srcw="/assets/images/post/" + _015_postSerial + "-" + _015_post + "/" + _015_post + ".webp", alt=_015_title, srcset='/assets/images/post/' + _015_postSerial + '-' + _015_post + '/' + _015_post + '.webp' + ' 1200w,' + '/assets/images/post/' + _015_postSerial + '-' + _015_post + '/' + _015_post + '-m.webp' + ' 1024w,' + '/assets/images/post/' + _015_postSerial + '-' + _015_post + '/' + _015_post + '-s.webp' + ' 768w')
+
+  p Quando il nostro codice deve rimanere in ascolto di eventi che vengono generati troppo frequentemente, è possibile un notevole calo delle prestazioni e conseguente deterioramento dell'esperienza utente. Uno sviluppatore deve saper agire di conseguenza togliendo dal suo cappello virtuale due degli strumenti più utili in questi casi: il debouncing e il throttling!
+
+  h2 Introduzione
+  p Nella programmazione JavaScript, capita spesso di dover #[em gestire eventi che accadono o si susseguono ad intervalli di tempo molto frequenti]; per esempio lo scoll del mouse, il resize della finestra o la digitazione di alcuni caratteri all'interno di un campo di testo. Nel primo caso in  elenco, lo scroll della rotellina del mouse per visualizzare il contenuto below-the-fold può generare decine se non centinaia (dipende dalla velocità di scoll) di eventi. Se il nostro compito, come programmatori, è quello di mettersi all'ascolto di questi eventi e lanciare l'esecuzione di un metodo ad ognuno di essi, potremmo incorrere in seri problemi di performance con rallentamenti visibili nelle applicazioni e conseguente degradazione della user experience.
+  p Qui entrano in gioco due tecniche fondamentali: throttle e debounce. Entrambe #[em servono a limitare il numero di volte in cui una funzione viene eseguita], ma lo fanno in modi diversi e con scopi differenti. In questo articolo vedremo ciascuna di queste tecniche, quando usarle e come implementarle... #[a(href=_015_postUrl, title=_015_title) &lbrack;Continua&rbrack;]
+
+  div(class="published") Pubblicato il <time datetime="2025-01-10">10 gennaio 2025</time>

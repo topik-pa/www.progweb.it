@@ -1,0 +1,90 @@
+aside(id="side")
+
+  include ../../../components/shared/share-mini/share-mini.pug
+
+  div(class="submenu fb-exclusive")
+    h3 Esclusiva Facebook
+    p L'ultimo post pubblicato sulla mia pagina Facebook!
+    div
+      div.fb-post(data-href='https://www.facebook.com/permalink.php?story_fbid=pfbid0FZLZQtqPNSiZTFcjjxL3HitVemFxo2PdwWfRkJYQR1gYSSB6NkSZMSqSrTFw7Jxil&id=100086483013646', data-width='350', data-show-text='true')
+        blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/permalink.php?story_fbid=565583853001044&id=100086483013646')
+          p
+            | &#x1F3AF; Ottimizza il caricamento delle immagini e delle risorse con l&rsquo;attributo &apos;fetchpriority&apos; in HTML5!
+            | Con l&rsquo;attributo &apos;...
+          | Pubblicato da 
+          a(href='https://www.facebook.com/people/Programmazione-Web-Italia/100086483013646/') Programmazione Web Italia
+          |  su&nbsp;
+          a(href='https://www.facebook.com/permalink.php?story_fbid=565583853001044&id=100086483013646') Marted&igrave; 3 dicembre 2024
+
+
+  div(class="submenu topic")
+    h3 Topic 
+    ul 
+      li(class="sec") #[a(href="/security", title="Cybersecurity") Cybersecurity(#{posts.getPostCountByTopic('sec')})]
+      li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
+      li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
+      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
+      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
+      li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]  
+
+  div(class="submenu services")
+    h3 Al tuo servizio
+    ul 
+      li 
+        a(href="/from-idea-to-prototype", title="Dalla Idea al Prototipo") Idea &gt; Prototipo: sviluppo di prodotti innovativi ad alto contenuto tecnologico
+          img(width="1200", height="630", loading="lazy" src="/assets/images/landing/from-idea-to-prototype/from-idea-to-prototype-og-image-it.webp", alt="Da zero a prototipo: progettazione, sviluppo e gestione di un prodotto.")
+      li 
+        a(href="/web-seo", title="Web SEO") Fai decollare la tua SEO
+          img(width="1200", height="630", loading="lazy" src="/assets/images/landing/web-seo/web-seo-og-image-it.webp", alt="Migliora la tua visibilità aumentando il ranking SEO del tuo sito o portale Web")
+      li 
+        a(href="/web-accessibility", title="Accessibilità Web") Fai crescere il tuo Business con un sito Web accessibile a tutti
+          img(loading="lazy", width="1200", height="630", src="/assets/images/landing/web-accessibility/web-accessibility-og-image-it.webp", alt="Non lasciare NESSUNO INDIETRO: rendi ACCESSIBILE il tuo sito!")
+      li 
+        a(href="/responsive-web-design", title="Responsive Web Design") Non farmi zoomare! Motivi pratici per avere un sito Web RESPONSIVE
+          img(loading="lazy", width="1200", height="630", src="/assets/images/landing/responsive-web-design/responsive-web-design-og-image-it.webp", alt="Rendi il tuo progetto MOBILE FRIENDLY!")
+      li 
+        a(href="/web-sustainability", title="Sostenibilità Web") Il tuo sito è sostenibile? Verifica l'impronta ecologia del tuo progetto web!
+          img(loading="lazy", width="1200", height="630", src="/assets/images/landing/web-sustainability/web-sustainability-og-image-it.webp", alt="Verifica l'impronta ecologia del tuo progetto web")
+
+
+  div(class="submenu others")
+    h3 Articoli pubblicati di recente
+    ul 
+      li 
+        p Sviluppare un software attraverso un approccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica.
+        a(href="/progettazione-software-sviluppo-evoluzionistico", title="Sviluppo evoluzionistico - un approccio organico alla progettazione software") 
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/014-progettazione-software-sviluppo-evoluzionistico/progettazione-software-sviluppo-evoluzionistico-m.webp", alt="Sviluppo evoluzionistico")
+      li 
+        p Migliorare le prestazioni e il caricamento delle pagine web in maniera nativa senza ricorrere a soluzioni di terze parti ora è più semplice che mai. Impara ad utilizzare l'attributo "loading" di HTML5 per le immagini e gli iframe!
+        a(href="/html-attributo-loading-lazy-load", title="Attributo loading in HTML5 - Migliora performance e UX con il lazy load nativo!") 
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/013-html-attributo-loading-lazy-load/html-attributo-loading-lazy-load-m.webp", alt="Attributo loading in HTML5")
+      li 
+        p Finalmente anche CSS introduce l'uso delle variabili (in realtà dal 2015...)! Ufficialmente chiamate Custom Properties, il loro scopo è quello di aiutare lo sviluppatore ad organizzare e gestire meglio il suo codice. Qui troverai una introduzione con dettagli d'uso ed esempi pratici!
+        a(href="/css-variabili-sintassi-esempi", title="Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!") 
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/012-css-variabili-sintassi-esempi/css-variabili-sintassi-esempi-m.webp", alt="Variabili in CSS")
+      li 
+        p Ogni promessa è debito... Ma quanto è romantico il termine Promise in JavaScript? Sapere, poi, che dietro a questa parola si nasconde il fatto di non fermare l'esecuzione single-thread del JavaScript Engine mentre si attende l'esito di una operazione asincrona rende tutto più commovente!
+        a(href="/javascript-promise-definizione-sintassi-esempi", title="JavaScript Promise: impara a gestire eventi asincroni!") 
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/011-javascript-promise-definizione-sintassi-esempi/javascript-promise-definizione-sintassi-esempi-m.webp", alt="JavaScript Promise")        
+
+
+  div(class="submenu socials")
+    h3 Social 
+    p I nostri Canali Social
+    ul 
+      each social in socials
+        li
+          a(href=social.url, title=social.name) #[i(class=social.icon)] #{social.name}
+            
+    p #[em Contatta PWI] per commentare o suggerire come migliorare i contenuti
+    ul
+      li 
+        a(href="mailto:info@progweb.it", title="Mail") #[i(class="icon-envelop")] info@progweb.it
+
+  div(class="submenu others") 
+      h3 Altri progetti 
+      div(class="other")
+        h4 tradingradar.net
+        p #[em Trova ora le Azioni più interessanti della Borsa Italiana]. Scopri in tempo reale quali titoli azionari stanno generando segnali cruciali secondo i principi dell' Analisi Tecnica.
+        a(href="https://tradingradar.net", title="tradingradar.net") 
+          img(loading="lazy" width="768" height="142" src="/assets/images/tr-logo-min.png", alt="tradingradar.net")

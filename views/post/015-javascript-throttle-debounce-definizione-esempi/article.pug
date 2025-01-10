@@ -1,0 +1,112 @@
+hgroup
+  h1 #{title}
+  div(class="intro-wrap")
+    img(fetchpriority="high" class="cover" width="1200" height="630" srcw="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title, srcset='/assets/images/post/' + serial + '-' + id + '/' + id + '.webp' + ' 1200w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-m.webp' + ' 1024w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-s.webp' + ' 768w')
+
+    p(class="intro") Quando il nostro codice deve rimanere in ascolto di eventi che vengono generati troppo frequentemente, è possibile un notevole calo delle prestazioni e conseguente deterioramento dell'esperienza utente. Uno sviluppatore deve saper agire di conseguenza togliendo dal suo cappello virtuale due degli strumenti più utili in questi casi: il debouncing e il throttling!#[img(src="assets/images/marco-talk.webp", alt="Marco dice...", width="100", height="100")]
+
+
+section
+  h2 Introduzione
+  p Nella programmazione JavaScript, capita spesso di dover #[em gestire eventi che accadono o si susseguono ad intervalli di tempo molto frequenti]; per esempio lo scoll del mouse, il resize della finestra o la digitazione di alcuni caratteri all'interno di un campo di testo. Nel primo caso in  elenco, lo scroll della rotellina del mouse per visualizzare il contenuto below-the-fold può generare decine se non centinaia (dipende dalla velocità di scoll) di eventi. Se il nostro compito, come programmatori, è quello di mettersi all'ascolto di questi eventi e lanciare l'esecuzione di un metodo ad ognuno di essi, potremmo incorrere in seri problemi di performance con rallentamenti visibili nelle applicazioni e conseguente degradazione della user experience.
+  p Qui entrano in gioco due tecniche fondamentali: throttle e debounce. Entrambe #[em servono a limitare il numero di volte in cui una funzione viene eseguita], ma lo fanno in modi diversi e con scopi differenti. In questo articolo vedremo ciascuna di queste tecniche, quando usarle e come implementarle.
+
+section 
+  h2 Cos'è il debounce in JavaScript?
+  p Il debounce è una tecnica di programmazione che assicura che una funzione venga #[em eseguita solo dopo un determinato intervallo di tempo dall'ultima volta in cui è stata chiamata]. Lo scopo è quella di evitare esecuzioni continue di una certa funzione per evitare problemi di performance, ma senza intaccare la funzionlità della applicazione.
+  p Immaginiamo un campo di ricerca che effettua richieste al server man mano che l'utente digita. In questo caso, ogni tasto premuto genera un evento che potrebbe inviare una richiesta. Il debounce evita che vengano effettuate troppe richieste ravvicinate, eseguendo la funzione solo dopo che l'utente ha smesso di digitare per un certo periodo di tempo.
+  div(class="code")
+    h3 Utilizzo del debounce per limitare le chiamate al server
+    code
+      pre function debounce(func, delay) {
+      pre   let timeout;
+      pre   return function(...args) {
+      pre     clearTimeout(timeout);
+      pre     timeout = setTimeout(() => func.apply(this, args), delay);
+      pre   };
+      pre }
+      pre 
+      pre // Uso del debounce
+      pre const handleSearch = debounce((query) => {
+      pre   console.log(`Ricerca per: ${query}`);
+      pre }, 300);
+      pre 
+      pre 
+      pre document.getElementById('searchInput').addEventListener('input', (event) => {
+      pre   handleSearch(event.target.value);
+      pre });
+      pre 
+  h3 Quando usare il debounce
+  p Il debounce è particolarmente utile nei casi in cui desideri eseguire una funzione solo una volta, dopo che una serie di eventi si è conclusa.
+  ul
+    li Campi di ricerca dinamica: evita di inviare una richiesta al server per ogni singola lettera digitata dall'utente. Con il debounce, la ricerca viene eseguita solo quando l'utente ha smesso di digitare per un intervallo di tempo prestabilito.
+    li Salvataggi automatici: ideale per applicazioni che salvano automaticamente il contenuto (ad esempio un editor di testo online) solo dopo che l'utente ha terminato di scrivere.
+    li Ridimensionamento della finestra: quando vuoi ricalcolare elementi della UI (come griglie o layout) solo dopo che l'utente ha finito di ridimensionare la finestra del browser, evitando di farlo durante ogni singolo pixel di movimento.
+    li Validazione dei moduli: riduce il numero di controlli effettuati durante la compilazione di un modulo, eseguendoli solo una volta terminata l'interazione.
+
+
+section 
+  h2 Cos'è il throttle in JavaScript?
+  p Il throttle #[em limita il numero di volte in cui una funzione può essere eseguita in un determinato intervallo di tempo]. A differenza del debounce, #[em il throttle garantisce che la funzione venga eseguita a intervalli regolari], indipendentemente da quanto frequentemente l'evento viene attivato.
+  p Un esempio comune è il caso dello scroll. Supponiamo di voler calcolare la posizione di un elemento mentre l'utente scorre la pagina. Il throttle limita la frequenza con cui questa funzione viene chiamata, migliorando le performance.
+  div(class="code")
+    h3 Utilizzo del throttle per limitare le chiamate al server
+    code
+      pre function throttle(func, limit) {
+      pre   let lastFunc;
+      pre   let lastRan;
+      pre   return function(...args) {
+      pre     const context = this;
+      pre     if (!lastRan) {
+      pre       func.apply(context, args);
+      pre       lastRan = Date.now();
+      pre     } else {
+      pre       clearTimeout(lastFunc);
+      pre       lastFunc = setTimeout(() => {
+      pre         if ((Date.now() - lastRan) >= limit) {
+      pre           func.apply(context, args);
+      pre           lastRan = Date.now();
+      pre         }
+      pre       }, limit - (Date.now() - lastRan));
+      pre     }
+      pre   };
+      pre }
+      pre 
+      pre // Uso del throttle
+      pre const handleScroll = throttle(() => {
+      pre   console.log('Evento di scroll!');
+      pre }, 200);
+      pre 
+      pre document.addEventListener('scroll', handleScroll);
+  h3 Quando usare il throttle
+  p Il throttle è ideale in situazioni in cui desideri garantire un’esecuzione regolare di una funzione durante l’attivazione continua di un evento.
+  ul
+    li Scroll della pagina: se vuoi monitorare la posizione di scroll per attivare effetti grafici o caricare contenuti dinamici, il throttle consente di aggiornare la UI a intervalli regolari senza sovraccaricare le risorse del browser.
+    li Trascinamento degli oggetti (drag-and-drop): durante il drag, puoi aggiornare la posizione dell'oggetto a intervalli regolari per mantenere una transizione fluida senza un eccessivo consumo di CPU.
+    li Monitoraggio della finestra (resize): quando l'utente ridimensiona la finestra, il throttle aiuta a limitare il numero di ricalcoli dei layout, evitando operazioni ridondanti.
+    li Eventi di mousemove: se hai funzioni legate al movimento del mouse (come il tracciamento di un cursore personalizzato o effetti hover complessi), il throttle garantisce performance stabili.
+    li Interazioni touch su dispositivi mobili: per gestire swipe o scroll su schermi touch, il throttle riduce il carico computazionale mantenendo un'esperienza fluida.
+
+section 
+  h2 Differenze tra throttle e debounce
+  table
+    tbody
+      tr
+        th
+          em Debounce
+        th
+          em Throttle
+      tr
+        td La funzione viene eseguita solo dopo che l&apos;evento si &egrave; fermato per un certo periodo di tempo.
+        td La funzione viene eseguita a intervalli regolari mentre l&apos;evento si verifica.
+      tr
+        td Ideale per eventi legati alla digitazione o al resize della finestra.
+        td Ideale per eventi frequenti come lo scroll o il mouse move.
+      tr
+        td Pu&ograve; ritardare l&apos;esecuzione della funzione fino alla fine degli eventi.
+        td Garantisce che la funzione venga eseguita regolarmente nel tempo.
+
+
+section 
+  h2 Conclusione 
+  p Throttle e debounce sono strumenti potenti per migliorare le performance delle applicazioni web. Saperli distinguere e utilizzare correttamente è essenziale per qualsiasi sviluppatore JavaScript. Inizia a sperimentare con i codici proposti e integra queste tecniche nei tuoi progetti per vedere subito i vantaggi!
