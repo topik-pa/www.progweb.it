@@ -8,13 +8,13 @@ const crypto = require('crypto')
 const PORT = process.env.PORT || 3002
 
 // HTTPS redirect server-side
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
     if (req.headers['x-forwarded-proto'] !== 'https') {
       return res.redirect('https://' + req.headers.host + req.url)
     } else { return next() }
   } else { return next() }
-})
+}) */
 
 // Compress responses if browser is capable
 app.use(compression({ filter: shouldCompress }))
@@ -32,14 +32,13 @@ app.set('view engine', 'pug')
 
 if (process.env.NODE_ENV === 'development') {
   app.use('/components', express.static(path.join(__dirname, 'components')))
-  app.use('/scripts', express.static(path.join(__dirname, 'scripts')))
-  app.use('/styles', express.static(path.join(__dirname, 'styles')))
-  app.use('/views', express.static(path.join(__dirname, 'views')))
 }
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
 app.use('/views', express.static(path.join(__dirname, 'views')))
+app.use('/scripts', express.static(path.join(__dirname, 'scripts')))
+app.use('/styles', express.static(path.join(__dirname, 'styles')))
 
 const i18n = new I18n({
   locales: ['en', 'it'],
