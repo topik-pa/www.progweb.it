@@ -1,7 +1,7 @@
 hgroup
   h1 #{title}
   div(class="intro-wrap")
-    img(fetchpriority="high" class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title, srcset='/assets/images/post/' + serial + '-' + id + '/' + id + '.webp' + ' 1200w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-m.webp' + ' 1024w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-s.webp' + ' 768w')
+    img(fetchpriority="high" class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title, srcset='/assets/images/post/' + serial + '-' + id + '/' + id + '.webp' + ' 1200w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-m.webp' + ' 1024w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-s.webp' + ' 768w', sizes="(max-width: 768px) 100vw, (max-width: 1024px) 75vw, 50vw")
 
     p(class="intro marco") Quando il nostro codice deve rimanere in ascolto di eventi che vengono generati troppo frequentemente, è possibile un notevole calo delle prestazioni e conseguente deterioramento dell'esperienza utente. Uno sviluppatore deve saper agire di conseguenza togliendo dal suo cappello virtuale due degli strumenti più utili in questi casi: il debouncing e il throttling!#[img(src="assets/images/marco-talk.webp", alt="Marco dice...", width="100", height="100")]
 
