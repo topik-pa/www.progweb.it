@@ -8,13 +8,13 @@ const crypto = require('crypto')
 const PORT = process.env.PORT || 3002
 
 // HTTPS redirect server-side
-/* app.use((req, res, next) => {
+app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
     if (req.headers['x-forwarded-proto'] !== 'https') {
       return res.redirect('https://' + req.headers.host + req.url)
     } else { return next() }
   } else { return next() }
-}) */
+})
 
 // Compress responses if browser is capable
 app.use(compression({ filter: shouldCompress }))
