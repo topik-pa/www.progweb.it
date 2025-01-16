@@ -13,6 +13,9 @@ block append meta
   meta(name="og:description" content=description)
   meta(name="og:image" content=proj_url + "/assets/images/post/" + serial + "-" + id + "/" + id + ".webp")
 
+  link(rel="stylesheet", type="text/css", href="/styles/prism.css")
+  script(async, defer, src='/scripts/prism.js')
+
 block main
   main(class="tworows")
     article

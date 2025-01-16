@@ -62,6 +62,18 @@ article .intro:after {
   left: 0;
   bottom: calc(var(--normal-space) * -1);
 }
+article .intro.marco:after {
+  content: "Marco Pavan";
+  bottom: -3rem;
+  transform: rotate(0deg);
+  font-size: var(--font-size-normal)
+}
+article .intro.marisa:after {
+  content: "Marisa";
+  bottom: -3rem;
+  transform: rotate(0deg);
+  font-size: var(--font-size-normal)
+}
 
 article img.cover {
   margin: 0 auto;

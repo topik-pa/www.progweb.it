@@ -20,6 +20,7 @@
   overflow-x: auto;
   text-align: left;
   border-radius: var(--border-radius-small);
+  text-shadow: none;
 }
 .code code pre::before {
   counter-increment: line;

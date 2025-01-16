@@ -3,7 +3,7 @@ hgroup
   div(class="intro-wrap")
     img(fetchpriority="high" class="cover" width="1200" height="630" srcw="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title, srcset='/assets/images/post/' + serial + '-' + id + '/' + id + '.webp' + ' 1200w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-m.webp' + ' 1024w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-s.webp' + ' 768w')
 
-    p(class="intro") Quando il nostro codice deve rimanere in ascolto di eventi che vengono generati troppo frequentemente, è possibile un notevole calo delle prestazioni e conseguente deterioramento dell'esperienza utente. Uno sviluppatore deve saper agire di conseguenza togliendo dal suo cappello virtuale due degli strumenti più utili in questi casi: il debouncing e il throttling!#[img(src="assets/images/marco-talk.webp", alt="Marco dice...", width="100", height="100")]
+    p(class="intro marco") Quando il nostro codice deve rimanere in ascolto di eventi che vengono generati troppo frequentemente, è possibile un notevole calo delle prestazioni e conseguente deterioramento dell'esperienza utente. Uno sviluppatore deve saper agire di conseguenza togliendo dal suo cappello virtuale due degli strumenti più utili in questi casi: il debouncing e il throttling!#[img(src="assets/images/marco-talk.webp", alt="Marco dice...", width="100", height="100")]
 
 
 section
@@ -17,25 +17,27 @@ section
   p Immaginiamo un campo di ricerca che effettua richieste al server man mano che l'utente digita. In questo caso, ogni tasto premuto genera un evento che potrebbe inviare una richiesta. Il debounce evita che vengano effettuate troppe richieste ravvicinate, eseguendo la funzione solo dopo che l'utente ha smesso di digitare per un certo periodo di tempo.
   div(class="code")
     h3 Utilizzo del debounce per limitare le chiamate al server
-    code
-      pre function debounce(func, delay) {
-      pre   let timeout;
-      pre   return function(...args) {
-      pre     clearTimeout(timeout);
-      pre     timeout = setTimeout(() => func.apply(this, args), delay);
-      pre   };
-      pre }
-      pre 
-      pre // Uso del debounce
-      pre const handleSearch = debounce((query) => {
-      pre   console.log(`Ricerca per: ${query}`);
-      pre }, 300);
-      pre 
-      pre 
-      pre document.getElementById('searchInput').addEventListener('input', (event) => {
-      pre   handleSearch(event.target.value);
-      pre });
-      pre 
+    pre 
+      code(class="language-js") 
+        | function debounce(func, delay) {
+        |   let timeout;
+        |   return function(...args) {
+        |     clearTimeout(timeout);
+        |     timeout = setTimeout(() => func.apply(this, args), delay);
+        |   };
+        | }   
+        |
+        | // Uso del debounce
+        | const handleSearch = debounce((query) => {
+        |   console.log(`Ricerca per: ${query}`);
+        | }, 300);
+        |
+        | document.getElementById('searchInput').addEventListener('input', (event) => {
+        |   handleSearch(event.target.value);
+        | });
+        |
+        
+      
   h3 Quando usare il debounce
   p Il debounce è particolarmente utile nei casi in cui desideri eseguire una funzione solo una volta, dopo che una serie di eventi si è conclusa.
   ul
@@ -51,33 +53,35 @@ section
   p Un esempio comune è il caso dello scroll. Supponiamo di voler calcolare la posizione di un elemento mentre l'utente scorre la pagina. Il throttle limita la frequenza con cui questa funzione viene chiamata, migliorando le performance.
   div(class="code")
     h3 Utilizzo del throttle per limitare le chiamate al server
-    code
-      pre function throttle(func, limit) {
-      pre   let lastFunc;
-      pre   let lastRan;
-      pre   return function(...args) {
-      pre     const context = this;
-      pre     if (!lastRan) {
-      pre       func.apply(context, args);
-      pre       lastRan = Date.now();
-      pre     } else {
-      pre       clearTimeout(lastFunc);
-      pre       lastFunc = setTimeout(() => {
-      pre         if ((Date.now() - lastRan) >= limit) {
-      pre           func.apply(context, args);
-      pre           lastRan = Date.now();
-      pre         }
-      pre       }, limit - (Date.now() - lastRan));
-      pre     }
-      pre   };
-      pre }
-      pre 
-      pre // Uso del throttle
-      pre const handleScroll = throttle(() => {
-      pre   console.log('Evento di scroll!');
-      pre }, 200);
-      pre 
-      pre document.addEventListener('scroll', handleScroll);
+    pre 
+      code(class="language-js") 
+        | function throttle(func, limit) {
+        |   let lastFunc;
+        |   let lastRan;
+        |   return function(...args) {
+        |     const context = this;
+        |     if (!lastRan) {
+        |       func.apply(context, args); 
+        |       lastRan = Date.now();
+        |     } else {
+        |       clearTimeout(lastFunc);
+        |       lastFunc = setTimeout(() => {
+        |         if ((Date.now() - lastRan) >= limit) {
+        |           func.apply(context, args);
+        |           lastRan = Date.now();
+        |         }
+        |       }, limit - (Date.now() - lastRan));
+        |    }
+        |   }
+        |
+        | // Uso del throttle
+        | const handleScroll = throttle(() => {
+        |   console.log('Evento di scroll!');
+        | }, 200);
+        |
+        | document.addEventListener('scroll', handleScroll);
+        |
+
   h3 Quando usare il throttle
   p Il throttle è ideale in situazioni in cui desideri garantire un’esecuzione regolare di una funzione durante l’attivazione continua di un evento.
   ul
