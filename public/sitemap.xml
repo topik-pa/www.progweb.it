@@ -118,6 +118,12 @@
 
 	<!--POST-->
 	<url>
+		<loc>https://www.progweb.it/html-tag-dialog-utilizzo-esempi</loc>
+		<lastmod>2025-01-17T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
 		<loc>https://www.progweb.it/javascript-throttle-debounce-definizione-esempi</loc>
 		<lastmod>2025-01-10T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>

@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/html-tag-dialog-utilizzo-esempi', (req, res) => {
+    const title = 'Il tag <dialog> in HTML5 - esempi e spiegazione su come generare finestre di dialogo'
+    const description = 'Come utilizzare il nuovo tag <dialog> di HTML5 per generare finestre modali e non modali. I vantaggi di una soluzione nativa ed esempi di codice'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/016-html-tag-dialog-utilizzo-esempi/html-tag-dialog-utilizzo-esempi',
+      {
+        id: 'html-tag-dialog-utilizzo-esempi',
+        serial: '016',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/javascript-throttle-debounce-definizione-esempi', (req, res) => {
     const title = 'Throttle e debounce in javascript: cosa sono e come usarli (con esempi)'
     const description = 'Gestire le prestazioni e mantenere la user experience quando si deve ascoltare e reagire ad eventi che vengono generati troppo frequentemente. Una guida al throttiling e al debouncing in JavaScript con esempi pratici e codice!'
