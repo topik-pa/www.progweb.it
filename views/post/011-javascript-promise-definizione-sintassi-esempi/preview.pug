@@ -13,11 +13,5 @@ div(class="preview")
   h2 Cos'è una operazione asincrona?
   h3 Le funzioni generatrici in JavaScript
   p Iniziamo prima definendo che cos'è la #[em programmazione sincrona]: in tale contesto il programma esegue tutte le istruzioni che lo compongono in maniera lineare una dopo l'altra. In altri termini, l'esecuzione attende di aver portato a termine una istruzione prima di passare a quella immediatamente successiva. Un esempio banale è il seguente, dove ogni log viene stampato a console esattamente come ce lo aspettiamo: "1", "2", "3" 
-  div(class="code")
-    h4 In un codice sincrono le istruzioni vengono eseguite in ordine una dopo l'altra
-    code
-      pre console.log(1); // Prima istruzione
-      pre console.log(2); // Seconda istruzione
-      pre console.log(3); // Terza istruzione
   p La #[em programmazione asincrona], invece, non è lineare e prevede che una istruzione venga eseguita dopo un'altra anche se definita precedentemente all'interno del codice. Questo è necessario quando vengono eseguiti compiti che prevedono un certo lasso di tempo per essere eseguiti (per esempio: una richiesta HTTP per ottenere delle risorse remote, una query ad un database o una operazione di I/O verso il disco rigido...). In questo caso è preferibile che l'esecuzione continui con il resto del codice senza dover attendere il risultato della prima operazione. Appena il risultato è pronto (per esempio: la richiesta HTTP ha restituito un JSON) sarà possibile riprendere...#[a(href="/javascript-promise-definizione-sintassi-esempi", title=title) &lbrack;Continua&rbrack;]
   div(class="published") Pubblicato il <time datetime="2024-10-30">30 ottobre 2024</time>
