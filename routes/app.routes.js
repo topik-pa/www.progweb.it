@@ -288,7 +288,7 @@ module.exports = (app, nonce) => {
   })
   // Specific
   app.get('/html-tag-dialog-utilizzo-esempi', (req, res) => {
-    const title = 'Il tag <dialog> in HTML5 - esempi e spiegazione su come generare finestre di dialogo'
+    const title = 'Il tag <dialog> in HTML5: esempi e spiegazione su come generare finestre di dialogo'
     const description = 'Come utilizzare il nuovo tag <dialog> di HTML5 per generare finestre modali e non modali. I vantaggi di una soluzione nativa ed esempi di codice'
     const breadcrumbs = [
       {
