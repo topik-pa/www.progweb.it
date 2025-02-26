@@ -288,7 +288,7 @@ module.exports = (app, nonce) => {
   })
   // Specific
   app.get('/html-tag-dialog-utilizzo-esempi', (req, res) => {
-    const title = 'Il tag <dialog> in HTML5: esempi e spiegazione su come generare finestre di dialogo'
+    const title = 'Il tag *dialog* in HTML5: esempi e spiegazione su come generare finestre di dialogo'
     const description = 'Come utilizzare il nuovo tag <dialog> di HTML5 per generare finestre modali e non modali. I vantaggi di una soluzione nativa ed esempi di codice'
     const breadcrumbs = [
       {
@@ -352,7 +352,7 @@ module.exports = (app, nonce) => {
       })
   })
   app.get('/progettazione-software-sviluppo-evoluzionistico', (req, res) => {
-    const title = 'Sviluppo evoluzionistico - un approccio organico alla progettazione software'
+    const title = 'Sviluppo evoluzionistico: un approccio organico alla progettazione software'
     const description = 'Sviluppare un software attraverso un approccio simile a quello che vediamo in Natura: una metodologia che pone in primo piano la struttura del progetto, le relazioni tra i suoi componenti e i requisiti da soddisfare, sviluppandoli in maniera organica, coesa e olistica'
     const breadcrumbs = [
       {
