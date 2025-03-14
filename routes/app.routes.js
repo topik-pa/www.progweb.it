@@ -287,6 +287,31 @@ module.exports = (app, nonce) => {
       })
   })
   // Specific
+  app.get('/js-jwt-autenticazione-stateless', (req, res) => {
+    const title = 'Scopri i JSON Web Token (JWT) - autenticazione stateless per le tue applicazioni web'
+    const description = 'I JWT e l\'autenticazione token-based: cosa sono e come funzionano i JSON Web Token. Esempi pratici, vantaggi e svantaggi, best practice dell\'autenticazione senza stato'
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render('post/017-js-jwt-autenticazione-stateless/js-jwt-autenticazione-stateless',
+      {
+        id: 'js-jwt-autenticazione-stateless',
+        serial: '017',
+        className: 'post',
+        title,
+        description,
+        url: req.url,
+        breadcrumbs,
+        posts,
+        nonce
+      })
+  })
   app.get('/html-tag-dialog-utilizzo-esempi', (req, res) => {
     const title = 'Il tag *dialog* in HTML5: esempi e spiegazione su come generare finestre di dialogo'
     const description = 'Come utilizzare il nuovo tag <dialog> di HTML5 per generare finestre modali e non modali. I vantaggi di una soluzione nativa ed esempi di codice'

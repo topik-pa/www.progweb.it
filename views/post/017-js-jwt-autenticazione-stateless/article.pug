@@ -1,0 +1,201 @@
+div
+  h1 #{title}
+  div(class="intro-wrap")
+    img(fetchpriority="high" class="cover" width="1200" height="630" src="/assets/images/post/" + serial + "-" + id + "/" + id + ".webp", alt=title, srcset='/assets/images/post/' + serial + '-' + id + '/' + id + '.webp' + ' 1200w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-m.webp' + ' 1024w,' + '/assets/images/post/' + serial + '-' + id + '/' + id + '-s.webp' + ' 768w', sizes="(max-width: 768px) 100vw, (max-width: 1024px) 75vw, 50vw")
+
+    p(class="intro marco") In termini di sicurezza e scalabilità, i JSON Web Token (JWT) emergono come la chiave per garantire un’autenticazione sicura, efficiente e senza soluzione di continuità. Scopri come questa tecnologia può rivoluzionare il modo in cui gestisci l’accesso alle tue risorse online! #[img(src="assets/images/marco-talk.webp", alt="Marco dice...", width="100", height="100")]
+
+
+section 
+  h2 Introduzione
+  
+  h3 Cos’è e a cosa serve un JWT 
+  p Nel mondo dello sviluppo web, #[em la sicurezza e la gestione dell’autenticazione] sono aspetti fondamentali: uno degli strumenti più utilizzati per garantire un accesso sicuro e scalabile nelle applicazioni moderne è rappresentato dal #[em JWT (JSON Web Token)].
+  p Un JWT è un token che permette di scambiare informazioni in modo sicuro tra due parti (tipicamente un client ed un server). Grazie alla sua #[em struttura basata su JSON] e alla possibilità di essere firmato digitalmente, i JWT vengono spesso utilizzati per autenticazione e autorizzazione in applicazioni web e API.
+  p Rispetto ai tradizionali metodi basati sulle sessioni, i JSON Web Token offrono #[em un approccio stateless], riducendo il carico sui server, che non dovranno più salvare i dati di sessione, e migliorando la scalabilità delle applicazioni. I JWT, leggeri e compatti, sono una soluzione particolarmente adatta per architetture moderne e distribuite, come le applicazioni single-page e i sistemi microservices.
+  
+  h3 Contesto d’uso: autenticazione e autorizzazione nelle applicazioni web e API
+  p I JSON Web Token (JWT) sono ampiamente utilizzati #[em per gestire l’autenticazione e l’autorizzazione] in applicazioni web e API. Questi due concetti, sebbene correlati, hanno ruoli distinti nella sicurezza di un sistema.
+  ul
+    li #[em Autenticazione]: verifica l’identità di un utente. Dopo il login, un server genera un JWT e lo invia al client, che lo utilizza per autenticarsi nelle richieste successive.
+    li #[em Autorizzazione]: determina quali risorse un utente autenticato può accedere. Il JWT può contenere informazioni sui permessi dell’utente, consentendo ai server di verificare rapidamente i diritti di accesso senza consultare un database.
+  p I JSON Web Token (JWT) sono ampiamente utilizzati per gestire l’autenticazione nelle applicazioni web e API. Dopo che un utente si autentica con successo (ad esempio, fornendo username e password), il server genera un JWT e lo invia al client. Da quel momento, il client include il token nelle richieste successive per dimostrare la propria identità senza dover effettuare nuovamente il login.
+  p Oltre all’autenticazione, i JWT possono essere utilizzati anche per l’autorizzazione. Un JWT può contenere informazioni sui ruoli e i permessi dell’utente, permettendo al server di verificare cosa l’utente è autorizzato a fare. Ad esempio, un’API potrebbe concedere accesso a determinati endpoint solo se nel token è presente un ruolo specifico (es. admin).
+
+  h3 Differenza tra session-based authentication e token-based authentication
+  p Quando si implementa un sistema di autenticazione in un’applicazione web, si può scegliere tra due approcci principali: session-based authentication e token-based authentication. Entrambi hanno lo scopo di identificare e mantenere l’autenticazione di un utente, ma funzionano in modo molto diverso.
+  h4 Session-Based Authentication (Autenticazione basata su sessione)
+  p È il metodo tradizionale utilizzato nei sistemi basati su server. I passaggi che comporta sono i seguenti.
+  ul
+    li L’utente si autentica inviando le proprie credenziali (es. username e password)
+    li Il server verifica le credenziali e crea una sessione, salvando le informazioni dell’utente in memoria o in un database
+    li Al client viene assegnato un session ID, che viene memorizzato in un cookie e inviato con ogni richiesta successiva
+    li Il server verifica il session ID per autenticare l’utente e restituire le risorse richieste
+    li Quando l’utente esce, la sessione viene invalidata lato server.
+  h4 Token-Based Authentication (Autenticazione basata su token: JWT)
+  p Questo metodo elimina la necessità di mantenere uno stato lato server. I passaggi che comporta sono i seguenti.
+  ul
+    li L’utente si autentica inviando le proprie credenziali
+    li Il server verifica le credenziali e genera un JWT, che contiene informazioni sull’utente e una firma crittografica
+    li Il client memorizza il JWT (di solito nel local storage o nei cookie) e lo invia con ogni richiesta HTTP nell’Authorization header
+    li Il server verifica la firma del JWT e concede l’accesso alle risorse senza consultare un database
+    li Quando il token scade, l’utente deve autenticarsi nuovamente o utilizzare un refresh token per ottenere un nuovo JWT
+
+section
+  h2 Cos'è un JSON Web Token (JWT)?
+  h3 Definizione e standard di riferimento (RFC 7519)
+  p Un JSON Web Token (JWT) è un formato compatto e sicuro per la trasmissione di informazioni tra parti diverse. È basato sullo standard RFC 7519 ed è ampiamente utilizzato per l’autenticazione e l’autorizzazione nelle applicazioni web e API. A differenza dei tradizionali session ID, un JWT è stateless, il che significa che non richiede al server di mantenere informazioni sulla sessione dell’utente. Tutti i dati necessari per l’autenticazione sono contenuti all’interno del token stesso.
+  p Un JWT è #[em composto da tre parti], separate da un punto (.).
+  ul
+    li #[em Header (intestazione)] - Contiene le informazioni sulla firma e il tipo di token
+    li #[em Payload (corpo)] - Contiene le informazioni sull’utente e altri dati personalizzati. I dati nel payload non sono criptati, quindi chiunque abbia accesso al token può leggerli. Tuttavia, sono firmati digitalmente, quindi non possono essere modificati senza invalidare il token.
+    li #[em Signature (firma)] - La firma assicura l’integrità del token e viene generata combinando l’header e il payload con una chiave segreta o una chiave privata
+  p Attenzione: un errore comune è pensare che i JWT siano criptati. #[em I dati all’interno del payload sono leggibili], quindi è fondamentale non includere informazioni sensibili (es. password, dati bancari).
+  
+  h3 Esempio di JWT
+  p Ecco un esempio di JWT completo, suddiviso nelle sue tre parti: Header, Payload e Signature.
+  p L'header specifica l'algoritmo di firma e il tipo di token
+  div(class="code")
+    h3 Esempio di JWT: Header
+    code
+      pre 
+      pre {
+      pre   "alg": "HS256",
+      pre   "typ": "JWT" 
+      pre }
+      pre    
+  p Il payload contiene le informazioni dell'utente e altre claim (dichiarazioni), come la scadenza del token (exp), il suo tempo di creazione (iat), il ruolo dell'utente (role) e i'identificativo univoco (sub):
+  div(class="code")
+    h3 Esempio di JWT: Payload
+    code
+      pre 
+      pre {
+      pre   "sub": "1234567890",
+      pre   "name": "John Doe",
+      pre   "role": "admin",
+      pre   "iat": 1710412800,
+      pre   "exp": 1710416400
+      pre }
+      pre   
+  p La firma viene generata combinando Header + Payload, codificati in Base64Url, e firmati con una chiave segreta:
+  div(class="code")
+    h3 Esempio di JWT: Signature
+    code
+      pre 
+      pre HMACSHA256(
+      pre   base64UrlEncode(header) + "." + base64UrlEncode(payload),
+      pre   "chiave-segreta"
+      pre )
+      pre 
+  p Un JWT completo (header + payload + signature) avrà questo aspetto (notare che le tre sezioni sono separate da un punto (.)):
+  div(class="code")
+    h3 Esempio di JWT: il JWT risultante
+    code
+      pre 
+      pre eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNDEyODAwLCJleHAiOjE3MTA0MTY0MDB9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+      pre 
+  
+
+section 
+  h2 Come funziona un JWT?
+  p Un JSON Web Token (JWT) segue #[em un flusso ben definito] per l’autenticazione e l’autorizzazione degli utenti nelle applicazioni web e API. Il processo può essere suddiviso in #[em tre fasi principali: generazione, trasmissione e verifica].
+  h3 Processo di generazione del token
+  p Quando un utente si autentica (ad esempio con email e password), il server verifica le credenziali e genera un JWT. Questo token contiene tipicamente le seguenti informazioni.
+  ul
+    li Informazioni sull’utente (es. ID, ruolo, nome)
+    li Metadati (es. data di creazione, data di scadenza)
+    li Firma crittografica, per garantirne l’integrità
+  p Il server firma il JWT con una #[em chiave segreta] (o una chiave privata nel caso di firme asimmetriche come RSA).
+  h3 Trasmissione del JWT
+  p Una volta generato, il JWT viene inviato al client (browser o app mobile), che può memorizzarlo in:
+  ul
+    li Local Storage 
+    li Session Storage
+    li HTTP-Only Cookie (più sicuro contro attacchi XSS)
+  p Quando il client deve accedere a una risorsa protetta, include il JWT in ogni richiesta HTTP, tipicamente nell’Authorization header 
+  div(class="code")
+    h3 Esempio di Authorization header con JWT allegato
+    code
+      pre 
+      pre Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+      pre 
+  p Questo evita la necessità di mantenere una sessione lato server.
+  
+  h3 Meccanismo di verifica della firma
+  p Quando il server riceve una richiesta con un JWT, ne esegue la verifica per concedere o negare l’accesso:
+  ul
+    li Decodifica il token e legge il payload.
+    li Verifica la firma per assicurarsi che il token non sia stato modificato.
+    li Controlla la scadenza (exp): se il token è scaduto, l’accesso viene negato.
+    li Determina i permessi dell’utente in base ai dati contenuti nel payload.
+  p Se il token è valido, il server concede l’accesso alla risorsa richiesta. In caso contrario, restituisce un errore 401 Unauthorized.
+  
+
+section 
+  h2 Vantaggi e svantaggi dell’utilizzo di JWT
+  p L’uso dei JSON Web Token (JWT) per l’autenticazione e l’autorizzazione ha reso le applicazioni web e le API più scalabili ed efficienti, ma presenta anche #[em alcune criticità da considerare]. Analizziamo nel dettaglio i vantaggi e gli svantaggi di questa tecnologia.
+  
+  h3 Vantaggi di JWT
+  h4 Stateless: nessuna gestione della sessione lato server
+  p I JWT sono autocontenuti, ovvero contengono tutte le informazioni necessarie per identificare l’utente. Questo significa che il server non deve mantenere uno stato della sessione, riducendo la complessità e il consumo di memoria.
+  h4 Scalabilità elevata
+  p Poiché il server non deve memorizzare sessioni, JWT è ideale per applicazioni distribuite e microservizi, dove più istanze del server possono verificare il token senza dover condividere lo stato della sessione.
+  h4 Sicurezza garantita dalla firma digitale
+  p Ogni JWT è firmato digitalmente con un algoritmo HMAC (es. HS256) o asimmetrico (es. RS256). Questo impedisce che il token venga alterato senza essere invalidato.
+  h4 Efficienza nel trasporto
+  p I JWT sono in formato Base64Url, il che li rende facilmente trasportabili su HTTP (Authorization Header), WebSocket o persino in URL come parametri di query.
+  h4 Supporto a Single Sign-On (SSO)
+  p Poiché i JWT possono essere verificati senza contattare il server che li ha emessi, sono perfetti per l’autenticazione federata e il Single Sign-On (SSO) tra più servizi.
+  h4 Flessibilità nel contenere informazioni personalizzate
+  p Oltre agli ID utente, i JWT possono includere ruoli, permessi e metadati personalizzati, rendendo più facile la gestione dell’accesso.
+  
+  h3 Svantaggi di JWT
+  h4 Non è possibile revocare un token lato server
+  p Una volta emesso, un JWT non può essere invalidato fino alla sua scadenza, a meno che non si implementi una blacklist lato server (che però annulla il vantaggio dello stato stateless). Questo può essere un problema in caso di furto del token o logout forzato.
+  h4 Dimensioni maggiori rispetto ai session ID
+  p I JWT contengono più informazioni rispetto a un semplice session ID, e questo può aumentare il peso delle richieste HTTP, specialmente se usati nei cookie o negli header di ogni richiesta API.
+  h4 Vulnerabilità a XSS e furto del token
+  p Se un JWT viene salvato in Local Storage, un attacco Cross-Site Scripting (XSS) potrebbe rubarlo e permettere a un hacker di impersonare l’utente. È preferibile usare HTTP-Only Cookies per mitigare questo rischio.
+  h4 Non sono criptati, solo firmati
+  p I dati contenuti nel JWT sono facilmente leggibili con una semplice decodifica Base64. Se il token contiene informazioni sensibili, queste possono essere esposte se il token viene intercettato. È buona pratica non includere mai dati sensibili nel payload del JWT.
+  h4 La gestione della scadenza richiede l’uso di Refresh Token
+  p Quando un JWT scade (exp nel payload), l’utente deve eseguire nuovamente il login o ottenere un nuovo token tramite un Refresh Token, aggiungendo complessità all’implementazione.
+
+section 
+  h2 Best Practices per l’utilizzo dei JWT
+  p L’utilizzo di JSON Web Tokens (JWT) per l’autenticazione e l’autorizzazione nelle applicazioni web e nelle API può essere estremamente vantaggioso, ma #[em è essenziale seguire alcune best practices] per garantirne una gestione sicura ed efficace. Ecco le principali linee guida da adottare per sfruttare al meglio i JWT.
+  
+  h3 Utilizza HTTPS per tutte le comunicazioni
+  p Poiché i JWT sono trasmessi come stringhe di testo attraverso la rete, è fondamentale proteggerli da eventuali attacchi di man-in-the-middle (MITM). E' sempre necessario #[em utilizzare HTTPS] per tutte le comunicazioni tra client e server. Questo meccanismo cripta i dati in transito e impedisce che i token vengano intercettati o alterati durante la trasmissione.
+  
+  h3 Non memorizzare dati sensibili nel payload
+  p Poiché il payload di un JWT non è criptato, ma solo firmato, chiunque abbia accesso al token può decodificarlo e leggere i suoi contenuti. Non memorizzare mai dati sensibili come password, numeri di carte di credito o altre informazioni private nel payload. Usa il token solo per identificare l'utente o il suo stato di autenticazione, non per trasmettere dati riservati.
+  
+  h3 Usa una chiave segreta complessa
+  p La chiave segreta utilizzata per firmare il JWT deve essere complessa e difficile da indovinare. Se stai usando un algoritmo simmetrico come HS256, una chiave segreta debole potrebbe esporre il sistema a attacchi di brute force. Se possibile, usa un algoritmo asimmetrico (ad esempio RS256), che usa una coppia di chiavi pubblica/privata, rendendo la gestione dei JWT più sicura.
+  
+  h3 Imposta una scadenza breve per i token
+  p I JWT dovrebbero avere una durata limitata. Imposta un tempo di scadenza (exp) che sia abbastanza breve per ridurre i rischi di esposizione, ma non così breve da costringere l'utente a fare login troppo frequentemente. Ad esempio, un token potrebbe scadere dopo 15-30 minuti. Se desideri mantenere l'accesso senza obbligare un nuovo login, usa un Refresh Token per ottenere un nuovo JWT senza richiedere la reimmissione delle credenziali.
+  
+  h3 Usa il refresh token per ottenere nuovi JWT
+  p Poiché i JWT sono stateless e non possono essere invalidati facilmente, puoi implementare un Refresh Token per consentire agli utenti di continuare ad accedere all'applicazione senza dover autenticarsi ripetutamente. Il Refresh Token può essere usato per ottenere un nuovo JWT quando quello precedente è scaduto, senza bisogno che l'utente fornisca nuovamente le credenziali. Tratta i Refresh Token con la stessa attenzione dei JWT, memorizzandoli in un luogo sicuro (preferibilmente in un cookie HTTP-Only).
+
+  h3 Proteggi i JWT contro attacchi XSS e CSRF
+  p Un JWT può essere vulnerabile a Cross-Site Scripting (XSS) se memorizzato in Local Storage o Session Storage, poiché uno script maligno potrebbe rubarlo. La soluzione migliore è memorizzare i JWT in un cookie HTTP-Only, che non è accessibile via JavaScript e riduce i rischi di attacchi XSS. Inoltre, quando usi JWT con i cookie, proteggi l’applicazione da attacchi Cross-Site Request Forgery (CSRF) utilizzando il flag SameSite sui cookie, che limita l'invio automatico dei cookie nelle richieste cross-site.
+
+  h3 Verifica sempre la firma del JWT
+  p Ogni volta che un server riceve un JWT, deve verificare la sua firma per assicurarsi che il token non sia stato modificato. La verifica della firma è fondamentale per proteggere l’integrità dei dati. Se usi un algoritmo simmetrico come HS256, verifica che il token sia stato firmato con la stessa chiave segreta usata per generarlo. Se usi un algoritmo asimmetrico come RS256, verifica che il token sia stato firmato con la chiave privata corrispondente alla chiave pubblica che possiedi.
+
+  h3 Monitora i JWT e rileva abusi
+  p Anche se i JWT sono sicuri se usati correttamente, è importante monitorare l'uso dei token. Ad esempio, tieni traccia dei tentativi di accesso falliti o di anomalie nel comportamento dei token (come richieste provenienti da indirizzi IP o dispositivi sospetti). Puoi utilizzare strumenti di logging e monitoring per rilevare abusi e implementare misure correttive, come la revoca del token in caso di comportamento sospetto.
+
+  h3 Considera la gestione dei permessi
+  p JWT può contenere dati sull’utente, ma non è una soluzione completa per la gestione dei permessi. Utilizza claim personalizzati come role o permissions per gestire l'accesso alle risorse, ma fai attenzione a non commettere l'errore di gestire l'autorizzazione basandoti solo sul contenuto del token. Controlla sempre i permessi sul server prima di eseguire azioni sensibili, per evitare che utenti non autorizzati possano accedere a risorse protette.
+
+
+section 
+  h2 Conclusione
+  p In questo articolo abbiamo esplorato il concetto di JSON Web Token (JWT), una tecnologia sempre più diffusa per l’autenticazione e l’autorizzazione nelle applicazioni moderne. Abbiamo visto come funziona, le sue potenzialità e i principali vantaggi che offre.
+  p Tuttavia, come per ogni tecnologia, l'uso dei JWT presenta anche delle sfide. La gestione della sicurezza, la protezione contro attacchi come XSS o CSRF, la scadenza dei token e l’impossibilità di revocare i token in tempo reale sono aspetti che devono essere affrontati con attenzione. È fondamentale seguire le best practices che abbiamo discusso, come l'uso di HTTPS, l'adozione di Refresh Token per gestire la durata dei JWT e la protezione contro l’intercettazione dei token.
+  p Con una corretta implementazione, i JWT possono essere una soluzione potente ed efficace per le moderne applicazioni web e le API, semplificando la gestione dell’autenticazione, aumentando la scalabilità e riducendo il carico sul server.
+  p In conclusione, JWT rappresenta una scelta eccellente per applicazioni che necessitano di una soluzione leggera, sicura e facilmente integrabile per l'autenticazione e l’autorizzazione. Con un’attenzione adeguata alla sicurezza, questa tecnologia può rendere le tue applicazioni più sicure, scalabili e robuste.

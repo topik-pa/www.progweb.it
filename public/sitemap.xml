@@ -118,6 +118,12 @@
 
 	<!--POST-->
 	<url>
+		<loc>https://www.progweb.it/js-jwt-autenticazione-stateless</loc>
+		<lastmod>2025-03-14T12:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
 		<loc>https://www.progweb.it/html-tag-dialog-utilizzo-esempi</loc>
 		<lastmod>2025-01-17T12:00:00+00:00</lastmod>
 		<changefreq>weekly</changefreq>
