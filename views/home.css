@@ -8,12 +8,6 @@
   border-right: 1px dashed var(--lighter-gray);
 }
 
-#home main .preview.analysis img {
-  width: 100%;
-  height: auto;
-  max-width: initial;
-}
-
 #home main .viewall {
   margin: var(--xx-large-space) auto;
   display: flex;

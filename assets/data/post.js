@@ -54,12 +54,6 @@ const data = [
     month: 9
   },
   {
-    id: '008-confronto-portali-ecommerce-moda-italiani',
-    topic: 'analysis',
-    year: 2024,
-    month: 6
-  },
-  {
     id: '007-curriculum-efficace-esempio-developer',
     topic: 'work',
     year: 2024,
