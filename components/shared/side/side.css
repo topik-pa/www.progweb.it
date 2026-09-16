@@ -2,6 +2,10 @@
   margin: var(--view-padding) 0;
   width: 30%!important;
   padding-left: var(--view-padding);
+
+  h3 {
+    margin-top: 0;
+  }
 }
 
 #side .submenu {

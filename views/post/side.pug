@@ -1,0 +1,50 @@
+aside(id="side")
+
+  div(class="submenu topic")
+    h3 Topic 
+    ul 
+      li(class="sec") #[a(href="/security", title="Cybersecurity") Cybersecurity(#{posts.getPostCountByTopic('sec')})]
+      li(class="html") #[a(href="/html", title="HTML") HTML (#{posts.getPostCountByTopic('html')})]
+      li(class="css") #[a(href="/css", title="CSS") CSS (#{posts.getPostCountByTopic('css')})]
+      li(class="js") #[a(href="/javascript", title="JavaScript") JavaScript (#{posts.getPostCountByTopic('js')})]
+      li(class="eng") #[a(href="/engineering", title="Software Engineering") Software Engineering (#{posts.getPostCountByTopic('eng')})]
+      li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]  
+
+  div(class="submenu others")
+    h3 Gli ultimi articoli
+    ul 
+      li 
+        a(href="/css-variabili-sintassi-esempi", title="Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!") Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/012-css-variabili-sintassi-esempi/css-variabili-sintassi-esempi-m.webp", alt="Variabili in CSS: scopri le Custom Properties e migliora il codice dei tuoi fogli di stile!")
+      li 
+        a(href="/javascript-promise-definizione-sintassi-esempi", title="JavaScript Promise: impara a gestire eventi asincroni!") JavaScript Promise: impara a gestire eventi asincroni! (con aggiornamento al metodo "Promise.withResolvers")
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/011-javascript-promise-definizione-sintassi-esempi/javascript-promise-definizione-sintassi-esempi-m.webp", alt="JavaScript Promise: impara a gestire eventi asincroni!")
+      li 
+        a(href="/javascript-generator-definizione-esempi", title="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!") Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/010-javascript-generator-definizione-esempi/javascript-generator-definizione-esempi-m.webp", alt="Cosa sono i Generator in JavaScript? Scopri tutte le potenzialità dei Generatori!")
+      li 
+        a(href="/security-by-design-principi", title="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web") La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web
+          img(loading="lazy", width="768", height="403", src="/assets/images/post/009-security-by-design-principi/security-by-design-principi-m.webp", alt="La Security by Design - scopri quali sono i 10 paradigmi della Sicurezza Web")     
+          
+  div(class="submenu coding")
+    h3 Esempi di codice 
+    ul 
+      li 
+        a(href="/javascript-html-tabella-dinamica", title="Tabella dinamica in HTML+JS") Tabella dinamica in HTML + JS
+          picture 
+            source(media="(max-width: 768px)", srcset="/assets/images/dynamic-table-m.webp")
+            img(loading="lazy" width="512" height="257" src="/assets/images/dynamic-table-s.webp", alt="Un esempio di tabella dinamica")
+        p Una tabella dinamica in HTML, JavaScript e CSS - codice, esempi e spiegazione.
+
+  div(class="submenu socials")
+    h3 Social 
+    p I nostri Canali Social
+    ul 
+      each social in socials
+        li
+          a(href=social.url, title=social.name) #[i(class=social.icon)] #{social.name}
+            
+    p #[em Contatta PWI] per commentare o suggerire come migliorare i contenuti
+    ul
+      li 
+        a(href="mailto:info@progweb.it", title="Mail") #[i(class="icon-envelop")] info@progweb.it

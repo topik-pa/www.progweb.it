@@ -20,7 +20,8 @@ block main
     article
       include ./article.pug
       include /components/shared/coffee/coffee.pug
-    include ./side.pug
+      include /components/shared/share/share.pug
+    include ../side.pug
 
 block viewscripts 
   if prod

@@ -2,7 +2,7 @@
   text-align: center;
   margin: var(--x-large-space);
   border: none;
-  border-top: 1px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
   background-color: rgba(2, 89, 139, .03);
 }
 #share::before {

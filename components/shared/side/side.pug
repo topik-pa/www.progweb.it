@@ -1,87 +1,4 @@
 aside(id="side")
-  include ../share-mini/share-mini.pug
-
-  div(class="submenu fb-exclusive")
-    h3 Esclusiva Facebook
-    p L'ultimo post pubblicato sulla mia pagina Facebook!
-    div
-      div.fb-post(data-href='https://www.facebook.com/permalink.php?story_fbid=pfbid02xx82iW4P4ujm3RBZY8NxRzzcBbSGSBWE9TvehjeNH74jMjBWjmrzEJcC5AZjtnpDl&id=100086483013646', data-width='350', data-show-text='true')
-        blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/permalink.php?story_fbid=576454965247266&id=100086483013646')
-          p
-            | Ottimizza le tue immagini con l&apos;attributo &apos;srcset&apos; in HTML5!
-            | Utilizza l&apos;attributo &apos;srcset&apos; per il caricamento delle...
-          | Pubblicato da 
-          a(href='https://www.facebook.com/people/Programmazione-Web-Italia/100086483013646/') Programmazione Web Italia
-          |  su&nbsp;
-          a(href='https://www.facebook.com/permalink.php?story_fbid=576454965247266&id=100086483013646') Gioved&igrave; 19 dicembre 2024
-
-  div(class="submenu work") 
-    h3 Lavoro
-    div(class="work")
-      h4 Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer
-      p Un modello di CV per evidenziare in maniera efficace le proprie competenze in ambito tech (... ma non solo!)<br> #[a(href="/curriculum-efficace-esempio-developer", title="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer") Leggi l'articolo...]
-      a(href="/curriculum-efficace-esempio-developer", title="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-m.webp")
-          img(width="512" height="640" src="/assets/images/post/007-curriculum-efficace-esempio-developer/CV-cover-s.webp", alt="Un esempio di Curriculum Vitae efficace per trovare lavoro come software developer")
-
-  div(class="submenu analyses") 
-    h3 Analisi
-    div(class="analysis")
-      h4 15 anni di guerra Social
-      p Gli ultimi 15 anni di battaglia tra i Social Media più popolari, riassunti in un video!<br>Chi è il Social più popolare? Quali Social sono stati sconfitti?
-      p Chi si ricorda oggi di Google+ e MySpace? E Facebook è sempre stato il Social più utilizzato?
-      div(class="mediawrapper")
-        video(controls, preload="none", poster="/assets/video/poster-guerra-social-2024-nov.webp")
-          source(src="/assets/video/poster-guerra-social-2024-nov.mp4", type="video/mp4")
-    div(class="analysis")
-      h4 Risoluzioni schermo MOBILE più utilizzate 2024
-      p Quali sono le risoluzioni mobile più utilizzate ad ottobre 2024? Una analisi grafica aggiornata! <br> #[a(href="/grafici/#risoluzioni-mobile-2024", title="Risoluzioni schermo mobile più utilizzate 2024") Guarda il grafico...]
-      a(href="/grafici/#risoluzioni-mobile-2024", title="Risoluzioni schermo mobile più utilizzate 2024") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/graphs/risoluzioni-mobile-2024-preview-m.webp")
-          img(width="420" height="135" loading="lazy" src="/assets/images/graphs/risoluzioni-mobile-2024-preview-s.webp", alt="Risoluzioni schermo mobile più utilizzate 2024")
-    div(class="analysis")
-      h4 Risoluzioni schermo DESKTOP più utilizzate 2024
-      p Quali sono le risoluzioni desktop più utilizzate ad ottobre 2024? Una analisi grafica aggiornata! <br> #[a(href="/grafici/#risoluzioni-desktop-2024", title="Risoluzioni schermo desktop più utilizzate 2024") Guarda il grafico...]
-      a(href="/grafici/#risoluzioni-desktop-2024", title="Risoluzioni schermo desktop più utilizzate 2024") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/graphs/risoluzioni-desktop-2024-preview-m.webp")
-          img(width="420" height="135" loading="lazy" src="/assets/images/graphs/risoluzioni-desktop-2024-preview-s.webp", alt="Risoluzioni schermo desktop più utilizzate 2024")
-    div(class="analysis")
-      h4 Qual è il framework front end più utilizzato negli ultimi 10 anni?
-      p Trend storico (2013-2024) dei framework front end più utilizzati: Ascesa e caduta di jQuery; dominio di AngularJS e testa a testa tra Vue.js e React.
-      div(class="mediawrapper")
-        video(controls, preload="none", poster="/assets/video/poster-framework-frontend-2013-2024.webp")
-          source(src="/assets/video/framework-frontend-2013-2024.mp4", type="video/mp4")
-    div(class="analysis")
-      h4 Tech Review dei principali portali e-commerce di moda in Italia
-      p Confronto tra i maggiori portali di e-commerce di moda italiani in termini di: Performance, Accessibilità, Best Practice, SEO e Sicurezza. <br> #[a(href="/analisi/confronto-portali-ecommerce-moda-italiani", title="Analisi tecnica dei portali e-commerce") Vai all'analisi...]
-      a(href="/analisi/confronto-portali-ecommerce-moda-italiani", title="Tech Review dei principali portali e-commerce di moda in Italia") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cover-og-image-m.webp")
-          img(width="512" height="512" loading="lazy" src="/assets/images/analysis/confronto-portali-ecommerce-moda-italiani/cover-og-image-s.webp", alt="Tech Review dei principali portali e-commerce di moda in Italia")
-    div(class="analysis")
-      h4 I framework Web più utilizzati dagli sviluppatori
-      p La classifica dei framework Web più utilizzati a livello globale nel 2023. <br> #[a(href="/grafici/#framework-web-developers-2023", title="I framework Web più utilizzati dagli sviluppatori") Guarda il grafico...]
-      a(href="/grafici/#framework-web-developers-2023", title="I framework Web più utilizzati dagli sviluppatori") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/graphs/framework-web-developer-preview-m.webp")
-          img(width="512" height="180" loading="lazy" src="/assets/images/graphs/framework-web-developer-preview-s.webp", alt="I framework Web più utilizzati dagli sviluppatori")
-    div(class="analysis")
-      h4 I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo
-      p La classifica dei 10 "linguaggi di programmazione" più utilizzati dagli sviluppatori nel mondo. <br> #[a(href="/grafici/#linguaggi-programmazione", title="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo") Guarda il grafico...]
-      a(href="/grafici/#linguaggi-programmazione", title="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/graphs/linguaggi-programmazione-developer-preview-m.webp")
-          img(loading="lazy" width="512" height="180" src="/assets/images/graphs/linguaggi-programmazione-developer-preview-s.webp", alt="I linguaggi di programmazione più utilizzati dagli sviluppatori nel mondo")
-    div(class="analysis")
-      h4 Quanto si guadagna in Italia come developer?
-      p La MEDIA DEGLI STIPENDI in Italia nel campo dello sviluppo Web e Mobile App. <br> Il confronto è fatto tra i dati dei portali Indeed e Joobydoo. #[a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") Guarda il grafico...]
-      a(href="/grafici/#stipendio-developer", title="Stipendio medio degli sviluppatori in Italia") 
-        picture 
-          source(media="(max-width: 768px)", srcset="/assets/images/graphs/stipendi_developer-preview-m.webp")
-          img(loading="lazy" width="512" height="180" src="/assets/images/graphs/stipendi_developer-preview-s.webp", alt="Stipendio medio degli sviluppatori in Italia")
 
   div(class="submenu topic")
     h3 Topic 
@@ -94,7 +11,7 @@ aside(id="side")
       li(class="node") #[a(href="/nodejs", title="Node.js") Node.js (#{posts.getPostCountByTopic('node')})]  
 
   div(class="submenu services")
-    h3 Al tuo servizio
+    h3 I nostri servizi
     ul 
       li 
         a(href="/from-idea-to-prototype", title="Dalla Idea al Prototipo") Idea &gt; Prototipo: sviluppo di prodotti innovativi ad alto contenuto tecnologico
@@ -134,12 +51,3 @@ aside(id="side")
     ul
       li 
         a(href="mailto:info@progweb.it", title="Mail") #[i(class="icon-envelop")] info@progweb.it
-
-  div(class="submenu others") 
-      h3 Altri progetti 
-      div(class="other")
-        h4 tradingradar.net
-        p #[em Trova ora le Azioni più interessanti della Borsa Italiana]. Scopri in tempo reale quali titoli azionari stanno generando segnali cruciali secondo i principi dell' Analisi Tecnica.
-        a(href="https://tradingradar.net", title="tradingradar.net") 
-          img(loading="lazy" width="768" height="142" src="/assets/images/tr-logo-min.png", alt="tradingradar.net")                
-

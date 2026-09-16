@@ -1,12 +1,14 @@
-aside(id="share", class="marisa")
+aside(id="share")
   h2 "Aiutami a #[em condividere] questo contenuto tra i tuoi contatti!"
   section
     h3 
       a(class="ext", href=socials[0].url, title="Su Facebook") Su Facebook
-    div(class="fb-like" data-href=(proj_url + url) data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true")
+      div(class="fb-share-button" data-href=(proj_url + url) data-layout="button_count")
   section 
     h3 
       a(class="ext", href=socials[2].url, title="Su LinkedIn") Su LinkedIn
-    script(type="IN/FollowCompany" data-id="86379680" data-counter="bottom")
-  picture 
-    img(loading="lazy", width="260", height="312", src="/assets/images/marisa-share-s.webp", alt="Marisa", id="marisa-share")
+      script(type="IN/FollowCompany" data-id="86379680" data-counter="bottom")
+  section 
+    h3 
+      a(class="ext", href=socials[2].url, title="Su Telegram") Su Telegram
+      script(async, src="https://telegram.org/js/telegram-widget.js?22", data-telegram-share-url=(proj_url + url), data-size="large")

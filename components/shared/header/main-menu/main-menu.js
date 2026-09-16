@@ -20,7 +20,6 @@ const mainMenu = {
       let parent = e.target.parentNode
       let toBeClosed = true
       while (parent) {
-        console.log(parent)
         if (parent === $root) {
           toBeClosed = false
           break
