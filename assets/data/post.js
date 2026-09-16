@@ -1,5 +1,11 @@
 const data = [
   {
+    id: '017-js-jwt-autenticazione-stateless',
+    topic: 'js',
+    year: 2026,
+    month: 9
+  },
+  {
     id: '016-html-tag-dialog-utilizzo-esempi',
     topic: 'html',
     year: 2025,
