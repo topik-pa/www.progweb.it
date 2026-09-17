@@ -119,7 +119,7 @@ module.exports = (app, nonce) => {
         name: 'Articoly Cybersecurity'
       }
     ]
-    res.render('topic/security/security', {
+    res.render('topic/sec/sec', {
       id: 'sec',
       title: 'Articoly Cybersecurity',
       url: req.url,
