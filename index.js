@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3002
 
 // HTTPS redirect server-side
 app.use((req, res, next) => {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production' && process.env.FORCE_HTTPS === 'true') {
     if (req.headers['x-forwarded-proto'] !== 'https') {
       return res.redirect('https://' + req.headers.host + req.url)
     } else { return next() }
