@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 const posts = require('../assets/data/post.js')
+const path = require('path')
 
 module.exports = (app, nonce) => {
   // Sitemap.xml
@@ -719,5 +720,42 @@ module.exports = (app, nonce) => {
     ]
     res.render('post/javascript-closure/javascript-closure',
       { id: 'js-closure', className: 'post', title, description, url: req.url, breadcrumbs, posts, nonce })
+  })
+
+  // Slugged
+  app.get('/:slug', (req, res) => {
+    const slug = req.params.slug
+
+    let json = {}
+    try {
+      json = require(path.join(__dirname, `../assets/data/posts/${slug}.json`))
+    } catch (error) {
+      res.status(400)
+      return res.render('404/404', { id: 'err404', title: 'Error 404' })
+      // console.error(`Errore nel caricamento del file JSON per lo slug: ${slug}`, error)
+    }
+    const { title, description, keywords, serial } = json
+    const breadcrumbs = [
+      {
+        name: 'Post',
+        url: '/posts'
+      },
+      {
+        name: title
+      }
+    ]
+    res.render(
+      `post/${slug}/${slug}`,
+      {
+        slug,
+        serial,
+        title,
+        description,
+        keywords,
+        url: req.url,
+        breadcrumbs,
+        nonce,
+        posts
+      })
   })
 }
